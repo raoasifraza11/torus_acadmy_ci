@@ -36,22 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form class="mg-b-20">
-                            <div class="row gutters-8">
-                                <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by ID ..." class="form-control">
-                                </div>
-                                <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by Name ..." class="form-control">
-                                </div>
-                                <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by Phone ..." class="form-control">
-                                </div>
-                                <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
-                                    <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
-                                </div>
-                            </div>
-                        </form>
+                        
                         <!--loading alerts-->
                         <?php
                         $this->load->view('partials/alerts');?>
@@ -72,6 +57,7 @@
                                         <th>Address</th>
                                         <th>Phone</th>
                                         <th>E-mail</th>
+                                        <th>Status</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -93,21 +79,28 @@
                                         <td class="text-capitalize"><?= $teacher['address']?></td>
                                         <td><?= $teacher['phno']?></td>
                                         <td><?= $teacher['email']?></td>
+                                        <td>
+                                        <?php if($teacher['status']==0):?>
+                                           <a href="#"  class="btn btn-danger activeBtn" id="<?= $teacher['id']?>">
+                                           <i class="fas fa-ban fa-lg"></i>
+                                           Inactive
+                                                     </a>
+                                                     <?php else:?>                        
+                                          <a href="#" class="btn btn-success inactiveBtn" id="<?= $teacher['id']?>">
+                                          <i class="fas fa-user "></i>
+                                          Active
+                                          </a>
+                                                     <?php endif;?>
+                                        </td>
                                          <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                     <span class="flaticon-more-button-of-three-dots"></span>
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                <!--
-                                                <a class="dropdown-item activeBtn "   href="#"><i class="fas fa-ban text-orange-peel "></i>Inactive</a>
-                                                
-                                                       <a class="dropdown-item inactiveBtn"   href="#"><i class="fas fa-user-check text-orange-peel "></i>Active</a>
-                                                       -->
-                                                       
-                                                <a class="dropdown-item" href="<?php echo base_url('/admin/profileteacher/'.$teacher['id']);?>"><i class="fas fa-info-circle text-orange-peel "></i>Show Profile</a>
+                                                <div class="dropdown-menu dropdown-menu-right">   
+                                                    <a class="dropdown-item" href="<?php echo base_url('/admin/profileteacher/'.$teacher['id']);?>"><i class="fas fa-info-circle text-orange-peel "></i>Show Profile</a>
                                                     <a class="dropdown-item" href="<?php echo base_url('/admin/editteacher/'.$teacher['id']);?>"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                                    <!--<a class="dropdown-item delBtn"  href="#"><i class="fas fa-trash text-orange-red"></i>Delete</a>-->
+                                                    <a class="dropdown-item delBtn" id="<?= $teacher['id']?>" href="#"><i class="fas fa-trash text-orange-red"></i>Delete</a>-->
                                                     
                                                 </div>
                                             </div>
@@ -123,14 +116,22 @@
                 <!-- Teacher Table Area End Here -->
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<!--script for deleting,active and inactive 
+<script>
+ $('table').DataTable(
+    {
+      order: [0,'desc'],
+      responsive: true
+    
+    }
+  );
+</script>
+<!--script for deleting,active and inactive--> 
 <script>
 
 $(document).ready(function(){
     //delete teacher ajax request
 $("body").on("click",".delBtn",function(e){
   e.preventDefault();
-  var tr=$(this).closest('tr');
   teacher_del_id=$(this).attr('id');
   Swal.fire({
   title: 'Are you sure?',
@@ -143,22 +144,21 @@ $("body").on("click",".delBtn",function(e){
 }).then((result) => {
   if (result.value) {
     $.ajax({
-      url:"../php/action.php",
+      url:"<?php echo base_url()?>Admin/deleteteacher",
       type:"POST",
       data:{teacher_del_id:teacher_del_id},
       success:function(response)
       {
-        $("#alert").html(response);
-        setInterval('location.reload()',1000);
+       alert(response);
+       setInterval('location.reload()',1000);
       }
     })    
   }
 });
 });
-//making teacher active ajax request
+ //making teacher active ajax request
 $("body").on("click",".activeBtn",function(e){
   e.preventDefault();
-  var tr=$(this).closest('tr');
   teacher_active_id=$(this).attr('id');
   Swal.fire({
   title: 'Are you sure?',
@@ -171,12 +171,12 @@ $("body").on("click",".activeBtn",function(e){
 }).then((result) => {
   if (result.value) {
     $.ajax({
-      url:"../php/action.php",
+      url:"<?php echo base_url()?>Admin/activeteacher",
       type:"POST",
       data:{teacher_active_id:teacher_active_id},
       success:function(response)
       { 
-        $("#alert").html(response);
+        alert(response);
         setInterval('location.reload()',1000);
       }
     });    
@@ -199,12 +199,12 @@ $("body").on("click",".inactiveBtn",function(e){
 }).then((result) => {
   if (result.value) {
     $.ajax({
-      url:"../php/action.php",
+      url:"<?php echo base_url()?>Admin/inactiveteacher",
       type:"POST",
       data:{teacher_inactive_id:teacher_inactive_id},
       success:function(response)
       { 
-        $("#alert").html(response);
+        alert(response);
         setInterval('location.reload()',1000);
       }
     });    
@@ -212,4 +212,4 @@ $("body").on("click",".inactiveBtn",function(e){
         });
           });
 });
-</script>-->
+</script>

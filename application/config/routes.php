@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 //student routes
 $route['students/register']='students/register';
+$route['students/login']='students/login';
+$route['students/test']='students/test';
 
 
 //teacher routes
@@ -63,11 +65,13 @@ $route['admin/allstudents']='admin/allstudents';
 $route['admin/profilestudent/(:any)']='admin/viewstudent/$1';
 $route['admin/editstudent/(:any)']='admin/editstudent/$1';
 $route['admin/updatestudent']='admin/updatestudent';
+
 $route['admin/allteachers']='admin/allteachers';
 $route['admin/profileteacher/(:any)']='admin/viewteacher/$1';
 $route['admin/editteacher/(:any)']='admin/editteacher/$1';
 $route['admin/updateteacher']='admin/updateteacher';
-
+$route['admin/addsubjects']='admin/addsubjects';
+$route['admin/allsubjects']='admin/allsubjects';
 
 //routes for login and signup
 $route['default_controller'] = 'pages/view';

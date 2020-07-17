@@ -27,12 +27,15 @@
     <link rel="stylesheet" href="<?php echo base_url();?>adminassets/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>adminassets/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <!-- Modernize js -->
     <script src="<?php echo base_url();?>adminassets/js/modernizr-3.6.0.min.js"></script>
     <!-- jquery-->
     <script src="<?php echo base_url();?>adminassets/js/jquery-3.3.1.min.js"></script>
       <!-- Student Table Area End Here -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 </head>
 
 <body>

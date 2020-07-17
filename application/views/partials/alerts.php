@@ -34,3 +34,13 @@
                                                 </p>';?>
                                         <?php
                                         endif;?>        
+
+                                        <?php if($this->session->flashdata('login_failed')):?>
+                                        <?php echo
+                                        '<p class="alert alert-danger alert-dismissible " role="alert">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                       
+                                            '.$this->session->flashdata('login_failed').'
+                                                </p>';?>
+                                        <?php
+                                        endif;?>              

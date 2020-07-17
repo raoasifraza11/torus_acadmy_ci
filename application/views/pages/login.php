@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="row">
                                 <div class=" col-sm-12 text-center">
-                              <a href="studentlogin.php" class="btn btn-primary">Student Log in</a>
+                              <a href="<?php echo base_url()?>students/login" class="btn btn-primary">Student Log in</a>
                                 </div>
                                         </div>        
                         

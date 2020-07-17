@@ -33,5 +33,26 @@
                 $this->db->update($table,$data_form);
                 return true;
             }
+            
+            //delete teacher
+            public function deleteTeacher($table,$id){
+                $this->db->where('id',$id);
+                $this->db->delete($table);
+                return true;
+
+            }
+
+            //make teacher active
+            public function activeTeacher($table,$data_form,$id){
+                $this->db->where('id',$id);
+                $this->db->update($table,$data_form);
+                return true;
+            }
+             //make teacher inactive
+             public function inactiveTeacher($table,$data_form,$id){
+                $this->db->where('id',$id);
+                $this->db->update($table,$data_form);
+                return true;
+            }
         }
 ?>

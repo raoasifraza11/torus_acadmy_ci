@@ -44,9 +44,9 @@
                                     class="flaticon-books"></i><span>Subjects</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                <a href="all_subject.php" class="nav-link"><i class="fas fa-angle-right"></i>
+                                <a href="<?php echo base_url();?>admin/allsubjects" class="nav-link"><i class="fas fa-angle-right"></i>
                                         Subjects</a>
-                                    <a href="add_subject.php" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                    <a href="<?php echo base_url();?>admin/addsubjects" class="nav-link"><i class="fas fa-angle-right"></i>Add
                                         Subjects</a>
                                 </li>
                             </ul>

@@ -3,7 +3,10 @@
     class Students extends CI_Controller{
         //student registration
         public function register(){
-            
+                         //check login
+                         if($this->session->userdata('logged_in')){
+                            redirect('students/login');
+                        }
            //validations
                 $this->form_validation->set_rules('fname','First Name','required');
                 $this->form_validation->set_rules('lname','Last Name','required');
@@ -60,4 +63,61 @@
                     }
         }
         //end student registration
+
+        public function login(){
+            //validations
+            $this->form_validation->set_rules('email','Email','required');
+            $this->form_validation->set_rules('password','Password','required');
+            if($this->form_validation->run()===FALSE){
+                $this->load->view('templates/header');
+                $this->load->view('students/login');
+                $this->load->view('templates/footer');
+
+            }
+            else{
+                
+                //Get email
+                $username=$this->input->post('email');
+                //Get and encrypt password
+                $password=md5($this->input->post('password'));
+                //login user
+                $student_id=$this->student_model->login('student',$username,$password);
+                if($student_id){
+                    //create session
+                   $student_data=array(
+                       'student_id'=>$student_id,
+                       'email'=>$email,
+                       'logged_in'=>true
+                   );
+                   $this->session->set_userdata($student_data);
+                   
+            // $this->session->set_flashdata('user_logged_in','You are now logged in!');
+             redirect('students/test');
+
+                }
+                else{
+                    //error
+             $this->session->set_flashdata('login_failed','**Login error**');
+             redirect('students/login');
+
+                }
+
+        }
+  
     }
+       //logout user
+       public function logout(){
+        //unset user data
+        $this->session->unset_userdata('logged_in');
+        $this->session->unset_userdata('student_id');
+        $this->session->unset_userdata('email');
+                 
+        $this->session->set_flashdata('user_logged_out','You are now logged out!');
+        redirect('students/login');
+    }
+    
+    public function test(){
+        $this->load->view('templates/header');
+        print_r($this->session->userdata());
+    }
+}

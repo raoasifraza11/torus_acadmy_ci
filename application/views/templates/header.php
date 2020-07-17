@@ -70,6 +70,16 @@
                                   <li class="btn btn-default"><a title="Logout" href="teacherlogout.php">Logout</a></li>
                                  -->
                             </ul>
+                            <?php if($this->session->userdata('logged_in')):?>
+                                <ul class="nav navbar-nav navbar-right">
+
+                                <li class="btn btn-default"><a title="Logout" href="<?php echo base_url();?>students/logout">LOG OUT</a></li>   
+                                <!--  
+                                 <li class="btn btn-default"><a title="Logout " href="studentlogout.php">Logout</a></li>
+                                  <li class="btn btn-default"><a title="Logout" href="teacherlogout.php">Logout</a></li>
+                                 -->
+                            </ul>
+                            <?php endif;?>
                             <!-- end dropdown -->
                         </div>
                         <!--/.nav-collapse -->
