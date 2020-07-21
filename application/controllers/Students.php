@@ -77,11 +77,11 @@
             else{
                 
                 //Get email
-                $username=$this->input->post('email');
+                $email=$this->input->post('email');
                 //Get and encrypt password
                 $password=md5($this->input->post('password'));
                 //login user
-                $student_id=$this->student_model->login('student',$username,$password);
+                $student_id=$this->student_model->login('student',$email,$password);
                 if($student_id){
                     //create session
                    $student_data=array(
@@ -91,8 +91,8 @@
                    );
                    $this->session->set_userdata($student_data);
                    
-            // $this->session->set_flashdata('user_logged_in','You are now logged in!');
-             redirect('students/test');
+             $this->session->set_flashdata('user_logged_in','You are now logged in!');
+             redirect('students/profilestudent');
 
                 }
                 else{
@@ -116,8 +116,45 @@
         redirect('students/login');
     }
     
-    public function test(){
+    //profile of student for selection of subjects and teachers
+    public function profilestudent(){
+        $email=$this->session->userdata('email');
+        $data['student']=$this->student_model->getStudents('student',$email);
+        $data['classes']=$this->class_model->getClasses('class');
+        $data['student_teacher']=$this->student_model->getStudentTeacher('student_teacher',$this->session->userdata('student_id'));
         $this->load->view('templates/header');
-        print_r($this->session->userdata());
+        $this->load->view('students/profilestudent',$data);
+        $this->load->view('templates/footer');
+        
+    }
+    public function selectTeacher(){
+        $subject_id=$this->input->post('subject');
+
+        $data['teachers']=$this->teacher_model->getTeachers('teacher',$subject_id);
+        $this->load->view('templates/header');
+        $this->load->view('students/select-teachers',$data);
+        $this->load->view('templates/footer');
+
+    }
+    //for according to class show subject
+    public function fetchsubject(){
+        $class_id=$this->input->post('class_id');
+        if($class_id){
+            echo $this->subject_model->showSubjects('subjects',$class_id);
+        }
+    }
+
+    public function addteachers($teacher_id,$teacher_name){
+        //getting values from form
+       $data_form['student_id']=$this->session->userdata('student_id');
+       $data_form['teacher_id']=$teacher_id;
+        $data_form['teacher_name']=$teacher_name;
+
+        //calling function
+        $this->student_model->addTeachers('student_teacher',$data_form);
+        $this->session->set_flashdata('teacher_added','You have selected'.' '.''.$teacher_name.'');
+        $subject_id=$this->session->userdata('subject_id');
+        redirect('students/profilestudent');
+
     }
 }

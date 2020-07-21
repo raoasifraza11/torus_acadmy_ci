@@ -14,8 +14,13 @@
             }
 
             //get all teachers
-            public function getTeachers($table){
+            public function getTeachers($table,$subject_id=FALSE){
+                if($subject_id==FALSE){
                 
+                $query=$this->db->get($table);
+                return $query->result_array();
+                }
+                $this->db->where('subject_id',$subject_id);
                 $query=$this->db->get($table);
                 return $query->result_array();
             }

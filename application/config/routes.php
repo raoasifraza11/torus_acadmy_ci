@@ -53,7 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //student routes
 $route['students/register']='students/register';
 $route['students/login']='students/login';
-$route['students/test']='students/test';
+$route['students/profilestudent']='students/profilestudent';
+//$route['students/select-teachers/(:any)/(:any)']='students/selectTeacher/$1/$2';
 
 
 //teacher routes

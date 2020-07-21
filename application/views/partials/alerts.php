@@ -43,4 +43,24 @@
                                             '.$this->session->flashdata('login_failed').'
                                                 </p>';?>
                                         <?php
-                                        endif;?>              
+                                        endif;?>      
+
+                                           <?php if($this->session->flashdata('user_logged_in')):?>
+                                        <?php echo
+                                        '<p class="alert alert-success alert-dismissible " role="alert">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                       
+                                            '.$this->session->flashdata('user_logged_in').'
+                                                </p>';?>
+                                        <?php
+                                        endif;?>      
+                                        
+                                        <?php if($this->session->flashdata('teacher_added')):?>
+                                        <?php echo
+                                        '<p class="alert alert-success alert-dismissible " role="alert">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                       
+                                            '.$this->session->flashdata('teacher_added').'
+                                                </p>';?>
+                                        <?php
+                                        endif;?> 

@@ -26,9 +26,13 @@
                 }
             } 
             //get students
-            public function getStudents($table){
+            public function getStudents($table,$email=FALSE){
+                if($email==FALSE){
                     $query=$this->db->get($table);
                     return $query->result_array();
+                }
+                $query=$this->db->get_where($table,array('email'=>$email));
+                return $query->row_array();
               
             }
 
@@ -66,6 +70,20 @@
                 return true;
                 
             }
+            //add teachers
+            public function addTeachers($table,$form_data){
+                return $this->db->insert($table,$form_data);
+                
+            }
+            public function getStudentTeacher($table,$student_id){
+                $this->db->where('student_id',$student_id);
+                $query=$this->db->get($table);
+                return $query->result_array();
+
+            }
+
+
+          
 
            
     }

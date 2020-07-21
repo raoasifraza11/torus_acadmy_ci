@@ -62,6 +62,7 @@
                         </div>
                         <!-- end navbar header -->
                         <div id="navbar" class="navbar-collapse collapse">
+                        <?php if(!$this->session->userdata('logged_in')):?>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="btn btn-default"><a title="Login Teacher" href="<?php echo base_url();?>signup">SIGN UP</a></li>  
                                 <li class="btn btn-default"><a title="Login Teacher" href="<?php echo base_url();?>login">LOG IN</a></li>   
@@ -70,6 +71,7 @@
                                   <li class="btn btn-default"><a title="Logout" href="teacherlogout.php">Logout</a></li>
                                  -->
                             </ul>
+                            <?php endif;?>
                             <?php if($this->session->userdata('logged_in')):?>
                                 <ul class="nav navbar-nav navbar-right">
 
