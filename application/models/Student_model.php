@@ -35,7 +35,6 @@
                 return $query->row_array();
               
             }
-
             //view student
             public function viewStudent($id,$table){
                 $query=$this->db->get_where($table,array('id'=>$id));
@@ -70,20 +69,23 @@
                 return true;
                 
             }
-            //add teachers
+            //selected teachers added in db
             public function addTeachers($table,$form_data){
                 return $this->db->insert($table,$form_data);
                 
             }
+            //get teachers selected ny student
             public function getStudentTeacher($table,$student_id){
                 $this->db->where('student_id',$student_id);
                 $query=$this->db->get($table);
                 return $query->result_array();
 
             }
+            //remove teacher 
+            public function removeTeacher($table,$teacher_id){
+                $this->db->where('teacher_id',$teacher_id);
+                $this->db->delete($table);
+                return true;
+            }
 
-
-          
-
-           
     }

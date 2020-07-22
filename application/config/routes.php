@@ -59,6 +59,8 @@ $route['students/profilestudent']='students/profilestudent';
 
 //teacher routes
 $route['teachers/register']='teachers/register';
+$route['teachers/login']='teachers/login';
+$route['teachers/profileteacher']='teachers/profileteacher';
 
 //admin routes
 $route['admin']='admin/index';
@@ -71,8 +73,12 @@ $route['admin/allteachers']='admin/allteachers';
 $route['admin/profileteacher/(:any)']='admin/viewteacher/$1';
 $route['admin/editteacher/(:any)']='admin/editteacher/$1';
 $route['admin/updateteacher']='admin/updateteacher';
+
 $route['admin/addsubjects']='admin/addsubjects';
 $route['admin/allsubjects']='admin/allsubjects';
+
+$route['admin/addgroups']='admin/addgroups';
+$route['admin/allgroups']='admin/allgroups';
 
 //routes for login and signup
 $route['default_controller'] = 'pages/view';

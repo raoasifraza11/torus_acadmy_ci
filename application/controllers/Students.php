@@ -14,7 +14,7 @@
                 $this->form_validation->set_rules('location','Location ','required');
                 $this->form_validation->set_rules('guardian_name','Guardian Name','required');
                 $this->form_validation->set_rules('phone','Phone Number ','required');
-                $this->form_validation->set_rules('psd','Password is ','required');
+                $this->form_validation->set_rules('psd','Password is ','required|min_length[8]');
                 $this->form_validation->set_rules('cpsd','Confirm Password','matches[psd]');
                
                     if($this->form_validation->run()===FALSE)
@@ -57,8 +57,9 @@
                             
                                 //calling function
                                 $this->student_model->registerStudent('student',$data_form);
-                                $this->session->set_flashdata('student_registered','You are now registered!');
-                                redirect('students/register');
+                                $this->session->set_flashdata('student_registered','You are now registered! Log in Now');
+
+                                redirect('students/login');
                         
                     }
         }
@@ -67,15 +68,14 @@
         public function login(){
             //validations
             $this->form_validation->set_rules('email','Email','required');
-            $this->form_validation->set_rules('password','Password','required');
+            $this->form_validation->set_rules('password','Password','required|min_length[8]x');
             if($this->form_validation->run()===FALSE){
                 $this->load->view('templates/header');
                 $this->load->view('students/login');
                 $this->load->view('templates/footer');
 
             }
-            else{
-                
+            else{   
                 //Get email
                 $email=$this->input->post('email');
                 //Get and encrypt password
@@ -118,9 +118,15 @@
     
     //profile of student for selection of subjects and teachers
     public function profilestudent(){
+        //get email from session
         $email=$this->session->userdata('email');
+        //calling function to get student data
         $data['student']=$this->student_model->getStudents('student',$email);
+        //bring class model
         $data['classes']=$this->class_model->getClasses('class');
+        //bring groups model
+        $data['groups']=$this->group_model->getGroups('groups');
+        //get record of teaher in profile page
         $data['student_teacher']=$this->student_model->getStudentTeacher('student_teacher',$this->session->userdata('student_id'));
         $this->load->view('templates/header');
         $this->load->view('students/profilestudent',$data);
@@ -128,9 +134,11 @@
         
     }
     public function selectTeacher(){
+        //subject id for less then 5
         $subject_id=$this->input->post('subject');
-
-        $data['teachers']=$this->teacher_model->getTeachers('teacher',$subject_id);
+        //group id for greater then 5
+        $group_id=$this->input->post('group');
+        $data['teachers']=$this->teacher_model->getTeachers('teacher',$subject_id,$group_id);
         $this->load->view('templates/header');
         $this->load->view('students/select-teachers',$data);
         $this->load->view('templates/footer');
@@ -144,17 +152,26 @@
         }
     }
 
-    public function addteachers($teacher_id,$teacher_name){
+    public function addteachers($teacher_id,$teacher_name,$teacher_fess){
         //getting values from form
        $data_form['student_id']=$this->session->userdata('student_id');
        $data_form['teacher_id']=$teacher_id;
         $data_form['teacher_name']=$teacher_name;
-
+        $data_form['teacher_fees']=$teacher_fess;
         //calling function
         $this->student_model->addTeachers('student_teacher',$data_form);
+           //session message
         $this->session->set_flashdata('teacher_added','You have selected'.' '.''.$teacher_name.'');
         $subject_id=$this->session->userdata('subject_id');
         redirect('students/profilestudent');
+    }
 
+    public function removeteacher($teacher_id){
+        //calling function
+        $this->student_model->removeTeacher('student_teacher',$teacher_id);
+        //session message
+        $this->session->set_flashdata('remove_teacher','Teacher removed successfully!');
+        //redirect
+        redirect('students/profilestudent');
     }
 }

@@ -51,6 +51,18 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class=" flaticon-classmates"></i><span>Groups</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                <a href="<?php echo base_url();?>admin/allgroups" class="nav-link"><i class="fas fa-angle-right"></i>
+                                        Groups</a>
+                                    <a href="<?php echo base_url();?>admin/addgroups" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                        Groups</a>
+                                </li>
+                            </ul>
+                        </li>
                         
 						<li class="nav-item">
                             <a href="payment.php" class="nav-link"><i

@@ -9,12 +9,12 @@
             <div class="dashboard-content-one">
                 <!-- Breadcubs Area Start Here -->
                 <div class="breadcrumbs-area">
-                    <h3>Subjects</h3>
+                    <h3>Groups</h3>
                     <ul>
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li>All Subjects</li>
+                        <li>All Groups</li>
                     </ul>
                 </div>
                 <!-- Breadcubs Area End Here -->
@@ -23,29 +23,29 @@
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title">
-                                <h3>All Subjects</h3>
+                                <h3>All Groups</h3>
                             </div>
-                           
+                         
                         </div>
                       
                         <div class="table-responsive">
                             <table class="table display data-table text-nowrap">
                                 <thead>
                                     <tr>
-                                       
-                                        <th>Subject Name</th>
                                      
+                                        <th>Group Name</th>
+                                       
                                         <th>Teacher Name</th>
                                     </tr>
                                 </thead>
                                 <?php
-                                    foreach($subjects as $subject):?>
+                                    foreach($groups as $group):?>
                                     <tr>
                                       
-                                    
-                                        <td class="text-capitalize"><?= $subject['name']?></td>
-                                       
-                                        <td class="text-capitalize"><?= $subject['fname'].' '.$subject['lname']?></td>
+                                      
+                                        <td class="text-capitalize"><?= $group['group_name']?></td>
+                                      
+                                        <td class="text-capitalize"><?= $group['fname'].' '.$group['lname']?></td>
                                         <?php
                                         endforeach;?>
                                     </tr>
@@ -60,7 +60,7 @@
       <script>
  $('table').DataTable(
     {
-      order: [0,'desc'],
+      order: [0,'asc'],
       responsive: true
     
     }

@@ -24,17 +24,8 @@
                             <div class="item-title">
                                 <h3>All Teachers Data</h3>
                             </div>
-                            <div id="alerts"></div>
-                           <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" 
-                                data-toggle="dropdown" aria-expanded="false">...</a>
-        
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                </div>
-                            </div>
+                         
+                        
                         </div>
                         
                         <!--loading alerts-->
@@ -44,12 +35,7 @@
                             <table class="table display data-table text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th> 
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input checkAll">
-                                                <label class="form-check-label">ID</label>
-                                            </div>
-                                        </th>
+                                       
                                         <th>Photo</th>
                                         <th>Name</th>
                                         <th>Gender</th>
@@ -66,12 +52,7 @@
                                   foreach($teachers as $teacher):
                                   ?>                                      
                                     <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">#0021</label>
-                                            </div>
-                                        </td>
+                                     
                                         <td class="text-center"><img src="<?php echo base_url();?>assets/uploads/teachers/<?= $teacher['profile_img']?>" width="70" height="20" alt="teacher"></td>
                                         <td class="text-capitalize"><?= $teacher['fname'].' '.$teacher['lname']?></td>
                                         <td class="text-capitalize"><?= $teacher['gender']?></td>

@@ -216,4 +216,36 @@
                 redirect('admin/allsubjects');
             }
         }
+        //END SUBJECT PANEL
+
+        //START GROUP PANEL
+
+        public function allgroups(){
+           $data['groups']=$this->group_model->getGroups('groups');
+           $this->load->view('admintemplates/header');
+           $this->load->view('admin/allgroups',$data);
+           $this->load->view('admintemplates/footer');
+        }
+        
+        public function addgroups(){
+              //bring teacher model to show all teachers in select box
+           $data['teachers']=$this->teacher_model->getTeachers('teacher');
+           //validations
+           $this->form_validation->set_rules('group_name','Group Name','required');
+           $this->form_validation->set_rules('teacher',' Teacher','required');
+           if($this->form_validation->run()===FALSE){
+            $this->load->view('admintemplates/header');
+            $this->load->view('admin/addgroups',$data);
+            $this->load->view('admintemplates/footer');
+           }
+           else{
+            $data_form['group_name']=$this->input->post('group_name');
+            $data_form['teacher_id']=$this->input->post('teacher');
+            $this->group_model->addGroups('groups',$data_form);
+            redirect('admin/allgroups');
+           }
+            
+        }
+
+       
     }

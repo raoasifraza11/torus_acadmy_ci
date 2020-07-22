@@ -64,7 +64,7 @@
                                         </div>
                                         <div class="row">
                                 <div class=" col-sm-12 text-center">
-                              <a href="teacherlogin.php" class="btn btn-primary">Teacher Log in</a>
+                              <a href="<?php echo base_url()?>teachers/login" class="btn btn-primary">Teacher Log in</a>
                                 </div>
                                         </div>
                                    

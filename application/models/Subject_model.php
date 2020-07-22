@@ -9,6 +9,7 @@
             //show all subjects
             public function showSubjects($table,$class_id=FALSE){
                 if($class_id==FALSE){
+                $this->db->join('teacher','teacher.id=subjects.teacher_id');
                 $query=$this->db->get($table);
                 return $query->result_array();
                 }

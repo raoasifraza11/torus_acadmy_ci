@@ -157,61 +157,19 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-12 col-md-12">
-										<label>Select Class Or Subject : </label>
-										<input type="radio" name="demo" value="Two"/> Select Class
-										<input type="radio" name="demo" value="Three"/> Select Subject
-										
-										<div id="showTwo" class="myDiv">
-											<div class="rows">
-												<div class="col-sm-6 col-md-6">
-													<label>Select Class</label>
-													<div class="form-group">
-														<select class="form-control" name="class">
-															<option value="1">1</option>
-															<option value="2">2</option>
-															<option value="3">3</option>
-															<option value="4">4</option>
-															
-														</select>
-													</div>
-												</div>
-												<div class="col-sm-6 col-md-6">
-													<label>Select  Time</label>
-														<select class="form-control" name="time">
-															<option value="00:00">00:00</option>
-															<option value="00:15">00:15</option>
-															<option value="00:30">00:30</option>
-															<option value="00:45">00:45</option>
-															<option value="01:00">01:00</option>
-															<option value="01:15">01:15</option>
-															<option value="01:30">01:30</option>
-															<option value="01:45">01:45</option>
-														</select>
-												</div>
-											</div>
-										</div>
-										
-										<div class="row">
-											<div id="showThree" class="myDiv">
-												<div class="row">
-													<div class="col-sm-12 col-md-12">
-														<label>Select Subject</label>
-														<div class="form-group">
-															<select id='testSelect1' class="form-control" name="subjects" multiple>
-																<option value='1'>English</option>
-																<option value='2' selected>Chemistry</option>
-																<option value='3' selected>Biology</option>
-																<option value='4'>Computer</option>
-																<option value='5'>Physics</option>
-															</select>
-															
-														</div>
-													</div>
-												</div>
-											</div>
+										<label>Select Subject</label>
+										<div class="form-group">
+											<select  class="form-control" name="subjects" >
+												<option value=''>Select Subject</option>
+												<?php foreach($subjects as $subject):?>
+												
+												<option value="<?= $subject['id']?>"><?=$subject['name']?>
+												<?php
+												endforeach;?>
+											</select>
+											
 										</div>
 									</div>
-									
 								</div>
 								<div class="row">
 									<div class="col-sm-12 col-md-12">

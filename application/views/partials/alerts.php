@@ -53,6 +53,15 @@
                                             '.$this->session->flashdata('user_logged_in').'
                                                 </p>';?>
                                         <?php
+                                        endif;?>  
+                                         <?php if($this->session->flashdata('user_logged_out')):?>
+                                        <?php echo
+                                        '<p class="alert alert-success alert-dismissible " role="alert">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                       
+                                            '.$this->session->flashdata('user_logged_out').'
+                                                </p>';?>
+                                        <?php
                                         endif;?>      
                                         
                                         <?php if($this->session->flashdata('teacher_added')):?>
@@ -61,6 +70,15 @@
                                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                        
                                             '.$this->session->flashdata('teacher_added').'
+                                                </p>';?>
+                                        <?php
+                                        endif;?> 
+                                         <?php if($this->session->flashdata('remove_teacher')):?>
+                                        <?php echo
+                                        '<p class="alert alert-danger alert-dismissible " role="alert">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                       
+                                            '.$this->session->flashdata('remove_teacher').'
                                                 </p>';?>
                                         <?php
                                         endif;?> 

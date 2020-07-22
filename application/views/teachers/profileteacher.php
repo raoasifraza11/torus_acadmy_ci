@@ -43,100 +43,66 @@
                 <!-- end page-title -->
             </div>
             <div class="section">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
-                      
                         <div class="col-md-12 col-sm-12">
-                      
-                        <?php
-                        $this->load->view('partials/alerts');?>
-                        <?php if(!$teachers):?>
-                            <h3 style="margin-bottom:50px;" class="text-center">No teachers !!</h3>
-                        <?php else:?>
                             <div class="about-widget clearfix">
                                 <div class="widget-title">
                                     <h3>About Me</h3>
                                     <hr>
                                 </div><!-- end title -->
                                 <div class="row">
-                                    <?php foreach($teachers as $teacher):?>
-                                    <div class="col-md-3 col-sm-12"   style="margin-bottom:70px;" >
-                                    <hr>
+                                    <div class="col-md-3 col-sm-12">
                                         <div class="team-member-img text-center">
                                             <img src="<?php echo base_url();?>assets/uploads/teachers/<?= $teacher['profile_img']?>" alt="team member img" class="img-responsive">
                                             <br>
-                                        </div>
-                                    </div><!-- end col -->
-                                    <hr>
-
-                                    <div class="col-md-9 col-sm-12"   style="margin-bottom:70px;">
-                                        <div class="team-member-name">
-                                            <p><?= $teacher['fname'].' '.$teacher['lname']?></p>
-                                            <span>Teacher</span>
                                           
                                         </div>
+                                    </div><!-- end col -->
+
+                                    <div class="col-md-9 col-sm-12">
+                                        <div class="team-member-name">
+                                            <p><?= $teacher['fname']?></p>
+                                            <span>Teacher</span>
+                                        </div>
                                         <p>
-                                                <?= $teacher['description']?>
-                                            </p>
+                                      
+                                        </p>
                                         <hr class="invis">
                                         <div class="widget-title">
                                             <h3>Basic Info</h3>
                                             <hr>
                                         </div><!-- end title -->
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <h4>
-                                                    Gender
-                                                </h4>
-                                                <p><?= $teacher['gender']?></p>
-                                                <h4>
-                                                    Date of birth
-                                                </h4>
-                                                <p><?= $teacher['dob']?></p>
 
-                                            </div>
-                                            <div class="col-md-4">
-                                            <h4>
-                                                    Email
-                                                </h4>
-                                                <p><?= $teacher['email']?></p>
-                                                <h4>
-                                                Phone
-                                                </h4>
+                                        <ul >
+                                        <li><h4>Location</h4>
+                                               <p><?= $teacher['location']?></p>
+                                            </li>
+                                            <li><h4>Email</h4>
+                                               <p><?= $teacher['email']?></p>
+                                            </li>
+                                            
+                                            <li><h4>Phone</h4>
                                                <p><?= $teacher['phno']?></p>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                            <h4>
-                                                   Youtube Link 
-                                                </h4>
-                                                <a href="<?= $teacher['link']?>"><?= $teacher['link']?></a>
-                                            <h4>
-                                                    Certification
-                                                </h4>
-                                                <p><?= $teacher['certificates']?></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group text-center" style="margin-top:15px;">
-                                        <a  href="<?php echo base_url('/students/addteachers/'.$teacher['id'].'/'.$teacher['fname'].''.$teacher['lname'].'/'.$teacher['fees']);?>" class="btn btn-default " >
-                                      Select
-                                    </a>
-                                        </div>    
+                                            </li>
+                                            <li><h4>Link</h4>
+                                            <a href="<?= $teacher['link']?>">
+                                            <?= $teacher['link']?>                                          
+                                            </li>
+                                            
+                                        </ul>
                                     </div><!-- end col -->
-                                </div><!-- end row -->   
-                                <?php 
-                                    endforeach;?>   
+                                </div><!-- end row -->      
                             </div><!-- end widget -->
                         </div><!-- end col -->
-                        
-                            </div><!-- end about-widget -->
-                        </div><!-- end col -->
+                      <!-- end col -->
                     </div><!-- end row -->
-                    <?php
-                    endif;?>
                 </div><!-- end container -->
             </div><!-- end section -->
 </div>    
+    <!-- end wrapper -->
+
+
     <!-- ******************************************
     /END SITE
     ********************************************** -->
@@ -146,6 +112,8 @@
     ********************************************** -->
     <script src="js/all.js"></script>
     <script src="js/custom.js"></script>
+   
+    
+ 
 </body>
-
 </html>

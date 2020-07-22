@@ -89,14 +89,26 @@
                                 </div><!-- end row -->      
                             </div><!-- end widget -->
                         </div><!-- end col -->
+                       
                         <div class="col-md-5 col-sm-12 m30">
-                               
                         <!--loading alerts-->
                         <?php
                         $this->load->view('partials/alerts');?>
+                          <?php if(!$student_teacher):?>
+                      <div class="widget-title">
+                                    <h3>Choose Your Class!</h3>
+                                    <hr>
+                                </div><!-- end title -->
+                        <label class="radio-inline"><input type="radio" id="less-then-5-btn" name="less-then-5-btn" checked >Less then 5</label>
+                        <label class="radio-inline"><input type="radio" id="greater-then-5-btn" name="greater-then-5-btn">Greater then 5</label>
+                     
+                        
+                         <!--less the 5-->
+                        <div id="less-then-5">
                             <div>
                                 <div class="widget-title">
-                                    <h3>Select Class</h3>
+                              
+                                    <h3  style="margin-top:30px;">Select Class</h3>
                                     <hr>
                                 </div><!-- end title -->
                                 <div class="defaultform">
@@ -111,8 +123,6 @@
                                                         </div>
                                 </div>
                             </div>
-                         
-                                <?php if(!$student_teacher):?>
                                     <div class="widget-title">
                                     <h3>Select Subjects</h3>
                                     <hr>
@@ -121,41 +131,85 @@
                                    <?php echo form_open('students/selectTeacher')?>      
                                         <div class="form-group" >
                                         <select id="subject" class="form-control" name="subject" placeholder="Select Subjects" required>
-                                                                </select>
+                                                </select>
                                                         </div>
-                                                        <div class="form-group">
-                                                        <input type="submit" value="SELECT TEACHERS" id="submit" class="btn btn-primary">
+                                <div class="form-group">
+                                <input type="submit" value="SELECT TEACHERS" id="submit" class="btn btn-primary">
+                                                    </div>
+                                                             </form> 
+                                                                 </div>
+                        </div> <!--end less then 5-->
+                        <div id="greater-then-5" style="display: none;">
+                            <div>
+                                <div class="widget-title">
+                                    <h3 style="margin-top:30px;">Select Group</h3>
+                                    <hr>
+                                </div><!-- end title -->
+                                <div class="defaultform">
+                                    <?php echo form_open('students/SelectTeacher')?>
+                                        <div class="form-group" >
+                                    <select class="form-control" name="group" placeholder="Select Group" id="group">
+                                    <option value="">Select group</option>
+                                    <?php foreach($groups as $group):?>
+                                    <option value="<?= $group['g_id']?>"><?= $group['group_name']?>
+															
+                                    <?php endforeach;?>		
+                                                            </select>                                                           
                                                         </div>
-                                                       
-                                    </form> 
-                                </div>
-                                <div class="row">
-                                
-                                <?php else:
-                                
-                                    foreach($student_teacher as $st):
-                                    ?>
-                                    <h3>Teachers selected</h3>
-                                    <div class="col-md-4">
-                                    <h5><?= $st['teacher_name']?></h5>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a href="" class="btn btn-default">Change</a>
-                                    </div>
-                                  
-                                   
-                                    <?php
-                                    
-                                endforeach;
-                            endif;?>
-                                </div>
+                                 <div class="form-group">
+                                <input type="submit" value="SELECT TEACHERS" id="submit" class="btn btn-primary">
+                                                    </div>
+                                                </form>
+                                                            </div>
+                                                                </div>
+                                                                    </div>
                                
-                            </div><!-- end about-widget -->
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div><!-- end section -->
-</div>    
+                             
+                                                </div>
+                                                        </div> <!--end less then 5-->
+                                                            </div><!-- end about-widget and end less then 5 -->
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                    <div class="row">
+                                <?php else:
+                                ?>
+                                <h3 style="margin-top:15px;">Teachers selected</h3>
+                                    <hr>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                            <th>Teacher Name</th>
+                                            <th>Fees</th>
+                                            <th></th>
+                                            </tr>                                          
+                                        </thead>
+                                        <tbody>
+                                                 <?php
+                                             foreach($student_teacher as $st):
+                                                     ?>
+                                            <tr> 
+                                            <td class="text-capitalize"><?= $st['teacher_name']?></td>
+                                            <td><?= $st['teacher_fees']?></td>
+                                            <td><a href="<?php echo base_url('/students/removeteacher/'.$st['teacher_id']);?>" class="btn btn-primary btn-sm">Remove</a></td>
+                                                            <?php
+                                                endforeach;
+                                                ?>
+                                              </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="form-group text-center">
+                                    <a href="" class="btn btn-default">
+                                       Pay now
+                                    </a>
+
+                                    </div>
+
+                                                <?php     
+                                        endif;?>
+                                </div>
+                                                </div><!-- end container -->
+                                            </div><!-- end section -->
+                                </div>    
     <!-- ******************************************
     /END SITE
     ********************************************** -->
@@ -166,6 +220,19 @@
     <script src="js/all.js"></script>
     <script src="js/custom.js"></script>
 </body>
+<!--script for hiding and showing less then 5 and greater then 5-->
+<script>
+    $(document).ready(function(){
+    $("#greater-then-5-btn").click(function(){
+    $("#less-then-5").hide();
+    $("#greater-then-5").show(500);
+});
+$("#less-then-5-btn").click(function(){
+    $("#greater-then-5").hide();
+    $("#less-then-5").show(500);
+});
+    });
+</script>
 <script>
 $(document).ready(function(){
 $('#class').change(function(){
@@ -182,24 +249,7 @@ $('#class').change(function(){
         });
     }
 });
-/*($('#subject').change(function(){
-    var subject_id=$("#subject").val();
-    if(subject_id!=''){
-        $.ajax({
-            url:"<?php echo base_url();?>Students/fetchteacher",
-            method:"POST",
-            data:{subject_id:subject_id},
-            success:function(response){
-                $('#teacher').html(response);
-              
-             
-            }
-            
-        });
-
-    }
-
-});*/
 });
+    
 </script>
 </html>
