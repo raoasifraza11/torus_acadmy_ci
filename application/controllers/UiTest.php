@@ -7,16 +7,16 @@ class UiTest extends TTT_Controller
         parent::__construct();
     }
 
-public function uuid(){
-//    	$data["ad"]=1;
-	$user_id=$this->Crud_model->insert('users',null);
 
-}
     public function index()
     {
         $this->slice->view('backend.index');
     }
+	public function uuid(){
+//    	$data["ad"]=1;
+		$user_id=$this->Crud_model->insert('users',null);
 
+	}
 
 //     public function view_users()
 //     {
