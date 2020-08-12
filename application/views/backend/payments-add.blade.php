@@ -1,0 +1,170 @@
+@extends('backend.includes.base')
+@section('title', 'Torus Academy - Add Payment')
+@section('_pageTitle')
+
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center ">
+        <div class="header-action">
+            <h1 class="page-title">Fees</h1>
+            <ol class="breadcrumb page-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Torus Academy</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Fees</li>
+            </ol>
+        </div>
+        <ul class="nav nav-tabs page-header-tab">
+            <li class="nav-item"><a class="nav-link" href="payments.html">List</a></li>
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Fees-add">Add Fees</a></li>
+        </ul>
+    </div>
+</div>
+
+
+@endsection
+
+@section('content')
+
+
+<div class="container-fluid">
+    <div class="tab-content">
+        <div class="tab-pane active" id="Fees-add">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Add Payments</h3>
+
+                </div>
+                <form class="card-body">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Roll No <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Student Name <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Department/Class <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <select class="form-control" name="select">
+                                <option value="">Select...</option>
+                                <option value="1">Mathematics</option>
+                                <option value="">Engineering</option>
+                                <option value="">Science</option>
+                                <option value="">M.B.A.</option>
+                                <option value="">Music</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Teacher <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <select class="form-control" name="select">
+                                <option value="">Select...</option>
+                                <option value="1">Nadeem Amin</option>
+                                <option value="">Naeem Amin</option>
+                                <option value="">Waseem</option>
+                                <option value="">Asif Raza</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Fees Type <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <select class="form-control" name="selectType">
+                                <option value="">Select...</option>
+                                <option value="Category 1">Annual</option>
+                                <option value="Category 2">Tuition</option>
+                                <option value="Category 3">Transport</option>
+                                <option value="Category 3">Exam</option>
+                                <option value="Category 3">Library</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Payment Duration <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <div class="custom-controls-stacked">
+                                <label class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked="">
+                                    <span class="custom-control-label">Monthly</span>
+                                </label>
+                                <label class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                                    <span class="custom-control-label">Session</span>
+                                </label>
+                                <label class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="example-inline-radios" value="option3">
+                                    <span class="custom-control-label">Yearly</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Collection Date <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Amount <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Payment Method <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <select class="form-control" name="select">
+                                <option value="">Select...</option>
+                                <option value="Category 1">Cash</option>
+                                <option value="Category 2">Cheque</option>
+                                <option value="Category 3">Credit Card</option>
+                                <option value="Category 4">Debit Card</option>
+                                <option value="Category 5">Netbanking</option>
+                                <option value="Category 6">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Payment Status <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <select class="form-control" name="select">
+                                <option value="">Select...</option>
+                                <option value="Category 1">Paid</option>
+                                <option value="Category 2">Unpaid</option>
+                                <option value="Category 3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Payment Reference No. <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Payment Details <span class="text-danger">*</span></label>
+                        <div class="col-md-7">
+                            <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label"></label>
+                        <div class="col-md-7">
+                            <a href="payments-receipt.html" class="btn btn-primary pull-right">Submit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@endsection
