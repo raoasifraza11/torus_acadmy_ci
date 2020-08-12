@@ -1,7 +1,13 @@
 @extends('frontend.includes.base')
 @section('title', 'Torus Academy - Courses')
 @section('_css')
-
+<style>
+    
+#index__page .section__courses:before
+{
+    background-color: #fff;
+}
+</style>
 @endsection
 
 @section('content')
@@ -20,7 +26,7 @@
 
                         <!-- Breadcrumbs -->
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ base_url('index1') }}">Home</a></li>
                             <li class="active">Courses</li>
                         </ol>
 
@@ -52,10 +58,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">Technology</span>
                             <h3>
-                                <a href="course-single.html">Flat design in web</a>
+                                <a href="{{ base_url('singleCourse') }}">Flat design in web</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -75,10 +81,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">Science</span>
                             <h3>
-                                <a href="course-single.html">Java: introduction</a>
+                                <a href="{{ base_url('singleCourse') }}">Java: introduction</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -98,10 +104,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">Training</span>
                             <h3>
-                                <a href="course-single.html">Ui / Ux training</a>
+                                <a href="{{ base_url('singleCourse') }}">Ui / Ux training</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -123,10 +129,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">History</span>
                             <h3>
-                                <a href="course-single.html">History of information</a>
+                                <a href="{{ base_url('singleCourse') }}">History of information</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -146,10 +152,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">Social</span>
                             <h3>
-                                <a href="course-single.html">Internet for people</a>
+                                <a href="{{ base_url('singleCourse') }}">Internet for people</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -169,10 +175,10 @@
                         <div class="course-item__content">
                             <span class="course-item__branch">Spelling</span>
                             <h3>
-                                <a href="course-single.html">Programming languages</a>
+                                <a href="{{ base_url('singleCourse') }}">Programming languages</a>
                             </h3>
                             <p class="course-item__desc">Lorem ipsum dolor sit amet, consetetur adipiscing elitsed do eius.</p>
-                            <a class="btn btn-primary" href="course-single.html">Choose course</a>
+                            <a class="btn btn-primary" href="{{ base_url('singleCourse') }}">Choose course</a>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>

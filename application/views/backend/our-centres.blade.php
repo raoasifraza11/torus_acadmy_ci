@@ -38,13 +38,13 @@
 
 @section('_js')
 
-<script src="./assets/bundles/lib.vendor.bundle.js"></script>
+
 
 <!-- Start Plugin Js -->
 <script src="./assets/bundles/jvectormap1.bundle.js"></script>
 
 <!-- Start project main js  and page js -->
-<script src="./assets/js/core.js"></script>
+
 <script src="./assets/js/map/map.js"></script>
 
 @endsection

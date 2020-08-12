@@ -54,7 +54,7 @@
                 </button>
 
                 <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ base_url('index1') }}">
                     Torus<span>.</span>
                     <!--<img class="img-responsvie" src="assets/img/torus-logo.png"  alt="Torus Academy">-->
                 </a>
@@ -64,15 +64,15 @@
             <!-- Links -->
             <div class="collapse navbar-collapse" id="navbar__collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="courses.html">Courses </a> </li>
-                    <li><a href="blog-grid.html">Blog </a> </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ base_url('index1') }}">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="{{ base_url('about') }}">About</a></li>
+                    <li><a href="{{ base_url('courses1') }}">Courses </a> </li>
+                    <li><a href="{{ base_url('blog') }}">Blog </a> </li>
+                    <li><a href="{{ base_url('contact') }}">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#signinModal" data-toggle="modal"><i class="ion-log-in"></i> Sign In</a></li>
-                    <li><a href="signup.html"><i class="ion-android-person"></i> Sign Up</a></li>
+                    <li><a href="{{ base_url('signup') }}"><i class="ion-android-person"></i> Sign Up</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
 
@@ -132,7 +132,7 @@
 
                                 <!-- Sign Up link -->
                                 <hr>
-                                <p>Not registered? <a href="signup.html">Create an Account.</a></p>
+                                <p>Not registered? <a href="{{ base_url('signup') }}">Create an Account.</a></p>
 
                                 <!-- Lost password form -->
                                 <p>
@@ -181,16 +181,16 @@
                 </div>
                 <div class="col-md-3 col-sm-4">
                     <ul class="footer-links__list">
-                        <li><a href="about.html"><i class="ion-ios-arrow-forward"></i> Home </a></li>
-                        <li><a href="courses.html"><i class="ion-ios-arrow-forward"></i> About us</a></li>
-                        <li><a href="blog.html"><i class="ion-ios-arrow-forward"></i> Courses</a></li>
+                        <li><a href="{{ base_url('index1') }}"><i class="ion-ios-arrow-forward"></i> Home </a></li>
+                        <li><a href="{{ base_url('about') }}"><i class="ion-ios-arrow-forward"></i> About us</a></li>
+                        <li><a href="{{ base_url('courses1') }}"><i class="ion-ios-arrow-forward"></i> Courses</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-4">
                     <ul class="footer-links__list">
                         <li><a href="courses.html"><i class="ion-ios-arrow-forward"></i> Terms & Conditions</a></li>
                         <li><a href="blog.html"><i class="ion-ios-arrow-forward"></i> Privacy Policy</a></li>
-                        <li><a href="contact.html"><i class="ion-ios-arrow-forward"></i> Contact us</a></li>
+                        <li><a href="{{ base_url('contact') }}"><i class="ion-ios-arrow-forward"></i> Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-4">
@@ -235,10 +235,10 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6">
                     <ul class="quick__links">
-                        <li>| <a href="index.html">Home</a> |</li>
-                        <li><a href="about.html">About</a> |</li>
-                        <li><a href="courses.html">Courses</a> |</li>
-                        <li><a href="contact.html">Contact</a> |</li>
+                        <li>| <a href="{{ base_url('index1') }}">Home</a> |</li>
+                        <li><a href="{{ base_url('about') }}">About</a> |</li>
+                        <li><a href="{{ base_url('courses') }}">Courses</a> |</li>
+                        <li><a href="{{ base_url('contact') }}">Contact</a> |</li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-6 col-md-pull-6">

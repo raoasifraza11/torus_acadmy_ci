@@ -87,13 +87,13 @@
                     <div class="about__quote">
                         <h2 class="about_quote__text"><i class="ion-quote"></i> A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring. <span class="quote_end"><i class="ion-quote"></i></span></h2>
                         <div class="author__signature">
-                            <img src="assets/img/author.png" alt="...">
+                            <img src="./assets1/img/author.png" alt="...">
                         </div>
                         <p class="about_quote__author">
                             <span>George Henderson</span> / Professor
                         </p>
                     </div> <!-- / .about__quote -->
-                    <a href="about.html" class="btn btn-accent">More About LCTRS.</a>
+                    <a href="{{ base_url('about') }}" class="btn btn-accent">More About LCTRS.</a>
                 </div> <!-- / .about__body -->
             </div>
         </div> <!-- / .row -->
@@ -191,7 +191,7 @@
                                     <li>Price: <span>160$</span></li>
                                     <li>Teacher: <span>J. Doe</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="{{ base_url('courses1') }}" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -228,7 +228,7 @@
                                     <li>Price: <span>175$</span></li>
                                     <li>Teacher: <span>J. Adams</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="{{ base_url('courses1') }}" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -265,7 +265,7 @@
                                     <li>Price: <span>85$</span></li>
                                     <li>Teacher: <span>G. Henderson</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="{{ base_url('courses1') }}" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -302,14 +302,14 @@
                                     <li>Price: <span>140$</span></li>
                                     <li>Teacher: <span>O. Robertson</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="{{ base_url('courses1') }}" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
                 </div> <!-- / .courses_item__wrapper -->
             </div>
             <div class="col-sm-12">
-                <a href="courses.html" class="btn btn-primary">All courses</a>
+                <a href="{{ base_url('courses1') }}" class="btn btn-primary">All courses</a>
             </div>
         </div> <!-- / .row -->
     </div> <!-- / .container -->
@@ -405,7 +405,7 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_1.jpg" class="img-responsive" alt="...">
+                        <img src="./assets1/img/teacher_1.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
@@ -432,7 +432,7 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_2.jpg" class="img-responsive" alt="...">
+                        <img src="./assets1/img/teacher_2.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
@@ -459,7 +459,7 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_3.jpg" class="img-responsive" alt="...">
+                        <img src="./assets1/img/teacher_3.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
@@ -486,7 +486,7 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_4.jpg" class="img-responsive" alt="...">
+                        <img src="./assets1/img/teacher_4.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
@@ -612,7 +612,7 @@
             </div>
             <div class="col-md-5 col-lg-6">
                 <div class="coming-soon__img">
-                    <img src="assets/img/coming-soon_img.jpg" class="img-responsive" alt="...">
+                    <img src="./assets1/img/coming-soon_img.jpg" class="img-responsive" alt="...">
                 </div>
                 <div class="coming-soon__btn text-center">
                     <a href="event-single.html" class="btn btn-primary">Register now</a>

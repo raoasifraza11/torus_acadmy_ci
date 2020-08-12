@@ -25,7 +25,7 @@
 
                         <!-- Breadcrumbs -->
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ base_url('index1') }}">Home</a></li>
                             <li class="active">Teacher Registration</li>
                         </ol>
 

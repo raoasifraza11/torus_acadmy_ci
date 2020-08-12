@@ -82,6 +82,8 @@ $route['singleCourse'] =  'UiTest/single_course';
 $route['contacts'] =  'UiTest/contacts';
 $route['blogItem'] =  'UiTest/blog_item';
 $route['blog'] =  'UiTest/blog';
+$route['about'] =  'UiTest/about';
+$route['signup'] =  'UiTest/signup';
 
 
 // Default Routes ---------------------------------------------------------

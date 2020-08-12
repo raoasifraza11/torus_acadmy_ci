@@ -20,7 +20,7 @@
 
                         <!-- Breadcrumbs -->
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ {{ base_url('index1') }}') }}">Home</a></li>
                             <li class="active">Blog</li>
                         </ol>
 
@@ -41,7 +41,7 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-1.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-1.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#study</a> <a href="#">#Torus</a> <a href="#">#conference</a>
@@ -64,7 +64,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>
@@ -78,7 +78,7 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-2.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-2.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#study</a> <a href="#">#LCTRS</a> <a href="#">#conference</a>
@@ -101,7 +101,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>
@@ -115,7 +115,7 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-3.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-3.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#learn</a> <a href="#">#design</a> <a href="#">#courses</a>
@@ -138,7 +138,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>
@@ -154,7 +154,7 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-1.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-1.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#study</a> <a href="#">#LCTRS</a> <a href="#">#conference</a>
@@ -177,7 +177,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>
@@ -191,7 +191,7 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-2.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-2.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#study</a> <a href="#">#LCTRS</a> <a href="#">#conference</a>
@@ -214,7 +214,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>
@@ -228,7 +228,7 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="blog__item" data-aos="zoom-in-up">
                         <div class="blog-item__img">
-                            <img src="assets/img/blog_img-3.jpg" class="img-responsive" alt="...">
+                            <img src="./assets1/img/blog_img-3.jpg" class="img-responsive" alt="...">
                         </div>
                         <div class="blog-item__tags">
                             <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">#learn</a> <a href="#">#design</a> <a href="#">#courses</a>
@@ -251,7 +251,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
                             </div>
                             <div class="blog-item__link">
-                                <a href="blog-item.html">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
+                                <a href="{{ base_url('blogItem') }}">Read More <i class="ion-android-arrow-forward" aria-hidden="true"></i></a>
                             </div>
                             <ul class="blog-item__share">
                                 <li>Share: </li>

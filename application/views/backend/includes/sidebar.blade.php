@@ -23,7 +23,6 @@
                 <nav class="sidebar-nav">
                     <ul class="metismenu">
                         <li><a href="{{base_url('payments')}}"><i class="fa fa-credit-card"></i><span>Payments</span></a></li>
-                        <li><a href="noticeboard.html"><i class="fa fa-dashboard"></i><span>Noticeboard</span></a></li>
                         <li><a href="{{base_url('taskboard')}}"><i class="fa fa-list-ul"></i><span>Taskboard</span></a></li>
                         <li><a href="{{base_url('attendance')}}"><i class="fa fa-calendar-check-o"></i><span>Attendance</span></a></li>
                         <li><a href="leave.html"><i class="fa fa-flag"></i><span>Leave</span></a></li>

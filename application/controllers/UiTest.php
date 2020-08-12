@@ -151,5 +151,15 @@ class UiTest extends TTT_Controller
         $this->slice->view('frontend.blog-grid');
     }
 
+    public function about()
+    {
+        $this->slice->view('frontend.about');
+    }
+
+    public function signup()
+    {
+        $this->slice->view('frontend.signup');
+    }
+
 }
 

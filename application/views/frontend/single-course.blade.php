@@ -20,7 +20,7 @@
 
                         <!-- Breadcrumbs -->
                         <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ base_url('index1') }}">Home</a></li>
                             <li class="active">Single course</li>
                         </ol>
 
@@ -431,7 +431,7 @@
                                         <img src="./assets1/img/instagram_img-4.jpg" class="img-responsive" alt="...">
                                     </a>
                                     <div class="sidebar_post__detail">
-                                        <h5><a href="course-single.html" title="">Flat design in web</a></h5>
+                                        <h5><a href="{{ base_url('singleCourses') }}" title="">Flat design in web</a></h5>
                                         <span>Course Price: <strong>Free</strong></span>
                                     </div>
                                 </div> <!-- Sidebar Post -->
@@ -440,7 +440,7 @@
                                         <img src="./assets1/img/instagram_img-2.jpg" class="img-responsive" alt="...">
                                     </a>
                                     <div class="sidebar_post__detail">
-                                        <h5><a href="course-single.html" title="">Internet for people</a></h5>
+                                        <h5><a href="{{ base_url('singleCourses') }}" title="">Internet for people</a></h5>
                                         <span>Course Price: <strong>70-120$</strong></span>
                                     </div>
                                 </div> <!-- Sidebar Post -->
@@ -449,7 +449,7 @@
                                         <img src="./assets1/img/instagram_img-3.jpg" class="img-responsive" alt="...">
                                     </a>
                                     <div class="sidebar_post__detail">
-                                        <h5><a href="course-single.html" title="">UI / UX training</a></h5>
+                                        <h5><a href="{{ base_url('courses1') }}" title="">UI / UX training</a></h5>
                                         <span>Course Price: <strong>Free</strong></span>
                                     </div>
                                 </div> <!-- Sidebar Post -->

@@ -80,6 +80,9 @@
 <script src="./assets/js/core.js"></script>
 <script src="./assets/js/form/dropify.js"></script>
 <script src="./assets/js/page/summernote.js"></script>
+
+<script src="./assets/js/page/sortable-nestable.js"></script>
+
 </body>
 
 <!-- Mirrored from puffintheme.com/demo/eric/university/professors.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jul 2020 13:04:00 GMT -->
