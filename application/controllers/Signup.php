@@ -11,7 +11,7 @@ class Signup extends TTT_Controller
 
 
 	/**
-	 * Handle  Sign up
+	 * Handle School Sign up
 	 *
 	 * @param post
 	 * @return array

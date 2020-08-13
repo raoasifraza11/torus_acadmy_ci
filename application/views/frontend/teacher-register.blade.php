@@ -38,7 +38,7 @@
         <div class="home__bg"></div>
     </section>
     <div class="wrapper">
-        <form action="" id="wizard">
+        <form action="<?php echo base_url("registerteacher") ?>" method="post" id="wizard">
             <!-- SECTION 1 -->
             <h2></h2>
             <section>

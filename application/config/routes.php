@@ -89,7 +89,7 @@ $route['signup'] =  'UiTest/signup';
 // Default Routes ---------------------------------------------------------
 
 $route['dev'] = 'home';
-$route['default_controller'] = 'home/commingsoon';
+$route['default_controller'] = 'UiTest/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
