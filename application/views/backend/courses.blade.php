@@ -14,6 +14,7 @@
         </div>
         <ul class="nav nav-tabs page-header-tab">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Courses-all">List View</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Courses-type">Course Type</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Courses-add">Add Course</a></li>
         </ul>
     </div>
@@ -28,6 +29,16 @@
 <div class="container-fluid">
     <div class="tab-content">
         <div class="tab-pane active" id="Courses-all">
+        <?php if ($this->session->flashdata('error')) : ?>
+                <div class="alert alert-danger" align="center">
+                    <?php echo $this->session->flashdata('error');  ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('success')) : ?>
+                <div class="alert alert-success" align="center">
+                    <?php echo $this->session->flashdata('success');  ?>
+                </div>
+            <?php endif; ?>
             <div class="row row-deck">
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="card">
@@ -160,7 +171,7 @@
         <div class="tab-pane" id="Courses-add">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Department Basic Info</h3>
+                    <h3 class="card-title">Course Basic Info</h3>
                     <div class="card-options ">
                         <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                         <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
@@ -170,12 +181,12 @@
                     <div class="row clearfix">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Department Name ">
+                                <input type="text" class="form-control" placeholder="Course Name ">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Head of Department">
+                                <input type="text" class="form-control" placeholder="Teacher Name">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -185,7 +196,22 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Department Start Date">
+                                <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Course Start Date">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Course Type">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Course Duration">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Course Price">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -244,6 +270,43 @@
                         <div class="col-md-7">
                             <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane" id="Courses-type">
+        <?php if ($this->session->flashdata('error')) : ?>
+                <div class="alert alert-danger" align="center">
+                    <?php echo $this->session->flashdata('error');  ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('success')) : ?>
+                <div class="alert alert-success" align="center">
+                    <?php echo $this->session->flashdata('success');  ?>
+                </div>
+            <?php endif; ?>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Course Type</h3>
+                    <div class="card-options ">
+                        <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                        <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                    </div>
+                </div>
+                <form action="<?php echo base_url(); ?>type/addType" method="POST">
+                    <div class="card-body">
+                        <div class="row clearfix">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="type_name" class="form-control" placeholder="Course Type">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-outline-secondary btn-default">Cancel</button>
+                            </div>
                         </div>
                     </div>
                 </form>

@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center ">
         <div class="header-action">
-            <h1 class="page-title">Professors</h1>
+            <h1 class="page-title">Professors</h1> <a href="<?php echo base_url(); ?>courses/index">Check</a>
             <ol class="breadcrumb page-breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Torus Academy</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Professors</li>
@@ -30,6 +30,16 @@
 <div class="container-fluid">
     <div class="tab-content">
         <div class="tab-pane active" id="pro-all">
+            <?php if ($this->session->flashdata('error')) : ?>
+                <div class="alert alert-danger" align="center">
+                    <?php echo $this->session->flashdata('error');  ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('success')) : ?>
+                <div class="alert alert-success" align="center">
+                    <?php echo $this->session->flashdata('success');  ?>
+                </div>
+            <?php endif; ?>
             <div class="table-responsive">
                 <table class="table table-hover table-vcenter table_custom text-nowrap spacing5 border-style mb-0">
                     <tbody>
@@ -596,92 +606,113 @@
             </div>
         </div>
         <div class="tab-pane" id="pro-add">
+                            <?php if ($this->session->flashdata('error')) : ?>
+                                <div class="alert alert-danger" align="center">
+                                    <?php echo $this->session->flashdata('error');  ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($this->session->flashdata('success')) : ?>
+                                <div class="alert alert-success" align="center">
+                                    <?php echo $this->session->flashdata('success');  ?>
+                                </div>
+                            <?php endif; ?>
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Basic Information</h3>
+
                             <div class="card-options ">
                                 <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                 <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row clearfix">
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control">
+                        <form action="<?php echo base_url(); ?>professor/addProfessor" method="POST" enctype="multipart/form-data">
+                            <div class="card-body">
+                                <div class="row clearfix">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" name="first_name" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" name="last_name" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Date of Birth</label>
-                                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Date of Birth">
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <input data-provide="datepicker" name="dob" data-date-autoclose="true" class="form-control" placeholder="Date of Birth">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-12">
-                                    <label>Gender</label>
-                                    <select class="form-control show-tick">
-                                        <option value="">-- Gender --</option>
-                                        <option value="10">Male</option>
-                                        <option value="20">Female</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Department</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-3 col-sm-12">
+                                        <label>Gender</label>
+                                        <select name="gender" class="form-control show-tick">
+                                            <option value="">-- Gender --</option>
+                                            <option name="gender" value="Male">Male</option>
+                                            <option name="gender" value="Female">Female</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Position</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Department</label>
+                                            <input type="text" name="department" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Phone</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-3 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Position</label>
+                                            <input type="text" name="position" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Enter Your Email</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Phone</label>
+                                            <input type="number" name="phone" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <label>Website URL</label>
-                                        <input type="text" class="form-control">
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Enter Your Email</label>
+                                            <input type="email" name="email" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group mt-2 mb-3">
-                                        <input type="file" class="dropify">
-                                        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Website URL</label>
+                                            <input type="text" name="url" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group mt-3">
-                                        <label>Messages</label>
-                                        <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                                    <div class="col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Select File</label>
+                                            <input type="file" name="image" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                    <!-- <div class="col-sm-12">
+                                        <div class="form-group mt-2 mb-3">
+                                            <img id="file1" width="150" height="80">
+                                            <input type="file" name="image" id="imgupload" style="display:none" onChange="document.getElementById('file1').src = window.URL.createObjectURL(this.files[0]),validate()">
+                                            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                            <a href="#" class="upload" onclick="$('#imgupload').trigger('click'); return false;"> <i class="fa fa-upload" aria-hidden="true"></i>Click to Upload </a>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-sm-12">
+                                        <div class="form-group mt-3">
+                                            <label>Messages</label>
+                                            <textarea rows="4" name="message" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
