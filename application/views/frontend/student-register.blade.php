@@ -38,7 +38,17 @@
         <div class="home__bg"></div>
     </section>
     <div class="wrapper">
-        <form action="" id="wizard">
+        <?php if ($this->session->flashdata('error')) : ?>
+            <div class="alert alert-danger" align="center">
+                <?php echo $this->session->flashdata('error');  ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($this->session->flashdata('success')) : ?>
+            <div class="alert alert-success" align="center">
+                <?php echo $this->session->flashdata('success');  ?>
+            </div>
+        <?php endif; ?>
+        <form action="<?php echo base_url(); ?>users/studentSignup" method="POST" enctype="multipart/form-data" id="wizard">
             <!-- SECTION 1 -->
             <h2></h2>
             <section>
@@ -53,34 +63,46 @@
                         <p>Please fill with your details</p>
                         <div class="form-row">
                             <div class="form-holder">
-                                <input type="text" placeholder="First Name" class="form-control">
+                                <input type="text" name="first_name" placeholder="First Name" class="form-control">
                             </div>
                             <div class="form-holder">
-                                <input type="text" placeholder="Last Name" class="form-control">
+                                <input type="text" name="last_name" placeholder="Last Name" class="form-control">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-holder">
-                                <input type="text" placeholder="Your Email" class="form-control">
+                                <input type="text" name="email" placeholder="Your Email" class="form-control">
                             </div>
                             <div class="form-holder">
-                                <input type="password" placeholder="Password" class="form-control">
+                                <input type="password" name="password" placeholder="Password" class="form-control">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="select">
+                            <!-- <div class="select">
                                 <div class="form-holder">
                                     <div class="select-control">Your country</div>
                                     <i class="zmdi zmdi-caret-down"></i>
                                 </div>
-                                <ul class="dropdown">
-                                    <li rel="United States">United States</li>
-                                    <li rel="United Kingdom">United Kingdom</li>
-                                    <li rel="Viet Nam">Viet Nam</li>
+                                <ul name="country" class="dropdown">
+                                    <li name="country" rel="United States">United States</li>
+                                    <li name="country" rel="United Kingdom">United Kingdom</li>
+                                    <li name="country" rel="Viet Nam">Viet Nam</li>
                                 </ul>
+                            </div> -->
+                            <div class="select">
+                                <div class="form-holder">
+                                    
+                                    <select class="form-control input-height" name="country" id="country">
+                                        <option value="">--Select Country--</option>
+                                        <option name="country" value="United States">United States</option>
+                                        <option name="country" value="United Kingdom">United Kingdom</option>
+                                        <option name="country" value="Viet Nam">Viet Nam</option>
+                                    </select>
+                                   
+                                </div>
                             </div>
                             <div class="form-holder">
-                                <input type="text" placeholder="Phone Number" class="form-control">
+                                <input type="text" name="phone" placeholder="Phone Number" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -101,7 +123,7 @@
                         <p>Please fill with additional info</p>
                         <div class="form-row">
                             <div class="form-holder">
-                                <input type="date" placeholder="Date of Birth" class="form-control">
+                                <input type="date" name="dob" placeholder="Date of Birth" class="form-control">
                             </div>
                             <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
                                 <div class="checkbox-tick">
@@ -118,10 +140,13 @@
                         </div>
                         <div class="form-row">
                             <div class="form-holder">
-                                <input type="text" placeholder="City" class="form-control">
+                                <input type="text" name="city" placeholder="City" class="form-control">
                             </div>
                             <div class="form-holder">
-                                <input type="text" placeholder="Zip Code" class="form-control">
+                                <input type="text" name="zip_code" placeholder="Zip Code" class="form-control">
+                            </div>
+                            <div class="form-holder">
+                                <button type="submit" class="form-control btn btn-primary">Submit</button>
                             </div>
                         </div>
                         <div class="checkbox-circle mt-24">

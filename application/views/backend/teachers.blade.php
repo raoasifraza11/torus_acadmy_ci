@@ -696,7 +696,6 @@
                                         <div class="form-group mt-2 mb-3">
                                             <img id="file1" width="150" height="80">
                                             <input type="file" name="image" id="imgupload" style="display:none" onChange="document.getElementById('file1').src = window.URL.createObjectURL(this.files[0]),validate()">
-                                            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
                                             <a href="#" class="upload" onclick="$('#imgupload').trigger('click'); return false;"> <i class="fa fa-upload" aria-hidden="true"></i>Click to Upload </a>
                                         </div>
                                     </div> -->

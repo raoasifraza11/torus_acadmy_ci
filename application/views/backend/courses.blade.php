@@ -29,7 +29,7 @@
 <div class="container-fluid">
     <div class="tab-content">
         <div class="tab-pane active" id="Courses-all">
-        <?php if ($this->session->flashdata('error')) : ?>
+            <?php if ($this->session->flashdata('error')) : ?>
                 <div class="alert alert-danger" align="center">
                     <?php echo $this->session->flashdata('error');  ?>
                 </div>
@@ -184,9 +184,16 @@
                                 <input type="text" class="form-control" placeholder="Course Name ">
                             </div>
                         </div>
+                        <?php $this->db->select('*');
+                        $this->db->from('professors');
+                        $this->db->join('courses', 'professors.id = courses.professor_id');
+                        $query = $this->db->get();
+                        foreach ($query->result() as $row) {
+                            echo $row->professor_id . '<br>';
+                        } ?>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Teacher Name">
+                                <input type="text" class="form-control" placeholder="Teacher Name" value="">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -276,7 +283,7 @@
             </div>
         </div>
         <div class="tab-pane" id="Courses-type">
-        <?php if ($this->session->flashdata('error')) : ?>
+            <?php if ($this->session->flashdata('error')) : ?>
                 <div class="alert alert-danger" align="center">
                     <?php echo $this->session->flashdata('error');  ?>
                 </div>

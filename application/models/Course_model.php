@@ -2,11 +2,11 @@
 
 class Course_model extends CI_Model
 {
-    public function courseJoin()
+    public function courseTypeJoin()
     {
         $this->db->select('*');
         $this->db->from('course_type');
-        $this->db->join('courses' , 'course_type.type_id = courses.c_id');
+        $this->db->join('courses' , 'course_type.id = courses.course_type_id');
         $query = $this->db->get();
     }
 
@@ -14,12 +14,12 @@ class Course_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('professors');
-        $this->db->join('courses' , 'professors.p_id = courses.c_id');
+        $this->db->join('courses' , 'professors.id = courses.professor_id');
         $query = $this->db->get();
         foreach ($query->result() as $row)
         {
-            echo $row->c_id.'<br>';
-            echo $row->professor_name.'<br>';
+            echo $row->course_type_id.'<br>';
+            echo $row->professor_id.'<br>';
 
         }
     }

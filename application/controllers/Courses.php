@@ -8,7 +8,7 @@ class Courses extends CI_Controller
         
         parent::__construct();
         $this->load->model('course_model');
-        $this->course_model->courseJoin();
+        $this->course_model->courseTypeJoin();
         $this->course_model->ProfessorJoin();
     }
     public function index()
@@ -16,7 +16,7 @@ class Courses extends CI_Controller
         //$data['course_details'] = $this->course_model->getAllCourses();
         //$this->load->view('backend/courses', $data);
         $this->load->model('course_model');
-        //$this->course_model->courseJoin();
+        $this->course_model->courseTypeJoin();
         $this->course_model->ProfessorJoin();
         
     }

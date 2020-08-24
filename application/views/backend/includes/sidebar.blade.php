@@ -1,6 +1,6 @@
 <h5 class="brand-name"><div class="hleft">
                 <a class="header-brand" href="index.html"><i class="fa fa-graduation-cap brand-logo"></i></a>
-            </div> Torus Academy<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+            </div> Torus Academy<a href="{{ base_url('index') }}" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
         <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">University</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-admin">Admin</a></li>

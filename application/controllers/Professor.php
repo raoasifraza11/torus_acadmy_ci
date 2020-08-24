@@ -30,7 +30,7 @@ class Professor extends CI_Controller
             $this->form_validation->set_rules('phone', 'phone', 'trim|required');
             $this->form_validation->set_rules('email', 'email', 'trim|required');
             $this->form_validation->set_rules('url', 'url', 'trim|required');
-            $this->form_validation->set_rules('image', 'image', 'trim|required');
+            $this->form_validation->set_rules('image', 'image', 'trim');
             $this->form_validation->set_rules('message', 'message', 'trim|required');
            
            
@@ -53,20 +53,20 @@ class Professor extends CI_Controller
                     
                 ]);
 
-                $config['encrypt_name'] = true;
-                $config['allowed_types'] = 'pdf|jpg|png';
-                $config['upload_path'] = './uploads/';
+                // $config['encrypt_name'] = true;
+                // $config['allowed_types'] = 'pdf|jpg|png';
+                // $config['upload_path'] = './uploads/';
 
-                $this->load->library('upload',$config
-                );
+                // $this->load->library('upload',$config
+                // );
 
-                if ($this->upload->do_upload('image')) {
-                    $data =  array('upload_data' => $this->upload->data());
-                    $image = $data['upload_data']['image'];
-                    return $image;
-                } else {
-                    print_r($this->upload->display_errors());
-                }
+                // if ($this->upload->do_upload('image')) {
+                //     $data =  array('upload_data' => $this->upload->data());
+                //     $image = $data['upload_data']['image'];
+                //     return $image;
+                // } else {
+                //     print_r($this->upload->display_errors());
+                // }
                 
                 if($result)
                 {

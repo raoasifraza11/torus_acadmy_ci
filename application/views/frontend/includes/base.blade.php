@@ -73,6 +73,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#signinModal" data-toggle="modal"><i class="ion-log-in"></i> Sign In</a></li>
                     <li><a href="{{ base_url('signup') }}"><i class="ion-android-person"></i> Sign Up</a></li>
+                     
+
+
                 </ul>
             </div><!-- /.navbar-collapse -->
 
@@ -91,19 +94,22 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Sign In</h4>
                 </div>
+
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="body-signin__form">
 
                                 <!-- Sign In form -->
-                                <form class="signin__form">
+                                <form action="<?php  echo base_url(); ?>users/loginUser/" method=" POST" class="signin__form">
+                                
+
                                     <!-- Email -->
                                     <div class="form-group">
                                         <label for="sign-in__email" class="sr-only">Enter email</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="ion-android-person"></i></span>
-                                            <input type="email" class="form-control" id="sign-in__email" placeholder="Enter email">
+                                            <input type="text" name="email" class="form-control" placeholder="Enter email">
                                         </div>
                                     </div>
                                     <!-- Password -->
@@ -111,7 +117,7 @@
                                         <label for="sign-in__password" class="sr-only">Enter password</label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="ion-locked"></i></span>
-                                            <input type="password" class="form-control" id="sign-in__password" placeholder="Password">
+                                            <input type="password" name="password" class="form-control" placeholder="Password">
                                         </div>
                                     </div>
                                     <div class="checkbox">
@@ -119,7 +125,9 @@
                                             <input type="checkbox"> Remember me
                                         </label>
                                     </div>
-                                    <button type="submit" class="btn btn-accent btn-block">Submit</button>
+                                    <button type="submit" name="submit" class="btn btn-accent btn-block">Submit</button>
+                                    
+                                    <?php  echo validation_errors('<div class = "alert alert-danger">' , '</div>'); ?>
                                 </form>
 
                                 <div class="signin__alt">
@@ -153,7 +161,8 @@
                             </div> <!-- / .body-signin__form -->
                         </div>
                     </div> <!-- / .row -->
-                </div> <!-- / .modal-body -->
+                </div>
+                <!-- / .modal-body -->
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
@@ -250,7 +259,7 @@
         </div> <!-- / .container -->
     </div> <!-- / .footer__copyright -->
 
-    
+
     <!-- JS Global -->
     <script src="./assets1/plugins/jquery/jquery-1.12.4.min.js"></script>
     <script src="./assets1/bootstrap/js/bootstrap.min.js"></script>

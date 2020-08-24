@@ -52,25 +52,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // BackEnd Routes ---------------------------------------------------
 $route['index'] =  'UiTest/index';
-$route['professors'] =  'UiTest/professors';
+$route['teachers'] =  'UiTest/teachers';
 $route['payments'] =  'UiTest/payments';
 $route['addPayments'] =  'UiTest/add_payments';
 $route['PaymentsReceipt'] =  'UiTest/payments_receipt';
 $route['courses'] =  'UiTest/courses';
 $route['coursesDetails'] =  'UiTest/courses_details';
 $route['ourCentres'] =  'UiTest/our_centres';
-$route['studentDashboard'] =  'UiTest/student_dashboard';
+$route['studentDetailInfo'] =  'UiTest/student_detail_info';
+$route['teacherDetailInfo'] =  'UiTest/teacher_detail_info';
 $route['studentDashboard1'] =  'UiTest/student_dashboard_2';
 $route['studentPayments'] =  'UiTest/student_dashboard_payments';
 $route['studentList'] =  'UiTest/students_list';
 $route['taskboard'] =  'UiTest/taskboard';
 $route['teacherDetails'] =  'UiTest/teacher_details';
 $route['settings'] =  'UiTest/settings';
-$route['login'] =  'UiTest/login';
+//$route['login'] =  'UiTest/login';
 $route['forgotPassword'] =  'UiTest/forgot_password';
 $route['appCompose'] =  'UiTest/app_compose';
 $route['attendance'] =  'UiTest/attendance';
 $route['appEmailView'] =  'UiTest/email_view';
+$route['studentInfo'] = 'users/studentInfo';
+$route['teacherInfo'] = 'users/teacherInfo';
+$route['UpdateStudentPersonalInfo'] = 'users/UpdateStudentRegistrationInfo';
+$route['logout'] = 'users/logout';
+$route['checkDetails'] = 'users/checkDetails';
+$route['Teacherdashboard'] = 'UiTest/teacher_dashboard';
+$route['Studentdashboard'] = 'UiTest/student_dashboard';
+$route['loginUser'] = 'users/loginUser';
 
 // BackEnd Routes ---------------------------------------------------------
 

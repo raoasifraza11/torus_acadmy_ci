@@ -5,6 +5,7 @@ class UiTest extends TTT_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('users_model');
     }
 
 // ------------------------ BackEnd----------------------------
@@ -14,9 +15,9 @@ class UiTest extends TTT_Controller
         $this->slice->view('backend.index');
     }
 
-    public function professors()
+    public function teachers()
     {
-        $this->slice->view('backend.professors');
+        $this->slice->view('backend.teachers');
     }
 
     public function payments()
@@ -49,14 +50,39 @@ class UiTest extends TTT_Controller
         $this->slice->view('backend.our-centres');
     }
 
-    public function student_dashboard()
+    public function student_detail_info()
     {
-        $this->slice->view('backend.student-dashboard');
+        $data['student_details'] = $this->users_model->getAllUsers();
+        //$data['user_details'] = $this->users_model->getUser($id);
+        //$user_id = $data['student_details']->id;
+        //var_dump($first_name); die();
+        $this->slice->view('backend.student-detail-info' , $data);
+        //$this->load->view('crud_view', $data);
+    }
+
+    public function teacher_detail_info()
+    {
+        $data['teacher_details'] = $this->users_model->getAllUsers();
+        //$data['user_details'] = $this->users_model->getUser($id);
+        //$user_id = $data['student_details']->id;
+        //var_dump($first_name); die();
+        $this->slice->view('backend.teacher-details' , $data);
+        //$this->load->view('crud_view', $data);
     }
 
     public function student_dashboard_2()
     {
-        $this->slice->view('backend.student-dashboard-3');
+        $this->slice->view('backend.student-course-info');
+    }
+    
+    public function teacher_dashboard()
+    {
+        $this->slice->view('backend.teacher-dashboard');
+    }
+
+    public function student_dashboard()
+    {
+        $this->slice->view('backend.student-dashboard');
     }
 
     public function student_dashboard_payments()
@@ -161,6 +187,7 @@ class UiTest extends TTT_Controller
         $this->slice->view('frontend.signup');
     }
 
+    //------------------------------------------------------------------
 
 
 }
