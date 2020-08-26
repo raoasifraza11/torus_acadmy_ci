@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Professor extends TTT_Controller
+class Student extends TTT_Controller
 {
     public function __construct()
     {
@@ -11,24 +11,15 @@ class Professor extends TTT_Controller
         $this->load->library('form_validation');
         $this->load->library('upload');
 		$this->load->model('users_model');
-
-	}
+    }
     public function index()
     {
-		$data['teacher_details'] = $this->users_model->getAllUsers();
-		if($this->input->post()) {
-
-			$form_data = $this->input->post();
-
-			$teacher["department"]=$form_data["department"];
-			$teacher["website_url"]=$form_data["url"];
-			$teacher["description"]=$form_data["brief"];
-			$teacher["user_id"]=$this->auth->userID();
-			$this->Crud_model->insert('teacher_details', $teacher);
-
-		}
-
-		$this->slice->view('backend.teacher-details' , $data);
+		$data['student_details'] = $this->users_model->getAllUsers();
+		//$data['user_details'] = $this->users_model->getUser($id);
+		//$user_id = $data['student_details']->id;
+		//var_dump($first_name); die();
+		$this->slice->view('backend.student-detail-info' , $data);
+//		$this->slice->view('backend.student-course-info');
 
     }
 

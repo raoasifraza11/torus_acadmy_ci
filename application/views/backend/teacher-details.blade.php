@@ -61,7 +61,7 @@
                             <h3 class="card-title">Basic Information</h3>
 
                         </div>
-                        <form action="<?php echo base_url('teacherInfo'); ?>"  method="POST" enctype="multipart/form-data" >
+                        <form action="<?php echo base_url('teacherinfoo'); ?>"  method="POST" enctype="multipart/form-data" >
                             <div class="card-body">
                                 <div class="row clearfix">
                                     <div class="col-md-6 col-sm-12">

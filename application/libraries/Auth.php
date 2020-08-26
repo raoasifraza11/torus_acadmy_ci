@@ -149,8 +149,8 @@ class Auth
         //$this->userName=$this->user->username;
         $this->CI->session->set_userdata(array(
             "userID" => $this->user->id,
-            "userType" => $this->user->role_id,
-            "fullName" => $this->user->full_name,
+            "roleId" => $this->user->role_id,
+//            "fullName" => $this->user->full_name,
 
             "email" => $this->user->email,
 //            "roles" => $this->userWiseRoles(),

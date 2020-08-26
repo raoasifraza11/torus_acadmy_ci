@@ -4,7 +4,7 @@
  * Author: Mussawar Ahamd
  * Date: 9/18/2019
  */
-class Migration_personal_Info extends CI_Migration {
+class Migration_courses extends CI_Migration {
 
     /**
      * Create table.
@@ -16,19 +16,21 @@ class Migration_personal_Info extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-			'parent_name' =>array(
+			'name' =>array(
 				'type' => 'VARCHAR',
 				'constraint' => 100,
 				'default' => NULL,
 			),
-			'parent_mobile' =>array(
-				'type' => 'BIGINT',
-				'default' => NULL,
-			),
-			'registration_date' =>array(
-				'type' => 'DATE',
-				'default' => NULL,
-			),
+            'status' => array(
+                'type' => 'TINYINT',
+                'constraint' => 1,
+                'default' => 0
+            ),
+            'is_verified' => array(
+                'type' => 'TINYINT',
+                'constraint' => 1,
+                'default' => 0
+            ),
             'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
@@ -37,18 +39,21 @@ class Migration_personal_Info extends CI_Migration {
                 'type' => 'timestamp',
                 'default' => NULL,
             ),
-
+            'deleted_at' => array(
+                'type' => 'timestamp',
+                'default' => NULL,
+            ),
         ));
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('personal_Info');
+        $this->dbforge->create_table('courses');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('personal_Info');
+        $this->dbforge->drop_table('courses');
     }
 
 }

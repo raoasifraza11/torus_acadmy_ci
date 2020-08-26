@@ -53,7 +53,7 @@
 
                         <div class="course-item__content">
                             <p class="course-item__desc">Give lessons or manage bookings with your customers</p>
-                            <center><a class="btn btn-primary" href="{{base_url('teacherRegister')}}">Teacher Signup</a></center>
+                            <center><a class="btn btn-primary" href="{{base_url('teacher')}}">Teacher Signup</a></center>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>
@@ -64,7 +64,7 @@
                         </div>
                         <div class="course-item__content">
                             <p class="course-item__desc">Have lessons, message your tutor or watch your lessons back</p>
-                            <center><a class="btn btn-primary" href="{{base_url('studentRegister')}}">Student Signup</a></center>
+                            <center><a class="btn btn-primary" href="{{base_url('student')}}">Student Signup</a></center>
                         </div> <!-- .teacher-course__content -->
                     </div> <!-- .course__item -->
                 </div>

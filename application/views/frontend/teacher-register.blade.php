@@ -48,8 +48,9 @@
                 <?php echo $this->session->flashdata('success');  ?>
             </div>
         <?php endif; ?>
-        <form action="<?php echo base_url(); ?>users/teacherSignup" method="POST" enctype="multipart/form-data" id="wizard">
-            <!-- SECTION 1 -->
+        <form action="<?php echo base_url("teacher"); ?>" method="POST" enctype="multipart/form-data" id="wizard">
+            <input type="hidden" name="role_id" value="1">
+			<!-- SECTION 1 -->
             <h2></h2>
             <section>
                 <div class="inner">

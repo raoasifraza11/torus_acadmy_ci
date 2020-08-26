@@ -21,37 +21,45 @@ class Login extends TTT_Controller
 
 	public function index(){
 		if ($this->input->post()){
+
+
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_isEmailExist|callback_isEmailverified|callback_isAccountApproved');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 			if ($this->form_validation->run() == FALSE) {
-				return $this->output
-					->set_content_type('application/json')
-					->set_status_header(400)
-					->set_output(json_encode(array(
-						'error' => $this->form_validation->error_array(),
-						'type' => 'danger'
-					)));
-
+				var_dump($this->form_validation->error_array());
+				die();
 			}else{
 				$status = $this->auth->login($_POST);
 
 				if ($status){
-					return $this->output
-						->set_content_type('application/json')
-						->set_status_header(200)
-						->set_output(json_encode(array(
-							'redirectTo' => 'dashboard',
-							'type' => 'success'
-						)));
+
+					if ($this->session->userdata("roleId")==1) {
+
+						//todo:teachers area
+						redirect(base_url("teacherinfoo"));
+
+					}elseif($this->session->userdata("roleId")==2){
+
+						//todo:students area
+						redirect(base_url("studentd"));
+
+					}
+					var_dump($this->session->userdata("roleId"));
+					die();
+
 				}else{
-					return $this->output
-						->set_content_type('application/json')
-						->set_status_header(400)
-						->set_output(json_encode(array(
-							'error' => array('error' => 'Email or Password is Incorrect!.'),
-							'type' => 'danger'
-						)));
+
+
+					var_dump("Email or Password is Incorrect!.");
+					die();
+//					return $this->output
+//						->set_content_type('application/json')
+//						->set_status_header(400)
+//						->set_output(json_encode(array(
+//							'error' => array('error' => 'Email or Password is Incorrect!.'),
+//							'type' => 'danger'
+//						)));
 				}
 			}
 

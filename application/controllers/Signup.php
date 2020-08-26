@@ -1,5 +1,5 @@
 <?php
-require 'application/controllers/MailSender.php';
+//require 'application/controllers/MailSender.php';
 
 class Signup extends TTT_Controller
 {
@@ -18,6 +18,11 @@ class Signup extends TTT_Controller
 	 */
 	public function index()
 	{
+   if($this->input->post()) {
+	 var_dump($_POST);
+	   var_dump("i am hear");
+	   die();
+   }
 		if ($this->input->post()) {
 			$this->form_validation->set_rules('fullname', 'Full Name', 'trim|required');
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_isEmailExist');
@@ -64,10 +69,95 @@ class Signup extends TTT_Controller
 			}
 		} else {
 			//redirect(base_url("404_override"));
-			var_dump("not post request");
-			die();
+//			var_dump("not post request");
+//			die();
 		}
+
 	}
+
+	public function student()
+	{
+		if ($this->input->post()) {
+			$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+			$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+//			$this->form_validation->set_rules('rpassword', 'Confirm Password', 'required|matches[password]');
+			if ($this->form_validation->run() == FALSE) {
+				var_dump($this->form_validation->error_array());
+				die();
+			} else {
+
+				$form_data = $this->input->post();
+
+
+//				$form_data["role_id"] = 1;
+				$form_data["password"] = md5($form_data['password']);
+				$form_data["token"]=md5($form_data['email']);
+				$form_data["status"]=1;
+				//inserting data in database
+				$user_id=$this->Crud_model->insert('users', $form_data);
+				$user_detail["user_id"]=$user_id;
+//				$this->Crud_model->insert('user_details', $user_detail);
+//				$payment_details["user_id"]=$user_id;
+//				$this->Crud_model->insert('payment_details', $payment_details);
+//				$data['token'] = md5($form_data['email']);
+//				$msg = $this->load->view('emailnotifications/confirm_email', $data, true);
+//				MailSender::sendEmailSMTP('LinksChild', $form_data['email'], 'Email Verification', 'Hello', $msg);
+
+
+
+			}
+		} else {
+			//redirect(base_url("404_override"));
+//			var_dump("not post request");
+//			die();
+		}
+
+		$this->slice->view('frontend.student-register');
+	}
+
+	public function teacher()
+	{
+		if ($this->input->post()) {
+			$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+			$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+//			$this->form_validation->set_rules('rpassword', 'Confirm Password', 'required|matches[password]');
+			if ($this->form_validation->run() == FALSE) {
+				var_dump($this->form_validation->error_array());
+				die();
+			} else {
+
+				$form_data = $this->input->post();
+
+
+				$form_data["role_id"] = 1;
+				$form_data["password"] = md5($form_data['password']);
+				$form_data["token"]=md5($form_data['email']);
+				$form_data["status"]=1;
+				//inserting data in database
+				$user_id=$this->Crud_model->insert('users', $form_data);
+				$user_detail["user_id"]=$user_id;
+//				$this->Crud_model->insert('user_details', $user_detail);
+//				$payment_details["user_id"]=$user_id;
+//				$this->Crud_model->insert('payment_details', $payment_details);
+//				$data['token'] = md5($form_data['email']);
+//				$msg = $this->load->view('emailnotifications/confirm_email', $data, true);
+//				MailSender::sendEmailSMTP('LinksChild', $form_data['email'], 'Email Verification', 'Hello', $msg);
+
+
+
+			}
+		} else {
+			//redirect(base_url("404_override"));
+//			var_dump("not post request");
+//			die();
+		}
+		$this->slice->view('frontend.teacher-register');
+	}
+
+
+
 
 	/**
 	 * Handle  Email varification

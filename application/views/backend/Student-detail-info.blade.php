@@ -28,19 +28,19 @@
             <div class="stepwizard">
                 <div class="stepwizard-row setup-panel">
                     <div class="stepwizard-step col-xs-3">
-                        <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                        <a href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
                         <p><small>Basic info</small></p>
                     </div>
                     <div class="stepwizard-step col-xs-3">
-                        <a href="#step-2" type="button" class="btn btn-success btn-circle">2</a>
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
                         <p><small>Detail info</small></p>
                     </div>
                     <div class="stepwizard-step col-xs-3">
-                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <a href="#step-3" type="button" class="btn btn-success btn-circle" >3</a>
                         <p><small>Courses</small></p>
                     </div>
                     <div class="stepwizard-step col-xs-3">
-                        <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                        <a href="#step-4" type="button" class="btn btn-success btn-circle" >4</a>
                         <p><small>Payment</small></p>
                     </div>
                 </div>

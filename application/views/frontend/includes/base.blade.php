@@ -101,7 +101,7 @@
                             <div class="body-signin__form">
 
                                 <!-- Sign In form -->
-                                <form action="<?php  echo base_url(); ?>users/loginUser/" method=" POST" class="signin__form">
+                                <form action="<?php  echo base_url("login"); ?>" method="post" class="signin__form">
                                 
 
                                     <!-- Email -->
