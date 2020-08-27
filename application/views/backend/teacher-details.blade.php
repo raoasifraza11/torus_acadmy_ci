@@ -11,10 +11,6 @@
 
 @section('_pageTitle')
 
-<?php foreach ($teacher_details as $row) : ?>
-
-    <?php $row->first_name; ?>
-<?php endforeach; ?>
 
 <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center ">
@@ -90,60 +86,20 @@
                                             <div class="col-md-6 col-sm-12">
                                                 <div style="margin:10px 0">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="Martic" />
-                                                                <span class="default">Martic</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="Inter" />
-                                                                <span class="primary"> Inter</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="A-level" />
-                                                                <span class="success">A-level</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="O-level" />
-                                                                <span class="info">O-level</span>
-                                                            </label>
-                                                        </li>
+														<?php foreach ($classes as $class ){ ?>
+														<li class="list-group-item">
+															<label class="checkbox">
+																<input type="checkbox" name="class[]" value="<?Php echo $class->id; ?>" />
+																<span class="info"><?Php echo $class->name; ?></span>
+															</label>
+														</li>
+														<?php } ?>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div style="margin:10px 0">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="BBA" />
-                                                                <span class="default">BBA</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="Mcs" />
-                                                                <span class="primary"> Mcs</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="MBA" />
-                                                                <span class="success">MBA</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="class[]" value="MS" />
-                                                                <span class="info">MS</span>
-                                                            </label>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -157,60 +113,28 @@
                                             <div class="col-md-6 col-sm-12">
                                                 <div style="margin:10px 0">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Physics" />
-                                                                <span class="default">Physics</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Chemistry" />
-                                                                <span class="primary"> Chemistry</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Math" />
-                                                                <span class="success">Math</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Biology" />
-                                                                <span class="info">Biology</span>
-                                                            </label>
-                                                        </li>
+
+														<?php foreach ($courses as $course ){ ?>
+															<li class="list-group-item">
+																<label class="checkbox">
+																	<input type="checkbox" name="subject[]" value="<?php echo  $course->id; ?>" />
+																	<span class="default"><?php echo $course->name;?></span>
+																</label>
+															</li>
+														<?php } ?>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div style="margin:10px 0">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Computer" />
-                                                                <span class="default">Computer</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="English" />
-                                                                <span class="primary"> English</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Urdu" />
-                                                                <span class="success">Urdu</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="list-grosup-item">
-                                                            <label class="checkbox">
-                                                                <input type="checkbox" name="subject[]" value="Islamic Studies" />
-                                                                <span class="info">Islamic Studies</span>
-                                                            </label>
-                                                        </li>
+{{--                                                        <li class="list-group-item">--}}
+{{--                                                            <label class="checkbox">--}}
+{{--                                                                <input type="checkbox" name="subject[]" value="Computer" />--}}
+{{--                                                                <span class="default">Computer</span>--}}
+{{--                                                            </label>--}}
+{{--                                                        </li>--}}
+
                                                     </ul>
                                                 </div>
                                             </div>

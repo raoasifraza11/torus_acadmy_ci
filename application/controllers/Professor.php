@@ -15,7 +15,6 @@ class Professor extends TTT_Controller
 	}
     public function index()
     {
-		$data['teacher_details'] = $this->users_model->getAllUsers();
 		if($this->input->post()) {
 
 			$form_data = $this->input->post();
@@ -26,8 +25,21 @@ class Professor extends TTT_Controller
 			$teacher["user_id"]=$this->auth->userID();
 			$this->Crud_model->insert('teacher_details', $teacher);
 
-		}
 
+			foreach ($form_data["class"] as $c){
+
+                 $cources["class_id"]=$c;
+                 $cources["teacher_id"]=$this->auth->userID();
+
+				$this->Crud_model->insert('teacher_classes', $cources);
+
+			}
+
+
+
+		}
+		$data["courses"]=$this->Crud_model->get_all_data("courses");
+		$data["classes"]=$this->Crud_model->get_all_data("classes");
 		$this->slice->view('backend.teacher-details' , $data);
 
     }
