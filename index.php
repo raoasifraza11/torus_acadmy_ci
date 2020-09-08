@@ -36,6 +36,13 @@
  * @filesource
  */
 
+require_once('vendor/autoload.php');
+
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -53,7 +60,9 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	#define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $_ENV['ENVIRONMENT']);
+
 
 /*
  *---------------------------------------------------------------
@@ -64,45 +73,10 @@
  * By default development will show errors but testing and live will hide them.
  */
 
-$os_type = PHP_OS_FAMILY;
-
-if(! defined('ENVIRONMENT') )
-{
-    switch($os_type) {
-        case 'Darwin' :
-            //OSX Server
-            define('ENVIRONMENT', 'developmentOsx');
-            break;
-
-        case 'OSX' :
-            //OSX Server
-            define('ENVIRONMENT', 'developmentOsx');
-            break;
-
-        case 'Windows' :
-            //Windows OS | Server
-            define('ENVIRONMENT', 'developmentOsw');
-            break;
-
-        case 'BSD' :
-            //Linux OS
-            define('ENVIRONMENT', 'production');
-            break;
-
-        case 'Linux' :
-            //Linux OS
-            define('ENVIRONMENT', 'production');
-            break;
-
-        default :
-            define('ENVIRONMENT', 'production');
-            break;
-    }
-}
 
 switch (ENVIRONMENT)
 {
-    case 'developmentOsx':
+    case 'development':
         error_reporting(-1);
         ini_set('display_errors', 1);
 
@@ -130,6 +104,8 @@ switch (ENVIRONMENT)
         echo 'The application environment is not set correctly.';
         exit(1); // EXIT_ERROR
 }
+
+// echo ENVIRONMENT; die();
 
 
 

@@ -3,3 +3,10 @@ RewriteCond $1 !^(index\.php|assets|adminassets|images|js|css|uploads|fonts|webf
 RewriteCond %(REQUEST_FILENAME) !-f
 RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^(.*)$ ./index.php/$1 [L]
+
+# CI_ENVIRONMENT SETTING
+    SetEnv CI_ENV development
+
+<IfModule mod_env.c>
+    SetEnv CI_ENV development
+</IfModule>

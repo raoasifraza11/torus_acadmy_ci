@@ -54,91 +54,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-
-//Todo: Signup Section
-
-$route['student'] =  'Signup/student';
-$route['teacher'] = 'Signup/teacher';
-$route['register'] = 'Signup/index';
-
-
-$route['login'] =  'Login/index';
-
-$route['forgotPassword'] =  'UiTest/forgot_password';//todo:workig
-
-//Todo: Student Section
-
-$route['studentd'] =  'Student/index';
-$route['studentDetailInfo'] =  'UiTest/student_detail_info';
-$route['PaymentsReceipt'] =  'UiTest/payments_receipt';
-//Todo: Teacher Section
-
-
-$route['teacherinfoo'] =  'Professor/index';
-$route['Teacherdashboard'] = 'UiTest/teacher_dashboard';
-
-
-
-//Todo:Admin
-$route['teachers'] =  'UiTest/teachers';
-$route['payments'] =  'UiTest/payments';
-$route['addPayments'] =  'UiTest/add_payments';
-$route['coursesDetails'] =  'UiTest/courses_details';
-$route['studentList'] =  'UiTest/students_list';
-$route['taskboard'] =  'UiTest/taskboard';
-$route['settings'] =  'UiTest/settings';
-
-
-// BackEnd Routes ---------------------------------------------------
-$route['index'] =  'UiTest/index';
-//$route['teachers'] =  'UiTest/teachers';//todo:workig
-//$route['payments'] =  'UiTest/payments';//todo:workig
-//$route['addPayments'] =  'UiTest/add_payments';//todo:workig
-//$route['PaymentsReceipt'] =  'UiTest/payments_receipt';//todo:workig
-$route['courses'] =  'UiTest/courses';
-//$route['coursesDetails'] =  'UiTest/courses_details';//todo:workig
-$route['ourCentres'] =  'UiTest/our_centres';
-//$route['studentDetailInfo'] =  'UiTest/student_detail_info';
-$route['teacherDetailInfo'] =  'UiTest/teacher_detail_info';//todo:workig
-$route['studentDashboard1'] =  'UiTest/student_dashboard_2';
-$route['studentPayments'] =  'UiTest/student_dashboard_payments';
-//$route['studentList'] =  'UiTest/students_list';//todo:workig
-//$route['taskboard'] =  'UiTest/taskboard';//todo:workig
-$route['teacherDetails'] =  'UiTest/teacher_details';
-//$route['settings'] =  'UiTest/settings';//todo:workig
-//$route['login'] =  'UiTest/login';
-//$route['forgotPassword'] =  'UiTest/forgot_password';//todo:workig
-//$route['appCompose'] =  'UiTest/app_compose'; //todo: not included
-//$route['attendance'] =  'UiTest/attendance';  //todo: not included
-//$route['appEmailView'] =  'UiTest/email_view'; //todo: not included
-//$route['studentInfo'] = 'users/studentInfo';
-//$route['teacherInfo'] = 'users/teacherInfo';
-//$route['UpdateStudentPersonalInfo'] = 'users/UpdateStudentRegistrationInfo';//todo: not included
-//$route['logout'] = 'users/logout';
-$route['checkDetails'] = 'users/checkDetails';//todo: not included
-$route['Teacherdashboard'] = 'UiTest/teacher_dashboard';
-$route['Studentdashboard'] = 'UiTest/student_dashboard';
-$route['loginUser'] = 'users/loginUser';
-
-// BackEnd Routes ---------------------------------------------------------
-
-$route['index1'] =  'UiTest/frontend_index';
-//$route['studentRegister'] =  'UiTest/student_register';//todo:under working
-//$route['teacherRegister'] =  'UiTest/teacher_register';//todo:uner working
-$route['courses1'] =  'UiTest/frontend_courses';
-$route['singleCourse'] =  'UiTest/single_course';
-$route['contacts'] =  'UiTest/contacts';
-$route['blogItem'] =  'UiTest/blog_item';
-//$route['blog'] =  'UiTest/blog';//todo: not included
-$route['about'] =  'UiTest/about';
-$route['signup'] =  'UiTest/signup';
-
-
 // Default Routes ---------------------------------------------------------
 
-$route['dev'] = 'home';
-$route['default_controller'] = 'UiTest/frontend_index';
+$route['default_controller'] = 'Welcome/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 
 
