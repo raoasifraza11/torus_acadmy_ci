@@ -53,21 +53,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-//Todo: Under Process
 
 
+//Todo: Signup Section
 
 $route['student'] =  'Signup/student';
 $route['teacher'] = 'Signup/teacher';
 $route['register'] = 'Signup/index';
 
+
 $route['login'] =  'Login/index';
 
 $route['forgotPassword'] =  'UiTest/forgot_password';//todo:workig
 
+//Todo: Student Section
+
 $route['studentd'] =  'Student/index';
 $route['studentDetailInfo'] =  'UiTest/student_detail_info';
 $route['PaymentsReceipt'] =  'UiTest/payments_receipt';
+//Todo: Teacher Section
 
 
 $route['teacherinfoo'] =  'Professor/index';
@@ -127,7 +131,7 @@ $route['contacts'] =  'UiTest/contacts';
 $route['blogItem'] =  'UiTest/blog_item';
 //$route['blog'] =  'UiTest/blog';//todo: not included
 $route['about'] =  'UiTest/about';
-//$route['signup'] =  'UiTest/signup';
+$route['signup'] =  'UiTest/signup';
 
 
 // Default Routes ---------------------------------------------------------
