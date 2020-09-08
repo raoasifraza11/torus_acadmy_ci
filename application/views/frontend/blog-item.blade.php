@@ -1,0 +1,294 @@
+@extends('frontend.includes.base')
+@section('title', 'Torus Academy - Blog items')
+@section('_css')
+
+@endsection
+
+@section('content')
+
+<div id="blog-item__page">
+    <section class="section__home">
+        <div class="container home__body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="home__content">
+
+                        <!-- Heading -->
+                        <h1 class="home__heading">
+                            Blog post
+                        </h1>
+
+                        <!-- Breadcrumbs -->
+                        <ol class="breadcrumb">
+                            <li><a href="{{ base_url('index1') }}">Home</a></li>
+                            <li class="active">Blog Item</li>
+                        </ol>
+
+                    </div> <!-- / .home__content -->
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+
+        <!-- Background image -->
+        <div class="home__bg"></div>
+    </section> <!-- .section__home -->
+
+    <!-- section blog-item -->
+    <section class="section__blog-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section_title__body">
+                        <div class="section__subtitle dark__subtitle">
+                            June 28, <span>2017</span>
+                        </div>
+                        <h2 class="blog_item__title dark__title">
+                            My way in LCTRS: Part I
+                        </h2>
+                        <p class="blog_item__tags">
+                            <i class="ion-ios-pricetags" aria-hidden="true"></i> <a href="#">Study</a> <a href="#">Education</a> <a href="#">Conference</a>
+                        </p> <!-- / .blog_item__tags -->
+                    </div> <!-- / .section_title__body  -->
+                    <div class="blog_item__abstract">
+                        One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog_item__img">
+                        <img src="./assets1/img/blog-item_img-1.jpg" class="img-responsive" alt="...">
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog_item__text">
+                        He felt a slight itch up on his belly; pushed himself slowly up on his back towards the headboard so that he could lift his head better; found where the itch was, and saw that it was covered with lots of little white spots which he didn't know what to make of; and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he touched it he was overcome by a cold shudder. He slid back into his former position. "Getting up early all the time", he thought, "it makes you stupid. You've got to get enough sleep. Other travelling salesmen live a life of luxury. For instance, whenever I go back to the guest house during the morning to copy out the contract, these gentlemen are always still sitting there eating their breakfasts. I ought to just try that with my boss; I'd get kicked out on the spot. But who knows, maybe that would be the best thing for me. His boss would certainly come round with the doctor from the medical insurance company, accuse his parents of having a lazy son, and accept the doctor's recommendation not to make any claim as the doctor believed that no-one was ever ill but that many were workshy.
+                    </div>
+                    <h2 class="blog_item__heading">First steps in web design</h2>
+                    <div class="blog_item__text">
+                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.
+                    </div>
+                    <ul class="blog_item__list">
+                        <li>List item #1</li>
+                        <li>List item #2</li>
+                        <li>Third list item</li>
+                        <li>Another list item</li>
+                    </ul>
+                    <div class="blog_item__text">
+                        His boss would certainly come round with the doctor from the medical insurance company, accuse his parents of having a lazy son, and accept the doctor's recommendation not to make any claim as the doctor believed that no-one was ever ill but that many were workshy. And what's more, would he have been entirely wrong in this case? Gregor did in fact, apart from excessive sleepiness after sleeping for so long, feel completely well and even felt much hungrier than usual.
+                    </div>
+                    <div class="blog_item__quote">
+                        Getting up early all the time, he thought, it makes you stupid. You've got to get enough sleep. Other travelling salesmen live a life of luxury.
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="blog_item__text">
+                        He felt a slight itch up on his belly; pushed himself slowly up on his back towards the headboard so that he could lift his head better; found where the itch was, and saw that it was covered with lots of little white spots which he didn't know what to make of; and when he tried to feel the place with one of his legs he drew it quickly back because as soon as he touched it he was overcome by a cold shudder. He slid back into his former position. "Getting up early all the time", he thought, "it makes you stupid. You've got to get enough sleep.
+                    </div>
+                    <div class="blog_item__text">
+                        You've got to get enough sleep. Other travelling salesmen live a life of luxury. For instance, whenever I go back to the guest house during the morning to copy out the contract, these gentlemen are always still sitting there eating their breakfasts. I ought to just try that with my boss; I'd get kicked out on the spot.
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="blog_item__img">
+                        <img src="./assets1/img/blog-item_img-2.jpg" class="img-responsive" alt="...">
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog_item__info">
+                        <div class="blog_item__author">
+                            Story by <a href="#">John Doe</a>
+                        </div>
+                        <ul class="blog_item__share">
+                            <li class="social-icons__item">Share:</li>
+                            <li class="social-icons__item"><a href="#"><i class="icon ion-social-twitter" aria-hidden="true"></i></a></li>
+                            <li class="social-icons__item"><a href="#"><i class="icon ion-social-facebook" aria-hidden="true"></i></a></li>
+                            <li class="social-icons__item"><a href="#"><i class="icon ion-social-googleplus" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="previous"><a href="#"><i class="ion-android-arrow-back"></i> Previous Post</a></li>
+                            <li class="next"><a href="#">Next Post <i class="ion-android-arrow-forward"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section__subtitle blog_item__subtitle">
+                        You may also <span>like</span>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="related_post__item">
+                        <a href="#" class="related_post__img">
+                            <img src="./assets1/img/blog_img-1.jpg" class="img-responsive" alt="...">
+                        </a>
+                        <div class="related_post__content">
+                            <h3><a href="#">Courses That I Like</a></h3>
+                            <span class="post-date">October 29, 2017</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="related_post__item">
+                        <a href="#" class="related_post__img">
+                            <img src="./assets1/img/blog_img-2.jpg" class="img-responsive" alt="...">
+                        </a>
+                        <div class="related_post__content">
+                            <h3><a href="#">From beginner to master</a></h3>
+                            <span class="post-date">October 09, 2017</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="related_post__item">
+                        <a href="#" class="related_post__img">
+                            <img src="./assets1/img/blog_img-3.jpg" class="img-responsive" alt="...">
+                        </a>
+                        <div class="related_post__content">
+                            <h3><a href="#">How to become a designer?</a></h3>
+                            <span class="post-date">August 15, 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section__subtitle blog_item__subtitle">
+                        <span>4</span> Comments
+                    </div>
+                    <div class="comments">
+                        <ul class="comments__list">
+                            <li class="comment">
+                                <div class="comment__avatar">
+                                    <img src="./assets1/img/instagram_img-6.jpg" class="img-responsive" alt="...">
+                                </div>
+                                <div class="comment__content">
+                                    <div class="comment__user">
+                                        Robert Jones
+                                    </div>
+                                    <div class="comment__date">
+                                        August 8, 2017 at 1:15 pm
+                                    </div>
+                                    <div class="comment__message">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dicta alias enim quasi sapiente saepe, repellat soluta commodi delectus doloribus, veniam odit hic ratione quae modi earum dolor dignissimos quas?
+                                    </div>
+                                    <div class="comment__reply">
+                                        <a href="#">Reply</a>
+                                    </div>
+                                </div>
+                            </li> <!-- .comment -->
+                            <li class="comment">
+                                <div class="comment__avatar">
+                                    <img src="./assets1/img/instagram_img-2.jpg" class="img-responsive" alt="...">
+                                </div>
+                                <div class="comment__content">
+                                    <div class="comment__user">
+                                        Jane Doe
+                                    </div>
+                                    <div class="comment__date">
+                                        August 12, 2017 at 3:15 pm
+                                    </div>
+                                    <div class="comment__message">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iusto sapiente magnam, dolorum laudantium eius corporis odit deserunt aliquid architecto ut veniam cumque repudiandae commodi impedit tempore vitae modi voluptates amet aliquam. Quisquam, temporibus, tempore! Animi veritatis laudantium ratione blanditiis!
+                                    </div>
+                                    <div class="comment__reply">
+                                        <a href="#">Reply</a>
+                                    </div>
+                                </div>
+                            </li> <!-- .comment -->
+                            <li class="comment">
+                                <div class="comment__avatar">
+                                    <img src="./assets1/img/instagram_img-1.jpg" class="img-responsive" alt="...">
+                                </div>
+                                <div class="comment__content">
+                                    <div class="comment__user">
+                                        Jessica Border
+                                    </div>
+                                    <div class="comment__date">
+                                        October 8, 2017 at 11:42 am
+                                    </div>
+                                    <div class="comment__message">
+                                        Sint nisi quod culpa animi sit a voluptas quia, dolor qui eius esse itaque velit quasi quibusdam, modi nesciunt facere harum! Error adipisci nesciunt praesentium! Dolorum magni dolorem adipisci vitae, culpa praesentium inventore voluptates corporis quia ipsum a maxime fugiat.
+                                    </div>
+                                    <div class="comment__reply">
+                                        <a href="#">Reply</a>
+                                    </div>
+                                </div>
+                            </li> <!-- .comment -->
+                            <li class="comment">
+                                <div class="comment__avatar">
+                                    <img src="./assets1/img/instagram_img-6.jpg" class="img-responsive" alt="...">
+                                </div>
+                                <div class="comment__content">
+                                    <div class="comment__user">
+                                        Robert Jones
+                                    </div>
+                                    <div class="comment__date">
+                                        October 14, 2017 at 11:10 am
+                                    </div>
+                                    <div class="comment__message">
+                                        placeat eaque quaerat distinctio voluptatibus modi. Asperiores fugiat deleniti praesentium enim incidunt quaerat cupiditate repellendus ad reprehenderit neque, qui, eveniet veniam quis voluptate ab architecto quam cum nihil, accusamus culp.
+                                    </div>
+                                    <div class="comment__reply">
+                                        <a href="#">Reply</a>
+                                    </div>
+                                </div>
+                            </li> <!-- .comment -->
+                        </ul> <!-- .comments__list -->
+                    </div> <!-- .comments -->
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section__subtitle blog_item__subtitle">
+                        Leave a <span>comment</span>
+                    </div>
+                    <form class="comments__form">
+
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name (Required)</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Full Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email address (Required)</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your E-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website" class="sr-only">Website</label>
+                            <input type="email" name="website" class="form-control" id="website" placeholder="Enter website">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Message (Required)</label>
+                            <textarea name="message" class="form-control" rows="6" id="message" placeholder="Enter Your Message"></textarea>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent">
+                            Post comment
+                        </button>
+                    </form>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+</div>
+
+@endsection
