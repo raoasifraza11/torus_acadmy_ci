@@ -61,10 +61,8 @@ $route['student'] =  'Signup/student';
 $route['teacher'] = 'Signup/teacher';
 $route['register'] = 'Signup/index';
 
-//Todo: Login Section
 
 $route['login'] =  'Login/index';
-
 
 $route['forgotPassword'] =  'UiTest/forgot_password';//todo:workig
 

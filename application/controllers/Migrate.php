@@ -29,8 +29,10 @@ class Migrate extends CI_Controller
                 200, "<h1 style='color: green;'>Data migrated Successfully!</h1>");
         }
     }
+
+
      public function seed(){
-	// 	//        	todo: insert dummy users
+	//  todo: insert dummy users
 	// 	$this->insertSiteConfigs();
 	// 	$this->insertRoles();
 	// 	$this->insertAdmin();
@@ -144,6 +146,8 @@ class Migrate extends CI_Controller
 		}
 
 	 }
+
+
 	 public function insertTeacher(){
 
 		 $student['password']=123;
@@ -163,6 +167,8 @@ class Migrate extends CI_Controller
 		 $student["is_verified"]=1;
 		 $student_id=$this->Crud_model->insert('users', $student);
 	 }
+
+
 	 public function insertStudent(){
 
 	 	$student['password']=123;
@@ -181,10 +187,6 @@ class Migrate extends CI_Controller
 	 	$student["status"]=1;
 	 	$student["is_verified"]=1;
 	 	$student_id=$this->Crud_model->insert('users', $student);
-
-
-
-
 	 }
 
 }
