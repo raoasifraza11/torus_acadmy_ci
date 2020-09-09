@@ -81,7 +81,7 @@ switch (ENVIRONMENT)
         ini_set('display_errors', 1);
 
         break;
-    case 'developmentOsw':
+    case 'windows':
         error_reporting(-1);
         ini_set('display_errors', 1);
         break;
