@@ -10,7 +10,7 @@
 
     <!-- Bootstrap Core and vandor -->
     <link rel="stylesheet" href="<?php echo asset_url('be_v1/plugins/bootstrap/css/bootstrap.min.css'); ?>" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Plugins css -->
     <link rel="stylesheet" href="<?php echo asset_url('be_v1/plugins/summernote/dist/summernote.css'); ?>"/>
     <script src="https://unpkg.com/feather-icons"></script>
