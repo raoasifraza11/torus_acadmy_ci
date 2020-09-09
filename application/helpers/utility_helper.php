@@ -21,6 +21,6 @@ if ( ! function_exists('asset_url()'))
      */
     function asset_url($sibling)
     {
-        return base_url().'application/public_html/assets_alpha/be_v1/'.$sibling;
+        return base_url().'application/public_html/assets_alpha/'.$sibling;
     }
 }

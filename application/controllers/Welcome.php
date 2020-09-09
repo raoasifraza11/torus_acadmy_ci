@@ -6,6 +6,11 @@ class  Welcome extends TTT_Controller
 
 	public function index()
 	{
-        $this->slice->view('master');
+        $this->slice->view('landing_alpha.index');
+	}
+
+	public function signup_view()
+	{
+        $this->slice->view('landing_alpha.signup');
 	}
 }
