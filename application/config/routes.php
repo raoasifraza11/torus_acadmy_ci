@@ -62,6 +62,36 @@ $route['registration_category'] = 'Landing/registration_role';
 $route['teacher/register'] = 'Landing/teacher_reg_view';
 $route['student/register'] = 'Landing/student_reg_view';
 
+
+/*
+ *
+ * Backend:
+ *          Administration apart
+ *
+ */
+$route['dashboard'] = 'Backend/index';
+$route['admin/students'] = 'Backend/students';
+$route['admin/courses'] = 'Backend/courses';
+$route['admin/teachers'] = 'Backend/teachers';
+$route['admin/invoices'] = 'Backend/invoices';
+$route['admin/revenue'] = 'Backend/revenue';
+$route['admin/payments'] = 'Backend/payments';
+
+// Site settings
+$route['admin/site-setting'] = 'Backend/site_configuration';
+$route['admin/copyrights'] = 'Backend/copyrights';
+
+
+
+/*
+ *
+ * Backend:
+ *          Student apart
+ *
+ */
+//$route['dashboard'] = 'Backend/index';
+
+
 // Default Routes ---------------------------------------------------------
 
 $route['default_controller'] = 'Welcome/index';
