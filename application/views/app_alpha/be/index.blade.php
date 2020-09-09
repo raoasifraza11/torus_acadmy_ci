@@ -2,21 +2,21 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <title>:: Torus Academy :: Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<title>:: Torus Academy :: Home</title>
 
-    <!-- Bootstrap Core and vandor -->
-    <link rel="stylesheet" href="<?php echo asset_url('plugins/bootstrap/css/bootstrap.min.css'); ?>" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Plugins css -->
-    <link rel="stylesheet" href="<?php echo asset_url('plugins/summernote/dist/summernote.css'); ?>"/>
-    <script src="https://unpkg.com/feather-icons"></script>
+<!-- Bootstrap Core and vandor -->
+<link rel="stylesheet" href="<?php echo asset_url('plugins/bootstrap/css/bootstrap.min.css'); ?>" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Plugins css -->
+<link rel="stylesheet" href="<?php echo asset_url('plugins/summernote/dist/summernote.css'); ?>"/>
+<script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Core css -->
-    <link rel="stylesheet" href="<?php echo asset_url('css/style.min.css'); ?>"/>
+<!-- Core css -->
+<link rel="stylesheet" href="<?php echo asset_url('css/style.min.css'); ?>"/>
 
 
 </head>
@@ -298,7 +298,7 @@
                                     <span class="name">Abigail Churchill</span>
                                     <span class="message">Art & Design</span>
                                 </div>
-                            </a>
+                            </a>                            
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="media">
@@ -307,7 +307,7 @@
                                     <span class="name">Alexandra Carr</span>
                                     <span class="message">Fashion</span>
                                 </div>
-                            </a>
+                            </a>                            
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="media">
@@ -447,7 +447,7 @@
                                     <p class="bg-light-blue">Are we meeting today?</p>
                                     <span class="time">10:10 AM, Today</span>
                                 </div>
-                            </li>
+                            </li>    
                             <li class="other-message">
                                 <img class="avatar mr-3" src="../assets/images/xs/avatar1.jpg" alt="avatar">
                                 <div class="message">
@@ -455,7 +455,7 @@
                                     <p class="bg-light-blue">Are we meeting today?</p>
                                     <span class="time">10:15 AM, Today</span>
                                 </div>
-                            </li>
+                            </li>                                    
                             <li class="my-message">
                                 <div class="message">
                                     <p class="bg-light-gray">Project has been already finished and I have results to show you.</p>
@@ -482,10 +482,10 @@
                                     </div>
                                     <span class="time">10:15 AM, Today</span>
                                 </div>
-                            </li>
+                            </li> 
                             <li class="other-message">
                                 <img class="avatar mr-3" src="../assets/images/xs/avatar1.jpg" alt="avatar">
-                                <div class="message">
+                                <div class="message">                                            
                                     <p class="bg-light-blue">Are we meeting today I have results?</p>
                                     <span class="time">10:18 AM, Today</span>
                                 </div>
@@ -560,9 +560,9 @@
                         <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
                         <li><a href="professors.html"><i class="fa fa-black-tie"></i><span>Professors</span></a></li>
                         <li><a href="students-list.html"><i class="fa fa-users"></i><span>Students</span></a></li>
-
-
-
+                       
+                                             
+                       
                     </ul>
                 </nav>
             </div>
@@ -570,7 +570,7 @@
                 <nav class="sidebar-nav">
                     <ul class="metismenu">
                         <li><a href="payments.html"><i class="fa fa-credit-card"></i><span>Payments</span></a></li>
-                        <li><a href="courses.html"><i class="fa fa-graduation-cap"></i><span>Courses</span></a></li>
+						<li><a href="courses.html"><i class="fa fa-graduation-cap"></i><span>Courses</span></a></li>   
                         <li><a href="setting.html"><i class="fa fa-gear"></i><span>Settings</span></a></li>
                     </ul>
                 </nav>
@@ -584,7 +584,7 @@
             <div class="container-fluid">
                 <div class="page-header">
                     <div class="right">
-                        <ul class="nav nav-pills">
+                        <ul class="nav nav-pills">                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <div class="dropdown-menu">
@@ -656,9 +656,9 @@
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                     <a class="dropdown-item" href="page-profile.html"><i class="dropdown-icon fe fe-user"></i> Profile</a>
                                     <a class="dropdown-item" href="app-setting.html"><i class="dropdown-icon fe fe-settings"></i> Settings</a>
-
+                                     
                                     <div class="dropdown-divider"></div>
-
+                                   
                                     <a class="dropdown-item" href="login.html"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
                                 </div>
                             </div>
@@ -810,7 +810,7 @@
                                                     <div class="progress-bar bg-yellow" role="progressbar" style="width: 61%" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <span class="text-uppercase font-10">Compared to last year</span>
-                                            </div>
+                                            </div> 
                                             <div class="col-xl-3 col-md-6 mb-2">
                                                 <div class="clearfix">
                                                     <div class="float-left"><strong>Income</strong></div>
@@ -830,12 +830,12 @@
                                                     <div class="progress-bar bg-pink" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <span class="text-uppercase font-10">Compared to last year</span>
-                                            </div>
+                                            </div>                                                                       
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                
                         <div class="row clearfix row-deck">
                             <div class="col-xl-6 col-lg-6 col-md-12">
                                 <div class="card">
@@ -848,7 +848,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-eye"></i> View Details </a>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-share-alt"></i> Share </a>
-                                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>
+                                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>                                            
                                                     <div class="dropdown-divider"></div>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-copy"></i> Copy to</a>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-folder"></i> Move to</a>
@@ -861,111 +861,111 @@
                                     <div class="table-responsive" style="height: 310px;">
                                         <table class="table card-table table-vcenter text-nowrap table-striped mb-0">
                                             <tbody>
-                                            <tr>
-                                                <th>No.</th>
-                                                <th>Name</th>
-                                                <th></th>
-                                                <th>Marks</th>
-                                                <th>%AGE</th>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar1.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Merri Diamond</div>
-                                                    <div class="text-muted">Science</div>
-                                                </td>
-                                                <td>199</td>
-                                                <td>99.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>23</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar2.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Sara Hopkins</div>
-                                                    <div class="text-muted">Mechanical</div>
-                                                </td>
-                                                <td>197</td>
-                                                <td>98.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>41</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar3.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Allen Collins</div>
-                                                    <div class="text-muted">M.C.A.</div>
-                                                </td>
-                                                <td>197</td>
-                                                <td>98.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar4.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Erin Gonzales</div>
-                                                    <div class="text-muted">Arts</div>
-                                                </td>
-                                                <td>194</td>
-                                                <td>97.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>57</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar5.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Claire Peters</div>
-                                                    <div class="text-muted">Science</div>
-                                                </td>
-                                                <td>192</td>
-                                                <td>95.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>85</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar6.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Claire Peters</div>
-                                                    <div class="text-muted">Science</div>
-                                                </td>
-                                                <td>192</td>
-                                                <td>95.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td class="w40">
-                                                    <div class="avatar">
-                                                        <img class="avatar" src="../assets/images/xs/avatar7.jpg" alt="avatar">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>Claire Peters</div>
-                                                    <div class="text-muted">Science</div>
-                                                </td>
-                                                <td>191</td>
-                                                <td>95.00</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>No.</th>                                                    
+                                                    <th>Name</th>
+                                                    <th></th>
+                                                    <th>Marks</th>
+                                                    <th>%AGE</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar1.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Merri Diamond</div>
+                                                        <div class="text-muted">Science</div>
+                                                    </td>
+                                                    <td>199</td>
+                                                    <td>99.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>23</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar2.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Sara Hopkins</div>
+                                                        <div class="text-muted">Mechanical</div>
+                                                    </td>
+                                                    <td>197</td>
+                                                    <td>98.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>41</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar3.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Allen Collins</div>
+                                                        <div class="text-muted">M.C.A.</div>
+                                                    </td>
+                                                    <td>197</td>
+                                                    <td>98.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar4.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Erin Gonzales</div>
+                                                        <div class="text-muted">Arts</div>
+                                                    </td>
+                                                    <td>194</td>
+                                                    <td>97.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>57</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar5.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Claire Peters</div>
+                                                        <div class="text-muted">Science</div>
+                                                    </td>
+                                                    <td>192</td>
+                                                    <td>95.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>85</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar6.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Claire Peters</div>
+                                                        <div class="text-muted">Science</div>
+                                                    </td>
+                                                    <td>192</td>
+                                                    <td>95.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td class="w40">
+                                                        <div class="avatar">
+                                                            <img class="avatar" src="../assets/images/xs/avatar7.jpg" alt="avatar">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Claire Peters</div>
+                                                        <div class="text-muted">Science</div>
+                                                    </td>
+                                                    <td>191</td>
+                                                    <td>95.00</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -1003,90 +1003,90 @@
                                         <div class="table-responsive">
                                             <table class="table table-striped mb-0 text-nowrap">
                                                 <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Name</th>
-                                                    <th>Assigned Professor</th>
-                                                    <th>Date Of Admit</th>
-                                                    <th>Fees</th>
-                                                    <th>Branch</th>
-                                                    <th>Edit</th>
-                                                </tr>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Assigned Professor</th>
+                                                        <th>Date Of Admit</th>
+                                                        <th>Fees</th>
+                                                        <th>Branch</th>
+                                                        <th>Edit</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Jens Brincker</td>
-                                                    <td>Kenny Josh</td>
-                                                    <td>27/05/2016</td>
-                                                    <td>
-                                                        <span class="tag tag-success">paid</span>
-                                                    </td>
-                                                    <td>Mechanical</td>
-                                                    <td>
-                                                        <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Mark Hay</td>
-                                                    <td> Mark</td>
-                                                    <td>26/05/2018</td>
-                                                    <td>
-                                                        <span class="tag tag-warning">unpaid</span>
-                                                    </td>
-                                                    <td>Science</td>
-                                                    <td>
-                                                        <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Anthony Davie</td>
-                                                    <td>Cinnabar</td>
-                                                    <td>21/05/2018</td>
-                                                    <td>
-                                                        <span class="tag tag-success ">paid</span>
-                                                    </td>
-                                                    <td>Commerce</td>
-                                                    <td>
-                                                        <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>David Perry</td>
-                                                    <td>Felix </td>
-                                                    <td>20/04/2019</td>
-                                                    <td>
-                                                        <span class="tag tag-danger">unpaid</span>
-                                                    </td>
-                                                    <td>Mechanical</td>
-                                                    <td>
-                                                        <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Anthony Davie</td>
-                                                    <td>Beryl</td>
-                                                    <td>24/05/2017</td>
-                                                    <td>
-                                                        <span class="tag tag-success ">paid</span>
-                                                    </td>
-                                                    <td>M.B.A.</td>
-                                                    <td>
-                                                        <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Jens Brincker</td>
+                                                        <td>Kenny Josh</td>
+                                                        <td>27/05/2016</td>
+                                                        <td>
+                                                            <span class="tag tag-success">paid</span>
+                                                        </td>
+                                                        <td>Mechanical</td>
+                                                        <td>
+                                                            <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Mark Hay</td>
+                                                        <td> Mark</td>
+                                                        <td>26/05/2018</td>
+                                                        <td>
+                                                            <span class="tag tag-warning">unpaid</span>
+                                                        </td>
+                                                        <td>Science</td>
+                                                        <td>
+                                                            <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Anthony Davie</td>
+                                                        <td>Cinnabar</td>
+                                                        <td>21/05/2018</td>
+                                                        <td>
+                                                            <span class="tag tag-success ">paid</span>
+                                                        </td>
+                                                        <td>Commerce</td>
+                                                        <td>
+                                                            <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>David Perry</td>
+                                                        <td>Felix </td>
+                                                        <td>20/04/2019</td>
+                                                        <td>
+                                                            <span class="tag tag-danger">unpaid</span>
+                                                        </td>
+                                                        <td>Mechanical</td>
+                                                        <td>
+                                                            <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Anthony Davie</td>
+                                                        <td>Beryl</td>
+                                                        <td>24/05/2017</td>
+                                                        <td>
+                                                            <span class="tag tag-success ">paid</span>
+                                                        </td>
+                                                        <td>M.B.A.</td>
+                                                        <td>
+                                                            <a href="javascript:void(0)"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
+                                        </div>  
                                     </div>
                                 </div>
                             </div>
@@ -1143,7 +1143,7 @@
                                         <button class="btn btn-default mt-3">Send</button>
                                     </div>
                                 </div>
-
+                
                             </div>
                             <div class="col-xl-5 col-lg-6 col-md-12">
                                 <div class="card">
@@ -1156,7 +1156,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-eye"></i> View Details </a>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-share-alt"></i> Share </a>
-                                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>
+                                                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-cloud-download"></i> Download</a>                                            
                                                     <div class="dropdown-divider"></div>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-copy"></i> Copy to</a>
                                                     <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fa fa-folder"></i> Move to</a>
@@ -1211,7 +1211,7 @@
                                                     <label class="d-block">Management - MGT <span class="float-right">61%</span></label>
                                                     <div class="progress progress-xs">
                                                         <div class="progress-bar bg-pink" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 61%;"></div>
-                                                    </div>
+                                                    </div>   
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1219,10 +1219,10 @@
                                                     <label class="d-block">Science <span class="float-right">77%</span></label>
                                                     <div class="progress progress-xs">
                                                         <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
-                                                    </div>
+                                                    </div>   
                                                 </td>
                                             </tr>
-                                            </tbody></table>
+                                        </tbody></table> 
                                     </div>
                                     <div class="card-footer">
                                         <small>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></small>
@@ -1234,118 +1234,118 @@
                                     <div class="table-responsive todo_list">
                                         <table class="table table-hover text-nowrap table-striped table-vcenter mb-0">
                                             <thead>
-                                            <tr>
-                                                <th>Task</th>
-                                                <th class="w150 text-right">Due</th>
-                                                <th class="w100">Priority</th>
-                                                <th class="w80 text-center"><i class="icon-user"></i></th>
-                                            </tr>
+                                                <tr>
+                                                    <th>Task</th>
+                                                    <th class="w150 text-right">Due</th>
+                                                    <th class="w100">Priority</th>
+                                                    <th class="w80 text-center"><i class="icon-user"></i></th>
+                                                </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
-                                                        <span class="custom-control-label">Report Panel Usag</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">Feb 12-2019</td>
-                                                <td><span class="tag tag-danger ml-0 mr-0">HIGH</span></td>
-                                                <td>
-                                                    <span class="avatar avatar-pink"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                        <span class="custom-control-label">Report Panel Usag</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">Feb 18-2019</td>
-                                                <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
-                                                <td>
-                                                    <img src="../assets/images/xs/avatar1.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
-                                                        <span class="custom-control-label">New logo design for Angular Admin</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">March 02-2019</td>
-                                                <td><span class="tag tag-success ml-0 mr-0">High</span></td>
-                                                <td>
-                                                    <img src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
-                                                        <span class="custom-control-label">Report Panel Usag</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">Feb 12-2019</td>
-                                                <td><span class="tag tag-danger ml-0 mr-0">HIGH</span></td>
-                                                <td>
-                                                    <span class="avatar avatar-pink"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                        <span class="custom-control-label">Report Panel Usag</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">Feb 18-2019</td>
-                                                <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
-                                                <td>
-                                                    <img src="../assets/images/xs/avatar3.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
-                                                        <span class="custom-control-label">New logo design for Angular Admin</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">March 02-2019</td>
-                                                <td><span class="tag tag-success ml-0 mr-0">High</span></td>
-                                                <td>
-                                                    <span class="avatar avatar-blue"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                        <span class="custom-control-label">Design PSD files for Angular Admin</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">March 20-2019</td>
-                                                <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
-                                                <td>
-                                                    <img src="../assets/images/xs/avatar4.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
-                                                        <span class="custom-control-label">Design PSD files for Angular Admin</span>
-                                                    </label>
-                                                </td>
-                                                <td class="text-right">March 20-2019</td>
-                                                <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
-                                                <td>
-                                                    <img src="../assets/images/xs/avatar5.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
+                                                            <span class="custom-control-label">Report Panel Usag</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">Feb 12-2019</td>
+                                                    <td><span class="tag tag-danger ml-0 mr-0">HIGH</span></td>
+                                                    <td>
+                                                        <span class="avatar avatar-pink"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+                                                            <span class="custom-control-label">Report Panel Usag</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">Feb 18-2019</td>
+                                                    <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
+                                                    <td>
+                                                        <img src="../assets/images/xs/avatar1.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
+                                                            <span class="custom-control-label">New logo design for Angular Admin</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">March 02-2019</td>
+                                                    <td><span class="tag tag-success ml-0 mr-0">High</span></td>
+                                                    <td>
+                                                        <img src="../assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
+                                                            <span class="custom-control-label">Report Panel Usag</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">Feb 12-2019</td>
+                                                    <td><span class="tag tag-danger ml-0 mr-0">HIGH</span></td>
+                                                    <td>
+                                                        <span class="avatar avatar-pink"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+                                                            <span class="custom-control-label">Report Panel Usag</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">Feb 18-2019</td>
+                                                    <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
+                                                    <td>
+                                                        <img src="../assets/images/xs/avatar3.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
+                                                            <span class="custom-control-label">New logo design for Angular Admin</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">March 02-2019</td>
+                                                    <td><span class="tag tag-success ml-0 mr-0">High</span></td>
+                                                    <td>
+                                                        <span class="avatar avatar-blue"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">NG</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+                                                            <span class="custom-control-label">Design PSD files for Angular Admin</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">March 20-2019</td>
+                                                    <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
+                                                    <td>
+                                                        <img src="../assets/images/xs/avatar4.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+                                                            <span class="custom-control-label">Design PSD files for Angular Admin</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="text-right">March 20-2019</td>
+                                                    <td><span class="tag tag-warning ml-0 mr-0">MED</span></td>
+                                                    <td>
+                                                        <img src="../assets/images/xs/avatar5.jpg" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -1364,12 +1364,12 @@
                         <div class="col-md-6 col-sm-12">
                             Copyright © 2020 <a href="https://tritechteal.com">Tritechteal(pvt)</a>.
                         </div>
-
+                        
                     </div>
                 </div>
             </footer>
         </div>
-    </div>
+    </div>    
 </div>
 
 <!-- Start Main project js, jQuery, Bootstrap -->
