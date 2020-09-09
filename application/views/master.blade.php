@@ -40,9 +40,11 @@
         @include('app_alpha.be.particle.student.sidebar')
     @elseif($this->input->get('sidebar', TRUE) == 't')
         @include('app_alpha.be.particle.teacher.sidebar')
+    @else
+        @include('app_alpha.be.particle.sidebar')
     @endif
 
-    <!-- Start project content area -->
+        <!-- Start project content area -->
     <div class="page">
         <!-- Start Page header -->
         @include('app_alpha.be.particle.page-header')
