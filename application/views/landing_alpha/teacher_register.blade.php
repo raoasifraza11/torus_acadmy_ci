@@ -35,7 +35,8 @@
             <div class="home__bg"></div>
         </section>
         <div class="wrapper">
-            <form action="" id="wizard">
+            <form id="wizard" name="techReg" action="<?php echo base_url('dashboard') ?>" method="get">
+                <input type="hidden" name="sidebar" value="t">
                 <!-- SECTION 1 -->
                 <h2></h2>
                 <section>
@@ -97,43 +98,43 @@
                                 <h3> Teacher Registration</h3>
                             </div>
                             <p>Please fill with additional info</p>
-                            <div class="form-row">
-                                <div class="form-holder">
-                                    <input type="date" placeholder="Date of Birth" class="form-control">
-                                </div>
-                                <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
-                                    <div class="checkbox-tick">
-                                        <label class="male">
-                                            <input type="radio" name="gender" value="male" checked> Male<br>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="female">
-                                            <input type="radio" name="gender" value="female"> Female<br>
-                                            <span class="checkmark"></span>
-                                        </label>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="date" placeholder="Date of Birth" class="form-control">
                                     </div>
+                                    <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                                        <div class="checkbox-tick">
+                                            <label class="male">
+                                                <input type="radio" name="gender" value="male" checked> Male<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="female">
+                                                <input type="radio" name="gender" value="female"> Female<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-holder w-100">
-                                    <input type="text" placeholder="Address" class="form-control">
+                                <div class="form-row">
+                                    <div class="form-holder w-100">
+                                        <input type="text" placeholder="Address" class="form-control">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-holder">
-                                    <input type="text" placeholder="City" class="form-control">
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="City" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Zip Code" class="form-control">
+                                    </div>
                                 </div>
-                                <div class="form-holder">
-                                    <input type="text" placeholder="Zip Code" class="form-control">
+                                <div class="checkbox-circle mt-24">
+                                    <label>
+                                        <input type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                            </div>
-                            <div class="checkbox-circle mt-24">
-                                <label>
-                                    <input type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
 
                         </div>
                     </div>

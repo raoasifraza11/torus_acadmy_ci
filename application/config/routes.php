@@ -92,6 +92,15 @@ $route['admin/copyrights'] = 'Backend/copyrights';
 //$route['dashboard'] = 'Backend/index';
 
 
+/*
+ *
+ * Backend:
+ *          Teacher apart
+ *
+ */
+$route['teacher/profile'] = 'Backend/profile_setting';
+
+
 // Default Routes ---------------------------------------------------------
 
 $route['default_controller'] = 'Welcome/index';

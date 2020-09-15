@@ -49,4 +49,15 @@ class  Backend extends TTT_Controller
         $this->slice->view('app_alpha.be.settings.copyrights');
     }
 
+
+    /**
+     *
+     * TEACHER
+     *
+     */
+    public function profile_setting()
+    {
+        $this->slice->view('app_alpha.be.teachers.profile_setting');
+    }
+
 }
