@@ -55,9 +55,24 @@ class  Backend extends TTT_Controller
      * TEACHER
      *
      */
+    public function dashboard_teacher()
+    {
+$this->slice->view('app_alpha.be.teachers.dashboard');
+    }
+
     public function profile_setting()
     {
         $this->slice->view('app_alpha.be.teachers.profile_setting');
+    }
+
+    public function enrolled_student()
+    {
+        $this->slice->view('app_alpha.be.teachers.enrolled_students');
+    }
+
+    public function revenue_teacher()
+    {
+        $this->slice->view('app_alpha.be.teachers.revenue');
     }
 
 }

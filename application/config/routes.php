@@ -98,7 +98,10 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *          Teacher apart
  *
  */
+$route['teacher/dashboard'] = 'Backend/dashboard_teacher';
 $route['teacher/profile'] = 'Backend/profile_setting';
+$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
+$route['teacher/revenue'] = 'Backend/revenue_teacher';
 
 
 // Default Routes ---------------------------------------------------------
