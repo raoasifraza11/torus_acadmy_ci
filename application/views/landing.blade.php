@@ -86,8 +86,8 @@
 <script src="<?php echo asset_url('fe_v1/js/google_maps.js'); ?>"></script>
 
 <!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfwXIv2vgXzFDZRzzRH2VpbvgSzhqCCuU&amp;callback=initMap"
-        async defer></script>
+<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfwXIv2vgXzFDZRzzRH2VpbvgSzhqCCuU&amp;callback=initMap"
+        async defer></--script-->
 
 @yield('_bottomJs')
 
