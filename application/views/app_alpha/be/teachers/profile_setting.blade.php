@@ -122,6 +122,7 @@
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#academicInfo">Academic
                             Information</a></li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#expInfo">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#courseSelection">Course Selection</a>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accountInfo">Account Setting</a>
@@ -468,6 +469,52 @@
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
                                     <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane" id="courseSelection">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Course Selection</h3>
+                            <div class="card-options ">
+                                <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
+                                            class="fe fe-chevron-up"></i></a>
+                                <a href="#" class="card-options-remove" data-toggle="card-remove"><i
+                                            class="fe fe-x"></i></a>
+                            </div>
+                        </div>
+                        <form class="card-body">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Select Class</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Class 1</option>
+                                    <option>Class 2</option>
+                                    <option>Class 3</option>
+                                    <option>Class 4</option>
+                                    <option>Class 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Subject 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Subject 2
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label"></label>
+                                <div class="col-md-7">
+                                    <button type="submit" class="btn btn-primary">Save</button>
                                     <button type="submit" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </div>

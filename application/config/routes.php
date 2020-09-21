@@ -102,6 +102,7 @@ $route['teacher/dashboard'] = 'Backend/dashboard_teacher';
 $route['teacher/profile'] = 'Backend/profile_setting';
 $route['teacher/enrolled/students'] = 'Backend/enrolled_student';
 $route['teacher/revenue'] = 'Backend/revenue_teacher';
+$route['teacher/courses'] = 'Backend/courses';
 
 
 // Default Routes ---------------------------------------------------------

@@ -57,7 +57,7 @@ class  Backend extends TTT_Controller
      */
     public function dashboard_teacher()
     {
-$this->slice->view('app_alpha.be.teachers.dashboard');
+        $this->slice->view('app_alpha.be.teachers.dashboard');
     }
 
     public function profile_setting()
@@ -73,6 +73,11 @@ $this->slice->view('app_alpha.be.teachers.dashboard');
     public function revenue_teacher()
     {
         $this->slice->view('app_alpha.be.teachers.revenue');
+    }
+
+    public function teacher_courses()
+    {
+        $this->slice->view('app_alpha.be.teachers.courses');
     }
 
 }
