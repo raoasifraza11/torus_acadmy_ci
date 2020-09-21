@@ -9,7 +9,7 @@
     <title>@yield('_pageTitle') - Torus Academy</title>
 
     <!-- CSS Plugins -->
-    <link href="<?php echo asset_url('/fe_v1/plugins/lightbox/dist/css/lightbox.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('application//fe_v1/plugins/lightbox/dist/css/lightbox.css'); ?>" rel="stylesheet">
     <link href="<?php echo asset_url('fe_v1/plugins/ionicons/css/ionicons.min.css'); ?>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php echo asset_url('fe_v1/plugins/owl-carousel/dist/assets/owl.carousel.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo asset_url('fe_v1/plugins/owl-carousel/dist/assets/owl.theme.default.min.css'); ?>">
@@ -17,7 +17,7 @@
 
     <!-- CSS Global -->
     <!--build:css assets/css/theme.min.css-->
-    <link rel="stylesheet" href="<?php echo asset_url('fe_v1/css/theme.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('application/public_html/assets_alpha/fe_v1/css/theme.css'); ?>">
     <!--end build-->
 
     @yield('_css')
