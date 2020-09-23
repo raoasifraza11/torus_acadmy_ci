@@ -35,7 +35,7 @@
             <div class="home__bg"></div>
         </section>
         <div class="wrapper">
-            <form id="wizard" name="techReg" action="<?php echo base_url('dashboard') ?>" method="get">
+            <form id="wizard" name="techReg" action="<?php echo base_url('teacher/register') ?>" method="post">
                 <input type="hidden" name="sidebar" value="t">
                 <!-- SECTION 1 -->
                 <h2></h2>
@@ -139,10 +139,17 @@
                         </div>
                     </div>
                 </section>
+				<button type="submit" >test</button>
             </form>
         </div>
     </div>
 
 
 
+@endsection
+@section('_bottomJs')
+
+<script>
+
+</script>
 @endsection

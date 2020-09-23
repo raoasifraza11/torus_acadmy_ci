@@ -22,13 +22,13 @@
                         <div class="body-signin__form">
 
                             <!-- Sign In form -->
-                            <form class="signin__form">
+                            <form class="signin__form" action="<?php echo base_url("login")?>" method="post">
                                 <!-- Email -->
                                 <div class="form-group">
                                     <label for="sign-in__email" class="sr-only">Enter email</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="ion-android-person"></i></span>
-                                        <input type="email" class="form-control" id="sign-in__email"
+                                        <input type="email" name="email"  class="form-control" id="sign-in__email"
                                                placeholder="Enter email">
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                                     <label for="sign-in__password" class="sr-only">Enter password</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="ion-locked"></i></span>
-                                        <input type="password" class="form-control" id="sign-in__password"
+                                        <input type="password" name="password" class="form-control" id="sign-in__password"
                                                placeholder="Password">
                                     </div>
                                 </div>

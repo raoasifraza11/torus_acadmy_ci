@@ -118,6 +118,8 @@ class Signup extends TTT_Controller
     public function teacher()
     {
         if ($this->input->post()) {
+        	var_dump("i am hear");
+        	die();
             $this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
             $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
@@ -151,7 +153,7 @@ class Signup extends TTT_Controller
 //			var_dump("not post request");
 //			die();
         }
-        $this->slice->view('frontend.teacher-register');
+		$this->slice->view('landing_alpha.teacher_register');
     }
 
 

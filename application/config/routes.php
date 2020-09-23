@@ -59,8 +59,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 $route['registration_category'] = 'Landing/registration_role';
-$route['teacher/register'] = 'Landing/teacher_reg_view';
+//$route['teacher/register'] = 'Landing/teacher_reg_view';
 $route['student/register'] = 'Landing/student_reg_view';
+
+
+
+/*
+ *
+ * Landing:
+ *          Website URL's mostly static
+ *
+ */
+
+$route['registration_category'] = 'Landing/registration_role';
+$route['teacher/register'] = 'Signup/teacher';
+$route['student/register'] = 'Landing/student_reg_view';
+$route['login'] = 'Login/index';
 
 
 /*

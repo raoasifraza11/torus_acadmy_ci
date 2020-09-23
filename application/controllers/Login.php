@@ -20,8 +20,8 @@ class Login extends TTT_Controller
 
 
 	public function index(){
-		if ($this->input->post()){
 
+		if ($this->input->post()){
 
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_isEmailExist|callback_isEmailverified|callback_isAccountApproved');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required');
