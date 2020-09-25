@@ -80,4 +80,25 @@ class  Backend extends TTT_Controller
         $this->slice->view('app_alpha.be.teachers.courses');
     }
 
+    public function student_dashboard()
+    {
+        $this->slice->view('app_alpha.be.students.dashboard');
+    }
+
+    public function student_profile_setting()
+    {
+        $this->slice->view('app_alpha.be.students.profile_setting');
+    }
+
+    public function student_payment_history()
+    {
+        $this->slice->view('app_alpha.be.students.payment_history');
+    }
+
+
+    public function student_course_enrolled()
+    {
+        $this->slice->view('app_alpha.be.students.enrolled');
+    }
+
 }

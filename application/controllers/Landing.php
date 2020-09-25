@@ -23,4 +23,19 @@ class  Landing extends TTT_Controller
 	{
         $this->slice->view('landing_alpha.student_register');
 	}
+
+	public function list_courses()
+	{
+        $this->slice->view('landing_alpha.courses');
+	}
+
+	public function single_course()
+	{
+        $this->slice->view('landing_alpha.course-single');
+	}
+
+	public function paynow()
+	{
+        $this->slice->view('landing_alpha.paynow');
+	}
 }

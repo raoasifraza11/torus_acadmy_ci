@@ -1,5 +1,6 @@
 @extends('landing')
 @section('_pageTitle', 'Registration')
+@section('page_id', 'courses__page')
 
 @section('content')
     <!-- CONTENT

@@ -211,6 +211,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Into Video URL<span class="text-danger">*</span></label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
                                     <button type="submit" class="btn btn-primary">Submit</button>

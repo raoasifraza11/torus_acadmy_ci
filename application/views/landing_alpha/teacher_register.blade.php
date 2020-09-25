@@ -1,5 +1,7 @@
 @extends('landing')
 @section('_pageTitle', 'Registration Teacher')
+@section('page_id', 'courses__page')
+
 @section('_css')
     <link rel="stylesheet" href="<?php echo asset_url('fe_v1/fonts/material-design-iconic-font/css/material-design-iconic-font.css'); ?>">
 
@@ -35,7 +37,7 @@
             <div class="home__bg"></div>
         </section>
         <div class="wrapper">
-            <form id="wizard" name="techReg" action="<?php echo base_url('dashboard') ?>" method="get">
+            <form id="wizard" name="techReg" action="<?php echo base_url('teacher/dashboard') ?>" method="get">
                 <input type="hidden" name="sidebar" value="t">
                 <!-- SECTION 1 -->
                 <h2></h2>
