@@ -227,32 +227,93 @@
                             </div>
                         </div>
                         <form class="card-body">
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">IBAN / Account Number <span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="number" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Branch Code <span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="number" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Account Title</label>
-                                <div class="col-md-7">
-                                    <input type="number" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label"></label>
-                                <div class="col-md-7">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                            <div  class="card-body">
+                                <div class="vertical-tabs">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" style="margin-bottom:10px;">
+                                            <a class="nav-link active" style="padding-left: 10px;" data-toggle="tab" href="#pag1" role="tab" aria-controls="home">JazzCash</a>
+                                        </li>
+                                        <li class="nav-item" style="margin-bottom:10px;">
+                                            <a class="nav-link" style="padding-left: 10px;" data-toggle="tab" href="#pag2" role="tab" aria-controls="profile">EasyPasa</a>
+                                        </li>
+                                        <li class="nav-item" style="margin-bottom:10px;">
+                                            <a class="nav-link" style="padding-left: 10px;" data-toggle="tab" href="#pag3" role="tab" aria-controls="messages">Credit Card </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="pag1" role="tabpanel">
+                                            <div class="sv-tab-panel">
+                                                <h3>TAB 1</h3>
+                                                <p>CONTEUDO 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="pag2" role="tabpanel">
+                                            <div class="sv-tab-panel">
+                                                <h3>TAB 2</h3>
+                                                <p>CONTEUDO 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="pag3" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="panel-body">
+                                                        <form action="" method="" >
+                                                            <div class="form-group">
+                                                                <label><b>CARD NUMBER</b></label>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                                                           required autofocus />
+                                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label><b>Expiry Month</b></label>
+                                                                        <select class="form-control show-tick">
+                                                                            <option value="">Select Month</option>
+                                                                            <option value="1">Jan</option>
+                                                                            <option value="2">Feb</option>
+                                                                            <option value="2">March</option>
+                                                                            <option value="2">April</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label><b>Expiry Year</b></label>
+                                                                        <select class="form-control show-tick">
+                                                                            <option value="">Select Year</option>
+                                                                            <option value="1">2020</option>
+                                                                            <option value="3">2021</option>
+                                                                            <option value="3">2022</option>
+                                                                            <option value="4">2023</option>
+                                                                            <option value="5">2024</option>
+                                                                            <option value="6">2025</option>
+                                                                            <option value="7">2026</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label><b> CV CODE</b></label>
+                                                                        <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <center>
+                                                                    <strong class="total-pay">Total Payment</strong>
+                                                                    <strong class="total-pay"> $5000</strong>
+                                                                </center>
+                                                            </div>
+                                                            <a href="index.html" class="btn btn-success btn-lg btn-block" role="button"><b>Confirm Payment</b></a>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
