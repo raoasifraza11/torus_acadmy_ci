@@ -16,22 +16,18 @@ class Migration_classes extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-			'name' =>array(
+            'name' =>array(
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'default' => NULL,
+            ),
+			'tag' =>array(
 				'type' => 'VARCHAR',
 				'constraint' => 100,
 				'default' => NULL,
 			),
-            'status' => array(
-                'type' => 'TINYINT',
-                'constraint' => 1,
-                'default' => 0
-            ),
-            'is_verified' => array(
-                'type' => 'TINYINT',
-                'constraint' => 1,
-                'default' => 0
-            ),
-            'created_at' => array(
+
+			'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
             ),

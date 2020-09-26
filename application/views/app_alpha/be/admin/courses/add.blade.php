@@ -12,17 +12,17 @@
             <div class="row">
                 <div class="col-md-9">
                     <h3>Add new course</h3>
-                    <form>
+                    <form method="post" action="{{base_url("admin/courses/add")}}">
                         <div class="form-group row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Class Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="staticEmail" value="Class Name (One)">
+                                <input type="text" required name="class_name" class="form-control" id="staticEmail" placeholder="Class Name (One)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Short Code</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Short Code (1)">
+                                <input type="text"  required name="class_tag" class="form-control" id="inputPassword" placeholder="Short Code (1)">
                             </div>
                         </div>
                         <hr width="75%">
@@ -34,10 +34,10 @@
                                         <div class="form-group row col-md-9">
                                             <label class="col-md-3 col-form-label">Subject Name<span class="text-danger">*</span></label>
                                             <div class="col-md-4">
-                                                <input type="text" class="form-control" placeholder="i.e Chemistry">
+                                                <input type="text" required name="course_name[]" class="form-control" placeholder="i.e Chemistry">
                                             </div>
                                             <div class="col-md-4">
-                                                <input type="text" class="form-control" placeholder="i.e CHY">
+                                                <input type="text" required name="course_tag[]" class="form-control" placeholder="i.e CHY">
                                             </div>
                                         </div>
                                     </div>

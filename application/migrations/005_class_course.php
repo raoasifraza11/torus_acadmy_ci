@@ -4,7 +4,7 @@
  * Author: Mussawar Ahamd
  * Date: 9/18/2019
  */
-class Migration_site_configs extends CI_Migration {
+class Migration_class_course extends CI_Migration {
 
     /**
      * Create table.
@@ -16,12 +16,16 @@ class Migration_site_configs extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'entity' => array(
+			'class_id' => array(
+				'type' => 'BIGINT',
+				'unsigned' => TRUE,
+			),
+            'name' => array(
 				'type' => 'VARCHAR',
 				'constraint' => 255,
 				'default' => NULL,
             ),
-			'value' => array(
+			'tag' => array(
 				'type' => 'VARCHAR',
 				'constraint' => 255,
 				'default' => NULL,
@@ -42,14 +46,14 @@ class Migration_site_configs extends CI_Migration {
         ));
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('site_configs');
+        $this->dbforge->create_table('class_course');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('site_configs');
+        $this->dbforge->drop_table('class_course');
     }
 
 }

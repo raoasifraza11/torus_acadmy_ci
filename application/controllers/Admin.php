@@ -22,84 +22,45 @@ class  Admin extends TTT_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Childminder_model');
-
-
-	}
-
-	public function mapApi(){
-		if ($this->input->post()){
-			$form_data=$this->input->post();
-
-			if ($this->input->post("submit") != null){
-				$site["value"] = json_encode($form_data);
-				$site["entity"] = "mapapi";
-				$data["site_data"]=$this->Crud_model->updateDataToTableWithColumnId("site_configs","entity","mapapi",$site);
-			}else {
-				$site["value"] = json_encode($form_data);
-				$site["entity"] = "mapapi";
-				$this->Crud_model->insert('site_configs', $site);
-			}
-		}
-
-		$data["site_data"]=$this->Crud_model->getDataToTableWithColumnId("site_configs","entity","mapapi");
-		if ($data["site_data"] != null){
-			$data["site_data"]->value = json_decode($data["site_data"]->value);
-		}
-
-		$this->slice->view('admin.setting.apis',$data);
 
 
 	}
 
 
-	public function siteLog(){
-		if ($this->input->post()){
-			$logo=$this->do_upload("logo");
-			$site["value"] = $logo;
-			$site["entity"] = "logo";
-			$status=$this->Crud_model->updateDataToTableWithColumnId("site_configs","entity","logo",$site);
-
-//			}
-//			if ($_FILES["fav_icon"]!= null) {
-//			$fav_icon=	$this->do_upload("fav_icon");
-//			$fav["value"] = $fav_icon;
-//			$fav["entity"] = "fav_icon";
-//			$this->Crud_model->insert('site_configs', $fav);
-//			}
-
-
-		}
-		$this->slice->view('admin.setting.logos');
-	}
-
-	/**
-	 * Handle Upload
-	 *
-	 * @param input_name
-	 * @return  Image
-	 */
-	public function do_upload($input_name)
+	public function course()
 	{
-		//todo:set unique name to file
-		$date = new DateTime();
-		$startdata = $date->format('YmdHis');
-		$newName = str_replace('/', '', $startdata) . $this->auth->userID();
-		$file_ext = pathinfo($_FILES[$input_name]["name"], PATHINFO_EXTENSION);
-		$config['file_name'] = $newName;
-		$config['upload_path'] = 'assets/uploads/';
-		$config['allowed_types'] = 'jpg|fav|png';
-//		$config['allowed_types'] = '*';
-		$config['max_size'] = 2048;
-		$this->load->library('upload', $config);
-		if (!$this->upload->do_upload($input_name)) {
-			$error = array('error' => $this->upload->display_errors());
-			$this->validationErrors = $error;
-			return false;
-		} else {
-			$data = array('upload_data' => $this->upload->data());
-			$image = $data['upload_data']['file_name'];
-			return $image;
+		$data["classes"]=$this->Crud_model->get_all_data("classes");
+		foreach ($data["classes"] as $class){
+			$class->courses = $this->Crud_model->get_all_data_by_column_id("class_course","class_id",$class->id);
 		}
+
+		$this->slice->view('app_alpha.be.admin.courses.view',$data);
 	}
+
+
+	//todo: add class with courses
+	public function addCourse()
+	{
+
+		if ($this->input->post()) {
+			$class["name"] = $this->input->post("class_name");
+			$class["tag"] = $this->input->post("class_tag");
+			$class_id = $this->Crud_model->insert('classes', $class);
+			$i = 0;
+			$courese_tags = $this->input->post("course_tag");
+			foreach ($this->input->post("course_name") as $c) {
+
+				$course["name"] = $c;
+				$course["tag"] = $courese_tags[$i];
+				$course["class_id"] = $class_id;
+				$this->Crud_model->insert('class_course', $course);
+
+				$i++;
+			}
+			redirect(base_url("courses"));
+		}
+		$this->slice->view('app_alpha.be.admin.courses.add');
+	}
+
+
 }

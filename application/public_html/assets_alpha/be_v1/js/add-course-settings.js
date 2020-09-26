@@ -22,10 +22,10 @@ Version      : 1.0
 			'                                        <div class="form-group row col-md-9">\n' +
 			'                                            <label class="col-md-3 col-form-label">Subject Name<span class="text-danger">*</span></label>\n' +
 			'                                            <div class="col-md-4">\n' +
-			'                                                <input type="text" class="form-control" placeholder="i.e Chemistry">\n' +
+			'                                                <input name="course_name[]" type="text"  required class="form-control" placeholder="i.e Chemistry">\n' +
 			'                                            </div>\n' +
 			'                                            <div class="col-md-4">\n' +
-			'                                                <input type="text" class="form-control" placeholder="i.e CHY">\n' +
+			'                                                <input name="course_tag[]" type="text" required class="form-control" placeholder="i.e CHY">\n' +
 			'                                            </div>\n' +
 			'                                        </div>\n' +
 			'                                    </div>\n' +

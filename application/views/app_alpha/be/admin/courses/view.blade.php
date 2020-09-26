@@ -23,22 +23,25 @@
                             <div class="table-responsive">
                                 <table class="table table-hover table-vcenter table_custom text-nowrap spacing5 border-style mb-0">
                                     <tbody>
+									<?php if ($classes){ foreach ($classes as $class){ ?>
                                     <tr>
                                         <td class="w60">
                                             <div class="avatar avatar-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">
                                                 <span>GS</span>
                                             </div>
                                         </td>
-                                        <td><div class="font-15">Course/Class Name</div></td>
-                                        <td><span>Subjects (6)</span></td>
-                                        <td><span class="text-muted">CH, PHY, ISL, PAK, GN, KG</span></td>
-                                        <td><strong>26 Sep, 2020</strong></td>
+                                        <td><div class="font-15">{{$class->name}}</div></td>
+                                        <td><span>Subjects ({{count($class->courses)}})</span></td>
+                                        <td><span class="text-muted"><?php $no=count($class->courses); $i=1; foreach ($class->courses as $coures){  if($i!=$no){echo $coures->tag.",";}else{echo $coures->tag;} $i++;}?></span></td>
                                         <td>
                                             <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
                                             <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
                                             <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                         </td>
                                     </tr>
+									<?php }}else{
+
+									}?>
                                     </tbody>
                                 </table>
                             </div>

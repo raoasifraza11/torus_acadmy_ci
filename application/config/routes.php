@@ -85,12 +85,31 @@ $route['login'] = 'Login/index';
  *
  */
 
-$route['admin'] = 'Backend/admin_login';
+//$route['admin'] = 'Backend/admin_login';
 $route['admin/dashboard'] = 'Backend/admin_dashboard';
 $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Backend/admin_courses';
 $route['admin/courses/add'] = 'Backend/admin_add_course';
 $route['admin/setting'] = 'Backend/admin_site_setting';
+
+
+
+/*
+ *
+ * Backend:
+ *          Administration apart Working
+ *
+ */
+
+$route['admin'] = 'Backend/admin_login';
+$route['admin/dashboard'] = 'Backend/admin_dashboard';
+$route['admin/users'] = 'Backend/admin_users';
+$route['admin/courses'] = 'Admin/course';
+$route['admin/courses/add'] = 'Admin/addCourse';
+$route['admin/setting'] = 'Backend/admin_site_setting';
+
+
+
 
 
 // Site settings

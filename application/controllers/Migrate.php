@@ -41,8 +41,8 @@ class Migrate extends CI_Controller
 	// 	$this->insertSchoolRoles();
 	 	$this->insertTeacher();
 	 	$this->insertStudent();
-	 	$this->insertClasses();
-	 	$this->insertCourses();
+//	 	$this->insertClasses();
+//	 	$this->insertCourses();
 	// 	$this->insertSessions();
 	// 	$this->insertRooms();
 
