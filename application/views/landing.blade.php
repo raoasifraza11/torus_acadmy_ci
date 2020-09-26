@@ -23,7 +23,7 @@
     @yield('_css')
 
 </head>
-<body id="index__page">
+<body id="@yield('page_id', 'index__page')">
 
 <!-- Back to top button
 ================================================== -->

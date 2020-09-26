@@ -77,19 +77,21 @@ $route['student/register'] = 'Signup/student';
 $route['login'] = 'Login/index';
 
 
+
 /*
  *
  * Backend:
  *          Administration apart
  *
  */
-$route['dashboard'] = 'Backend/index';  //todo: using on backed
-$route['admin/students'] = 'Backend/students';
-$route['admin/courses'] = 'Backend/courses';
-$route['admin/teachers'] = 'Backend/teachers';
-$route['admin/invoices'] = 'Backend/invoices';
-$route['admin/revenue'] = 'Backend/revenue';
-$route['admin/payments'] = 'Backend/payments';
+
+$route['admin'] = 'Backend/admin_login';
+$route['admin/dashboard'] = 'Backend/admin_dashboard';
+$route['admin/users'] = 'Backend/admin_users';
+$route['admin/courses'] = 'Backend/admin_courses';
+$route['admin/courses/add'] = 'Backend/admin_add_course';
+$route['admin/setting'] = 'Backend/admin_site_setting';
+
 
 // Site settings
 $route['admin/site-setting'] = 'Backend/site_configuration';
@@ -104,6 +106,12 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *
  */
 //$route['dashboard'] = 'Backend/index';
+$route['student/dashboard'] = 'Backend/student_dashboard';
+$route['student/profile'] = 'Backend/student_profile_setting';
+$route['student/payment/history'] = 'Backend/student_payment_history';
+$route['student/course/enrolled'] = 'Backend/student_course_enrolled';
+
+$route['student/test_reg'] = 'Student/student_reg_data';
 
 
 /*

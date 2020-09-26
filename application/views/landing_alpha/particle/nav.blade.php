@@ -26,7 +26,7 @@
             <ul class="nav navbar-nav navbar-left">
                 <li class="active"><a href="<?php echo base_url('/'); ?>">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Courses </a></li>
+                <li><a href="<?php echo base_url('courses'); ?>">Courses </a></li>
                 <li><a href="#">Blog </a></li>
                 <li><a href="#">Contact</a></li>
             </ul>

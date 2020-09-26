@@ -37,7 +37,7 @@
     @if($this->session->userdata("roleId")==0)
         @include('app_alpha.be.particle.sidebar')
     @elseif($this->session->userdata("roleId")==2)
-        @include('app_alpha.be.particle.student.sidebar')
+		@include('app_alpha.be.particle.student.sidebar')
     @elseif($this->session->userdata("roleId")==1)
         @include('app_alpha.be.particle.teacher.sidebar')
     @else

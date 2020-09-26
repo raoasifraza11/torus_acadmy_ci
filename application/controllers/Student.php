@@ -89,6 +89,10 @@ class Student extends TTT_Controller
         //redirect(base_url('professors'));
     }
 
+    public function student_reg_data(){
+        var_dump($_POST);die();
+    }
+
     
 }
 ?>

@@ -3,41 +3,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class  Backend extends TTT_Controller
 {
-
-    public function index()
+    /**
+     * ADMIN
+     */
+    public function admin_login()
     {
-        $this->slice->view('app_alpha.be.index');
+        $this->slice->view('app_alpha.be.admin.login');
     }
 
-    public function students()
+    public function admin_dashboard()
     {
-        $this->slice->view('app_alpha.be.students.list_view');
+        $this->slice->view('app_alpha.be.admin.dashboard');
     }
 
-    public function courses()
+    public function admin_users()
     {
-        $this->slice->view('app_alpha.be.courses.list_view');
+        $this->slice->view('app_alpha.be.admin.users');
     }
 
-    public function teachers()
+    public function admin_courses()
     {
-        $this->slice->view('app_alpha.be.teachers.list_view');
+        $this->slice->view('app_alpha.be.admin.courses.view');
     }
 
-    public function invoices()
+    public function admin_add_course()
     {
-        $this->slice->view('app_alpha.be.invoices.list_view');
+        $this->slice->view('app_alpha.be.admin.courses.add');
     }
 
-    public function revenue()
+    public function admin_site_setting()
     {
-        $this->slice->view('app_alpha.be.revenue.list_view');
+        $this->slice->view('app_alpha.be.admin.site_setting');
     }
 
-    public function payments()
-    {
-        $this->slice->view('app_alpha.be.payments.list_view');
-    }
 
     public function site_configuration()
     {
@@ -78,6 +76,31 @@ class  Backend extends TTT_Controller
     public function teacher_courses()
     {
         $this->slice->view('app_alpha.be.teachers.courses');
+    }
+
+
+    /**
+     * STUDENTS
+     */
+    public function student_dashboard()
+    {
+        $this->slice->view('app_alpha.be.students.dashboard');
+    }
+
+    public function student_profile_setting()
+    {
+        $this->slice->view('app_alpha.be.students.profile_setting');
+    }
+
+    public function student_payment_history()
+    {
+        $this->slice->view('app_alpha.be.students.payment_history');
+    }
+
+
+    public function student_course_enrolled()
+    {
+        $this->slice->view('app_alpha.be.students.enrolled');
     }
 
 }
