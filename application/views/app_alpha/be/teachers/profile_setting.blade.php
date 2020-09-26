@@ -240,9 +240,9 @@
                             </div>
                         </div>
 
-                        <form class="card-body" action="<?php base_url("teacher/academic") ?>" method="post">
+                        <form class="card-body" action="<?php echo base_url("teacher/academic") ?>" method="post">
                             <div class="education-info">
-
+  <?php foreach ($academics as $academic){ ?>
                                 <!-- list item -->
                                 <div class="row form-row education-cont">
                                     <div class="col-12 col-md-10 col-lg-11">
@@ -250,13 +250,13 @@
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Degree<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="text" name="degree[]" class="form-control">
+                                                    <input type="text" disabled value="{{$academic->degree}}" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Year<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="number" name="year[]" class="form-control">
+                                                    <input type="number" disabled value="{{$academic->year}}" class="form-control">
                                                 </div>
                                             </div>
                                             <hr style="width:75%;text-align:center;">
@@ -268,6 +268,33 @@
                                                     class="fa fa-trash-o"></i></a></div>
                                 </div>
                                 <!-- ./list item -->
+								<?php } ?>
+
+  <!-- list item -->
+	  <div class="row form-row education-cont">
+		  <div class="col-12 col-md-10 col-lg-11">
+			  <div class="row form-row">
+				  <div class="form-group row col-md-9">
+					  <label class="col-md-3 col-form-label">Degree<span class="text-danger">*</span></label>
+					  <div class="col-md-7">
+						  <input type="text" name="degree[]" class="form-control">
+					  </div>
+				  </div>
+				  <div class="form-group row col-md-9">
+					  <label class="col-md-3 col-form-label">Year<span class="text-danger">*</span></label>
+					  <div class="col-md-7">
+						  <input type="number" name="year[]" class="form-control">
+					  </div>
+				  </div>
+				  <hr style="width:75%;text-align:center;">
+			  </div>
+		  </div>
+		  <div class="col-12 col-md-2 col-lg-1"><label
+					  class="d-md-block d-sm-none d-none">&nbsp;</label><a
+					  href="#" class="btn btn-danger trash"><i
+						  class="fa fa-trash-o"></i></a></div>
+	  </div>
+	  <!-- ./list item -->
 
                             </div>
                             <div class="add-more">
@@ -300,8 +327,36 @@
                             </div>
                         </div>
 
-                        <form class="card-body" action="<?php echo base_url("teacher/experience")?>"  ethod="post">
+                        <form class="card-body" action="<?php echo base_url("teacher/experience")?>"  method="post">
                             <div class="exp-info">
+
+								<?php foreach ($organisations as $organisation){ ?>
+								<!-- list item -->
+								<div class="row form-row exp-cont">
+									<div class="col-12 col-md-10 col-lg-11">
+										<div class="row form-row">
+											<div class="form-group row col-md-9">
+												<label class="col-md-3 col-form-label">Organisation<span class="text-danger">*</span></label>
+												<div class="col-md-7">
+													<input  type="text" disabled value="{{ $organisation->organisation }}"  class="form-control">
+												</div>
+											</div>
+											<div class="form-group row col-md-9">
+												<label class="col-md-3 col-form-label">Years<span class="text-danger">*</span></label>
+												<div class="col-md-7">
+													<input type="number" disabled value="{{ $organisation->year }}" class="form-control">
+												</div>
+											</div>
+											<hr style="width:75%;text-align:center;">
+										</div>
+									</div>
+									<div class="col-12 col-md-2 col-lg-1"><label
+												class="d-md-block d-sm-none d-none">&nbsp;</label><a
+												href="#" class="btn btn-danger trash"><i
+													class="fa fa-trash-o"></i></a></div>
+								</div>
+								<!-- ./list item -->
+									<?php }?>
 
                                 <!-- list item -->
                                 <div class="row form-row exp-cont">
@@ -310,13 +365,13 @@
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Organisation<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input name="organisation" type="text" class="form-control">
+                                                    <input name="organisations[]" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Years<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="number" name="year" class="form-control">
+                                                    <input type="number" name="years[]" class="form-control">
                                                 </div>
                                             </div>
                                             <hr style="width:75%;text-align:center;">

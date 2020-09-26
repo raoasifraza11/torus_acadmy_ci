@@ -4,7 +4,7 @@
  * Author: Mussawar Ahamd
  * Date: 9/18/2019
  */
-class Migration_teacher_academic_details extends CI_Migration {
+class Migration_teacher_experience_details extends CI_Migration {
 
     /**
      * Create table.
@@ -19,9 +19,9 @@ class Migration_teacher_academic_details extends CI_Migration {
             'user_id' => array(
                 'type' => 'BIGINT',
             ),
-            'degree' =>array(
+            'organisation' =>array(
                 'type' => 'VARCHAR',
-                'constraint' => 100,
+                'constraint' => 255,
                 'default' => NULL,
             ),
 			'year' =>array(
@@ -44,14 +44,14 @@ class Migration_teacher_academic_details extends CI_Migration {
         ));
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('teacher_academic_details');
+        $this->dbforge->create_table('teacher_experience_details');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('teacher_academic_details');
+        $this->dbforge->drop_table('teacher_experience_details');
     }
 
 }

@@ -11,7 +11,6 @@ class Professor extends TTT_Controller
         $this->load->library('form_validation');
         $this->load->library('upload');
 		$this->load->model('users_model');
-		$this->load->model('users_model');
 
 	}
     public function index()
@@ -25,14 +24,26 @@ class Professor extends TTT_Controller
     				die();
 				}
 		$data["user"] = $this->Crud_model->get("users", $this->auth->userID());
+		$data["academics"] =  $this->Crud_model->get_all_data_by_column_id("teacher_academic_details","user_id",$this->auth->userID());
+		$data["organisations"] =  $this->Crud_model->get_all_data_by_column_id("teacher_experience_details","user_id",$this->auth->userID());
 
 		$this->slice->view('app_alpha.be.teachers.profile_setting',$data);
 	}
 
 	public function academic(){
+
+
 		if($this->input->post()) {
-			var_dump($_POST);
-			die();
+			$i=0;
+			$years=$this->input->post("year");
+			foreach ($this->input->post("degree") as $d ){
+               $degree["degree"]=$d;
+               $degree["year"]=$years[$i];
+               $degree["user_id"]=$this->auth->userID();
+               $this->Crud_model->insert('teacher_academic_details', $degree);
+				$i++;
+
+			}
 		}
 		redirect(base_url("teacher/profile"));
 	}
@@ -40,10 +51,18 @@ class Professor extends TTT_Controller
 
 	public function experience(){
 		if($this->input->post()) {
-			var_dump($_POST);
-			die();
+			$i=0;
+			$years=$this->input->post("years");
+			foreach ($this->input->post("organisations") as $d ){
+				$degree["organisation"]=$d;
+				$degree["year"]=$years[$i];
+				$degree["user_id"]=$this->auth->userID();
+				$this->Crud_model->insert('teacher_experience_details', $degree);
+				$i++;
+
+			}
 		}
-		$this->slice->view('app_alpha.be.teachers.profile_setting');
+		redirect(base_url("teacher/profile"));
 	}
 
 	public function availability(){
