@@ -77,6 +77,7 @@ $route['admin/dashboard'] = 'Backend/admin_dashboard';
 $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Backend/admin_courses';
 $route['admin/courses/add'] = 'Backend/admin_add_course';
+$route['admin/setting'] = 'Backend/admin_site_setting';
 
 
 // Site settings

@@ -20,7 +20,7 @@
         <div class="tab-pane fade" id="menu-admin" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu">
-                    <li><a href="<?php echo base_url('teacher/profile?sidebar=t'); ?>"><i class="fa fa-gavel"></i><span>Settings</span></a></li>
+                    <li><a href="<?php echo base_url('admin/setting?sidebar=t'); ?>"><i class="fa fa-gavel"></i><span>Settings</span></a></li>
                 </ul>
             </nav>
         </div>

@@ -31,6 +31,11 @@ class  Backend extends TTT_Controller
         $this->slice->view('app_alpha.be.admin.courses.add');
     }
 
+    public function admin_site_setting()
+    {
+        $this->slice->view('app_alpha.be.admin.site_setting');
+    }
+
 
     public function site_configuration()
     {

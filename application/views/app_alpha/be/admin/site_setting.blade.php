@@ -119,14 +119,9 @@
                 <ul class="nav nav-tabs page-header-tab">
                     <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#personalInfo">Personal
                             Information</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#academicInfo">Academic
-                            Information</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#expInfo">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#courseSelection">Course Selection</a>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accountInfo">Account Setting</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#logoFav">Logo & Favicon</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bankApis">Bank APIs</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#changePassword">Change Password</a>
                 </ul>
             </div>
         </div>
@@ -203,19 +198,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Bio / Introductory Text<span class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <textarea rows="4" class="form-control no-resize"
-                                              placeholder="Please type what you want..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Into Video URL<span class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
+
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
@@ -226,12 +209,11 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="academicInfo">
+                <div class="tab-pane" id="logoFav">
                     <!-- Item -->
-                    <div class="card obs-card">
-
+                    <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Academic Information</h3>
+                            <h3 class="card-title">Logo & Favicon</h3>
                             <div class="card-options ">
                                 <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
                                             class="fe fe-chevron-up"></i></a>
@@ -239,41 +221,20 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-
                         <form class="card-body">
-                            <div class="education-info">
-
-                                <!-- list item -->
-                                <div class="row form-row education-cont">
-                                    <div class="col-12 col-md-10 col-lg-11">
-                                        <div class="row form-row">
-                                            <div class="form-group row col-md-9">
-                                                <label class="col-md-3 col-form-label">Degree<span class="text-danger">*</span></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row col-md-9">
-                                                <label class="col-md-3 col-form-label">Year<span class="text-danger">*</span></label>
-                                                <div class="col-md-7">
-                                                    <input type="number" class="form-control">
-                                                </div>
-                                            </div>
-                                            <hr style="width:75%;text-align:center;">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-2 col-lg-1"><label
-                                                class="d-md-block d-sm-none d-none">&nbsp;</label><a
-                                                href="#" class="btn btn-danger trash"><i
-                                                    class="fa fa-trash-o"></i></a></div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Logo <span
+                                            class="text-danger">*</span></label>
+                                <div class="col-md-7">
+                                    <input type="file" class="form-control">
                                 </div>
-                                <!-- ./list item -->
-
                             </div>
-                            <div class="add-more">
-                                <a href="javascript:void(0);" class="add-education"><i
-                                            class="fa fa-plus-circle"></i> Add
-                                    More</a>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Favicon <span
+                                            class="text-danger">*</span></label>
+                                <div class="col-md-7">
+                                    <input type="file" class="form-control">
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
@@ -286,70 +247,10 @@
                     </div>
                     <!-- End Item -->
                 </div>
-                <div class="tab-pane" id="expInfo">
-                    <!-- Item -->
-                    <div class="card exp-card">
-
-                        <div class="card-header">
-                            <h3 class="card-title">Experience Info</h3>
-                            <div class="card-options ">
-                                <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
-                                            class="fe fe-chevron-up"></i></a>
-                                <a href="#" class="card-options-remove" data-toggle="card-remove"><i
-                                            class="fe fe-x"></i></a>
-                            </div>
-                        </div>
-
-                        <form class="card-body">
-                            <div class="exp-info">
-
-                                <!-- list item -->
-                                <div class="row form-row exp-cont">
-                                    <div class="col-12 col-md-10 col-lg-11">
-                                        <div class="row form-row">
-                                            <div class="form-group row col-md-9">
-                                                <label class="col-md-3 col-form-label">Organisation<span class="text-danger">*</span></label>
-                                                <div class="col-md-7">
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row col-md-9">
-                                                <label class="col-md-3 col-form-label">Years<span class="text-danger">*</span></label>
-                                                <div class="col-md-7">
-                                                    <input type="number" class="form-control">
-                                                </div>
-                                            </div>
-                                            <hr style="width:75%;text-align:center;">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-2 col-lg-1"><label
-                                                class="d-md-block d-sm-none d-none">&nbsp;</label><a
-                                                href="#" class="btn btn-danger trash"><i
-                                                    class="fa fa-trash-o"></i></a></div>
-                                </div>
-                                <!-- ./list item -->
-
-                            </div>
-                            <div class="add-more">
-                                <a href="javascript:void(0);" class="add-exp"><i
-                                            class="fa fa-plus-circle"></i> Add
-                                    More</a>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label"></label>
-                                <div class="col-md-7">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- End Item -->
-                </div>
-                <div class="tab-pane" id="avaInfo">
+                <div class="tab-pane" id="bankApis">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Availability Information & Fee</h3>
+                            <h3 class="card-title">Bank APIs</h3>
                             <div class="card-options ">
                                 <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
                                             class="fe fe-chevron-up"></i></a>
@@ -359,115 +260,17 @@
                         </div>
                         <form class="card-body">
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Mon<span
+                                <label class="col-md-3 col-form-label">API Public Key <span
                                             class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" placeholder="XDF***">
                                 </div>
                             </div>
-
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Tue<span
+                                <label class="col-md-3 col-form-label">API Private Key <span
                                             class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Wed<span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Thu<span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Fri<span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Sat<span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Sun<span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">Start Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="col-md-4 col-form-label">End Time<span
-                                                class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Price Per Subject <span
-                                            class="text-danger">*</span></label>
-                                <div class="col-md-6">
-                                    <input type="number" class="form-control">
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" placeholder="IAS***">
                                 </div>
                             </div>
 
@@ -481,56 +284,10 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="courseSelection">
+                <div class="tab-pane" id="changePassword">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Course Selection</h3>
-                            <div class="card-options ">
-                                <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
-                                            class="fe fe-chevron-up"></i></a>
-                                <a href="#" class="card-options-remove" data-toggle="card-remove"><i
-                                            class="fe fe-x"></i></a>
-                            </div>
-                        </div>
-                        <form class="card-body">
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Select Class</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>Class 1</option>
-                                    <option>Class 2</option>
-                                    <option>Class 3</option>
-                                    <option>Class 4</option>
-                                    <option>Class 5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Subject 1
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Subject 2
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label"></label>
-                                <div class="col-md-7">
-                                    <button type="submit" class="btn btn-primary">Save</button>
-                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="tab-pane" id="accountInfo">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Account Information</h3>
+                            <h3 class="card-title">Change Password</h3>
                             <div class="card-options ">
                                 <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
                                             class="fe fe-chevron-up"></i></a>
@@ -540,23 +297,17 @@
                         </div>
                         <form class="card-body">
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">IBAN / Account Number <span
+                                <label class="col-md-3 col-form-label">New Password <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control">
+                                    <input type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Branch Code <span
+                                <label class="col-md-3 col-form-label">Repeat Password<span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Account Title</label>
-                                <div class="col-md-7">
-                                    <input type="number" class="form-control">
+                                    <input type="password" class="form-control">
                                 </div>
                             </div>
 
