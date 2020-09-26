@@ -43,6 +43,7 @@
 		</section>
 		<div class="wrapper">
 			<form action="{{base_url("student/register")}}" method="post" id="wizard">
+
 				<!-- SECTION 1 -->
 				<h2></h2>
 				<section>

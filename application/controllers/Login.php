@@ -30,7 +30,21 @@ class Login extends TTT_Controller
 				die();
 			} else {
 				$status = $this->auth->login($_POST);
-				redirect(base_url("dashboard"));
+				if ($status){
+					if ($this->input->post("dsh")=="a"){
+						redirect(base_url("admin/dashboard"));
+
+					}
+					if ($this->session->userdata("roleId")=="1"){
+						redirect(base_url("teacher/dashboard"));
+
+					}else{
+						redirect(base_url("student/dashboard"));
+
+					}
+
+
+				}
 			}
 
 
@@ -38,7 +52,10 @@ class Login extends TTT_Controller
 
 		}
 	}
+	public function adminlogin(){
+		$this->slice->view('app_alpha.be.admin.login');
 
+	}
 
 	/**
 	 * Logout.

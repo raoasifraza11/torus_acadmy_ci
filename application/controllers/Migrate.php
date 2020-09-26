@@ -41,6 +41,7 @@ class Migrate extends CI_Controller
 	// 	$this->insertSchoolRoles();
 	 	$this->insertTeacher();
 	 	$this->insertStudent();
+	 	$this->insertAdmin();
 //	 	$this->insertClasses();
 //	 	$this->insertCourses();
 	// 	$this->insertSessions();
@@ -188,5 +189,25 @@ class Migrate extends CI_Controller
 	 	$student["is_verified"]=1;
 	 	$student_id=$this->Crud_model->insert('users', $student);
 	 }
+
+	public function insertAdmin(){
+
+		$student['password']=123;
+		$student["role_id"] = 0;
+		$student["email"]="admin@torus.com";
+		$student["password"] = md5(123);
+		$student["token"]=md5("school@linkschild.com");
+		$student["first_name"]="Arslan";
+		$student["last_name"]="Ahmad";
+		$student["phone"]="1234";
+		$student["gender"]="Male";
+		$student["country"]="Pakistan";
+		$student["city"]="Islamabad";
+		$student["zip_code"]="4600";
+		$student["dob"]="01-02-2020";
+		$student["status"]=1;
+		$student["is_verified"]=1;
+		$student_id=$this->Crud_model->insert('users', $student);
+	}
 
 }

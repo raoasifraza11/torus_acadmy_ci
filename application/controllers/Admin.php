@@ -26,6 +26,9 @@ class  Admin extends TTT_Controller
 
 	}
 
+	public function index(){
+		$this->slice->view('app_alpha.be.admin.dashboard');
+	}
 
 	public function course()
 	{

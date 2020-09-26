@@ -59,8 +59,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 $route['registration_category'] = 'Landing/registration_role';
-//$route['teacher/register'] = 'Landing/teacher_reg_view';
-//$route['student/register'] = 'Landing/student_reg_view';
 
 
 
@@ -81,28 +79,12 @@ $route['login'] = 'Login/index';
 /*
  *
  * Backend:
- *          Administration apart
- *
- */
-
-//$route['admin'] = 'Backend/admin_login';
-$route['admin/dashboard'] = 'Backend/admin_dashboard';
-$route['admin/users'] = 'Backend/admin_users';
-$route['admin/courses'] = 'Backend/admin_courses';
-$route['admin/courses/add'] = 'Backend/admin_add_course';
-$route['admin/setting'] = 'Backend/admin_site_setting';
-
-
-
-/*
- *
- * Backend:
  *          Administration apart Working
  *
  */
 
-$route['admin'] = 'Backend/admin_login';
-$route['admin/dashboard'] = 'Backend/admin_dashboard';
+$route['admin'] = 'Login/adminlogin';
+$route['admin/dashboard'] = 'Admin/index';
 $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Admin/course';
 $route['admin/courses/add'] = 'Admin/addCourse';
@@ -124,8 +106,7 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *          Student apart
  *
  */
-//$route['dashboard'] = 'Backend/index';
-$route['student/dashboard'] = 'Backend/student_dashboard';
+$route['student/dashboard'] = 'Student/index';//working on backend
 $route['student/profile'] = 'Backend/student_profile_setting';
 $route['student/payment/history'] = 'Backend/student_payment_history';
 $route['student/course/enrolled'] = 'Backend/student_course_enrolled';
@@ -139,12 +120,14 @@ $route['student/test_reg'] = 'Student/student_reg_data';
  *          Teacher apart
  *
  */
-$route['teacher/dashboard'] = 'Backend/dashboard_teacher';
+//$route['teacher/dashboard'] = 'Backend/dashboard_teacher';
 //$route['teacher/profile'] = 'Backend/profile_setting';
 //$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
 $route['teacher/revenue'] = 'Backend/revenue_teacher';
 $route['teacher/courses'] = 'Backend/teacher_courses';
 
+//todo:under working on backend
+$route['teacher/dashboard'] = 'Professor/index';
 $route['teacher/profile'] = 'Professor/profile'; //at backend
 $route['teacher/academic'] = 'Professor/academic'; //at backend
 $route['teacher/experience'] = 'Professor/experience'; //at backend

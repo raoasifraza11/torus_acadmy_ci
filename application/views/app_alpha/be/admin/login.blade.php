@@ -18,8 +18,8 @@
 
 </head>
 <body class="font-muli theme-cyan gradient">
-<form action="<?php echo base_url('admin/dashboard'); ?>" method="get">
-    <input type="hidden" name="sidebar" value="a">
+<form action="<?php echo base_url('login'); ?>" method="post">
+    <input type="hidden" name="dsh" value="a">
 
     <div class="auth option2">
         <div class="auth_left">
@@ -30,10 +30,10 @@
                         <div class="card-title mt-3">Login to your account</div>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
                     </div>
 
                     <div class="form-group">

@@ -36,7 +36,8 @@
         </section>
         <div class="wrapper">
             <form id="wizard" name="techReg" action="<?php echo base_url('teacher/register') ?>" method="post">
-                <!-- SECTION 1 -->
+
+				<!-- SECTION 1 -->
                 <h2></h2>
                 <section>
                     <div class="inner">
