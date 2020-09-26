@@ -1,7 +1,7 @@
 <div id="left-sidebar" class="sidebar">
     <h5 class="brand-name"><div class="hleft">
             <a class="header-brand" href="<?php echo base_url('/'); ?>"><i class="fa fa-graduation-cap brand-logo"></i></a>
-        </div> Ericsson<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+        </div> Torus<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">Student</a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-admin">Profile Setting</a></li>

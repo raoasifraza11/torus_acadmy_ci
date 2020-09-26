@@ -72,13 +72,12 @@ $route['paynow'] = 'Landing/paynow';
  *          Administration apart
  *
  */
-$route['dashboard'] = 'Backend/index';
-$route['admin/students'] = 'Backend/students';
-$route['admin/courses'] = 'Backend/courses';
-$route['admin/teachers'] = 'Backend/teachers';
-$route['admin/invoices'] = 'Backend/invoices';
-$route['admin/revenue'] = 'Backend/revenue';
-$route['admin/payments'] = 'Backend/payments';
+$route['admin'] = 'Backend/admin_login';
+$route['admin/dashboard'] = 'Backend/admin_dashboard';
+$route['admin/users'] = 'Backend/admin_users';
+$route['admin/courses'] = 'Backend/admin_courses';
+$route['admin/courses/add'] = 'Backend/admin_add_course';
+
 
 // Site settings
 $route['admin/site-setting'] = 'Backend/site_configuration';

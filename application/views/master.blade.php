@@ -35,7 +35,7 @@
     <!-- Start Main leftbar navigation -->
 
     @if($this->input->get('sidebar', TRUE) == 'a')
-        @include('app_alpha.be.particle.sidebar')
+        @include('app_alpha.be.particle.admin.sidebar')
     @elseif($this->input->get('sidebar', TRUE) == 's')
         @include('app_alpha.be.particle.student.sidebar')
     @elseif($this->input->get('sidebar', TRUE) == 't')
