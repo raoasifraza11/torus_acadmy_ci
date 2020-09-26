@@ -145,24 +145,24 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <form class="card-body">
+                        <form class="card-body" action="<?php echo base_url("teacher/profile"); ?>" method="post">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">First Name <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="first_name"  value="{{ $user->first_name }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Last Name</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="last_name" value="{{ $user->first_name }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Email Address <span class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input data-provide="datepicker" data-date-autoclose="true" class="form-control"
+                                    <input data-provide="datepicker" value="{{ $user->email }}" name="email" data-date-autoclose="true" class="form-control"
                                            placeholder="">
                                 </div>
                             </div>
@@ -170,20 +170,20 @@
                                 <label class="col-md-3 col-form-label">Phone Number <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="phone" value="{{ $user->phone }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Address<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="address"  class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">City<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
                                     <!-- TODO: @Ahmad Add city values -->
-                                    <select name="cars" class="form-control" id="cars">
+                                    <select name="city" class="form-control" id="cars">
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>
@@ -195,7 +195,7 @@
                                 <label class="col-md-3 col-form-label">Country<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
                                     <!-- TODO: @Ahmad Add countries values -->
-                                    <select name="cars" class="form-control" id="cars">
+                                    <select name="coutry" class="form-control" id="cars">
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>
@@ -206,7 +206,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Bio / Introductory Text<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <textarea rows="4" class="form-control no-resize"
+                                    <textarea rows="4" name="bio" class="form-control no-resize"
                                               placeholder="Please type what you want..."></textarea>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@
                             </div>
                         </div>
 
-                        <form class="card-body">
+                        <form class="card-body" action="<?php base_url("teacher/academic") ?>" method="post">
                             <div class="education-info">
 
                                 <!-- list item -->
@@ -244,13 +244,13 @@
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Degree<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" name="degree[]" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Year<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" name="year[]" class="form-control">
                                                 </div>
                                             </div>
                                             <hr style="width:75%;text-align:center;">
@@ -294,7 +294,7 @@
                             </div>
                         </div>
 
-                        <form class="card-body">
+                        <form class="card-body" action="<?php echo base_url("teacher/experience")?>"  ethod="post">
                             <div class="exp-info">
 
                                 <!-- list item -->
@@ -304,13 +304,13 @@
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Organisation<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="text" class="form-control">
+                                                    <input name="organisation" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-md-9">
                                                 <label class="col-md-3 col-form-label">Years<span class="text-danger">*</span></label>
                                                 <div class="col-md-7">
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" name="year" class="form-control">
                                                 </div>
                                             </div>
                                             <hr style="width:75%;text-align:center;">
@@ -351,19 +351,62 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <form class="card-body">
-                            <div class="form-group row">
+						<form class="card-body" action="<?php echo base_url("teacher/availability")?>"  method="post">
+							<div class="exp-info">
+
+								<!-- list item -->
+								<div class="row form-row exp-cont">
+									<div class="col-12 col-md-10 col-lg-11">
+										<div class="row form-row">
+											<div class="form-group row col-md-9">
+												<label class="col-md-3 col-form-label">Organisation<span class="text-danger">*</span></label>
+												<div class="col-md-7">
+													<input name="organisation" type="text" class="form-control">
+												</div>
+											</div>
+											<div class="form-group row col-md-9">
+												<label class="col-md-3 col-form-label">Years<span class="text-danger">*</span></label>
+												<div class="col-md-7">
+													<input type="number" name="year" class="form-control">
+												</div>
+											</div>
+											<hr style="width:75%;text-align:center;">
+										</div>
+									</div>
+									<div class="col-12 col-md-2 col-lg-1"><label
+												class="d-md-block d-sm-none d-none">&nbsp;</label><a
+												href="#" class="btn btn-danger trash"><i
+													class="fa fa-trash-o"></i></a></div>
+								</div>
+								<!-- ./list item -->
+
+							</div>
+							<div class="add-more">
+								<a href="javascript:void(0);" class="add-exp"><i
+											class="fa fa-plus-circle"></i> Add
+									More</a>
+							</div>
+							<div class="form-group row">
+								<label class="col-md-3 col-form-label"></label>
+								<div class="col-md-7">
+									<button type="submit" class="btn btn-primary">Submit</button>
+									<button type="submit" class="btn btn-outline-secondary">Cancel</button>
+								</div>
+							</div>
+						</form>
+
+						<div class="form-group row">
                                 <label class="col-md-3 col-form-label">Mon<span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-3">
                                     <label class="col-md-4 col-form-label">Start Time<span
                                                 class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
+                                    <input type="time" name="start_time" class="form-control">
                                 </div>
                                 <div class="col-md-3">
                                     <label class="col-md-4 col-form-label">End Time<span
                                                 class="text-danger">*</span></label>
-                                    <input type="time" class="form-control">
+                                    <input type="time" name="end_time" class="form-control">
                                 </div>
                             </div>
 
@@ -486,10 +529,10 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <form class="card-body">
+                        <form class="card-body" action="<?php echo base_url("teacher/courseselection")?>" method="post">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Select Class</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <select name="class" class="form-control" id="exampleFormControlSelect1">
                                     <option>Class 1</option>
                                     <option>Class 2</option>
                                     <option>Class 3</option>
@@ -499,14 +542,14 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <input name="suject" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Subject 1
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <label  class="form-check-label" for="defaultCheck1">
                                         Subject 2
                                     </label>
                                 </div>
@@ -532,25 +575,25 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <form class="card-body">
+                        <form class="card-body" method="post" action="<?php echo base_url("teacher/account");?>">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">IBAN / Account Number <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control">
+                                    <input type="number"  name="IBAN" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Branch Code <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control">
+                                    <input type="number" name="branch_code" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Account Title</label>
                                 <div class="col-md-7">
-                                    <input type="number" class="form-control">
+                                    <input type="number" name="account_title" class="form-control">
                                 </div>
                             </div>
 

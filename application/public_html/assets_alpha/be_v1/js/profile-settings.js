@@ -22,13 +22,13 @@ Version      : 1.0
 			'                                            <div class="form-group row col-md-9">\n' +
 			'                                                <label class="col-md-3 col-form-label">Degree<span class="text-danger">*</span></label>\n' +
 			'                                                <div class="col-md-7">\n' +
-			'                                                    <input type="text" class="form-control">\n' +
+			'                                                    <input type="text" name="degree[]" class="form-control">\n' +
 			'                                                </div>\n' +
 			'                                            </div>\n' +
 			'                                            <div class="form-group row col-md-9">\n' +
 			'                                                <label class="col-md-3 col-form-label">Year<span class="text-danger">*</span></label>\n' +
 			'                                                <div class="col-md-7">\n' +
-			'                                                    <input type="number" class="form-control">\n' +
+			'                                                    <input type="number" name="year[]" class="form-control">\n' +
 			'                                                </div>\n' +
 			'                                            </div>\n' +
 			'                                            <hr style="width:75%;text-align:center;">\n' +

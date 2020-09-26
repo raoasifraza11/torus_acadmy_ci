@@ -31,36 +31,8 @@ class Login extends TTT_Controller
 				die();
 			}else{
 				$status = $this->auth->login($_POST);
+            redirect(base_url("dashboard"));
 
-				if ($status){
-
-					if ($this->session->userdata("roleId")==1) {
-
-						//todo:teachers area
-						redirect(base_url("teacherinfoo"));
-
-					}elseif($this->session->userdata("roleId")==2){
-
-						//todo:students area
-						redirect(base_url("studentd"));
-
-					}
-					var_dump($this->session->userdata("roleId"));
-					die();
-
-				}else{
-
-
-					var_dump("Email or Password is Incorrect!.");
-					die();
-//					return $this->output
-//						->set_content_type('application/json')
-//						->set_status_header(400)
-//						->set_output(json_encode(array(
-//							'error' => array('error' => 'Email or Password is Incorrect!.'),
-//							'type' => 'danger'
-//						)));
-				}
 			}
 
 

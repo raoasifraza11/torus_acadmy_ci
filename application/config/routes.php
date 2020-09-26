@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['registration_category'] = 'Landing/registration_role';
 //$route['teacher/register'] = 'Landing/teacher_reg_view';
-$route['student/register'] = 'Landing/student_reg_view';
+//$route['student/register'] = 'Landing/student_reg_view';
 
 
 
@@ -71,9 +71,9 @@ $route['student/register'] = 'Landing/student_reg_view';
  *
  */
 
-$route['registration_category'] = 'Landing/registration_role';
+//$route['registration_category'] = 'Landing/registration_role';
 $route['teacher/register'] = 'Signup/teacher';
-$route['student/register'] = 'Landing/student_reg_view';
+$route['student/register'] = 'Signup/student';
 $route['login'] = 'Login/index';
 
 
@@ -83,7 +83,7 @@ $route['login'] = 'Login/index';
  *          Administration apart
  *
  */
-$route['dashboard'] = 'Backend/index';
+$route['dashboard'] = 'Backend/index';  //todo: using on backed
 $route['admin/students'] = 'Backend/students';
 $route['admin/courses'] = 'Backend/courses';
 $route['admin/teachers'] = 'Backend/teachers';
@@ -113,10 +113,19 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *
  */
 $route['teacher/dashboard'] = 'Backend/dashboard_teacher';
-$route['teacher/profile'] = 'Backend/profile_setting';
-$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
+//$route['teacher/profile'] = 'Backend/profile_setting';
+//$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
 $route['teacher/revenue'] = 'Backend/revenue_teacher';
-$route['teacher/courses'] = 'Backend/courses';
+$route['teacher/courses'] = 'Backend/teacher_courses';
+
+$route['teacher/profile'] = 'Professor/profile'; //at backend
+$route['teacher/academic'] = 'Professor/academic'; //at backend
+$route['teacher/experience'] = 'Professor/experience'; //at backend
+$route['teacher/availability'] = 'Professor/availability'; //at backend
+$route['teacher/courseselection'] = 'Professor/courseSelection'; //at backend
+$route['teacher/account'] = 'Professor/account'; //at backend
+$route['teacher/enrolled/students'] = 'Professor/students';
+
 
 
 // Default Routes ---------------------------------------------------------

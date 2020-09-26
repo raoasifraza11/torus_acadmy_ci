@@ -4,7 +4,7 @@
  * Author: Mussawar Ahamd
  * Date: 9/18/2019
  */
-class Migration_teacher_details extends CI_Migration {
+class Migration_teacher_academic_details extends CI_Migration {
 
     /**
      * Create table.
@@ -19,34 +19,16 @@ class Migration_teacher_details extends CI_Migration {
             'user_id' => array(
                 'type' => 'BIGINT',
             ),
-            'department' =>array(
+            'degree' =>array(
                 'type' => 'VARCHAR',
                 'constraint' => 100,
                 'default' => NULL,
             ),
-			'website_url' =>array(
+			'year' =>array(
 				'type' => 'VARCHAR',
 				'constraint' => 100,
 				'default' => NULL,
 			),
-            'school_name' =>array(
-                'type' => 'VARCHAR',
-                'constraint' => 200,
-                'default' => NULL,
-            ),
-			'description' =>array(
-				'type' => 'VARCHAR',
-				'constraint' => 200,
-				'default' => NULL,
-			),
-            'rating' =>array (
-                'type' => 'BIGINT',
-                'default' => NULL,
-            ),
-            'created_at' => array(
-                'type' => 'timestamp',
-                'default' => NULL,
-            ),
             'updated_at' =>array (
                 'type' => 'timestamp',
                 'default' => NULL,
@@ -58,14 +40,14 @@ class Migration_teacher_details extends CI_Migration {
         ));
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('teacher_details');
+        $this->dbforge->create_table('teacher_academic_details');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('teacher_details');
+        $this->dbforge->drop_table('teacher_academic_details');
     }
 
 }

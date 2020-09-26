@@ -78,6 +78,7 @@ class Signup extends TTT_Controller
     public function student()
     {
         if ($this->input->post()) {
+
             $this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
             $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
@@ -90,7 +91,7 @@ class Signup extends TTT_Controller
                 $form_data = $this->input->post();
 
 
-//				$form_data["role_id"] = 1;
+				$form_data["role_id"] = 2;
                 $form_data["password"] = md5($form_data['password']);
                 $form_data["token"] = md5($form_data['email']);
                 $form_data["status"] = 1;
@@ -107,19 +108,16 @@ class Signup extends TTT_Controller
 
             }
         } else {
-            //redirect(base_url("404_override"));
-//			var_dump("not post request");
-//			die();
-        }
 
-        $this->slice->view('frontend.student-register');
-    }
+		}
+		$this->slice->view('landing_alpha.student_register');
+
+	}
 
     public function teacher()
     {
         if ($this->input->post()) {
-        	var_dump("i am hear");
-        	die();
+
             $this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
             $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
@@ -136,6 +134,8 @@ class Signup extends TTT_Controller
                 $form_data["password"] = md5($form_data['password']);
                 $form_data["token"] = md5($form_data['email']);
                 $form_data["status"] = 1;
+                unset($form_data["terms"]);
+                unset($form_data["Address"]);
                 //inserting data in database
                 $user_id = $this->Crud_model->insert('users', $form_data);
                 $user_detail["user_id"] = $user_id;
