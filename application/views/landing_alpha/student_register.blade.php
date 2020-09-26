@@ -125,7 +125,7 @@
             <div class="home__bg"></div>
         </section>
         <div class="wrapper">
-            <form action="<?php echo base_url('student/dashboard') ?>" method="get" id="wizard">
+            <form action="<?php echo base_url('student/test_reg') ?>" method="post" id="wizard">
                 <input type="hidden" name="sidebar" value="s">
 
                 <!-- SECTION 1 -->
@@ -142,10 +142,10 @@
                             <p>Please fill with your details</p>
                             <div class="form-row">
                                 <div class="form-holder">
-                                    <input type="text" placeholder="First Name" class="form-control">
+                                    <input type="text" name="first_name" placeholder="First Name" class="form-control">
                                 </div>
                                 <div class="form-holder">
-                                    <input type="text" placeholder="Last Name" class="form-control">
+                                    <input type="text" name="last_name" placeholder="Last Name" class="form-control">
                                 </div>
                             </div>
                             <div class="form-row">
