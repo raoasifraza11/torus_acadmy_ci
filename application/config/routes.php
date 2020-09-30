@@ -73,6 +73,7 @@ $route['registration_category'] = 'Landing/registration_role';
 $route['teacher/register'] = 'Signup/teacher';
 $route['student/register'] = 'Signup/student';
 $route['login'] = 'Login/index';
+$route['logout'] = 'Login/logout';
 
 
 
@@ -124,7 +125,7 @@ $route['student/test_reg'] = 'Student/student_reg_data';
 //$route['teacher/profile'] = 'Backend/profile_setting';
 //$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
 $route['teacher/revenue'] = 'Backend/revenue_teacher';
-$route['teacher/courses'] = 'Backend/teacher_courses';
+//$route['teacher/courses'] = 'Backend/teacher_courses';
 
 //todo:under working on backend
 $route['teacher/dashboard'] = 'Professor/index';

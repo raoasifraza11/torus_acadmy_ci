@@ -60,7 +60,7 @@ class  Admin extends TTT_Controller
 
 				$i++;
 			}
-			redirect(base_url("courses"));
+			redirect(base_url("'admin/courses"));
 		}
 		$this->slice->view('app_alpha.be.admin.courses.add');
 	}

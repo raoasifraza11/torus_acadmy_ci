@@ -117,12 +117,12 @@
                     </ol>
                 </div>
                 <ul class="nav nav-tabs page-header-tab">
-                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#personalInfo">Personal
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#personalInfo">Personal
                             Information</a></li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#academicInfo">Academic
                             Information</a></li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#expInfo">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#courseSelection">Course Selection</a>
+                    <li class="nav-item"><a class="nav-link @if($active_tab=="selection") {{"active"}} @endif"  data-toggle="tab" href="#courseSelection">Course Selection</a>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accountInfo">Account Setting</a>
@@ -134,7 +134,7 @@
     <div class="section-body mt-4">
         <div class="container-fluid">
             <div class="tab-content">
-                <div class="tab-pane active" id="personalInfo">
+                <div class="tab-pane" id="personalInfo">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Personal Information</h3>
@@ -579,7 +579,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="courseSelection">
+                <div class="tab-pane @if($active_tab=="selection"){{"active"}} @endif " id="courseSelection">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Course Selection</h3>
@@ -594,31 +594,28 @@
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Select Class</label>
                                 <select name="class" class="form-control" id="exampleFormControlSelect1">
-                                    <option>Class 1</option>
-                                    <option>Class 2</option>
-                                    <option>Class 3</option>
-                                    <option>Class 4</option>
-                                    <option>Class 5</option>
+                                   <?php foreach ($classes as $class){ ?>
+									<option <?php if($this->session->userdata("class_id") == $class->id ){ echo "Selected"; } ?>  value="{{$class->id}}">{{$class->name}}</option>
+									<?php }?>
                                 </select>
                             </div>
+							@if($courses)
                             <div class="form-group">
+								<?php foreach ($courses as $course ){ ?>
                                 <div class="form-check">
-                                    <input name="suject" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <input  <?php if (!$course->selected){ ?> name="sujects[]" <?php }else{?> disabled="disabled" <?php  } ?>  <?php if ($course->selected){ echo "checked"; }?> class="form-check-input" type="checkbox" value= {{$course->id}} id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
-                                        Subject 1
+                                        {{$course->name}}
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label  class="form-check-label" for="defaultCheck1">
-                                        Subject 2
-                                    </label>
-                                </div>
+								<?php  } ?>
+
                             </div>
+							@endif
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="submit"  name="coures_s" value="test" class="btn btn-primary">Save</button>
                                     <button type="submit" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </div>
@@ -674,5 +671,11 @@
 @endsection
 
 @section('_bottomJs')
+	<script>
+		$("#exampleFormControlSelect1").on("change",function() {
+			$("#course_sel").click();
+		});
+
+	</script>
     <script src="<?php echo asset_url('be_v1/js/profile-settings.js'); ?>"></script>
 @endsection

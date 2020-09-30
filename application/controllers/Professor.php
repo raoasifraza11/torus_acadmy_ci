@@ -23,15 +23,25 @@ class Professor extends TTT_Controller
     				var_dump($_POST);
     				die();
 				}
+		$data["active_tab"]=$this->session->userdata("active_tab");
+
+    	if ($data["active_tab"]=="selection"){
+			$data["courses"]=$this->professor_model->courses($this->session->userdata("class_id"));
+		}else{
+			$data["courses"]=null;
+		}
+
+
 		$data["user"] = $this->Crud_model->get("users", $this->auth->userID());
 		$data["academics"] =  $this->Crud_model->get_all_data_by_column_id("teacher_academic_details","user_id",$this->auth->userID());
 		$data["organisations"] =  $this->Crud_model->get_all_data_by_column_id("teacher_experience_details","user_id",$this->auth->userID());
+		$data["classes"]=$this->Crud_model->get_all_data("classes");
+
 
 		$this->slice->view('app_alpha.be.teachers.profile_setting',$data);
 	}
 
 	public function academic(){
-
 
 		if($this->input->post()) {
 			$i=0;
@@ -65,6 +75,7 @@ class Professor extends TTT_Controller
 		redirect(base_url("teacher/profile"));
 	}
 
+
 	public function availability(){
 	if($this->input->post()) {
 		var_dump($_POST);
@@ -75,11 +86,37 @@ class Professor extends TTT_Controller
 
 
 	public function courseSelection(){
-		if($this->input->post()) {
+		if($this->input->post("insert")) {
 			var_dump($_POST);
 			die();
 		}
-		$this->slice->view('app_alpha.be.teachers.profile_setting');
+		if($this->input->post("coures_s")) {
+
+			if($this->input->post("sujects")){
+				foreach ($this->input->post("sujects") as $subject) {
+					$teacher_course["class_id"] = $this->session->userdata("class_id");
+					$teacher_course["course_id"] = $subject;
+					$teacher_course["teacher_id"] = $this->auth->userID();
+					$this->Crud_model->insert('teacher_class_course', $teacher_course);
+				}
+
+			}else {
+				$class = array(
+					'class_id' => $this->input->post("class"),
+				);
+				$this->session->set_userdata($class);
+
+			}
+
+		}
+
+		$tab = array(
+			'active_tab' =>"selection" ,
+		);
+
+		$this->session->set_userdata($tab);
+		redirect(base_url("teacher/profile"));
+
 	}
 
 	public function account(){
