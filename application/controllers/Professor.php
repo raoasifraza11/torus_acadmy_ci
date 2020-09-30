@@ -36,6 +36,7 @@ class Professor extends TTT_Controller
 		$data["academics"] =  $this->Crud_model->get_all_data_by_column_id("teacher_academic_details","user_id",$this->auth->userID());
 		$data["organisations"] =  $this->Crud_model->get_all_data_by_column_id("teacher_experience_details","user_id",$this->auth->userID());
 		$data["classes"]=$this->Crud_model->get_all_data("classes");
+		$data["account"]=$this->Crud_model->get("bank_details", $this->auth->userID());
 
 
 		$this->slice->view('app_alpha.be.teachers.profile_setting',$data);
@@ -55,6 +56,10 @@ class Professor extends TTT_Controller
 
 			}
 		}
+		$tab = array(
+			'active_tab' =>"acadmic" ,
+		);
+		$this->session->set_userdata($tab);
 		redirect(base_url("teacher/profile"));
 	}
 
@@ -72,6 +77,10 @@ class Professor extends TTT_Controller
 
 			}
 		}
+		$tab = array(
+			'active_tab' =>"exp" ,
+		);
+		$this->session->set_userdata($tab);
 		redirect(base_url("teacher/profile"));
 	}
 
@@ -81,8 +90,13 @@ class Professor extends TTT_Controller
 		var_dump($_POST);
 		die();
 	}
-	$this->slice->view('app_alpha.be.teachers.profile_setting');
-}
+		$tab = array(
+			'active_tab' =>"avaInfo" ,
+		);
+		$this->session->set_userdata($tab);
+		redirect(base_url("teacher/profile"));
+
+	}
 
 
 	public function courseSelection(){
@@ -121,10 +135,29 @@ class Professor extends TTT_Controller
 
 	public function account(){
 		if($this->input->post()) {
-			var_dump($_POST);
-			die();
+
+			$form_data=$this->input->post();
+			$bank["ibn"]=$form_data["IBAN"];
+			$bank["branch_code"]=$form_data["branch_code"];
+			$bank["title"]=$form_data["account_title"];
+			$bank["user_id"]=$this->auth->userID();
+
+			$account=$this->Crud_model->get("bank_details", $this->auth->userID());
+   if (!$account) {
+	   $this->Crud_model->insert('bank_details', $bank);
+   }else{
+   	unserialize($bank["user_id"]);
+	   $this->Crud_model->update('bank_details',$this->auth->userID() ,$bank);
+
+   }
+
 		}
-		$this->slice->view('app_alpha.be.teachers.profile_setting');
+		$tab = array(
+			'active_tab' =>"account" ,
+		);
+		$this->session->set_userdata($tab);
+
+		redirect(base_url("teacher/profile"));
 	}
 
 	public function students(){

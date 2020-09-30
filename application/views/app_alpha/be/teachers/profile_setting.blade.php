@@ -117,15 +117,15 @@
                     </ol>
                 </div>
                 <ul class="nav nav-tabs page-header-tab">
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#personalInfo">Personal
+                    <li class="nav-item"><a class="nav-link @if(!$active_tab) {{"active"}} @endif" data-toggle="tab" href="#personalInfo">Personal
                             Information</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#academicInfo">Academic
+                    <li class="nav-item"><a class="nav-link @if($active_tab=="acadmic") {{"active"}} @endif" data-toggle="tab" href="#academicInfo">Academic
                             Information</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#expInfo">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link @if($active_tab=="selection") {{"active"}} @endif"  data-toggle="tab" href="#courseSelection">Course Selection</a>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
+                    <li class="nav-item"><a class="nav-link @if($active_tab=="exp") {{"active"}} @endif" data-toggle="tab" href="#expInfo">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link @if($active_tab=="avaInfo") {{"active"}} @endif"  data-toggle="tab" href="#courseSelection">Course Selection</a>
+                    <li class="nav-item"><a class="nav-link @if($active_tab=="selection") {{"active"}} @endif" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accountInfo">Account Setting</a>
+                    <li class="nav-item"><a class="nav-link@if($active_tab=="account") {{"active"}} @endif" data-toggle="tab" href="#accountInfo">Account Setting</a>
                     </li>
                 </ul>
             </div>
@@ -134,7 +134,7 @@
     <div class="section-body mt-4">
         <div class="container-fluid">
             <div class="tab-content">
-                <div class="tab-pane" id="personalInfo">
+                <div class="tab-pane  @if(!$active_tab){{"active"}} @endif" id="personalInfo">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Personal Information</h3>
@@ -226,7 +226,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="academicInfo">
+                <div class="tab-pane  @if($active_tab=="acadmic"){{"active"}} @endif" id="academicInfo">
                     <!-- Item -->
                     <div class="card obs-card">
 
@@ -313,7 +313,7 @@
                     </div>
                     <!-- End Item -->
                 </div>
-                <div class="tab-pane" id="expInfo">
+                <div class="tab-pane  @if($active_tab=="exp"){{"active"}} @endif" id="expInfo">
                     <!-- Item -->
                     <div class="card exp-card">
 
@@ -401,7 +401,7 @@
                     </div>
                     <!-- End Item -->
                 </div>
-                <div class="tab-pane" id="avaInfo">
+                <div class="tab-pane  @if($active_tab=="avaInfo"){{"active"}} @endif" id="avaInfo">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Availability Information & Fee</h3>
@@ -622,7 +622,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="accountInfo">
+                <div class="tab-pane @if($active_tab=="account"){{"active"}} @endif" id="accountInfo">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Account Information</h3>
@@ -637,21 +637,21 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">IBAN / Account Number <span
                                             class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="number"  name="IBAN" class="form-control">
+                                <div class="col-md-7">.
+                                    <input type="text"  value="@if($account) {{$account->ibn}} @endif" name="IBAN" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Branch Code <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="number" name="branch_code" class="form-control">
+                                    <input type="text" name="branch_code"  value="@if($account) {{$account->branch_code}} @endif" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Account Title</label>
                                 <div class="col-md-7">
-                                    <input type="number" name="account_title" class="form-control">
+                                    <input type="text" name="account_title"  value=" @if($account) {{$account->title}} @endif" class="form-control">
                                 </div>
                             </div>
 

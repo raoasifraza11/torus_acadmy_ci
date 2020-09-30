@@ -10,17 +10,17 @@
         <div class="tab-pane fade show active" id="menu-uni" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu">
-                    <li class="active"><a href="<?php echo base_url('student/dashboard?sidebar=s'); ?>"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-                    <li><a href="<?php echo base_url('student/course/enrolled?sidebar=s'); ?>"><i class="fa fa-black-tie"></i><span>Enrolled Classes</span></a></li>
-                    <li><a href="<?php echo base_url('student/payment/history?sidebar=s'); ?>"><i class="fa fa-black-tie"></i><span>Payment History</span></a></li>
+                    <li class="active"><a href="<?php echo base_url('student/dashboard'); ?>"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+                    <li><a href="<?php echo base_url('student/course/enrolled'); ?>"><i class="fa fa-black-tie"></i><span>Enrolled Classes</span></a></li>
+                    <li><a href="<?php echo base_url('student/payment/history'); ?>"><i class="fa fa-black-tie"></i><span>Payment History</span></a></li>
                 </ul>
             </nav>
         </div>
         <div class="tab-pane fade" id="menu-admin" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu">
-                    <li><a href="<?php echo base_url('student/profile?sidebar=s'); ?>"><i class="fa fa-credit-card"></i><span>Personal Information</span></a></li>
-                    <li><a href="<?php echo base_url('student/profile?sidebar=s'); ?>"><i class="fa fa-graduation-cap"></i><span>Emergency Contact</span></a></li>
+                    <li><a href="<?php echo base_url('student/profile'); ?>"><i class="fa fa-credit-card"></i><span>Personal Information</span></a></li>
+                    <li><a href="<?php echo base_url('student/profile'); ?>"><i class="fa fa-graduation-cap"></i><span>Emergency Contact</span></a></li>
                 </ul>
             </nav>
         </div>
