@@ -2,50 +2,25 @@
 
 class Course_model extends CI_Model
 {
-    public function courseTypeJoin()
-    {
-        $this->db->select('*');
-        $this->db->from('course_type');
-        $this->db->join('courses' , 'course_type.id = courses.course_type_id');
-        $query = $this->db->get();
-    }
 
-    public function ProfessorJoin()
-    {
-        $this->db->select('*');
-        $this->db->from('professors');
-        $this->db->join('courses' , 'professors.id = courses.professor_id');
-        $query = $this->db->get();
-        foreach ($query->result() as $row)
-        {
-            echo $row->course_type_id.'<br>';
-            echo $row->professor_id.'<br>';
+	public function getAllCourses(){
+		$this->db->select('*,teacher_class_course.id,classes.name as class_name,class_course.name');
+		$this->db->from("teacher_class_course");
+		$this->db->join('classes', 'teacher_class_course.class_id = classes.id',"left");
+		$this->db->join('class_course','teacher_class_course.id = class_course.id',"left");
+		$this->db->join('users','teacher_class_course.teacher_id = users.id',"left");
+		return $this->db->get()->result();
+	}
 
-        }
-    }
 
-    public function getAllCourses()
-    {
-        $query = $this->db->get('courses');
+	public function getCourse($id){
+		$this->db->select('*,teacher_class_course.id,classes.name as class_name,class_course.name');
+		$this->db->from("teacher_class_course");
+		$this->db->where("teacher_class_course.id",$id);
+		$this->db->join('classes', 'teacher_class_course.class_id = classes.id',"left");
+		$this->db->join('class_course','teacher_class_course.id = class_course.id',"left");
+		$this->db->join('users','teacher_class_course.teacher_id = users.id',"left");
+		return $this->db->get()->row();
+	}
 
-        if($query)
-        {
-            return $query->result();
-        }
-    }
-
-    public function insertCourse($data)
-    {
-        $query = $this->db->insert('courses', $data);
-
-        if($query)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-    }
 }

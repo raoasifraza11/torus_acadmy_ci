@@ -59,6 +59,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 $route['registration_category'] = 'Landing/registration_role';
+$route['courses'] = 'Courses/courses';
+$route['course/single'] = 'Student/singleCourse';
+$route['course/paynow'] = 'Student/payNow';
+
 
 
 
@@ -108,7 +112,8 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *
  */
 $route['student/dashboard'] = 'Student/index';//working on backend
-$route['student/profile'] = 'Backend/student_profile_setting';
+//$route['student/profile'] = 'Backend/student_profile_setting';
+$route['student/profile'] = 'Student/profile';
 $route['student/payment/history'] = 'Backend/student_payment_history';
 $route['student/course/enrolled'] = 'Backend/student_course_enrolled';
 
@@ -136,6 +141,7 @@ $route['teacher/availability'] = 'Professor/availability'; //at backend
 $route['teacher/courseselection'] = 'Professor/courseSelection'; //at backend
 $route['teacher/account'] = 'Professor/account'; //at backend
 $route['teacher/enrolled/students'] = 'Professor/students';
+$route['teacher/bank'] = 'Professor/bank';
 
 
 

@@ -139,32 +139,31 @@
                                             class="fe fe-x"></i></a>
                             </div>
                         </div>
-                        <form class="card-body">
+                        <form class="card-body" action="{{base_url("student/profile")}}" method="post">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">First Name <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="first_name"  value="{{ $user->first_name }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Last Name</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="last_name" value="{{ $user->first_name }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Email Address <span class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input data-provide="datepicker" data-date-autoclose="true" class="form-control"
-                                           placeholder="">
+                                    <input  value="{{ $user->email }}" name="email" data-date-autoclose="true" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Phone Number <span
                                             class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="phone" value="{{ $user->phone }}" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -177,7 +176,7 @@
                                 <label class="col-md-3 col-form-label">City<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
                                     <!-- TODO: @Ahmad Add city values -->
-                                    <select name="cars" class="form-control" id="cars">
+                                    <select name="city" class="form-control" id="cars">
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>
@@ -189,7 +188,7 @@
                                 <label class="col-md-3 col-form-label">Country<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
                                     <!-- TODO: @Ahmad Add countries values -->
-                                    <select name="cars" class="form-control" id="cars">
+                                    <select name="coutry" class="form-control" id="cars">
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>

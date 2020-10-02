@@ -20,7 +20,7 @@
         <div class="tab-pane fade" id="menu-admin" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu">
-                    <li><a href="<?php echo base_url('teacher/profile'); ?>"><i class="fa fa-credit-card"></i><span>Account Details</span></a></li>
+                    <li><a href="<?php echo base_url('teacher/bank'); ?>"><i class="fa fa-credit-card"></i><span>Account Details</span></a></li>
                 </ul>
             </nav>
         </div>
