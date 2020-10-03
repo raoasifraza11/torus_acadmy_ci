@@ -40,6 +40,18 @@
                                                 <input type="text" required name="course_tag[]" class="form-control" placeholder="i.e CHY">
                                             </div>
                                         </div>
+                                        <div class="form-group row col-md-9">
+                                            <label class="col-md-3 col-form-label">Description<span class="text-danger">*</span></label>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control" rows="10" placeholder="Write something about subject"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row col-md-9">
+                                            <label class="col-md-3 col-form-label">Subject Price<span class="text-danger">*</span></label>
+                                            <div class="col-md-9">
+                                                <input type="text" required name="course_tag[]" class="form-control" placeholder="Course Price">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-2 col-lg-1"><label
@@ -54,7 +66,7 @@
                         <div class="add-more">
                             <a href="javascript:void(0);" class="add-course"><i
                                         class="fa fa-plus-circle"></i> Add
-                                More</a>
+                                More Subject</a>
                         </div>
 
                         <div class="form-group row">

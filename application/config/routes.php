@@ -111,7 +111,7 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  *          Student apart
  *
  */
-$route['student/dashboard'] = 'Student/index';//working on backend
+$route['student/dashboard'] = 'Student/index';      //working on backend
 //$route['student/profile'] = 'Backend/student_profile_setting';
 $route['student/profile'] = 'Student/profile';
 $route['student/payment/history'] = 'Backend/student_payment_history';

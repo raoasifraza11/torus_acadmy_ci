@@ -34,14 +34,14 @@ class Student extends TTT_Controller
    }
 
    public function singleCourse(){
-		$data=null;
-		if ($this->input->post("id")) {
+		//$data=null;
+		/*if ($this->input->post("id")) {
           $data["course"] =  $this->Course_model->getCourse($this->input->post("id"));
 		}else{
 			redirect(base_url("courses"));
-		}
+		}*/
 
-			$this->slice->view('landing_alpha.course-single',$data);
+			$this->slice->view('landing_alpha.course-single');
    }
 	public function payNow()
 	{
