@@ -30,6 +30,14 @@ class Migration_class_course extends CI_Migration {
 				'constraint' => 255,
 				'default' => NULL,
 			),
+			'description' => array(
+				'type' => 'text',
+				'default' => NULL,
+			),
+			'price' => array(
+				'type' => 'BIGINT',
+				'unsigned' => TRUE,
+			),
 
             'created_at' => array(
                 'type' => 'timestamp',

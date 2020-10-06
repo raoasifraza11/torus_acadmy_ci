@@ -51,10 +51,14 @@ class  Admin extends TTT_Controller
 			$class_id = $this->Crud_model->insert('classes', $class);
 			$i = 0;
 			$courese_tags = $this->input->post("course_tag");
+			$courese_prices = $this->input->post("course_price");
+			$courese_descriptions = $this->input->post("course_description");
 			foreach ($this->input->post("course_name") as $c) {
 
 				$course["name"] = $c;
 				$course["tag"] = $courese_tags[$i];
+				$course["price"] = $courese_prices[$i];
+				$course["description"] = $courese_descriptions[$i];
 				$course["class_id"] = $class_id;
 				$this->Crud_model->insert('class_course', $course);
 

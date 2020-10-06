@@ -31,13 +31,13 @@ Version      : 1.0
 			'                                        <div class="form-group row col-md-9">\n' +
 			'                                            <label class="col-md-3 col-form-label">Description<span class="text-danger">*</span></label>\n' +
 			'                                            <div class="col-md-9">\n' +
-			'                                                <textarea class="form-control" rows="10" placeholder="Write something about subject"></textarea>\n' +
+			'                                                <textarea class="form-control" name="course_description[]" rows="10" placeholder="Write something about subject"></textarea>\n' +
 			'                                            </div>\n' +
 			'                                        </div>\n' +
 			'                                        <div class="form-group row col-md-9">\n' +
 			'                                            <label class="col-md-3 col-form-label">Subject Price<span class="text-danger">*</span></label>\n' +
 			'                                            <div class="col-md-9">\n' +
-			'                                                <input type="text" required name="course_tag[]" class="form-control" placeholder="Course Price">\n' +
+			'                                                <input type="text" required name="course_price[]" class="form-control" placeholder="Course Price">\n' +
 			'                                            </div>\n' +
 			'                                        </div>\n' +
 			'                                    </div>\n' +

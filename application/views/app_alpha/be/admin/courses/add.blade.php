@@ -43,13 +43,13 @@
                                         <div class="form-group row col-md-9">
                                             <label class="col-md-3 col-form-label">Description<span class="text-danger">*</span></label>
                                             <div class="col-md-9">
-                                                <textarea class="form-control" rows="10" placeholder="Write something about subject"></textarea>
+                                                <textarea class="form-control"  required name="course_description[]" rows="10" placeholder="Write something about subject"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row col-md-9">
                                             <label class="col-md-3 col-form-label">Subject Price<span class="text-danger">*</span></label>
                                             <div class="col-md-9">
-                                                <input type="text" required name="course_tag[]" class="form-control" placeholder="Course Price">
+                                                <input type="text" required name="course_price[]" class="form-control" placeholder="Course Price">
                                             </div>
                                         </div>
                                     </div>
