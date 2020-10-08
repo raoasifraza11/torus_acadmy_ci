@@ -110,11 +110,11 @@
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item" style="margin-bottom:10px;">
                                             <a class="nav-link active" style="padding-left: 10px;" data-toggle="tab"
-                                               href="#pag1" role="tab" aria-controls="home">JazzCash</a>
+                                               href="#pag2" role="tab" aria-controls="profile">JazzCash</a>
                                         </li>
                                         <li class="nav-item" style="margin-bottom:10px;">
                                             <a class="nav-link" style="padding-left: 10px;" data-toggle="tab"
-                                               href="#pag2" role="tab" aria-controls="profile">EasyPasa</a>
+                                               href="#pag1" role="tab" aria-controls="home">EasyPaisa</a>
                                         </li>
                                         <li class="nav-item" style="margin-bottom:10px;">
                                             <a class="nav-link" style="padding-left: 10px;" data-toggle="tab"
@@ -122,9 +122,9 @@
                                         </li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div class="tab-pane active" id="pag1" role="tabpanel">
+                                        <div class="tab-pane " id="pag1" role="tabpanel">
                                             <div class="sv-tab-panel">
-                                                <h3>Easypasa</h3>
+                                                <h3>Easypaisa</h3>
                                                 <form action="<?php echo base_url('student/course/enrolled'); ?>">
                                                     <input type="hidden" name="sidebar" value="s">
 
@@ -132,7 +132,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="pag2" role="tabpanel">
+                                        <div class="tab-pane active" id="pag2" role="tabpanel">
                                             <div class="sv-tab-panel">
                                                 <h3>MobiCash</h3>
                                                 <form action="<?php echo base_url('student/course/enrolled'); ?>">

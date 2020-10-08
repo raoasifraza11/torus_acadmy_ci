@@ -23,6 +23,8 @@ class Courses extends TTT_Controller
 	public function courses()
 	{
 		$data["courses"]=$this->Course_model->getAllCourses();
+//		var_dump($data);
+//		die();
 		$this->slice->view('landing_alpha.courses',$data);
 	}
 
