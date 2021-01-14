@@ -72,6 +72,14 @@ class Student extends TTT_Controller
 		$data["courses"]=$this->users_model->enrolledCourse($this->auth->userID());
 		$this->slice->view('app_alpha.be.students.enrolled',$data);
 	}
+
+	public function student_course_enrolled_proof()
+	{
+		$data["courses"]=$this->users_model->enrolledCourse($this->auth->userID());
+		$this->slice->view('app_alpha.be.students.proof',$data);
+	}
+
+
 	public function studentPaymentHistory()
 	{
 		$data["user"] = $this->Crud_model->get("users", $this->auth->userID());

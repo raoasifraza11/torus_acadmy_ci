@@ -5,7 +5,6 @@
     <div class="section-body mt-4">
         <div class="container-fluid">
             <div class="content">
-                <h1>You have subscribed CLASS NAME <a href="<?php echo base_url('courses'); ?>" class="float-right text-warning small">Request Change <i class="fa fa-pencil"></i></a></h1>
 
                 <table class="table table-striped">
                     <thead>
@@ -13,6 +12,7 @@
                         <th>Sr #</th>
                         <th>Subject Name</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -24,6 +24,9 @@
 
 							<span class="tag tag-success"> <?php if ($course->payment_status){  ?> Enrolled <?php }else{ ?> Pending <?php }?></span>
 						</td>
+                        <td>
+                            <a href="{{ base_url('student/course/enrolled/proof') }}"> <i class="fa fa-pencil"></i> Add Proof</a>
+                        </td>
                     </tr>
 					<?php $i++; } ?>
                     </tbody>

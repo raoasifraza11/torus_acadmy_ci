@@ -118,6 +118,7 @@ $route['student/dashboard'] = 'Student/index';      //working on backend
 $route['student/profile'] = 'Student/profile';
 $route['student/payment/history'] = 'Student/studentPaymentHistory';
 $route['student/course/enrolled'] = 'Student/student_course_enrolled';
+$route['student/course/enrolled/proof'] = 'Student/student_course_enrolled_proof';
 $route['student/test_reg'] = 'Student/student_reg_data';
 
 
