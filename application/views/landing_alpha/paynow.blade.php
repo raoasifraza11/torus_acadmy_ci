@@ -51,13 +51,8 @@
                         <div class="card-body">
                             <div class="row my-8">
                                 <div class="col-6 text-right">
-                                    <p class="h3">STUDENT NAME</p>
-                                    <address>
-                                        Street Address<br>
-                                        State, City<br>
-                                        Region, Postal Code<br>
-                                        ctr@example.com
-                                    </address>
+                                    <p class="h3"><?php echo $this->session->userdata("email");?></p>
+
                                 </div>
                             </div>
                             <div class="table-responsive push">
@@ -69,40 +64,26 @@
                                         <td>
                                             <p class="font600 mb-1">Course Name</p>
                                         </td>
-                                        <td class="text-center">Quantity</td>
                                         <td class="text-right">Course Fee</td>
                                         <td class="text-right">Total</td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center">2</td>
-                                        <td>
-                                            <p class="font600 mb-1">Course 3</p>
-                                        </td>
                                         <td class="text-center">1</td>
-                                        <td class="text-right">$20.000,00</td>
-                                        <td class="text-right">$20.000,00</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4" class="font600 text-right">Subtotal</td>
-                                        <td class="text-right">$25.000,00</td>
-                                    </tr>
-                                    <tr class="bg-light">
-                                        <td colspan="4" class="font600 text-right">Vat Rate</td>
-                                        <td class="text-right">20%</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4" class="font600 text-right">Vat Due</td>
-                                        <td class="text-right">$5.000,00</td>
+                                        <td>
+                                            <p class="font600 mb-1">{{$course->name}}</p>
+                                        </td>
+                                        <td class="text-right">{{$course->name}}</td>
+                                        <td class="text-right">{{$course->price}}</td>
                                     </tr>
                                     <tr class="bg-green text-light">
-                                        <td colspan="4" class="font700 text-right">Total Due</td>
-                                        <td class="font700 text-right">$30.000,00</td>
+                                        <td colspan="3 " class="font700 text-right">Total </td>
+                                        <td class="font700 text-right">{{$course->price}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <p class="text-muted text-center">Thank you very much for doing business with us. We look
-                                forward to working with you again!</p>
+{{--                            <p class="text-muted text-center">Thank you very much for doing business with us. We look--}}
+{{--                                forward to working with you again!</p>--}}
 
 
                             <div class="card-body">
@@ -116,29 +97,27 @@
                                             <a class="nav-link" style="padding-left: 10px;" data-toggle="tab"
                                                href="#pag1" role="tab" aria-controls="home">EasyPaisa</a>
                                         </li>
-                                        <li class="nav-item" style="margin-bottom:10px;">
-                                            <a class="nav-link" style="padding-left: 10px;" data-toggle="tab"
-                                               href="#pag3" role="tab" aria-controls="messages">Credit Card </a>
-                                        </li>
+{{--                                        <li class="nav-item" style="margin-bottom:10px;">--}}
+{{--                                            <a class="nav-link" style="padding-left: 10px;" data-toggle="tab"--}}
+{{--                                               href="#pag3" role="tab" aria-controls="messages">Credit Card </a>--}}
+{{--                                        </li>--}}
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane " id="pag1" role="tabpanel">
                                             <div class="sv-tab-panel">
                                                 <h3>Easypaisa</h3>
-                                                <form action="<?php echo base_url('student/course/enrolled'); ?>">
-                                                    <input type="hidden" name="sidebar" value="s">
-
-                                                    <button type="submit">Pay</button>
-                                                </form>
+                                                <form method="post" action="<?php echo base_url('course/paynow'); ?>">
+                                                    <input type="hidden" name="id" value="{{$course->id}}">
+                                                    <button type="submit" name="type" value="easypaisa">Pay</button>
+                                             </form>
                                             </div>
                                         </div>
                                         <div class="tab-pane active" id="pag2" role="tabpanel">
                                             <div class="sv-tab-panel">
                                                 <h3>MobiCash</h3>
-                                                <form action="<?php echo base_url('student/course/enrolled'); ?>">
-                                                    <input type="hidden" name="sidebar" value="s">
-
-                                                    <button type="submit">Pay</button>
+                                                <form method="post" action="<?php echo base_url('course/paynow'); ?>">
+                                                    <input type="hidden" name="pmethod" value="mobicash">
+													<button type="submit" name="type" value="jazzcash">Pay</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -146,9 +125,8 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="panel-body">
-                                                        <form action="<?php echo base_url('student/course/enrolled'); ?>">
+                                                        <form method="post" action="<?php echo base_url('course/paynow'); ?>">
                                                             <input type="hidden" name="sidebar" value="s">
-
                                                             <div class="form-group">
                                                                 <label><b>CARD NUMBER</b></label>
                                                                 <div class="input-group">

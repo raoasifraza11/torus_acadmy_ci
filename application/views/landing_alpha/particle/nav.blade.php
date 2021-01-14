@@ -30,10 +30,13 @@
                 <li><a href="#">Blog </a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+			<?php if (!$this->session->has_userdata('userID')){?>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#signinModal" data-toggle="modal"><i class="ion-log-in"></i> Sign In</a></li>
+
+                <li><a href="#signinModal" data-toggle="modal" id="singIn"><i class="ion-log-in"></i> Sign In</a></li>
                 <li><a href="<?php echo base_url('registration_category'); ?>"><i class="ion-android-person"></i> Sign Up</a></li>
             </ul>
+			<?php } ?>
         </div><!-- /.navbar-collapse -->
 
     </div><!-- /.container -->

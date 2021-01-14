@@ -39,8 +39,13 @@ class Login extends TTT_Controller
 						redirect(base_url("teacher/dashboard"));
 
 					}else{
-						redirect(base_url("student/dashboard"));
 
+						if ($this->session->has_userdata('redirect_to')) {
+							redirect(base_url($this->session->userdata('redirect_to')));
+						}
+						else {
+							redirect(base_url("student/dashboard"));
+						}
 					}
 
 

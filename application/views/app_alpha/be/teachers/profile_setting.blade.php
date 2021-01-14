@@ -219,7 +219,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" name="tab" value="personal" class="btn btn-primary">Submit</button>
                                     <button type="submit" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </div>

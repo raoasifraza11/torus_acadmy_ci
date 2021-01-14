@@ -141,9 +141,24 @@
 @yield('_bottomTopJs')
 
 
+
+
 <!-- JS Global -->
 <script src="<?php echo asset_url('fe_v1/plugins/jquery/jquery-1.12.4.min.js'); ?>"></script>
 <script src="<?php echo asset_url('fe_v1/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+<script>
+
+	<?php
+	if($this->session->flashdata('login')){
+	?>
+	$(document).ready(function () {
+		$('#singIn').click();
+	});
+	<?php }
+	?>
+
+</script>
 
 
 <!-- JQUERY STEP -->

@@ -20,11 +20,29 @@ class Courses extends TTT_Controller
         
     }
 
+	public function singleCourse(){
+		if (!$this->session->has_userdata('userID')) {
+			$this->session->set_flashdata('login', 'You Need to Logged In To Proceed');
+			$c_status = array(
+				'redirect_to' => "courses"
+			);
+			$this->session->set_userdata($c_status);
+			redirect(base_url(), 'refresh');
+		}
+		$this->session->unset_userdata("redirect_to");
+
+		$data=null;
+		if ($this->input->post("id")) {
+			$data["course"] =  $this->Course_model->getCourse($this->input->post("id"));
+		}else{
+			redirect(base_url("courses"));
+		}
+		$this->slice->view('landing_alpha.course-single',$data);
+	}
+
 	public function courses()
 	{
 		$data["courses"]=$this->Course_model->getAllCourses();
-//		var_dump($data);
-//		die();
 		$this->slice->view('landing_alpha.courses',$data);
 	}
 

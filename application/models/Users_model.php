@@ -148,6 +148,26 @@ class Users_model extends CI_Model
 
     }
 
+    public function enrolledCourse($user_id){
+		$this->db->select("*,classes.name as class_name");
+    	$this->db->where('student_id' , $user_id);
+		$this->db->join('class_course', 'class_course.id = student_enrolled_courses.course_id');
+		$this->db->join('classes', 'classes.id = class_course.class_id');
+		$query = $this->db->get('student_enrolled_courses');
+		return $query->result();
+	}
+
+	public function teacherEnrolledStudents($user_id){
+		$this->db->select("*,classes.name as class_name");
+		$this->db->where('teacher_id' , $user_id);
+		$this->db->join('student_enrolled_courses', 'teacher_class_course.course_id = student_enrolled_courses.course_id');
+		$this->db->join('users', 'users.id = student_enrolled_courses.student_id');
+		$this->db->join('classes', 'classes.id = teacher_class_course.class_id');
+		$this->db->group_by('users.id');
+		$query = $this->db->get('teacher_class_course');
+		return $query->result();
+	}
+
 }
 
 ?>

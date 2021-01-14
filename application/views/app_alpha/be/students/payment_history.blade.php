@@ -19,19 +19,25 @@
                             <div class="table-responsive">
                                 <table class="table table-hover table-vcenter table_custom text-nowrap spacing5 border-style mb-0">
                                     <tbody>
-                                    <tr>
-                                        <td class="w60">
-                                            <div class="avatar avatar-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">
-                                                <span>GS</span>
-                                            </div>
-                                        </td>
-                                        <td><div class="font-15">Student Name</div></td>
-                                        <td><span>(TID) 646-8377</span></td>
-                                        <td><span class="text-muted">CLASS</span></td>
-                                        <td>SUBJECT LIST</td>
-                                        <td><strong>04 Jan, 2020</strong></td>
-                                        <td><span class="tag tag-success">Paid</span></td>
-                                    </tr>
+
+									<?php foreach ($courses as $course){ ?>
+									<tr>
+										<td class="w60">
+											<div class="avatar avatar-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">
+												<span>{{ucfirst($user->first_name[0]).ucfirst($user->last_name[0])}}</span>
+											</div>
+										</td>
+										<td><div class="font-15">{{$user->first_name." ".$user->last_name}}</div></td>
+										<td><span class="text-muted">{{$course->class_name}}</span></td>
+										<td><strong>04 Jan, 2020</strong></td>
+										<?php if ($course->payment_status){  ?>
+										<td><span class="tag tag-success">Paid</span></td>
+										<?php }else{ ?>
+										<td><span class="tag tag-warning">Processing</span></td>
+
+									<?php } ?>
+									</tr>
+									<?php } ?>
 
                                     <tr>
                                         <td class="w60">
@@ -40,23 +46,7 @@
                                             </div>
                                         </td>
                                         <td><div class="font-15">Student Name</div></td>
-                                        <td><span>(TID) 646-8377</span></td>
                                         <td><span class="text-muted">CLASS</span></td>
-                                        <td>SUBJECT LIST</td>
-                                        <td><strong>04 Jan, 2020</strong></td>
-                                        <td><span class="tag tag-warning">Processing</span></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="w60">
-                                            <div class="avatar avatar-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Avatar Name">
-                                                <span>GS</span>
-                                            </div>
-                                        </td>
-                                        <td><div class="font-15">Student Name</div></td>
-                                        <td><span>(TID) 646-8377</span></td>
-                                        <td><span class="text-muted">CLASS</span></td>
-                                        <td>SUBJECT LIST</td>
                                         <td><strong>04 Jan, 2020</strong></td>
                                         <td><span class="tag tag-danger">Overdue</span></td>
                                     </tr>
@@ -74,7 +64,7 @@
                                                 <img class="rounded-circle" src="<?php echo asset_url('be_v1/images/xs/avatar1.jpg'); ?>" alt="">
                                             </div>
                                             <div class="wid-u-info">
-                                                <h5>Dessie Parks</h5>
+                                                <h5>{{$user->first_name." ".$user->last_name}}</h5>
                                                 <p class="text-muted m-b-0">119 Peepee Way, Hilo, HI, 96720</p>
                                                 <ul class="list-unstyled">
                                                     <li>

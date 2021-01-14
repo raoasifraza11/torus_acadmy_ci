@@ -161,6 +161,7 @@ class Professor extends TTT_Controller
 		);
 		$this->session->set_userdata($tab);
 
+
 		redirect(base_url("teacher/profile"));
 	}
    public function bank(){
@@ -174,12 +175,8 @@ class Professor extends TTT_Controller
 
 	public function students()
 	{
-		if ($this->input->post()) {
-			var_dump($_POST);
-			die();
-		}
-		$this->slice->view('app_alpha.be.teachers.enrolled_students');
-
+		$data["students"]=$this->users_model->teacherEnrolledStudents($this->auth->userID());
+		$this->slice->view('app_alpha.be.teachers.enrolled_students',$data);
 	}
 
 

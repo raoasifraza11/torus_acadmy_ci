@@ -16,21 +16,16 @@
                     </tr>
                     </thead>
                     <tbody>
+					<?php $i=1; foreach ($courses as $course ){ ?>
                     <tr>
-                        <td>1</td>
-                        <td>Chemistry</td>
-                        <td><span class="tag tag-success">Enrolled</span></td>
+                        <td>{{ $i }}</td>
+                        <td>{{ ucfirst($course->name) }}</td>
+                        <td>
+
+							<span class="tag tag-success"> <?php if ($course->payment_status){  ?> Enrolled <?php }else{ ?> Pending <?php }?></span>
+						</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Math</td>
-                        <td><span class="tag tag-success">Enrolled</span></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Physic</td>
-                        <td><span class="tag tag-success">Enrolled</span></td>
-                    </tr>
+					<?php $i++; } ?>
                     </tbody>
                 </table>
             </div>
