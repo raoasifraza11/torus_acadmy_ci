@@ -19,7 +19,7 @@
 </head>
 <body class="font-muli theme-cyan gradient">
 <form action="<?php echo base_url('login'); ?>" method="post">
-    <input type="hidden" name="dsh" value="a">
+    <input type="hidden" name="dsh" value="a" >
 
     <div class="auth option2">
         <div class="auth_left">
@@ -34,7 +34,9 @@
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
-                    </div>
+						<span  style="color: red;text-align: center;display: none" id="login_error">Email or password is invalid </span>
+
+					</div>
 
                     <div class="form-group">
                         <label class="custom-control custom-checkbox">
@@ -52,9 +54,22 @@
 </form>
 
 <!-- Start Main project js, jQuery, Bootstrap -->
+<script src="<?php echo asset_url('fe_v1/plugins/jquery/jquery-1.12.4.min.js'); ?>"></script>
 
 <!-- Start project main js  and page js -->
 <script src="<?php echo base_url('application/public_html/assets_alpha/be_v1/js/core.js'); ?>"></script>
+<script>
+	<?php
+	if($this->session->flashdata('login_error')){
+	?>
+	$(document).load(function () {
+		// $('#singIn').click();
+		console.log("value set");
+		$('#login_error').css('display','block')
+	});
+	<?php }
+	?>
+</script>
 </body>
 
 <!-- Mirrored from puffintheme.com/demo/eric/university/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jul 2020 13:03:39 GMT -->

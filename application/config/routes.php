@@ -92,6 +92,8 @@ $route['logout'] = 'Login/logout';
 
 $route['admin'] = 'Login/adminlogin';
 $route['admin/dashboard'] = 'Admin/index';
+$route['admin/students'] = 'Admin/students';
+$route['admin/teachers'] = 'Admin/teachers';
 $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Admin/course';
 $route['admin/courses/add'] = 'Admin/addCourse';
@@ -118,7 +120,8 @@ $route['student/dashboard'] = 'Student/index';      //working on backend
 $route['student/profile'] = 'Student/profile';
 $route['student/payment/history'] = 'Student/studentPaymentHistory';
 $route['student/course/enrolled'] = 'Student/student_course_enrolled';
-$route['student/course/enrolled/proof'] = 'Student/student_course_enrolled_proof';
+$route['student/course/enrolled/proof/(:any)'] = 'Student/studentCourseEnrolledProof/$1';
+$route['student/course/enrolled/uplaodproof'] = 'Student/uploadProof';
 $route['student/test_reg'] = 'Student/student_reg_data';
 
 

@@ -8,8 +8,9 @@
                 <h1>
                     Upload the voucher / proof picture here
                 </h1>
-                <form action="">
-                    <input type="file">
+                <form method="post" action="{{base_url("student/course/enrolled/uplaodproof")}}" enctype="multipart/form-data">
+                    <input type="file" name="proof_file">
+                    <input type="hidden" name="c_id" value="{{$course_id}}">
                     <button type="submit">Submit Proof</button>
                 </form>
             </div>

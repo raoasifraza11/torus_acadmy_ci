@@ -26,8 +26,23 @@ class Login extends TTT_Controller
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|callback_isEmailExist|callback_isEmailverified|callback_isAccountApproved');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required');
 			if ($this->form_validation->run() == FALSE) {
-				var_dump($this->form_validation->error_array());
-				die();
+
+				if ($this->form_validation->error_array("email")) {
+					$this->session->set_flashdata('login_error', $this->form_validation->error_array("email"));
+
+					if ($this->input->post("dsh")) {
+						if ($this->input->post("dsh") == "a") {
+							redirect(base_url("admin"));
+						} else{
+							redirect(base_url());
+						}
+
+					}else {
+						redirect(base_url());
+					}
+
+				}
+
 			} else {
 				$status = $this->auth->login($_POST);
 				if ($status){
@@ -39,7 +54,6 @@ class Login extends TTT_Controller
 						redirect(base_url("teacher/dashboard"));
 
 					}else{
-
 						if ($this->session->has_userdata('redirect_to')) {
 							redirect(base_url($this->session->userdata('redirect_to')));
 						}
@@ -49,14 +63,25 @@ class Login extends TTT_Controller
 					}
 
 
+				}else{
+					$this->session->set_flashdata('login_error', "Email or password is not valid");
+					if ($this->input->post("role")) {
+						if ($this->input->post("dsh") == "a") {
+							redirect(base_url("admin"));
+						} else{
+							redirect(base_url());
+						}
+
+					}else {
+						redirect(base_url());
+					}
 				}
 			}
 
 
-		} else {
-
 		}
 	}
+
 	public function adminlogin(){
 		$this->slice->view('app_alpha.be.admin.login');
 
