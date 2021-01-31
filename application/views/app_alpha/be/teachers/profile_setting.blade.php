@@ -123,8 +123,6 @@
                             Information</a></li>
                     <li class="nav-item"><a class="nav-link @if($active_tab=="exp") {{"active"}} @endif" data-toggle="tab" href="#expInfo">Experience</a></li>
                     <li class="nav-item"><a class="nav-link @if($active_tab=="avaInfo") {{"active"}} @endif"  data-toggle="tab" href="#courseSelection">Course Selection</a>
-                    <li class="nav-item"><a class="nav-link @if($active_tab=="selection") {{"active"}} @endif" data-toggle="tab" href="#avaInfo">Availability & Fee</a>
-                    </li>
                     <li class="nav-item"><a class="nav-link@if($active_tab=="account") {{"active"}} @endif" data-toggle="tab" href="#accountInfo">Account Setting</a>
                     </li>
                 </ul>
@@ -162,7 +160,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Email Address <span class="text-danger">*</span></label>
                                 <div class="col-md-7">
-                                    <input data-provide="datepicker" value="{{ $user->email }}" name="email" data-date-autoclose="true" class="form-control"
+                                    <input  disabled data-provide="datepicker" value="{{ $user->email }}" name="email" data-date-autoclose="true" class="form-control"
                                            placeholder="">
                                 </div>
                             </div>
@@ -173,12 +171,12 @@
                                     <input type="text" name="phone" value="{{ $user->phone }}" class="form-control">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Address<span class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="text" name="address"  class="form-control">
-                                </div>
-                            </div>
+{{--                            <div class="form-group row">--}}
+{{--                                <label class="col-md-3 col-form-label">Address<span class="text-danger">*</span></label>--}}
+{{--                                <div class="col-md-7">--}}
+{{--                                    <input type="text" name="address"  class="form-control">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">City<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
@@ -195,7 +193,7 @@
                                 <label class="col-md-3 col-form-label">Country<span class="text-danger">*</span></label>
                                 <div class="col-md-7">
                                     <!-- TODO: @Ahmad Add countries values -->
-                                    <select name="coutry" class="form-control" id="cars">
+                                    <select name="country" class="form-control" id="cars">
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>
@@ -203,19 +201,19 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Bio / Introductory Text<span class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <textarea rows="4" name="bio" class="form-control no-resize"
-                                              placeholder="Please type what you want..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Into Video URL<span class="text-danger">*</span></label>
-                                <div class="col-md-7">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
+{{--                            <div class="form-group row">--}}
+{{--                                <label class="col-md-3 col-form-label">Bio / Introductory Text<span class="text-danger">*</span></label>--}}
+{{--                                <div class="col-md-7">--}}
+{{--                                    <textarea rows="4" name="bio" class="form-control no-resize"--}}
+{{--                                              placeholder="Please type what you want..."></textarea>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="form-group row">--}}
+{{--                                <label class="col-md-3 col-form-label">Into Video URL<span class="text-danger">*</span></label>--}}
+{{--                                <div class="col-md-7">--}}
+{{--                                    <input type="text" class="form-control">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label"></label>
                                 <div class="col-md-7">
@@ -603,7 +601,7 @@
                             <div class="form-group">
 								<?php foreach ($courses as $course ){ ?>
                                 <div class="form-check">
-                                    <input  <?php if (!$course->selected){ ?> name="sujects[]" <?php }else{?> disabled="disabled" <?php  } ?>  <?php if ($course->selected){ echo "checked"; }?> class="form-check-input" type="checkbox" value= {{$course->id}} id="defaultCheck1">
+                                    <input  name="sujects[]"   <?php if ($teacher_courses){ if (in_array($course->id,$teacher_courses)){ echo "checked"; }}?>  <?php if ($teacher_courses){ if (!in_array($course->id,$teacher_courses)){ ?>  <?php }else{?> disabled="disabled" <?php  } }?>   class="form-check-input" type="checkbox" value= {{$course->id}} id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         {{$course->name}}
                                     </label>

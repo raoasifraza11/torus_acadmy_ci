@@ -56,6 +56,8 @@
 								<h3>Student Registration</h3>
 							</div>
 							<p>Please fill with your details</p>
+							<p style="color:red;font-size: 10px"> <?php echo validation_errors(); ?></p>
+
 							<div class="form-row">
 								<div class="form-holder">
 									<input type="text" name="first_name" placeholder="First Name" class="form-control">

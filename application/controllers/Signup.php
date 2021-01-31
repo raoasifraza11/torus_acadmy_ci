@@ -84,8 +84,7 @@ class Signup extends TTT_Controller
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
 //			$this->form_validation->set_rules('rpassword', 'Confirm Password', 'required|matches[password]');
             if ($this->form_validation->run() == FALSE) {
-                var_dump($this->form_validation->error_array());
-                die();
+
             } else {
 
                 $form_data = $this->input->post();
@@ -107,9 +106,8 @@ class Signup extends TTT_Controller
 
 
             }
-        } else {
+        }
 
-		}
 		$this->slice->view('landing_alpha.student_register');
 
 	}
@@ -123,8 +121,8 @@ class Signup extends TTT_Controller
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
 //			$this->form_validation->set_rules('rpassword', 'Confirm Password', 'required|matches[password]');
             if ($this->form_validation->run() == FALSE) {
-                var_dump($this->form_validation->error_array());
-                die();
+//				$this->slice->view('landing_alpha.teacher_register');
+
             } else {
 
                 $form_data = $this->input->post();

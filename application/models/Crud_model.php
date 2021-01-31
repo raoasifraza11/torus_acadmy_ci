@@ -680,4 +680,14 @@ public  function get_review($exp_id,$user_id){
     }
 
 
+
+	public function get_payments(){
+//		$this->db->where($column ,$data);
+		$this->db->select('AVG(rating) as avg_ratting');
+		$this->db->from('student_enrolled_courses');
+		$this->db->join('users','users.id=student_enrolled_courses.student_id');
+		return $this->db->get("student_enrolled_courses")->result();
+	}
+
+
 }

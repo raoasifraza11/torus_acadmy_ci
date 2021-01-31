@@ -98,6 +98,7 @@ $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Admin/course';
 $route['admin/courses/add'] = 'Admin/addCourse';
 $route['admin/setting'] = 'Backend/admin_site_setting';
+$route['admin/payments'] = 'Admin/payments';
 
 
 

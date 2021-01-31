@@ -80,6 +80,9 @@ class  Admin extends TTT_Controller
 		$data["teachers"] = $this->Crud_model->get_all_data_by_column_id("users","role_id",1);
 		$this->slice->view('app_alpha.be.admin.teachers',$data);
 	}
+	public function payments(){
+		$data["payments"] = $this->Crud_model->get_payments();
+		$this->slice->view('app_alpha.be.admin.payment_listview');
 
-
+	}
 }

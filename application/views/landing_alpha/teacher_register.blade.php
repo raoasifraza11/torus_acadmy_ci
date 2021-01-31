@@ -24,6 +24,7 @@
                             <ol class="breadcrumb">
                                 <li><a href="<?php echo base_url('/'); ?>">Home</a></li>
                                 <li class="active">Teacher Registration</li>
+
                             </ol>
 
                         </div> <!-- / .home__content -->
@@ -46,15 +47,17 @@
                         </div>
                         <div class="form-content">
                             <div class="form-header">
-                                <h3>Teacher Registration</h3>
+								<h3>Teacher Registration </h3>
                             </div>
                             <p>Please fill with your details</p>
-                            <div class="form-row">
+							<p style="color:red;font-size: 10px"> <?php echo validation_errors(); ?></p>
+
+							<div class="form-row">
                                 <div class="form-holder">
-                                    <input type="text" name="first_name" placeholder="First Name" class="form-control">
+                                    <input type="text" name="first_name" required placeholder="First Name" class="form-control">
                                 </div>
                                 <div class="form-holder">
-                                    <input type="text" name="last_name" placeholder="Last Name" class="form-control">
+                                    <input type="text" name="last_name" required placeholder="Last Name" class="form-control">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -62,7 +65,7 @@
                                     <input type="text" name="email" placeholder="Your Email" class="form-control">
                                 </div>
                                 <div class="form-holder">
-                                    <input type="password" name="password" placeholder="Password" class="form-control">
+                                    <input type="password" name="password" required placeholder="Password" class="form-control">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -70,7 +73,7 @@
                                     <div class="form-holder">
                                         <div >Your country</div>
                                         <i class="zmdi zmdi-caret-down"></i>
-										<select name="country" class="select-control ">
+										<select name="country" required class="select-control ">
 											<option value="volvo">Volvo</option>
 											<option value="saab">Saab</option>
 											<option value="mercedes">Mercedes</option>
@@ -79,7 +82,7 @@
                                     </div>
                                 </div>
                                 <div class="form-holder">
-                                    <input type="text" name="phone" placeholder="Phone Number" class="form-control">
+                                    <input type="text" name="phone"  required placeholder="Phone Number" class="form-control">
                                 </div>
                             </div>
 
@@ -106,11 +109,11 @@
                                     <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
                                         <div class="checkbox-tick">
                                             <label class="male">
-                                                <input type="radio" name="gender" value="male" checked> Male<br>
+                                                <input type="radio" name="gender" required value="male" checked> Male<br>
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="female">
-                                                <input type="radio" name="gender" value="female"> Female<br>
+                                                <input type="radio" name="gender" required value="female"> Female<br>
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -119,20 +122,20 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder w-100">
-                                        <input type="text" name="Address" placeholder="Address" class="form-control">
+                                        <input type="text" name="Address" placeholder="Address" required class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder">
-                                        <input type="text" name="city" placeholder="City" class="form-control">
+                                        <input type="text" name="city" placeholder="City" required class="form-control">
                                     </div>
                                     <div class="form-holder">
-                                        <input type="text" name="zip_code" placeholder="Zip Code" class="form-control">
+                                        <input type="text" name="zip_code" placeholder="Zip Code" required class="form-control">
                                     </div>
                                 </div>
                                 <div class="checkbox-circle mt-24">
                                     <label>
-                                        <input name="terms" type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
+                                        <input name="terms" required type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>

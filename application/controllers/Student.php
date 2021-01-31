@@ -83,11 +83,8 @@ class Student extends TTT_Controller
 		if ($this->input->post()) {
 		 $data["proof"] =	$this->do_upload("proof_file");
 		 $data["payment_status"] =	1;
-		 var_dump($data);
-			$this->Crud_model->updateDataToTableWithColumnId("student_enrolled_courses","id",$this->input->post("c_id"),$data);
-			var_dump($_POST);
-			die();
-			redirect(base_url(""));
+		 $this->Crud_model->updateDataToTableWithColumnId("student_enrolled_courses","id",$this->input->post("c_id"),$data);
+			redirect(base_url("student/course/enrolled"));
 		}else{
 			redirect();
 		}
@@ -118,25 +115,20 @@ class Student extends TTT_Controller
 		$newName = str_replace('/', '', $startdata) . $this->auth->userID();
 		$file_ext = pathinfo($_FILES[$input_name]["name"], PATHINFO_EXTENSION);
 		$config['file_name'] = $newName;
-		$config['upload_path'] = 'application/assets/uploads/';
+		$config['upload_path']='application/public_html/assets/uploads/';
 		$config['allowed_types'] = '*';
 		$config['max_size'] = 2048;
 //      $config['max_width']            = 1920;
 //      $config['max_height']           = 1080;
 
 		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 
 		if (!$this->upload->do_upload($input_name)) {
 			$error = array('error' => $this->upload->display_errors());
 			$this->validationErrors = $error;
-			if (is_dir("20200310094100.png")){
-				var_dump("yes");
-			}else{
-				var_dump("no");
-			}
-			var_dump($config['upload_path']);
-var_dump($this->validationErrors);
-die();
+			var_dump($this->validationErrors);
+			die();
 			return false;
 
 		} else {
