@@ -69,5 +69,20 @@ class  Admin extends TTT_Controller
 		$this->slice->view('app_alpha.be.admin.courses.add');
 	}
 
+	public function students()
+	{
+		$data["students"] = $this->Crud_model->get_all_data_by_column_id("users","role_id",2);
+		$this->slice->view('app_alpha.be.admin.students',$data);
+	}
 
+	public function teachers()
+	{
+		$data["teachers"] = $this->Crud_model->get_all_data_by_column_id("users","role_id",1);
+		$this->slice->view('app_alpha.be.admin.teachers',$data);
+	}
+	public function payments(){
+		$data["payments"] = $this->Crud_model->get_payments();
+		$this->slice->view('app_alpha.be.admin.payment_listview');
+
+	}
 }

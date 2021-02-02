@@ -25,7 +25,7 @@
 							<span class="tag tag-success"> <?php if ($course->payment_status){  ?> Enrolled <?php }else{ ?> Pending <?php }?></span>
 						</td>
                         <td>
-                            <a href="{{ base_url('student/course/enrolled/proof') }}"> <i class="fa fa-pencil"></i> Add Proof</a>
+                            <a href="{{ base_url('student/course/enrolled/proof/').$course->id }}"> <i class="fa fa-pencil"></i> Add Proof</a>
                         </td>
                     </tr>
 					<?php $i++; } ?>

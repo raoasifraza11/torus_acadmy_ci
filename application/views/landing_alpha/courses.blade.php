@@ -53,7 +53,7 @@
 						</div>
 						<div class="course-item__info">
 							<div class="info__students">
-								<i class="ion-person-stalker" aria-hidden="true"></i> 53/120
+{{--								<i class="ion-person-stalker" aria-hidden="true"></i> 53/120--}}
 							</div>
 							<div class="info__price">
 								<i class="ion-ios-pricetags" aria-hidden="true"></i> {{$course->price}}$

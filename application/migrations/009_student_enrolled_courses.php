@@ -34,6 +34,16 @@ class Migration_student_enrolled_courses extends CI_Migration {
 				'constraint' => 1,
 				'default' => 0
 			),
+			'proof' => array(
+				'type' => 'TINYINT',
+				'constraint' => 255,
+				'default' => NULL,
+			),
+			'admin_proof' => array(
+				'type' => 'TINYINT',
+				'constraint' => 1,
+				'default' => 0
+			),
             'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,

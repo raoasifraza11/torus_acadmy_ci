@@ -22,13 +22,18 @@ class Professor extends TTT_Controller
 	public function profile()
 	{
 		if ($this->input->post()) {
-			var_dump($_POST);
-			die();
+			$this->session->unset_userdata('active_tab');
+			unset($_POST["tab"]);
+			$this->Crud_model->update("users",$this->auth->userID(),$_POST);
+
+
 		}
 		$data["active_tab"] = $this->session->userdata("active_tab");
 
 		if ($data["active_tab"] == "selection") {
-			$data["courses"] = $this->professor_model->courses($this->session->userdata("class_id"));
+			$data["courses"] = $this->professor_model->courses($this->session->userdata("class_id"),$this->auth->userID());
+			$data["teacher_courses"] = $this->professor_model->teacher_courses($this->session->userdata("class_id"),$this->auth->userID());
+
 		} else {
 			$data["courses"] = null;
 		}
@@ -39,7 +44,6 @@ class Professor extends TTT_Controller
 		$data["organisations"] = $this->Crud_model->get_all_data_by_column_id("teacher_experience_details", "user_id", $this->auth->userID());
 		$data["classes"] = $this->Crud_model->get_all_data("classes");
 		$data["account"] = $this->Crud_model->get("bank_details", $this->auth->userID());
-
 
 		$this->slice->view('app_alpha.be.teachers.profile_setting', $data);
 	}

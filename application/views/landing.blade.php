@@ -72,6 +72,8 @@
 										<input type="password" name="password" class="form-control" id="sign-in__password"
 											   placeholder="Password">
 									</div>
+									<span  style="color: red;text-align: center;display: none" id="login_error">Email or password is invalid </span>
+
 								</div>
 								<div class="checkbox">
 									<label>
@@ -81,13 +83,6 @@
 								<button type="submit" class="btn btn-accent btn-block">Submit</button>
 							</form>
 
-							<div class="signin__alt">
-								<p>or sign in with social media</p>
-								<ul class="signin__social">
-									<li class="facebook"><a href="#"><i class="ion-social-facebook"></i></a></li>
-									<li class="googleplus"><a href="#"><i class="ion-social-googleplus"></i></a></li>
-								</ul>
-							</div>
 
 							<!-- Sign Up link -->
 							<hr>
@@ -154,6 +149,16 @@
 	?>
 	$(document).ready(function () {
 		$('#singIn').click();
+	});
+	<?php }
+	?>
+
+	<?php
+	if($this->session->flashdata('login_error')){
+	?>
+	$(document).ready(function () {
+		$('#singIn').click();
+		$('#login_error').css('display','block')
 	});
 	<?php }
 	?>
