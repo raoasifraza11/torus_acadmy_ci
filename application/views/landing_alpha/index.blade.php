@@ -26,9 +26,8 @@
                     </h1>
 
                     <!-- Info -->
-                    <p class="home__info" data-aos="fade-up" data-aos-delay="2800">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptas placeat cupiditate neque
-                        eligendi facilis cum commodi.
+                    <p class="home__info justify-content-center" data-aos="fade-up" data-aos-delay="2800">
+                        Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                     </p>
 
                     <!-- Button -->
@@ -47,7 +46,7 @@
         <div class="row">
             <div class="hidden-xs col-sm-6">
                 <div class="home__address">
-                    <i class="ion-android-pin"></i> Near Qasim Market,Rawapindi,Pakistan
+                    <i class="ion-android-pin"></i> Near Qasim Market, Rawalpindi, Pakistan
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -80,19 +79,14 @@
                         <i class="ion-ios-bookmarks-outline"></i>
                     </div>
                     <div class="section__subtitle dark__subtitle">
-                        Short story about <span>lctrs.</span>
+                        Short story <span>about.</span>
                     </div>
                     <h2 class="section__title dark__title">
                         About us
                     </h2>
                     <p class="about__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequuntur debitis ducimus
-                        sequi laudantium molestias necessitatibus hic similique. Iusto fuga doloremque nam culpa, animi
-                        odio, excepturi itaque dignissimos eaque est voluptas, dolore voluptate tempore quod, magni
-                        provident nisi quisquam quasi quas odit quia repellendus rerum accusamus! Laudantium, cumque
-                        distinctio repellendus aspernatur facilis, obcaecati natus, accusantium a recusandae soluta
-                        nobis ad quo dignissimos. Ipsam, earum, ea. Asperiores aspernatur beatae sit odit, excepturi
-                        inventore saepe atque officia, animi doloremque, adipisci ipsa deleniti.
+                        TORUS Academy is committed and continuously striving to provide the additional support and help the modern day student needs to make a mark in today's academic and professional environment.  TORUS Academy’s faculty members have the knack of delivering with continuous devotion, leading towards excellent results of their students and enabling them to compete in dynamic conditions at the highest levels of excellence.
+                        TORUS Academy is committed and continuously striving to provide the additional support and help the modern day student needs to make a mark in today's academic and professional environment.  TORUS Academy’s faculty members have the knack of delivering with continuous devotion, leading towards excellent results of their students and enabling them to compete in dynamic conditions at the highest levels of excellence.
                     </p> <!-- / .about__desc -->
                     <div class="about__quote">
                         <h2 class="about_quote__text"><i class="ion-quote"></i> A wonderful serenity has taken
@@ -105,7 +99,7 @@
                             <span>George Henderson</span> / Professor
                         </p>
                     </div> <!-- / .about__quote -->
-                    <a href="about.html" class="btn btn-accent">More About LCTRS.</a>
+                    <a href="#" class="btn btn-accent">More About Torus.</a>
                 </div> <!-- / .about__body -->
             </div>
         </div> <!-- / .row -->
@@ -125,8 +119,7 @@
                             Online courses
                         </div>
                         <div class="feature_item__desc" style="color: #6f6f6f;">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. In nemo dolore maxime voluptas
-                            quamgit.
+                            TORUS Academy believes that every student has their own forte. We are offering online courses.
                         </div>
                     </div> <!-- / .feature__item -->
                 </div>
@@ -139,8 +132,7 @@
                             Best teachers
                         </div>
                         <div class="feature_item__desc" style="color: #6f6f6f;">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. In nemo dolore maxime voluptas
-                            quamgit.
+                            Certification from Cambridge International University as a Teacher and Trainer.
                         </div>
                     </div> <!-- / .feature__item -->
                 </div>
@@ -150,11 +142,10 @@
                             <i class="ion-ios-bookmarks-outline"></i>
                         </div>
                         <div class="feature_item__title">
-                            Book library
+                            Online Software
                         </div>
                         <div class="feature_item__desc" style="color: #6f6f6f;">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. In nemo dolore maxime voluptas
-                            quamgit.
+                            Strong skills on online teaching software’s i.e. Zoom, Microsoft teams and google classroom.
                         </div>
                     </div> <!-- / .feature__item -->
                 </div>
@@ -188,8 +179,7 @@
                                 Training
                             </div>
                             <p class="courses__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vel similique eos
-                                voluptatem error voluptat.
+                                Course description goes here.
                             </p>
                         </div> <!-- / .card__top -->
                         <div class="card__back">
@@ -209,7 +199,7 @@
                                     <li>Price: <span>160$</span></li>
                                     <li>Teacher: <span>J. Doe</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="#" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -227,8 +217,7 @@
                                 Spelling
                             </div>
                             <p class="courses__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vel similique eos
-                                voluptatem error voluptat.
+                                Course description goes here.
                             </p>
                         </div> <!-- / .card__top -->
                         <div class="card__back">
@@ -248,7 +237,7 @@
                                     <li>Price: <span>175$</span></li>
                                     <li>Teacher: <span>J. Adams</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="#" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -266,8 +255,7 @@
                                 Team Work
                             </div>
                             <p class="courses__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vel similique eos
-                                voluptatem error voluptat.
+                                Course description goes here.
                             </p>
                         </div> <!-- / .card__top -->
                         <div class="card__back">
@@ -287,7 +275,7 @@
                                     <li>Price: <span>85$</span></li>
                                     <li>Teacher: <span>G. Henderson</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="#" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
@@ -305,8 +293,7 @@
                                 Design
                             </div>
                             <p class="courses__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vel similique eos
-                                voluptatem error voluptat.
+                                Course description goes here.
                             </p>
                         </div> <!-- / .card__top -->
                         <div class="card__back">
@@ -326,14 +313,14 @@
                                     <li>Price: <span>140$</span></li>
                                     <li>Teacher: <span>O. Robertson</span></li>
                                 </ul> <!-- / .course__info -->
-                                <a href="courses.html" class="btn btn-primary text-center">Course page</a>
+                                <a href="#" class="btn btn-primary text-center">Course page</a>
                             </div> <!-- / .card_back__wrapper -->
                         </div> <!-- / .card__back -->
                     </div> <!-- / .courses__item -->
                 </div> <!-- / .courses_item__wrapper -->
             </div>
             <div class="col-sm-12">
-                <a href="courses.html" class="btn btn-primary">All courses</a>
+                <a href="#" class="btn btn-primary">All courses</a>
             </div>
         </div> <!-- / .row -->
     </div> <!-- / .container -->
@@ -413,9 +400,7 @@
                         Our teachers
                     </h2>
                     <p class="section_title__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores a atque, esse delectus. Vel
-                        quas voluptate atque natus laboriosam, vero molestiae repudiandae eaque veniam repellendus nemo
-                        unde suscipit ducimus tenetur.
+                        Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                     </p> <!-- / .section_title__desc -->
                 </div> <!-- / .section_title__body  -->
             </div>
@@ -432,12 +417,11 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_1.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/teacher_2.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. Ducimus expedita atque alias aperiam
-                            repudiandae verorepellat saepe eligendi. Obcaecati tempora emque.
+                            Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                         </p>
                         <ul class="overlay__social">
                             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -445,7 +429,7 @@
                             <li><a href="#"><i class="ion-social-skype"></i></a></li>
                             <li><a href="#"><i class="ion-social-whatsapp-outline"></i></a></li>
                         </ul>
-                        <a href="teacher-profile.html" class="btn btn-accent">More info</a>
+                        <a href="#" class="btn btn-accent">More info</a>
                     </div> <!-- / .teacher_item__overlay -->
                 </div> <!-- / .teacher__item -->
             </div>
@@ -460,12 +444,11 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_2.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/teacher_1.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. Ducimus expedita atque alias aperiam
-                            repudiandae verorepellat saepe eligendi. Obcaecati tempora emque.
+                            Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                         </p>
                         <ul class="overlay__social">
                             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -473,7 +456,7 @@
                             <li><a href="#"><i class="ion-social-skype"></i></a></li>
                             <li><a href="#"><i class="ion-social-whatsapp-outline"></i></a></li>
                         </ul>
-                        <a href="teacher-profile.html" class="btn btn-accent">More info</a>
+                        <a href="#" class="btn btn-accent">More info</a>
                     </div> <!-- / .teacher_item__overlay -->
                 </div> <!-- / .teacher__item -->
             </div>
@@ -488,12 +471,11 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_3.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/teacher_3.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. Ducimus expedita atque alias aperiam
-                            repudiandae verorepellat saepe eligendi. Obcaecati tempora emque.
+                            Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                         </p>
                         <ul class="overlay__social">
                             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -501,7 +483,7 @@
                             <li><a href="#"><i class="ion-social-skype"></i></a></li>
                             <li><a href="#"><i class="ion-social-whatsapp-outline"></i></a></li>
                         </ul>
-                        <a href="teacher-profile.html" class="btn btn-accent">More info</a>
+                        <a href="#" class="btn btn-accent">More info</a>
                     </div> <!-- / .teacher_item__overlay -->
                 </div> <!-- / .teacher__item -->
             </div>
@@ -516,12 +498,11 @@
                         </div>
                     </div> <!-- / .teacher__info -->
                     <div class="teacher__img">
-                        <img src="assets/img/teacher_4.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/teacher_4.jpg" class="img-responsive" alt="...">
                     </div>
                     <div class="teacher_item__overlay">
                         <p class="overlay__desc">
-                            Lorem ipsum dolor sitamet consectetur adipisicing elit. Ducimus expedita atque alias aperiam
-                            repudiandae verorepellat saepe eligendi. Obcaecati tempora emque.
+                            Teaching experience of almost thirteen years in the domain of Islamiyat to O’ Levels (IGCSE, GCSE & Edexcel). Ability to embed the teaching of Islam in the pupils’ life, strengthen their ability to attempt any sort of question with the clear understanding and application of the concepts and promote critical analysis.
                         </p>
                         <ul class="overlay__social">
                             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -529,7 +510,7 @@
                             <li><a href="#"><i class="ion-social-skype"></i></a></li>
                             <li><a href="#"><i class="ion-social-whatsapp-outline"></i></a></li>
                         </ul>
-                        <a href="teacher-profile.html" class="btn btn-accent">More info</a>
+                        <a href="#" class="btn btn-accent">More info</a>
                     </div> <!-- / .teacher_item__overlay -->
                 </div> <!-- / .teacher__item -->
             </div>
@@ -551,9 +532,7 @@
                         Study process
                     </h2>
                     <p class="section_title__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores a atque, esse delectus. Vel
-                        quas voluptate atque natus laboriosam, vero molestiae repudiandae eaque veniam repellendus nemo
-                        unde suscipit ducimus tenetur.
+                        TORUS Academy is also supporting students in conceptualizing, researching, compiling and finalizing academic projects and theses in various spheres of academics. The Academy also provides capacity building sessions to students in Mathametica, Matlab, Maple and Fortran.
                     </p> <!-- / .about__desc -->
                 </div> <!-- / .section_title__body  -->
             </div>
@@ -572,8 +551,7 @@
                                 Register in LCTRS<span>.</span>
                             </div>
                             <div class="process_item__desc">
-                                Rerum perspiciatis iste quidem, expedita dolorem commodi provident vitae doloremque enim
-                                odit nisi recusan.
+                                TORUS Academy is also supporting students in conceptualizing, researching, compiling and finalizing academic projects and theses in various spheres of academics. The Academy also provides capacity building sessions to students in Mathametica, Matlab, Maple and Fortran.
                             </div>
                         </div>
                     </div> <!-- / .row -->
@@ -604,7 +582,7 @@
                                 Select liked course
                             </div>
                             <div class="process_item__desc">
-                                Rerum perspiciatis iste quidem, expedita dolorem commodi provident vitae dolorem.
+                                TORUS Academy is also supporting students in conceptualizing, researching, compiling and finalizing academic projects and theses in various spheres of academics. The Academy also provides capacity building sessions to students in Mathametica, Matlab, Maple and Fortran. .
                             </div>
                         </div>
                     </div> <!-- / .row -->
@@ -625,8 +603,7 @@
                                 Enjoy the practice
                             </div>
                             <div class="process_item__desc">
-                                Rerum perspiciatis iste quidem, expedita dolorem commodi provident vitae doloremque enim
-                                odit nisi recusan.
+                                TORUS Academy is also supporting students in conceptualizing, researching, compiling and finalizing academic projects and theses in various spheres of academics. The Academy also provides capacity building sessions to students in Mathametica, Matlab, Maple and Fortran.
                             </div>
                         </div>
                     </div> <!-- / .row -->
@@ -638,32 +615,7 @@
 
 
 <!-- section coming-soon -->
-<section class="section__coming-soon">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-lg-6">
-                <div id="clock"></div> <!-- / #clock -->
-                <div class="coming-soon__text">
-                    <h2 class="coming-soon__title">Free conference <span>2017</span></h2>
-                    <p class="coming-soon__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-                        omnis nam consequatur, illum aliquid optio quidem nemo necessitatibus velit! Laboriosam porro
-                        amet iste, quisquam deserunt optio consequatur itaque numquam provident.</p>
-                    <p class="coming-soon__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ea,
-                        omnis voluptates, vero ab alias harum totam animi corporis excepturi in, facere mollitia quasi
-                        nihil illo placeat? Optio, corrupti quis.</p>
-                </div>
-            </div>
-            <div class="col-md-5 col-lg-6">
-                <div class="coming-soon__img">
-                    <img src="assets/img/coming-soon_img.jpg" class="img-responsive" alt="...">
-                </div>
-                <div class="coming-soon__btn text-center">
-                    <a href="event-single.html" class="btn btn-primary">Register now</a>
-                </div>
-            </div>
-        </div> <!-- / .row -->
-    </div> <!-- / .container -->
-</section> <!-- .section__footer -->
+<!-- .section__footer -->
 
 
 <!-- section testimonials -->
@@ -672,7 +624,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="section__subtitle light__subtitle">
-                    Our students about <span>lctrs.</span>
+                    Our students about <span>Torus.</span>
                 </div>
                 <h2 class="section__title light__title">
                     Testimonials
@@ -767,42 +719,42 @@
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-1.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-1.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-2.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-2.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-3.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-3.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-4.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-4.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-5.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-5.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-2">
                 <div class="intagram_img__body">
                     <a href="#" class="insagram__img">
-                        <img src="assets/img/instagram_img-6.jpg" class="img-responsive" alt="...">
+                        <img src="application/public_html/assets_alpha/fe_v1/img/instagram_img-6.jpg" class="img-responsive" alt="...">
                     </a>
                 </div>
             </div>
