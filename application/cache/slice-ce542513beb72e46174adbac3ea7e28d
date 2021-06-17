@@ -1,0 +1,82 @@
+a:3:{s:4:"time";i:1599484226;s:3:"ttl";i:3600;s:4:"data";s:3565:"<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<title><?php echo $this->_yield('title','Torus Academy | Empty Page'); ?></title>
+
+<!-- Bootstrap Core and vandor -->
+<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Plugins css -->
+<link rel="stylesheet" href="http://puffintheme.com/demo/eric/assets/plugins/summernote/dist/summernote.css"/>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!-- Core css -->
+<link rel="stylesheet" href="http://puffintheme.com/demo/eric/assets/css/style.min.css"/>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./assets/plugins/summernote/dist/summernote.css"/>
+
+<!-- Core css -->
+<link rel="stylesheet" href="./assets/css/style.min.css"/><?php echo $this->_yield('_css'); ?>
+</head>
+
+<body class="font-muli theme-cyan gradient">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+    </div>
+</div>
+
+<div id="main_content">
+    <!-- Start Quick menu with more functio -->
+    <div class="user_div">
+        <?php echo $this->_include('backend.includes.quick_menu'); ?>
+    </div>
+    <!-- Start Main leftbar navigation -->
+    <div id="left-sidebar" class="sidebar">
+        <?php echo $this->_include('backend.includes.sidebar'); ?>
+    </div>
+    <!-- Start project content area -->
+    <div class="page">
+        <!-- Start Page header -->
+        <div class="section-body" id="page_top" >
+            <?php echo $this->_include('backend.includes.page_header'); ?>
+        </div>
+        <!-- Start Page title and tab -->
+        <div class="section-body"><?php echo $this->_yield('_pageTitle', 'Empty Page'); ?>
+        </div>
+        <div class="section-body mt-4"><?php echo $this->_yield('content','Content goes here...'); ?>
+        </div>
+        <!-- Start main footer -->
+        <div class="section-body">
+            <?php echo $this->_include('backend.includes.footer'); ?>
+        </div>
+    </div>    
+</div><?php echo $this->_yield('_js'); ?>
+<!-- Start Main project js, jQuery, Bootstrap -->
+<script src="./assets/bundles/lib.vendor.bundle.js"></script>
+
+<!-- Start Plugin Js -->
+<script src="./assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="./assets/plugins/dropify/js/dropify.min.js"></script>
+<script src="./assets/bundles/summernote.bundle.js"></script>
+
+<!-- Start project main js  and page js -->
+<script src="./assets/js/core.js"></script>
+<script src="./assets/js/form/dropify.js"></script>
+<script src="./assets/js/page/summernote.js"></script>
+
+<script src="./assets/js/page/sortable-nestable.js"></script>
+
+</body>
+
+<!-- Mirrored from puffintheme.com/demo/eric/university/professors.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jul 2020 13:04:00 GMT -->
+</html>
+";}

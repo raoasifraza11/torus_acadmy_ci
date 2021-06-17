@@ -1,0 +1,114 @@
+a:3:{s:4:"time";i:1596828507;s:3:"ttl";i:3600;s:4:"data";s:4219:"<?php $this->_opening_section('title', 'Administration - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Rooms'); ?><?php $this->_opening_section('_areaTitle', 'Management'); ?><?php $this->_opening_section('content'); ?>
+    <!-- begin:: Content -->
+    <div class="alert alert-light alert-elevate" role="alert">
+        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+        <div class="alert-text">
+            Add new room <code> + Add New > Room</code>.
+        </div>
+    </div>
+    <div class="kt-portlet kt-portlet--mobile">
+        <div class="kt-portlet__head kt-portlet__head--lg">
+            <div class="kt-portlet__head-label">
+										<span class="kt-portlet__head-icon">
+											<i class="kt-font-brand flaticon2-line-chart"></i>
+										</span>
+                <h3 class="kt-portlet__head-title">
+                    School Room Management
+                </h3>
+            </div>
+            <div class="kt-portlet__head-toolbar">
+                <div class="kt-portlet__head-wrapper">
+                    <div class="kt-portlet__head-actions">
+                        &nbsp;
+
+                        <a href="<?php echo  base_url('addstaff') ; ?>" class="btn btn-danger btn-elevate btn-icon-sm">
+                            <i class="la la-plus"></i>
+                            Assign Staff
+                        </a>
+                    </div>
+                </div>
+                <div class="kt-portlet__head-wrapper">
+                    <div class="kt-portlet__head-actions">
+                        &nbsp;
+                      
+
+                        <a href="<?php echo  base_url('addroom') ; ?>" class="btn btn-brand btn-elevate btn-icon-sm">
+
+                            <i class="la la-plus"></i>
+                            Add New Room
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kt-portlet__body">
+
+            <!--begin: Datatable -->
+            <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
+                <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Avatar</th>
+                    <th>Room Name</th>
+                    <th>Session</th>
+                    <th>Visibility</th>
+                    <th>Action</th>
+                    <th>Staff</th>
+                    <th>Browse</th>
+                </tr>
+                </thead>
+                <tbody>
+
+				<?php
+				if ($school_rooms){
+					foreach ($school_rooms as $room){ ?>
+                <tr>
+                    <td><?php echo $room->id; ?></td>
+                    <td><i class="la la-keyboard-o la-4x"></i></td>
+                    <td><?php echo $room->name; ?></td>
+                    <td>2020</td>
+                    <td>1</td>
+                    <td nowrap></td>
+                    <td>Luca Doncic</td>s
+                    <td>
+
+						<form action="<?php echo  base_url('room') ; ?>" method="post">
+                        <button name="test" type="submit" class="btn btn-outline-hover-brand btn-elevate btn-pill btn-lg"><i class="la la-folder-open"></i> Open the Room</button>
+						</form>
+					</td>
+
+                </tr>
+				<?php }}
+				else{
+
+				?>
+				<tr>
+					<td>
+						<?php echo "No Record Found"; ?>
+					</td>
+				</tr>
+				<?php
+
+				}?>
+
+                </tbody>
+            </table>
+
+            <!--end: Datatable -->
+        </div>
+    </div>
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+    <!--begin::Page Scripts(used by this page) -->
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+    <!--end::Page Vendors -->
+
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="./assets/js/demo1/pages/crud/datatables/data-sources/html.js" type="text/javascript"></script>
+
+    <!--end::Page Scripts -->
+<?php $this->_closing_section(); ?>
+
+<?php echo $this->_include('master'); ?>";}

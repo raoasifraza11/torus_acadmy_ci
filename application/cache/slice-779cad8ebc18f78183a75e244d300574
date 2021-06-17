@@ -1,0 +1,111 @@
+a:3:{s:4:"time";i:1596828597;s:3:"ttl";i:3600;s:4:"data";s:5266:"<?php $this->_opening_section('title', 'Mark Attendance - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Attendance Mgmt'); ?><?php $this->_opening_section('_areaTitle', 'Mark Attendance'); ?><?php $this->_opening_section('_css'); ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+<!-- row first cards -->
+<div class="kt-portlet">
+
+    <div class="kt-portlet__body">
+
+        <!--begin::Section-->
+        <div class="kt-section">
+            <div class="kt-section__content">
+				<form action="<?php base_url("markattendance"); ?>" method="post">
+
+				<table class="table table-sm table-head-bg-brand">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>#</th>
+                            <th>STUDENT NAME</th>
+                            <th>PRESENT</th>
+                            <th>ABSENT</th>
+                            <th>LATE</th>
+                            <th>LEAVE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+					<?php foreach($room_students as $student) { ?>
+                        <tr>
+                            <th style="padding-top: 13px;" scope="row">1</th>
+                            <td>
+                                <div class="kt-user-card-v2">
+                                    <div class="kt-user-card-v2__pic">
+                                        <div class="kt-badge kt-badge--xl kt-badge--success"><span>E</span></div>
+                                    </div>
+                                    <div class="kt-user-card-v2__details">
+                                        <span class="kt-user-card-v2__name"><?php echo $student["full_name"]?></span>
+                                        <a href="#" class="kt-user-card-v2__email kt-link">Rosenbaum-Reichel</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="padding-top: 5px;"> <label class="kt-checkbox kt-checkbox--solid kt-checkbox--success">
+                                        <input name="studnet_<?php echo $student["student_id"] ?>" class="radio" type="checkbox" value="present">
+                                        <span></span>
+                                    </label></div>
+                            </td>
+                            <td>
+                                <div style="padding-top: 5px;"> <label class="kt-checkbox kt-checkbox--solid kt-checkbox--danger">
+                                        <input name="studnet_<?php echo $student["student_id"] ?>" class="radio" type="checkbox" value="absent">
+                                        <span></span>
+                                    </label></div>
+                            </td>
+                            <td>
+                                <div style="padding-top: 5px;"> <label class="kt-checkbox kt-checkbox--solid kt-checkbox--warning">
+                                        <input name="studnet_<?php echo $student["student_id"] ?>" class="radio" type="checkbox" value="late">
+                                        <span></span>
+                                    </label></div>
+                            </td>
+                            <td>
+                                <div style="padding-top: 5px;"> <label class="kt-checkbox kt-checkbox--solid kt-checkbox--info">
+                                        <input name="studnet_<?php echo $student["student_id"] ?>" class="radio" type="checkbox" value="leave">
+                                        <span></span>
+                                    </label></div>
+                            </td>
+                        </tr>
+					<?php } ?>
+
+                    </tbody>
+                </table>
+                <div class="modal-footer">
+                    <button  type="submit"  class="btn btn-success">Take Attendence</button>
+                </div>
+				</form>
+            </div>
+        </div>
+
+        <!--end::Section-->
+    </div>
+</div>
+<!-- ./row first cards -->
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content --><?php $this->_opening_section('_js'); ?>
+
+<script>
+    // the selector will match all input controls of type :checkbox
+    // and attach a click event handler 
+    $("input:checkbox").on('click', function() {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+        } else {
+            $box.prop("checked", false);
+        }
+    });
+</script>
+
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('school'); ?>";}

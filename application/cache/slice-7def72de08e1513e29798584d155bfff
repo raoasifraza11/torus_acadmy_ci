@@ -1,0 +1,190 @@
+a:3:{s:4:"time";i:1623874964;s:3:"ttl";i:3600;s:4:"data";s:7199:"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title><?php echo $this->_yield('_pageTitle'); ?> - Torus Academy</title>
+
+    <!-- CSS Plugins -->
+    <link href="<?php echo base_url('application//fe_v1/plugins/lightbox/dist/css/lightbox.css'); ?>" rel="stylesheet">
+    <link href="<?php echo asset_url('fe_v1/plugins/ionicons/css/ionicons.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset_url('fe_v1/plugins/owl-carousel/dist/assets/owl.carousel.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset_url('fe_v1/plugins/owl-carousel/dist/assets/owl.theme.default.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset_url('fe_v1/plugins/aos-master/dist/aos.css'); ?>">
+
+    <!-- CSS Global -->
+    <!--build:css assets/css/theme.min.css-->
+    <link rel="stylesheet" href="<?php echo base_url('application/public_html/assets_alpha/fe_v1/css/theme.css'); ?>">
+    <!--end build--><?php echo $this->_yield('_css'); ?>
+
+</head>
+<body id="<?php echo $this->_yield('page_id', 'index__page'); ?>">
+
+<!-- Back to top button
+================================================== -->
+<a id="back-to-top" href="#section__home" class="btn btn-primary back-to-top" role="button"
+   title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <i class="ion-android-arrow-up"></i>
+</a>
+
+<!-- PRELOADER
+================================================== -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+</div>
+
+<!-- SIGNIN MODAL
+================================================== -->
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Sign In</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="body-signin__form">
+
+							<!-- Sign In form -->
+							<form class="signin__form" action="<?php echo base_url("login")?>" method="post">
+								<!-- Email -->
+								<div class="form-group">
+									<label for="sign-in__email" class="sr-only">Enter email</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="ion-android-person"></i></span>
+										<input type="email" name="email"  class="form-control" id="sign-in__email"
+											   placeholder="Enter email">
+									</div>
+								</div>
+								<!-- Password -->
+								<div class="form-group">
+									<label for="sign-in__password" class="sr-only">Enter password</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="ion-locked"></i></span>
+										<input type="password" name="password" class="form-control" id="sign-in__password"
+											   placeholder="Password">
+									</div>
+									<span  style="color: red;text-align: center;display: none" id="login_error">Email or password is invalid </span>
+
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> Remember me
+									</label>
+								</div>
+								<button type="submit" class="btn btn-accent btn-block">Submit</button>
+							</form>
+
+
+							<!-- Sign Up link -->
+							<hr>
+							<p>Not registered? <a href="signup.html">Create an Account.</a></p>
+
+							<!-- Lost password form -->
+							<p>
+								Forgot password? <a href="#lost-password__form" data-toggle="collapse"
+													aria-expanded="false" aria-controls="lost-password__form">Click here
+									to recover.</a>
+							</p>
+							<div class="collapse" id="lost-password__form">
+								<p class="text-muted">
+									Enter your email address below and we will send you a link to reset your password.
+								</p>
+								<form class="form-inline">
+									<div class="form-group">
+										<label class="sr-only" for="lost-password__email">Email address</label>
+										<input type="email" class="form-control" id="lost-password__email"
+											   placeholder="Enter email">
+									</div>
+									<button type="submit" class="btn btn-accent">Send</button>
+								</form>
+							</div> <!-- lost-password__form -->
+						</div> <!-- / .body-signin__form -->
+					</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Navbar
+================================================== -->
+<?php echo $this->_include('landing_alpha.particle.nav'); ?>
+
+<!-- CONTENT
+  ================================================== --><?php echo $this->_yield('content'); ?>
+
+<!-- section footer -->
+<?php echo $this->_include('landing_alpha.particle.footer'); ?>
+<!-- .section__footer -->
+
+<!-- section footer copyright -->
+<?php echo $this->_include('landing_alpha.particle.copy-right'); ?>
+<!-- / .footer__copyright --><?php echo $this->_yield('_bottomTopJs'); ?>
+
+
+
+
+<!-- JS Global -->
+<script src="<?php echo asset_url('fe_v1/plugins/jquery/jquery-1.12.4.min.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/bootstrap/js/bootstrap.min.js'); ?>"></script>
+
+<script>
+
+	<?php
+	if($this->session->flashdata('login')){
+	?>
+	$(document).ready(function () {
+		$('#singIn').click();
+	});
+	<?php }
+	?>
+
+	<?php
+	if($this->session->flashdata('login_error')){
+	?>
+	$(document).ready(function () {
+		$('#singIn').click();
+		$('#login_error').css('display','block')
+	});
+	<?php }
+	?>
+
+</script>
+
+
+<!-- JQUERY STEP -->
+<script src="<?php echo asset_url('fe_v1/js/jquery.steps.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1//js/main.js'); ?>"></script>
+
+
+<!-- JS Plugins -->
+<script src="<?php echo asset_url('fe_v1/plugins/waypoints/lib/jquery.waypoints.min.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/lightbox/dist/js/lightbox.min.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/owl-carousel/dist/owl.carousel.min.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/countTo/jquery.countTo.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/countdown/jquery.countdown.min.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/aos-master/dist/aos.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/contact/contact.js'); ?>"></script>
+<script src="<?php echo asset_url('fe_v1/plugins/smothscroll/smoothscroll.js'); ?>"></script>
+
+<!-- JS Custom -->
+<!--build:js assets/js/theme.min.js -->
+<script src="<?php echo asset_url('fe_v1/js/theme.js'); ?>"></script>
+<!-- endbuild -->
+<script src="<?php echo asset_url('fe_v1/js/google_maps.js'); ?>"></script>
+
+<!-- Google Maps -->
+<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfwXIv2vgXzFDZRzzRH2VpbvgSzhqCCuU&amp;callback=initMap"
+        async defer></--script--><?php echo $this->_yield('_bottomJs'); ?>
+
+</body>
+
+</html>
+";}

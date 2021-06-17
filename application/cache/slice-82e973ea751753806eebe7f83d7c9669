@@ -1,0 +1,19 @@
+a:3:{s:4:"time";i:1610949891;s:3:"ttl";i:3600;s:4:"data";s:789:"<?php $this->_opening_section('content'); ?>
+
+    <!-- Start Page title and tab -->
+    <div class="section-body mt-4">
+        <div class="container-fluid">
+            <div class="content">
+                <h1>
+                    Upload the voucher / proof picture here
+                </h1>
+                <form method="post" action="<?php echo base_url("student/course/enrolled/uplaodproof"); ?>" enctype="multipart/form-data">
+                    <input type="file" name="proof_file">
+                    <input type="hidden" name="c_id" value="<?php echo $course_id; ?>">
+                    <button type="submit">Submit Proof</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('master'); ?>";}

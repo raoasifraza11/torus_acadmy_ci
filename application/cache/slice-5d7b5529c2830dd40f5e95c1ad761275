@@ -1,0 +1,139 @@
+a:3:{s:4:"time";i:1596828350;s:3:"ttl";i:3600;s:4:"data";s:6762:"<?php $this->_opening_section('title', 'Administration - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Key Worker'); ?><?php $this->_opening_section('_areaTitle', 'Management'); ?><?php $this->_opening_section('content'); ?>
+    <!-- begin:: Content -->
+    <div class="alert alert-light alert-elevate" role="alert">
+        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+        <div class="alert-text">
+            Key worker not yet added, You need to add it by click <code> + Add New > Key worker</code>.
+        </div>
+    </div>
+    <div class="kt-portlet kt-portlet--mobile">
+        <div class="kt-portlet__head kt-portlet__head--lg">
+            <div class="kt-portlet__head-label">
+										<span class="kt-portlet__head-icon">
+											<i class="kt-font-brand flaticon2-line-chart"></i>
+										</span>
+
+            </div>
+            <div class="kt-portlet__head-toolbar">
+                <div class="kt-portlet__head-wrapper">
+                    <div class="kt-portlet__head-actions">
+                        &nbsp;
+                        <a href="<?php echo  base_url("addworker") ; ?>" class="btn btn-brand btn-elevate btn-icon-sm">
+                            <i class="la la-plus"></i>
+                            New Key Worker
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kt-portlet__body">
+
+            <!--begin: Search Form -->
+            <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
+                <div class="row align-items-center">
+                    <div class="col-xl-8 order-2 order-xl-1">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-input-icon kt-input-icon--left">
+                                    <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                    <span class="kt-input-icon__icon kt-input-icon__icon--left">
+																<span><i class="la la-search"></i></span>
+															</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-form__group kt-form__group--inline">
+                                    <div class="kt-form__label">
+                                        <label>Status:</label>
+                                    </div>
+                                    <div class="kt-form__control">
+                                        <select class="form-control bootstrap-select" id="kt_form_status">
+                                            <option value="">All</option>
+                                            <option value="1">Pending</option>
+                                            <option value="2">Verified</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-form__group kt-form__group--inline">
+                                    <div class="kt-form__label">
+                                        <label>Type:</label>
+                                    </div>
+                                    <div class="kt-form__control">
+                                        <select class="form-control bootstrap-select" id="kt_form_type">
+                                            <option value="">All</option>
+                                            <option value="1">Direct</option>
+                                            <option value="2">Invited</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-xl-4 order-1 order-xl-2 kt-align-right">
+                        <a href="#" class="btn btn-default kt-hidden">
+                            <i class="la la-cart-plus"></i> New Order
+                        </a>
+                        <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg d-xl-none"></div>
+                    </div>-->
+                </div>
+            </div>
+
+            <!--end: Search Form -->
+        </div>
+        <div class="kt-portlet__body kt-portlet__body--fit">
+
+            <!--begin: Datatable -->
+            <table class="kt-datatable" width="100%">
+                <thead>
+                <tr>
+                    <th title="">Registration ID</th>
+                    <th title="">Full Name</th>
+                    <th title="">Email</th>
+                    <th title="">Status</th>
+                    <th title="">Type</th>
+                    <th title="">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+				<?php foreach($key_workers as $key_worker): ?>
+                <tr>
+                    <td>0000-<?php echo $key_worker->id; ?></td>
+                    <td><?php echo  $key_worker->full_name ; ?></td>
+                    <td><?php echo  $key_worker->email ; ?></td>
+                    <td align="right"><?php if($key_worker->is_verified == 0): ?> <?php echo "1"; ?> <?php else: ?> <?php echo "2"; ?> <?php endif; ?></td>
+                    <td align="right">1</td>
+                    <td>
+                      <form action="" method="">
+						  <button type="submit" title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-md"><i class="la la-edit"></i></button>
+						  <button type="submit" title="Delete" class="btn btn-sm btn-clean btn-icon btn-icon-md"><i class="la la-trash"></i></button>
+					  </form>
+                    </td>
+                </tr>
+					<?php endforeach; ?>
+
+                </tbody>
+            </table>
+
+            <!--end: Datatable -->
+        </div>
+    </div>
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="./assets/js/demo1/pages/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>
+	<?php if($k_w_n): ?>
+		<script>
+			swal.fire({
+				"title": "",
+				"text": "Key worker invited successfully!",
+				"type": "success",
+				"confirmButtonClass": "btn btn-secondary"
+			});
+		</script>
+	<?php endif; ?>
+<?php $this->_closing_section(); ?>
+
+<?php echo $this->_include('master'); ?>";}

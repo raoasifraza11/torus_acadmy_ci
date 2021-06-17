@@ -1,0 +1,107 @@
+a:3:{s:4:"time";i:1596828563;s:3:"ttl";i:3600;s:4:"data";s:4471:"<?php $this->_opening_section('title', 'Attendance - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Attendance Mgmt'); ?><?php $this->_opening_section('_areaTitle', 'Attendance'); ?><?php $this->_opening_section('_css'); ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+
+
+<style>
+    .toolbar {
+        float: left;
+    }
+
+    .td {
+        color: black;
+        text-align: center
+    }
+</style>
+
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+<!-- row first cards -->
+<div class="kt-portlet">
+
+    <div class="kt-portlet__body">
+        <div>
+            <a href="<?php echo  base_url('attendenceSession') ; ?>" onclick="addRow()" type="submit" name="insert" class="btn btn-brand">Add Session</a>
+        </div>
+
+        <!--begin::Section-->
+        <div id="kt_table_1_wrapper" class="kt-section dataTables_wrapper dt-bootstrap4 no-footer">
+
+            <div class="kt-section__content">
+                <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="kt_table_1" role="grid" aria-describedby="kt_table_1_info" style="width: 1271px;">
+                    <thead>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 10px;" aria-sort="ascending">#</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 301px;" aria-sort="ascending">Date</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 228px;" aria-sort="ascending">Time</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 228px;" aria-sort="ascending">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="padding-top: 13px; text-align:center" scope="row">1</th>
+                            <td>
+                                <h5>6 - July - 2020</h5>
+                            </td>
+                            <td>
+                                <h5>9:00:00</h5>
+                            </td>
+                            <td>
+                                <a href="<?php echo  base_url('view_attendance') ; ?>" class="btn btn-brand btn-elevate btn-icon-sm">View</a>
+                                <a href="<?php echo  base_url('mark_attendance') ; ?>" class="btn btn-danger btn-elevate btn-icon-sm">Take</a>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <th style="padding-top: 13px; text-align:center" scope="row">2</th>
+                            <td>
+                                <h5>8 - July - 2020</h5>
+                            </td>
+                            <td>
+                                <h5>9:00:00</h5>
+                            </td>
+                            <td>
+                                <a href="<?php echo  base_url('view_attendance') ; ?>" class="btn btn-brand btn-elevate btn-icon-sm">View</a>
+                                <a href="<?php echo  base_url('mark_attendance') ; ?>" class="btn btn-danger btn-elevate btn-icon-sm">Take</a>
+                            </td>
+
+
+                        </tr>
+
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+        <!--end::Section-->
+    </div>
+</div>
+<!-- ./row first cards -->
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content --><?php $this->_opening_section('_js'); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Datatable JS -->
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#kt_table_1').DataTable({
+            "dom": '<"toolbar">frtip'
+        });
+
+        $("div.toolbar");
+    });
+</script>
+
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

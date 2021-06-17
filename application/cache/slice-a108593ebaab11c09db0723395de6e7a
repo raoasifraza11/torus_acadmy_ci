@@ -1,0 +1,77 @@
+a:3:{s:4:"time";i:1590692350;s:3:"ttl";i:3600;s:4:"data";s:3117:"<?php $this->_opening_section('title', 'Notification settings - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'User Settings'); ?><?php $this->_opening_section('_areaTitle', 'Notification Area'); ?><?php $this->_opening_section('content'); ?>
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <div class="col-md-9">
+
+                <!--begin::Portlet-->
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Email Notification
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+
+                        <!--begin::Form-->
+                        <form class="kt-form">
+                            <div class="form-group row">
+                                <label class="col-8 col-form-label">Email Alerts</label>
+                                <div class="col-3">
+														<span class="kt-switch kt-switch--lg kt-switch--icon">
+																	<label>
+																		<input type="checkbox" checked="checked" name="">
+																		<span></span>
+																	</label>
+																</span>
+                                </div>
+                                <small>Default setting for mail notification is enabled.</small>
+
+                            </div>
+                        </form>
+
+                        <!--end::Form-->
+                    </div>
+                </div>
+
+                <!--end::Portlet-->
+
+                <!--begin::Portlet-->
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                SMS Notification
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+
+                        <!--begin::Form-->
+                        <form class="kt-form">
+                            <div class="form-group row">
+                                <label class="col-8 col-form-label">SMS Alerts</label>
+                                <div class="col-3">
+														<span class="kt-switch kt-switch--lg kt-switch--icon">
+																	<label>
+																		<input type="checkbox" name="">
+																		<span></span>
+																	</label>
+																</span>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <!--end::Form-->
+                    </div>
+                </div>
+
+                <!--end::Portlet-->
+            </div>
+        </div>
+    </div>
+<?php $this->_closing_section(); ?>
+
+<?php echo $this->_include('master'); ?>";}

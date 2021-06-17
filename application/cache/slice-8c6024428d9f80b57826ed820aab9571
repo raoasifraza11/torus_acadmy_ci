@@ -1,0 +1,122 @@
+a:3:{s:4:"time";i:1596828768;s:3:"ttl";i:3600;s:4:"data";s:6257:"<?php $this->_opening_section('title', 'Library Info - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Early Year Library'); ?><?php $this->_opening_section('_areaTitle', 'Staff Management'); ?><?php $this->_opening_section('_css'); ?>
+
+<link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+<style>
+    .toolbar {
+        float: left;
+    }
+</style>
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+<!-- begin:: Content -->
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <span class="kt-portlet__head-icon">
+                <i class="kt-font-brand flaticon2-line-chart"></i>
+            </span>
+            <h3 class="kt-portlet__head-title">
+                Dashboard - Staff Management - Early Year Library
+            </h3>
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <!-- <div class="kt-portlet__head-actions">
+                    &nbsp;
+                    <a data-toggle="modal" data-target="#" href="#" class="btn btn-brand btn-elevate btn-icon-sm">
+                        <i class="la la-plus"></i>
+                        Add New Library
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+            <div class="kt-portlet__body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="kt-portlet kt-callout">                           
+                                <img hei src="./assets/media/Capture.png" style="height: 200px; width:400px; border: 2px solid" alt="">
+                                <div class="kt-portlet__body">
+                                    <div class="kt-callout__body">
+                                        <div style="text-align: center;" class="kt-callout__content">
+                                            <h3 class="kt-callout__title">Basic Shapes</h3>
+                                            <a href="./assets/InformedSearch.pdf" target="_blank" class="btn btn-custom btn-bold btn-upper btn-font-sm  btn-brand">Click to View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kt-portlet kt-callout">
+                            <img hei src="./assets/media/Capture.png" style="height: 200px; width:400px; border: 2px solid" alt="">
+                            <div class="kt-portlet__body">
+                                <div class="kt-callout__body">
+                                    <div style="text-align: center;" class="kt-callout__content">
+                                        <h3 class="kt-callout__title">Rectangle Shapes</h3>
+                                        <a href="./assets/InformedSearch.pdf" target="_blank" class="btn btn-custom btn-danger btn-upper btn-font-sm  btn-brand">Click to View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="kt-portlet kt-callout">                           
+                                <img hei src="./assets/media/Capture.png" style="height: 200px; width:400px; border: 2px solid" alt="">
+                                <div class="kt-portlet__body">
+                                    <div class="kt-callout__body">
+                                        <div style="text-align: center;" class="kt-callout__content">
+                                            <h3 class="kt-callout__title">Oval Shapes</h3>
+                                            <a href="./assets/InformedSearch.pdf" target="_blank" class="btn btn-custom btn-success btn-upper btn-font-sm btn-brand">Click to View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kt-portlet kt-callout">
+                            <img hei src="./assets/media/Capture.png" style="height: 200px; width:400px; border: 2px solid" alt="">
+                            <div class="kt-portlet__body">
+                                <div class="kt-callout__body">
+                                    <div style="text-align: center;" class="kt-callout__content">
+                                        <h3 class="kt-callout__title">Complex Shapes</h3>
+                                        <a href="./assets/InformedSearch.pdf" target="_blank" class="btn btn-custom btn-warning btn-upper btn-font-sm  btn-brand">Click to View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+<script src="./assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+<script src="./assets/js/demo1/scripts.bundle.js" type="text/javascript"></script>
+
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#kt_table_1').DataTable({
+            "dom": '<"toolbar">frtip'
+        });
+
+        $("div.toolbar");
+    });
+</script>
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('master'); ?>";}

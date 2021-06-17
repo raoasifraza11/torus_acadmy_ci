@@ -1,0 +1,919 @@
+a:3:{s:4:"time";i:1596828657;s:3:"ttl";i:3600;s:4:"data";s:33681:"<?php $this->_opening_section('title', 'Children Diaries - LinksChild'); ?><?php $this->_opening_section('_css'); ?>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.material-icons.md-70 {
+		font-size: 70px;
+		color: #000000;
+	}
+
+	section.cms-boxes .cms-boxes-outer {
+		text-align: left;
+		margin-bottom: 6px;
+
+		height: 100px;
+		width: 50px;
+		padding-bottom: 160px
+	}
+
+	section.cms-boxes .cms-boxes-outer .cms-boxes-items {
+		height: 150px;
+		display: table;
+		width: 100%;
+	}
+
+	section.cms-boxes .cms-boxes-outer .cms-boxes-items p {
+		color: #fff;
+	}
+
+	section.cms-boxes .boxes-align {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	section.cms-boxes .small-box,
+	section.cms-boxes .large-box {
+		max-width: 350px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	section.cms-boxes .cms-boxes-items h2 {
+		font-size: 15px;
+		color: #fff;
+		font-weight: 400;
+		line-height: 37px;
+		text-align: center;
+		margin: 20px 0 10px;
+		text-transform: uppercase;
+	}
+
+	section.cms-boxes .cms-features {
+		background-color: #F786A7;
+	}
+
+	section.cms-boxes .cms-security {
+		background-color: #95C3F8;
+	}
+
+	section.cms-boxes .cms-documentation {
+		background-color: #ADF895;
+	}
+
+	section.cms-boxes .cms-scalability {
+		background-color: #F9ABEC;
+	}
+
+	section.cms-boxes .cms-built {
+		background-color: #F4F9AB;
+	}
+
+
+	section.cms-boxes .cms-boxes-items :hover {
+		opacity: .6;
+		cursor: pointer;
+
+	}
+
+	.fa-ambulance {
+		color: black;
+		padding-top: 9%;
+	}
+
+	.small-box {
+		color: black;
+	}
+
+	.text {
+		color: black;
+	}
+
+	a {
+		color: inherit;
+	}
+</style>
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+
+<?php
+$month = date('m');
+$day = date('d');
+$year = date('Y');
+$today = $year . '-' . $month . '-' . $day;
+?>
+
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1 style="text-align: center; font-size:xxx-large; font-family: Arial, Helvetica, sans-serif">Children Diaries</h1>
+		<p>Manage Your Child Activities</p>
+	</div>
+</div>
+<br>
+
+<div class="container">
+	<section class="cms-boxes">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewMeal') ; ?>">
+						<div class="cms-boxes-items cms-features">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70"> fastfood</span></i>
+									<h3 class="text">Meal</h3>
+									<a data-toggle="modal" data-target="#AddMeal" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!-- <p>Gain valuable insights with WebCorpCo Data.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewFeed') ; ?>">
+						<div class="cms-boxes-items cms-security">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><img style="height: 100px; width:100px" src="./assets/media/icons/Breastfeeding.png" /></i>
+									<h3>Baby Feeding</h3>
+									<a data-toggle="modal" data-target="#AddFeed" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>Pull in realtime data from every source on the web.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewSleep') ; ?>">
+						<div class="cms-boxes-items cms-built">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">hotel</span></i>
+									<h3 class="text">Sleep Pattern</h3>
+									<a data-toggle="modal" data-target="#AddSleep" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>Pull in realtime data from every source on the web.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewChange') ; ?>">
+						<div class="cms-boxes-items cms-built">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">baby_changing_station</span></i>
+									<h3 class="text">Changing Time</h3>
+									<a data-toggle="modal" data-target="#AddChange" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--   <p>Pull in realtime data from every source on the web.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewSafeguard') ; ?>">
+						<div class="cms-boxes-items cms-documentation">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">security</span></i>
+									<h3 class="text">Child Safeguard</h3>
+									<a data-toggle="modal" data-target="#Addsafeguard" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>The world's most advanced algorithms let loose on your data.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewIncident') ; ?>">
+						<div class="cms-boxes-items cms-features">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i class="fa fa-4x fa-ambulance"></i>
+									<h3 class="text">Incident</h3>
+									<a data-toggle="modal" data-target="#AddIncident" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div> -->
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewPhoto') ; ?>">
+						<div class="cms-boxes-items cms-features">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">insert_photo</span></i>
+									<h3 class="text">Photo</h3>
+									<a data-toggle="modal" data-target="#AddPhoto" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>Pull in realtime data from every source on the web.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewVideo') ; ?>">
+						<div class="cms-boxes-items cms-security">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i> <span class="material-icons md-70">videocam</span></i>
+									<h3 class="text">Video</h3>
+									<a data-toggle="modal" data-target="#AddVideo" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>Pull in realtime data from every source on the web.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewEmoji') ; ?>">
+						<div class="cms-boxes-items cms-scalability">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">insert_emoticon</span></i>
+									<h3 class="text">Expressions</h3>
+									<a href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--   <p>Award-winning, U.S. based support 24/7. If you need help we are here.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewLearning') ; ?>">
+						<div class="cms-boxes-items cms-security">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">school</span></i>
+									<h3 class="text">Early Year Learning</h3>
+									<a data-toggle="modal" data-target="#AddLearning" href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--  <p>From connecting data sources to styling reports, we have everything you need to get the most value out of WebCorpCo.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-4 cms-boxes-outer">
+					<a href="<?php echo  base_url('viewNote') ; ?>">
+						<div class="cms-boxes-items cms-features">
+							<div class="boxes-align">
+								<div class="small-box">
+									<i><span class="material-icons md-70">sticky_note_2</span></i>
+									<h3 class="text">Notes</h3>
+									<a href="#"><i><span style="float : right; position:absolute; right:12px; top:3px" class="material-icons">add_circle_outline</span></i></a>
+									<!--   <p>From connecting data sources to styling reports, we have everything you need to get the most value out of WebCorpCo.</p> -->
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- Modal 1 -->
+
+<div class="modal fade" id="AddMeal" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Meal</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="form-group" for="meal">Choose a Meal Type:</label>
+						<select class="form-control" name="meal" id="meal" required>
+							<option value="">Breakfast</option>
+							<option value="volvo">Snack - AM</option>
+							<option value="saab">Lunch</option>
+							<option value="mercedes">Snack - PM</option>
+							<option value="audi">Dinner</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="quantity">Quantity</label>
+						<input type="number" min="1" name="quantity" placeholder="Quantity" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" name="time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Choose a Staff:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 2 -->
+
+<div class="modal fade" id="AddFeed" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add BabyFeeding</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="form-group" for="ounce">Choose Ounce:</label>
+						<select class="form-control" name="ounce" id="ounce" required>
+							<option value="">1</option>
+							<option value="volvo">2</option>
+							<option value="saab">3</option>
+							<option value="mercedes">4</option>
+							<option value="audi">5</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" name="time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="reminder">Set a Reminder</label>
+						<input type="text" name="reminder" placeholder="Reminder" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Choose a Staff:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 3 -->
+
+<div class="modal fade" id="AddSleep" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Sleeping pattern</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Start-Time</label>
+						<input type="time" name="s_time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">End-Time</label>
+						<input type="time" name="e_time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="reminder">Set a Reminder</label>
+						<input type="text" name="reminder" placeholder="Reminder" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Choose a Staff:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 4 -->
+
+<div class="modal fade" id="AddChange" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Changing Time</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label for="c_time">Changing/Potty Time</label>
+						<input type="time" name="c_time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="type">Choose a Type:</label>
+						<select class="form-control" name="type" id="type" required>
+							<option value="nappie">Nappie</option>
+							<option value="w_potty">Wet Potty</option>
+							<option value="d_potty">Dry Potty</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" name="time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="reminder">Set a Reminder</label>
+						<input type="text" name="reminder" placeholder="Reminder" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Choose a Staff:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 5 -->
+
+<div class="modal fade" id="Addsafeguard" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+
+			<div class="modal-header">
+				<h5 class="modal-title" id="AddLabel">Choose to Add Safeguard Details</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+
+				<div class="form-group">
+					<a class="btn btn-info" data-toggle="modal" data-target="#AddMedic" href="#">Medication</a>
+					<a class="btn btn-info" href="<?php echo  base_url('incidentReport'); ?>">Incident Report</a>
+                    <a class="btn btn-info" href="<?php echo  base_url('healthReport'); ?>">Health Report</a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="AddMedic" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Medication</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-md-6">
+								<div class="form-group">
+									<label for="m_name">Name of the Medicine</label>
+									<input type="text" placeholder="Medicine" name="m_name" id="m_name" class="form-control">
+								</div>
+								<div class="form-group">
+									<label class="form-group">Photo of Prescribe by Doctor</label><br>
+									<input type="file" name="photo" id="photo" accept="image/*">
+								</div>
+								<div class="form-group">
+									<label for="date">Date</label>
+									<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="time">Time</label>
+									<input type="time" name="time" id="currentTime" class="form-control">
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6">
+								<div class="form-group">
+									<label for="description">Description</label>
+									<input type="text" name="description" placeholder="Description" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="reminder">Set a Reminder</label>
+									<input type="text" name="reminder" placeholder="Reminder" class="form-control">
+								</div>
+								<div class="form-group">
+									<label class="form-group" for="staff">Choose a Staff:</label>
+									<select class="form-control" name="staff" id="staff" required>
+										<option value="Naveen">Mam Naveen</option>
+										<option value="Mam">Mam</option>
+										<option value="Sir">Sir</option>
+										<option value="Sameen">Mam Sameen</option>
+										<option value="Principle">Principle</option>
+									</select>
+								</div>
+
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" name="insert" class="btn btn-info">Add</button>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		</form>
+	</div>
+
+</div>
+
+<div class="modal fade" id="AddIncident" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Incident</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="form-group" for="injury">Nature of Injury:</label>
+						<select class="form-control" name="injury" id="injury" required>
+							<option value="">Low</option>
+							<option value="volvo">Middle</option>
+							<option value="saab">Severe</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="care">First Aid Administered:</label>
+						<select class="form-control" name="care" id="care" required>
+							<option value="">Doctor</option>
+							<option value="volvo">Nurse</option>
+							<option value="saab">Treatment Manager</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Staff Present:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="notify">Parent Notification</label><br>
+						<input type="radio" name="notify" value="Yes"> Yes<br>
+						<input type="radio" name="notify" value="No"> No<br>
+					</div>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" name="time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 6 -->
+
+<div class="modal fade" id="AddPhoto" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Photo(s)</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="form-group">
+						<label class="form-group">Select Photo(s)</label><br>
+						<input type="file" name="photo" id="photo" accept="image/*" multiple>
+					</div>
+					<div class="form-group">
+						<label class="form-group">Note</label><br>
+						<input type="text" name="note" class="form-control">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal 7 -->
+
+<div class="modal fade" id="AddVideo" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Video</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+
+					<div class="form-group">
+						<label class="form-group">Select Video</label><br>
+						<input type="file" name="video" accept="video/*" capture="environment">
+					</div>
+					<div class="form-group">
+						<label class="form-group">Note</label><br>
+						<input type="text" name="note" class="form-control">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- ----------------------------------Learning Modal -------------------------------------- -->
+
+<div class="modal fade" id="AddLearning" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+
+			<div class="modal-header">
+				<h5 class="modal-title" id="AddLabel">Choose to Add Learning Material</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+
+				<div class="form-group">
+					<a class="btn btn-info" data-toggle="modal" data-target="#AddActivity" href="#">Activity Name</a>
+					<a class="btn btn-info" data-toggle="modal" data-target="#AddTopic" href="#">Topic of the Day</a>
+					<a class="btn btn-info" data-toggle="modal" data-target="#AddLesson" href="#">Managing Lesson Plan</a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Activity Modal ---- -->
+
+<div class="modal fade" id="AddActivity" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Activity</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label for="activity">Name of the Activity</label>
+						<input type="text" name="activity" placeholder="Activity" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="time">Time</label>
+						<input type="time" name="time" id="currentTime" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<input type="text" name="description" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group" for="staff">Choose a Staff:</label>
+						<select class="form-control" name="staff" id="staff" required>
+							<option value="Naveen">Mam Naveen</option>
+							<option value="Mam">Mam</option>
+							<option value="Sir">Sir</option>
+							<option value="Sameen">Mam Sameen</option>
+							<option value="Principle">Principle</option>
+						</select>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- Topic Modal ---- -->
+
+<div class="modal fade" id="AddTopic" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<form action="" method="POST">
+				<div class="modal-header">
+					<h5 class="modal-title" id="AddLabel">Add Topic</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="form-group" for="topic">Topic of the Day</label>
+						<input type="text" placeholder="Topic" name="topic" id="topic" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="date">Date</label>
+						<input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label class="form-group">Daily Activity</label><br>
+						<input type="text" name="activity" placeholder="Daily Activity" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-group">Select Photo(s)</label><br>
+						<input type="file" name="acitvity_photo" id="photo" accept="image/*" multiple>
+					</div>
+					<div class="form-group">
+						<label class="form-group">Select Video</label><br>
+						<input type="file" name="acitvity_video" accept="video/*" capture="environment">
+					</div>
+				</div>
+
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" name="insert" class="btn btn-info">Add</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Lesson Modal ---- -->
+
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('script'); ?>
+
+<script>
+	const getTwoDigits = (value) => value < 10 ? `0${value}` : value;
+
+	const formatDate = (date) => {
+		const day = getTwoDigits(date.getDate());
+		const month = getTwoDigits(date.getMonth() + 1); // add 1 since getMonth returns 0-11 for the months
+		const year = date.getFullYear();
+
+		return `${year}-${month}-${day}`;
+	}
+
+	const formatTime = (date) => {
+		const hours = getTwoDigits(date.getHours());
+		const mins = getTwoDigits(date.getMinutes());
+
+		return `${hours}:${mins}`;
+	}
+
+	const date = new Date();
+	document.getElementById('currentDate').value = formatDate(date);
+	document.getElementById('currentTime').value = formatTime(date);
+	document.getElementById('currentTime1').value = formatTime(date);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

@@ -1,0 +1,64 @@
+a:3:{s:4:"time";i:1595333454;s:3:"ttl";i:3600;s:4:"data";s:3555:"<?php $this->_opening_section('title', 'Notification settings - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'User Settings'); ?><?php $this->_opening_section('_areaTitle', 'Notification Area'); ?><?php $this->_opening_section('content'); ?>
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-portlet">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        Database Setting section
+                    </h3>
+                </div>
+            </div>
+
+            <!--begin::Form-->
+            <form class="kt-form kt-form--label-right">
+                <div class="kt-portlet__body">
+                    <div class="form-group form-group-last">
+                        <div class="alert alert-secondary" role="alert">
+                            <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                            <div class="alert-text">
+                                Here you can set of <code>.database</code> setting for production site:
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Database name</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="linkschild" id="example-text-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-search-input" class="col-2 col-form-label">Database Username</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="linkschild" id="example-search-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Database Password</label>
+                        <div class="col-10">
+                            <input class="form-control" type="password" value="xyz" id="example-email-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-url-input" class="col-2 col-form-label">Database Host</label>
+                        <div class="col-10">
+                            <input class="form-control" type="url" value="https://example.com" id="example-url-input">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="kt-form__actions">
+                        <div class="row">
+                            <div class="col-2">
+                            </div>
+                            <div class="col-10">
+                                <button type="reset" class="btn btn-success">Submit</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php $this->_closing_section(); ?><?php echo $this->_include('master'); ?>";}

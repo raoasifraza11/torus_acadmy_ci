@@ -1,0 +1,417 @@
+a:3:{s:4:"time";i:1596828033;s:3:"ttl";i:3600;s:4:"data";s:27043:"<?php $this->_opening_section('title', 'Add New Student - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Administration'); ?><?php $this->_opening_section('_areaTitle', 'Add New Student'); ?><?php $this->_opening_section('_css'); ?>
+    <link href="./assets/css/demo1/pages/wizard/wizard-4.css" rel="stylesheet" type="text/css">
+<?php $this->_closing_section(); ?>
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+    <!-- row first cards -->
+    <div class="kt-wizard-v4" id="kt_wizard_v4" data-ktwizard-state="first">
+
+        <!--begin: Form Wizard Nav -->
+        <div class="kt-wizard-v4__nav">
+            <div class="kt-wizard-v4__nav-items">
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            1
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Bio
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Basic Child Information
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            2
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Relationship
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Parent / Carer Details
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            3
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Safety
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Authorised Persons
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            4
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Consents
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Accepted consents.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--end: Form Wizard Nav -->
+        <div class="kt-portlet">
+            <div class="kt-portlet__body kt-portlet__body--fit">
+                <div class="kt-grid">
+                    <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+
+                        <!--begin: Form Wizard Form-->
+                        <form class="kt-form" id="kt_form" novalidate="novalidate" method="post"
+                              action="<?php echo base_url("addstudent")?>">
+
+                            <!--begin: Form Wizard Step 1-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content"
+                                 data-ktwizard-state="current">
+                                <div class="kt-heading kt-heading--md">Enter the student detail</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>Child's Full Name</label>
+                                            <input type="text" class="form-control" name="full_name"
+                                                   placeholder="Full name" value="">
+                                            <span class="form-text text-muted">Please enter child name.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Child's Permanent Address</label>
+                                            <input type="text" class="form-control" name="first_address"
+                                                   placeholder="first line of Address" value="">
+                                            <span class="form-text text-muted">Please enter chid permanent address.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Child's Permanent Address</label>
+                                            <input type="text" class="form-control" name="second_address"
+                                                   placeholder="second line of Address" value="">
+                                            <span class="form-text text-muted">Please enter child permanent address.</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Postcode/Zipcode</label>
+                                                    <input type="text" class="form-control" name="postal_code"
+                                                           placeholder="Postcode/Zipcode" value="">
+                                                    <span class="form-text text-muted">Please enter child Postcode/Zipcode.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Home Telephone <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="telephone"
+                                                           placeholder="Telephone" value="">
+                                                    <span class="form-text text-muted">Please enter telephone.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Date of Birth</label>
+                                                    <input type="date" class="form-control" name="dob"
+                                                           placeholder="Select Birth date" value="">
+                                                    <span class="form-text text-muted">Please enter child Date of Birth.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Religion<span class="text-danger">*</span></label>
+                                                    <select name="religion" id="" class="form-control">
+
+                                                        <option>Select religion</option>
+                                                        <option value="One">Islam</option>
+                                                        <option value="One">Christianity</option>
+                                                        <option value="One">Not Religious</option>
+                                                        <option value="One">Hinduism</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Nationality</label>
+                                                    <select name="nationality" id="" class="form-control">
+                                                        <option>Select nationality</option>
+                                                        <option value="One">British</option>
+                                                        <option value="One">Irish</option>
+                                                        <option value="One">Asian</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter child Nationality.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Home Language<span class="text-danger">*</span></label>
+                                                    <select name="home_language" id="" class="form-control">
+                                                        <option value="One">Global English</option>
+                                                        <option value="One">US English</option>
+                                                        <option value="One">British English</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 1-->
+
+                            <!--begin: Form Wizard Step 2-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Setup Parent / Carer Details</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" class="form-control" name="g_full_name"
+                                                   placeholder="First Name" value="">
+                                            <span class="form-text text-muted">Please enter parent / carer full name.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>Date of Birth</label>
+                                                <input type="date" class="form-control" name="g_dob"
+                                                       placeholder="Select Birth date" value="">
+                                                <span class="form-text text-muted">Please enter parent / carer Date of Birth.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>Telephone Number<span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="g_telephone"
+                                                       placeholder="Phone Number" value="">
+                                                <span class="form-text text-muted">Please enter parent / carer telephone number.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>National Insurance Number</label>
+                                            <input type="text" class="form-control" name="national_insurance_number"
+                                                   placeholder="National Insurance Number" value="">
+                                            <span class="form-text text-muted">Please enter NIN.</span>
+                                        </div>
+                                    </div>
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>Email Address</label>
+                                            <input type="text" class="form-control" name="email"
+                                                   placeholder="Email Address" value="">
+                                            <span class="form-text text-muted">Please enter a valid email address, he/she will be invitable with above email.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Permanent Address (If different)</label>
+                                        <input type="text" class="form-control" name="p_first_address"
+                                               placeholder="Address line 1" value="">
+                                        <span class="form-text text-muted">Please enter chid permanent address.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Permanent Address (If different)</label>
+                                        <input type="text" class="form-control" name="p_second_address"
+                                               placeholder="Address line 2" value="">
+                                        <span class="form-text text-muted">Please enter chid permanent address.</span>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-6 col-form-label">Communication preferred way:</label>
+                                        <div class="col-xl-6 col-lg-8 col-sm-12 col-md-12">
+                                            <div class="kt-checkbox-inline">
+                                                <label class="kt-checkbox">
+                                                    <input type="checkbox" name="communication" value="email"> Email
+                                                    <span></span>
+                                                </label>
+                                                <label class="kt-checkbox">
+                                                    <input type="checkbox" name="communication" value="sms"> SMS
+                                                    <span></span>
+                                                </label>
+                                                <label class="kt-checkbox">
+                                                    <input type="checkbox" name="communication" value="phone"> Phone
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Please select the options which applies to you.</label>
+                                        <div class="input-group">
+                                            <select class="form-control kt-selectpicker" multiple>
+                                                <option>Income Support (IS)</option>
+                                                <option>Universal Credit</option>
+                                                <option>Look After Child</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 2-->
+
+                            <!--begin: Form Wizard Step 3-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">For the safety of your child, we will not release
+                                    them into the care of un-Authorised persons.
+                                </div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" class="form-control" name="a_full_name"
+                                                   placeholder="Full Name" value="">
+                                            <span class="form-text text-muted">Please enter your full name.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>Relationship to Child<span class="text-danger">*</span></label>
+                                            <select name="a_relation_to_child" id="" class="form-control">
+                                                <option value="One">Brother</option>
+                                                <option value="One">Sister</option>
+                                                <option value="One">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>Home Telephone</label>
+                                                <input type="text" class="form-control" name="a_telephone"
+                                                       placeholder="Phone" value="">
+                                                <span class="form-text text-muted">Please enter home telephone number.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>Mobile Telephone<span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="a_mobile"
+                                                       placeholder="Mobile" value="">
+                                                <span class="form-text text-muted">Please enter phone number.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-9">
+                                            <div class="form-group">
+                                                <label>Does the authorized person have the parental
+                                                    responsibility?</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <div class="form-group">
+                                                <span class="kt-switch kt-switch--icon">
+                                                    <label>
+                                                        <input type="checkbox" checked="checked" name="">
+                                                        <span></span>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 3-->
+
+                            <!--begin: Form Wizard Step 4-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Agree Terms / Consents and Submit</div>
+                                <div class="kt-wizard-v4__form">
+                                    <div class="form-group">
+                                        <label class="kt-checkbox kt-checkbox--bold" style="display: block;">
+                                            <input type="checkbox" name="emergency_treatment"> Consent for <a href="#">Emergency
+                                                Treatment</a>.
+                                            <span></span>
+                                        </label>
+                                        <label class="kt-checkbox kt-checkbox--bold" style="display: block;">
+                                            <input type="checkbox" name="outing"> Consent for <a href="#">Outings</a>.
+                                            <span></span>
+                                        </label>
+                                        <label class="kt-checkbox kt-checkbox--bold" style="display: block;">
+                                            <input type="checkbox" name="keep_us_informed"> Agreement to keep us
+                                            informed.
+                                            <span></span>
+                                        </label>
+                                        <label class="kt-checkbox kt-checkbox--bold" style="display: block;">
+                                            <input type="checkbox" name="terms_and_conditions"> Agreement to <a
+                                                    href="#">Terms and Conditions</a>.
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 4-->
+
+                            <!--begin: Form Actions -->
+                            <div class="kt-form__actions">
+                                <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+                                     data-ktwizard-type="action-prev">
+                                    Previous
+                                </div>
+                                <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+                                     data-ktwizard-type="action-submit">
+                                    Submit
+                                </div>
+                                <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"
+                                     data-ktwizard-type="action-next">
+                                    Next Step
+                                </div>
+                            </div>
+
+                            <!--end: Form Actions -->
+                        </form>
+
+                        <!--end: Form Wizard Form-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./row first cards -->
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content --><?php $this->_opening_section('_js'); ?>
+    <script src="./assets/js/demo1/pages/wizard/wizard-4.js" type="text/javascript"></script>
+        <!-- <script>
+            swal.fire({
+               "title": "",
+               "text": "Check Js script tag booting of page add_student.blade.php for SWAL alerts.!",
+               "type": "success",
+            "confirmButtonClass": "btn btn-secondary"
+           });
+        </script> -->
+
+
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="./assets/js/demo1/pages/crud/forms/widgets/bootstrap-select.js" type="text/javascript"></script>
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('master'); ?>";}

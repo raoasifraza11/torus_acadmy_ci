@@ -1,0 +1,464 @@
+a:3:{s:4:"time";i:1596794100;s:3:"ttl";i:3600;s:4:"data";s:31491:"<?php $this->_opening_section('title', 'Add Observation - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Add Observation'); ?><?php $this->_opening_section('_areaTitle', 'Observation Mgmt'); ?><?php $this->_opening_section("_css"); ?>
+<!--begin::Page Vendors Styles(used by this page) -->
+<link href="./assets/vendors/custom/jstree/jstree.bundle.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+<?php
+
+$month = date('m');
+$day = date('d');
+$year = date('Y');
+
+$today = $year . '-' . $month . '-' . $day;
+?>
+
+
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <span class="kt-portlet__head-icon">
+                <i class="kt-font-brand flaticon2-line-chart"></i>
+            </span>
+            <h3 class="kt-portlet__head-title">
+                School Management - Observation Mgmt - Add Observation
+            </h3>
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <div class="kt-portlet__head-actions">
+                    &nbsp;
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        <form action="" method="POST">
+            <div class="header">
+                <h5 class="title" id="AddLabel">Add Week Base Observation</h5>
+            </div>
+            <div class="body">
+                <div class="form-group">
+                    <label class="form-group" for="week">Choose Week:</label>
+                    <select id="dropDown" class="form-control" name="drop-down" required>
+                        <option class="form-control" value="Week1">Week - 1</option>
+                        <option class="form-control" value="Week2">Week - 2</option>
+                        <option class="form-control" value="Week3">Week - 3</option>
+                        <option class="form-control" value="Week4">Week - 4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div style="height:200px; overflow:auto;">
+                        <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="kt_table_1" role="grid" aria-describedby="kt_table_1_info" style="width: 930px;">
+                            <thead>
+                                <tr role="row">
+                                    <th tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 30px;">Students</th>
+                                    <th tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 22px;">Select</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row" class="odd">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--success"><span>E</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Emelita Giraldez</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Rosenbaum-Reichel</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--primary"><span>G</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Gerhard Reinhard</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Gleason, Kub and Marquardt</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--info"><span>E</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Englebert Shelley</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Jenkins Inc</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--brand"><span>E</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Evangeline Cure</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Pfannerstill-Treutel</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--primary"><span>F</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Freida Morby</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Haley, Schamberger and Durgan</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--info"><span>H</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Hazlett Kite</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Streich LLC</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--warning"><span>N</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Nixie Sailor</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Gleichner, Ziemann and Gutkowski</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--info"><span>N</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Norri Foldes</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Strosin, Nitzsche and Wisozk</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--success"><span>O</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Obed Helian</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Labadie, Predovic and Hammes</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--danger"><span>S</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Sibyl Amy</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Treutel-Ratke</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td tabindex="0">
+                                        <div class="kt-user-card-v2">
+                                            <div class="kt-user-card-v2__pic">
+                                                <div class="kt-badge kt-badge--xl kt-badge--danger"><span>S</span></div>
+                                            </div>
+                                            <div class="kt-user-card-v2__details">
+                                                <span class="kt-user-card-v2__name">Sibyl Amy</span>
+                                                <a href="#" class="kt-user-card-v2__email kt-link">Treutel-Ratke</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><label class="kt-checkbox kt-checkbox--solid kt-checkbox--brand">
+                                            <input type="checkbox">Select
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-group" for="staff">Staff Present:</label>
+                    <select class="form-control" name="staff">
+                        <option value="Naveen">Mam Naveen</option>
+                        <option value="Mam">Mam</option>
+                        <option value="Sir">Sir</option>
+                        <option value="Sameen">Mam Sameen</option>
+                        <option value="Principle">Principle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="datetime" name="date" value="<?php echo $today; ?>" id="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" name="time" id="currentTime" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a style="color: white;" onclick="changevalue(name)" id="show" name="show" class="btn btn-info"><i class="flaticon2-plus"></i>Add MileStones</a>
+                </div>
+
+                <div id="milestone" class="form-group">
+                    <form action="" method="POST">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="AddLabel">Add Milestones</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label><strong>Communication and Language</strong></label>
+
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> In many cases, the words “language” and “communication” are used interchangeably.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> In a very real sense, every living thing communicates in some way.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> These noises or other interactions communicate, or transfer information of some kind.</p>
+
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Listening and attention</strong></label>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Always addressing the child by name before you speak.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Using visual prompts, natural gesture and a range of facial expression and tones of voice to engage the child’s interest.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Trying to avoid the child being seated near possible distractions e.g. book racks, toys and equipment drawers.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Getting down to the child’s level whenever possible.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Position a child who has attention difficulties at the front and near the teacherduring carpet time.</p>
+
+
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Understanding</strong></label>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More extraverted or introverted as their primary source of life energy.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More literal or possibilities-oriented when processing information.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More thinking- or feelings-oriented when making decisions and experiencing emotions.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More structured or open-ended when dealing with life events.</p>
+
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Speaking</strong></label>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Speaking to yourself can be "dangerous" because men in white coats may come and take you away.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> That is why you should make every effort possible to find somebody to speak with.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Learn how to give a presentation or speak in public in English.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Even strangers discuss the weather. Learn the proper vocabulary and expressions.</p>
+
+
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Dual language Acquisition</strong></label>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Among children living in non-English language households, Spanish is by far the most prevalent household language.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Even while the proportion of children who are dual language learners has grown, a steadily declining number of children in these households speak English less than “very well”.</p>
+                                <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> There is no single consistent definition of dual language learners. The one used here takes an inclusive approach.</p>
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <div class="footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="<?php echo  base_url('rateObservation') ; ?>" type="submit" name="insert" class="btn btn-info">Next Step</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- //--------------------------------- MileStone Modal ------------------------------ -->
+
+<!-- <div class="modal fade" id="milestone" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <form action="" method="POST">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddLabel">Add Milestones</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label><strong>Communication and Language</strong></label>
+
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> In many cases, the words “language” and “communication” are used interchangeably.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> In a very real sense, every living thing communicates in some way.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> These noises or other interactions communicate, or transfer information of some kind.</p>
+
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Listening and attention</strong></label>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Always addressing the child by name before you speak.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Using visual prompts, natural gesture and a range of facial expression and tones of voice to engage the child’s interest.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Trying to avoid the child being seated near possible distractions e.g. book racks, toys and equipment drawers.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Getting down to the child’s level whenever possible.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Position a child who has attention difficulties at the front and near the teacherduring carpet time.</p>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Understanding</strong></label>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More extraverted or introverted as their primary source of life energy.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More literal or possibilities-oriented when processing information.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More thinking- or feelings-oriented when making decisions and experiencing emotions.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> More structured or open-ended when dealing with life events.</p>
+
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Speaking</strong></label>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Speaking to yourself can be "dangerous" because men in white coats may come and take you away.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> That is why you should make every effort possible to find somebody to speak with.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Learn how to give a presentation or speak in public in English.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Even strangers discuss the weather. Learn the proper vocabulary and expressions.</p>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Dual language Acquisition</strong></label>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Among children living in non-English language households, Spanish is by far the most prevalent household language.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> Even while the proportion of children who are dual language learners has grown, a steadily declining number of children in these households speak English less than “very well”.</p>
+                        <p><input class="kt-checkbox kt-checkbox--solid kt-checkbox--brand" type="checkbox"><span></span> There is no single consistent definition of dual language learners. The one used here takes an inclusive approach.</p>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" name="insert" class="btn btn-info">Add</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div> -->
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+
+<script>
+    document.getElementById("show").style.display = "block";
+    document.getElementById("milestone").style.display = "none";
+
+
+    function changevalue(name) {
+        if (name == "show") {
+            document.getElementById("show").style.display = "none";
+            document.getElementById("milestone").style.display = "block";
+
+        }
+    }
+</script>
+
+<script>
+    const getTwoDigits = (value) => value < 10 ? `0${value}` : value;
+
+
+    const formatTime = (date) => {
+        const hours = getTwoDigits(date.getHours());
+        const mins = getTwoDigits(date.getMinutes());
+
+        return `${hours}:${mins}`;
+    }
+
+    const date = new Date();
+    document.getElementById('currentTime').value = formatTime(date);
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Datatable JS -->
+
+
+<!--end::Page Scripts -->
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

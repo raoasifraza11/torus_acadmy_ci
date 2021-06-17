@@ -1,0 +1,26 @@
+a:3:{s:4:"time";i:1598373123;s:3:"ttl";i:3600;s:4:"data";s:1203:"<?php $this->_opening_section('title', 'Torus Academy - Teacher Dashboard'); ?><?php $this->_opening_section('_pageTitle'); ?>
+
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center ">
+        <div class="header-action">
+            <h1 class="page-title">Teacher Dashboard</h1>
+            <ol class="breadcrumb page-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Torus Academy</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Teacher Dashboard</li>
+            </ol>
+        </div>
+        <ul class="nav nav-tabs page-header-tab">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Courses-all">List View</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Courses-type">Course Type</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Courses-add">Add Course</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+
+
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('backend.includes.base'); ?>";}

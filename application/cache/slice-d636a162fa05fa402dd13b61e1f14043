@@ -1,0 +1,16 @@
+a:3:{s:4:"time";i:1587146753;s:3:"ttl";i:3600;s:4:"data";s:839:"<!-- Stored in application/views/child.slice.php --><?php $this->_opening_section('title', 'Child Page Title'); ?><?php $this->_opening_section('sidebar'); ?>
+@parent
+<p>This is appended to the master sidebar.</p>
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+
+<p>If you would like to edit this page you'll find it located at:</p>
+<code>application/views/welcome_message.php</code>
+
+<p>The corresponding controller for this page is found at:</p>
+<code>application/controllers/Welcome.php</code>
+
+<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+<?php $this->_closing_section(); ?>
+
+<?php echo $this->_include('master'); ?>";}

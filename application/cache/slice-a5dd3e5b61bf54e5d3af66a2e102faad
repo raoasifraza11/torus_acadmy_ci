@@ -1,0 +1,74 @@
+a:3:{s:4:"time";i:1610906624;s:3:"ttl";i:3600;s:4:"data";s:3681:"<?php $this->_opening_section('_pageTitle', 'Registration Teacher'); ?><?php $this->_opening_section('page_id', 'courses__page'); ?><?php $this->_opening_section('_css'); ?>
+	<link rel="stylesheet" href="<?php echo asset_url('fe_v1/fonts/material-design-iconic-font/css/material-design-iconic-font.css'); ?>">
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="<?php echo asset_url('fe_v1/css/theme.css'); ?>">
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+	<!-- CONTENT
+      ================================================== -->
+
+
+
+	<!-- section home -->
+	<section class="section__home">
+		<div class="container home__body">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="home__content">
+
+						<!-- Heading -->
+						<h1 class="home__heading">
+							Courses
+						</h1>
+
+						<!-- Breadcrumbs -->
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">Courses</li>
+						</ol>
+
+					</div> <!-- / .home__content -->
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+
+		<!-- Background image -->
+		<div class="home__bg"></div>
+	</section>
+
+	<!-- section courses -->
+	<section class="section__courses">
+		<div class="container">
+			<div class="row">
+				<?php foreach ($courses as $course){ ?>
+				<div class="col-sm-4">
+					<div class="course__item">
+						<div class="course-item__img">
+							<img src="<?php echo base_url('application/public_html/assets_alpha/fe_v1/img/courses_img-1.jpg') ?>" class="img-responsive" alt="...">
+						</div>
+						<div class="course-item__info">
+							<div class="info__students">
+<?php // 								<i class="ion-person-stalker" aria-hidden="true"></i> 53/120 ?>							</div>
+							<div class="info__price">
+								<i class="ion-ios-pricetags" aria-hidden="true"></i> <?php echo $course->price; ?>$
+							</div>
+						</div>
+						<div class="course-item__content">
+							<span class="course-item__branch">class</span>
+							<h3>
+								<a href="course-single.html"><?php echo $course->name; ?></a>
+							</h3>
+							<p class="course-item__desc"><?php echo $course->description; ?>.</p>
+							<form method="post" action="<?php echo base_url("course/single"); ?>">
+								<button type="submit" name="id" value="<?php echo $course->id; ?>" class="btn btn-primary" href="<?php echo base_url('course/single');  ?>">Choose course</button>
+							</form>
+<?php // 							<a class="btn btn-primary" href="course-single.html">Choose course</a> ?>						</div> <!-- .teacher-course__content -->
+					</div> <!-- .course__item -->
+				</div>
+				<?php } ?>
+			</div> <!-- / .row -->
+<?php // 			<div class="row"> ?><?php // 				<div class="col-sm-12"> ?><?php // 					<nav aria-label="..."> ?><?php // 						<ul class="pagination"> ?><?php // 							<li class="disabled"><a href="#" aria-label="Previous"><i class="ion-android-arrow-back"></i></a></li> ?><?php // 							<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li> ?><?php // 							<li><a href="#">2</a></li> ?><?php // 							<li><a href="#">3</a></li> ?><?php // 							<li><a href="#">4</a></li> ?><?php // 							<li><a href="#">...</a></li> ?><?php // 							<li><a href="#">10</a></li> ?><?php // 							<li> ?><?php // 								<a href="#" aria-label="Next"> ?><?php // 									<i class="ion-android-arrow-forward"></i> ?><?php // 								</a> ?><?php // 							</li> ?><?php // 						</ul> ?><?php // 					</nav> ?><?php // 				</div> ?><?php // 			</div> ?>			<!-- / .row -->
+		</div> <!-- / .container -->
+	</section> <!-- / .section__courses -->
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('landing'); ?>";}

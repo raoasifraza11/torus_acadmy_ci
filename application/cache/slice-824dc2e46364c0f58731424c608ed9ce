@@ -1,0 +1,253 @@
+a:3:{s:4:"time";i:1596828512;s:3:"ttl";i:3600;s:4:"data";s:12124:"<?php $this->_opening_section('title', 'Rooms Dashboard - LinksChild'); ?><?php $this->_opening_section('_pageTitle', "School Management"); ?><?php $this->_opening_section('_areaTitle', 'Room Actions'); ?><?php $this->_opening_section('_css'); ?>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+  
+</style>
+
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="kt-portlet kt-iconbox kt-iconbox--success kt-iconbox--animate-slow">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="kt-portlet__body">
+                        <div class="kt-iconbox__body">
+                            <div class="kt-iconbox__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                        <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" id="Combined-Shape" fill="#000000" opacity="0.3"></path>
+                                        <path d="M10.875,15.75 C10.6354167,15.75 10.3958333,15.6541667 10.2041667,15.4625 L8.2875,13.5458333 C7.90416667,13.1625 7.90416667,12.5875 8.2875,12.2041667 C8.67083333,11.8208333 9.29375,11.8208333 9.62916667,12.2041667 L10.875,13.45 L14.0375,10.2875 C14.4208333,9.90416667 14.9958333,9.90416667 15.3791667,10.2875 C15.7625,10.6708333 15.7625,11.2458333 15.3791667,11.6291667 L11.5458333,15.4625 C11.3541667,15.6541667 11.1145833,15.75 10.875,15.75 Z" id="check-path" fill="#000000"></path>
+                                        <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" id="Combined-Shape" fill="#000000"></path>
+                                    </g>
+                                </svg> </div>
+                            <div class="kt-iconbox__desc">
+                                <h3 class="kt-iconbox__title">
+                                    Room 1
+                                </h3>
+                                <div class="kt-iconbox__content">
+                                    Room Management &amp; Activities
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="kt-portlet__body float-right">
+                        <div class="kt-callout__action">
+                            <a href="<?php echo  base_url('viewrooms') ; ?>" class="btn btn-custom btn-bold btn-upper btn-md  btn-danger">
+                                <i class="fa fa-power-off fa-3x"></i>
+                                Exit Room
+                            </a>
+                        </div>
+                    </div>
+                    <div id="checkin" class="kt-portlet__body float-right">
+                        <div class="kt-callout__action">
+                            <a style="color: white;" name="checkin" onclick="changevalue(name)" class="btn btn-custom btn-bold btn-upper btn-md  btn-success">
+                            <i class="fa fa-sign-in-alt fa-2x"></i>
+                                Check - IN
+                            </a>
+                        </div>
+                    </div>
+                    <div id="break" class="kt-portlet__body float-right">
+                        <div class="kt-callout__action">
+                            <a name="break" onclick="changevalue(name)" class="btn btn-custom btn-bold btn-upper btn-md  btn-warning">
+                            <i class="fa fa-pause fa-2x"></i>
+                                Break
+                            </a>
+                        </div>
+                    </div>
+                    <div id="checkout" class="kt-portlet__body float-right">
+                        <div class="kt-callout__action">
+                            <a style="color: white;" name="checkout" onclick="changevalue(name)" class="btn btn-custom btn-bold btn-upper btn-md  btn-info">
+                            <i class="fa fa-sign-out-alt fa-2x"></i>
+                                Check - OUT
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- row first cards -->
+<div class="row">
+    <div class="col-xl-4">
+
+        <!--begin:: Widgets/Personal Income-->
+        <div class="kt-portlet kt-portlet--fit kt-portlet--head-lg kt-portlet--head-overlay kt-portlet--height-fluid">
+            <div class="kt-portlet__head kt-portlet__space-x">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title kt-font-light">
+                        Enrolled Students
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <button class="btn btn-outline-light btn-sm btn-bold">
+                        Session - 2019
+                    </button>
+
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="kt-widget27">
+                    <div class="kt-widget27__visual">
+                        <img src="./assets/media//bg/bg-2.jpg" alt="">
+                        <h3 class="kt-widget27__title">
+                            <span><span>Total:</span>120</span>
+                        </h3>
+                        <div class="kt-widget27__btn">
+                            <a href="<?php echo  base_url('viewstudents') ; ?>" class="btn btn-pill btn-light btn-elevate btn-bold">View All Students</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--end:: Widgets/Personal Income-->
+    </div>
+    <div class="col-xl-4">
+
+        <!--begin:: Widgets/Personal Income-->
+        <div class="kt-portlet kt-portlet--fit kt-portlet--head-lg kt-portlet--head-overlay kt-portlet--height-fluid">
+            <div class="kt-portlet__head kt-portlet__space-x">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title kt-font-light">
+                        Attendance
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <button class="btn btn-outline-light btn-sm btn-bold">
+                        Session - 2019
+                    </button>
+
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="kt-widget27">
+                    <div class="kt-widget27__visual">
+                        <img src="./assets/media//bg/bg-5.jpg" alt="">
+                        <h3 class="kt-widget27__title">
+                            <span><span>Completed:</span>20%</span>
+                        </h3>
+                        <div class="kt-widget27__btn">
+                            <a href="<?php echo  base_url('attendance') ; ?>" class="btn btn-pill btn-light btn-elevate btn-bold">Take Attendance</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--end:: Widgets/Personal Income-->
+    </div>
+    <div class="col-xl-4">
+
+        <!--begin:: Widgets/Personal Income-->
+        <div class="kt-portlet kt-portlet--fit kt-portlet--head-lg kt-portlet--head-overlay kt-portlet--height-fluid">
+            <div class="kt-portlet__head kt-portlet__space-x">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title kt-font-light">
+                        Calendar Event
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <button class="btn btn-outline-light btn-sm btn-bold">
+                        Session - 2019
+                    </button>
+
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="kt-widget27">
+                    <div class="kt-widget27__visual">
+                        <img src="./assets/media//bg/bg-7.jpg" alt="">
+                        <h3 class="kt-widget27__title">
+                            <span><span>Events:</span>2</span>
+                        </h3>
+                        <div class="kt-widget27__btn">
+                            <a href="<?php echo  base_url('calendar') ; ?>" class="btn btn-pill btn-light btn-elevate btn-bold">Create New Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--end:: Widgets/Personal Income-->
+    </div>
+</div>
+<!-- ./row first cards -->
+
+
+<!-- When students not yet enrolled -->
+<div class="row mt-5">
+    <div class="col-xl-12">
+
+        <!--begin:: Widgets/Announcements 2-->
+        <div class="kt-portlet kt-bg-danger kt-portlet--skin-solid kt-portlet--height-fluid">
+            <div class="kt-portlet__head kt-portlet__head--noborder">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        Enrolled the Student
+                    </h3>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+
+                <!--begin::Widget 7-->
+                <div class="kt-widget7 kt-widget7--skin-light">
+                    <div class="kt-widget7__desc">
+                        <h1>Please, Enroll the students in room.</h1>
+                    </div>
+
+                    <div class="kt-widget7__button">
+                        <a class="btn btn-brand" href="#" role="button">Start Enrollment</a>
+                    </div>
+                </div>
+
+                <!--end::Widget 7-->
+            </div>
+        </div>
+
+        <!--end:: Widgets/Announcements 2-->
+    </div>
+</div>
+<!-- ./When students not yet enrolled -->
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+
+<script>
+    document.getElementById("checkin").style.display = "block";
+    document.getElementById("break").style.display = "none";
+    document.getElementById("checkout").style.display = "none";
+
+
+    function changevalue(name) {
+        if (name == "checkin") {
+            document.getElementById("checkin").style.display = "none";
+            document.getElementById("break").style.display = "block";
+            document.getElementById("checkout").style.display = "none";
+        } else if (name == "break") {
+            document.getElementById("checkin").style.display = "none";
+            document.getElementById("break").style.display = "none";
+            document.getElementById("checkout").style.display = "block";           
+        } else if (name == "checkout") {
+            document.getElementById("checkin").style.display = "block";
+            document.getElementById("break").style.display = "none";
+            document.getElementById("checkout").style.display = "none";           
+        }
+    }
+</script>
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

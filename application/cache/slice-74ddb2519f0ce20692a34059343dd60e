@@ -1,0 +1,157 @@
+a:3:{s:4:"time";i:1596828424;s:3:"ttl";i:3600;s:4:"data";s:7345:"<?php $this->_opening_section('title', 'Dashboard - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Administration'); ?><?php $this->_opening_section('_areaTitle', 'Add New Room'); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+    <!-- row first cards -->
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <div class="col-md-6">
+
+                <!--begin::Portlet-->
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Add New Room
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!--begin::Form-->
+                    <form class="kt-form" method="post"  action="<?php echo base_url("addroom");?>">
+                        <div class="kt-portlet__body">
+                            <div class="form-group form-group-last">
+                                <div class="alert alert-secondary" role="alert">
+                                    <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                                    <div class="alert-text">
+                                        All fields are important to fill.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Session <code>*</code> </label>
+                                <select name="session_id" id="" class="form-control">
+									<?php if ($school_sessions){
+									foreach ($school_sessions as $session){ ?>
+                                    <option value="<?php echo $session->id; ?>"><?php echo $session->name; ?></option>
+									<?php }
+									} ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Room Name <code>*</code> </label>
+                                <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+                                       placeholder="Enter Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Select Staff <code>*</code> </label>
+                                <select name="teacher_id" id="" class="form-control">
+									<?php if ($school_teachers){
+									foreach ($school_teachers as $teacher){ ?>
+									<option value="<?php echo $teacher->user_id; ?>"><?php echo $teacher->full_name; ?></option>
+									<?php }
+									} ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Set Visibility</label><br>
+                                <span class="kt-switch kt-switch--lg kt-switch--icon">
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="visibility">
+                                        <span></span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-bold btn-label-brand btn-sm" data-toggle="modal" data-target="#kt_modal_6">Set room avatar</button>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <button type="submit" class="btn btn-primary">Create Room</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--end::Form-->
+                </div>
+
+                <!--end::Portlet-->
+
+
+            </div>
+            <div class="col-md-6">
+
+                <!--begin::Portlet-->
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                How it works?
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!--begin::Form-->
+
+                    <div class="kt-portlet__body">
+                        <div class="form-group form-group-last">
+                            <div class="alert alert-secondary" role="alert">
+                                <div class="alert-icon"><i class="flaticon-notepad kt-font-brand"></i></div>
+                                <div class="alert-text">
+                                    Need to add information about invite process for child mentor.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Form-->
+                </div>
+
+                <!--end::Portlet-->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ./row first cards -->
+
+
+    <div class="modal fade" id="kt_modal_6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Please choose the avatar for Room:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="kt-section">
+                        <div class="kt-section__content">
+                            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                                <div class="btn-group mr-2" role="group" aria-label="...">
+                                    <i class="la la-bold la-4x"></i> &nbsp;
+                                    <i class="la la-bolt la-4x"></i> &nbsp;
+                                    <i class="la la-car la-4x"></i> &nbsp;
+                                    <i class="la la-keyboard-o la-4x"></i> &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="">Choose your avatar:</label>
+                    <input type="file">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content -->
+
+<?php echo $this->_include('master'); ?>";}

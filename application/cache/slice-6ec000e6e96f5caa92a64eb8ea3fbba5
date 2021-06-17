@@ -1,0 +1,47 @@
+a:3:{s:4:"time";i:1595333467;s:3:"ttl";i:3600;s:4:"data";s:2950:"<?php $this->_opening_section('title', 'System Settings - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'APIs'); ?><?php $this->_opening_section('_areaTitle', 'Configuration'); ?><?php $this->_opening_section('content'); ?>
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-portlet">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        API's Keys
+                    </h3>
+                </div>
+            </div>
+
+            <!--begin::Form-->
+            <form class="kt-form kt-form--label-right" action="<?php echo base_url("mapapi"); ?>" method="post">
+                <div class="kt-portlet__body">
+                    <div class="form-group form-group-last">
+                        <div class="alert alert-secondary" role="alert">
+                            <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                            <div class="alert-text">
+                                Please update your latest <code>API's Keys</code> for production use:
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Google Map: </label>
+                        <div class="col-10">
+                            <input class="form-control" name="google_map" type="text" value="<?php if($site_data != null): ?> <?php echo  $site_data->value->google_map ; ?> <?php endif; ?>" placeholder="Please paste your API key here" id="example-text-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-search-input" class="col-2 col-form-label">Google GeoCode: </label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" name="google_geocode" value="<?php if($site_data != null): ?> <?php echo  $site_data->value->google_geocode ; ?> <?php endif; ?>" placeholder="Please paste your API key here" id="example-search-input">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="kt-form__actions float-right mb-3">
+                                <button type="submit" name="submit" class="btn btn-success" value="<?php if($site_data != null): ?> <?php echo  $site_data->id ; ?> <?php endif; ?>">  Submit </button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('master'); ?>";}

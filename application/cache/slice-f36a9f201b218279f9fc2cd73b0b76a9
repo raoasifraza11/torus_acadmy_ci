@@ -1,0 +1,308 @@
+a:3:{s:4:"time";i:1596828399;s:3:"ttl";i:3600;s:4:"data";s:18307:"<?php $this->_opening_section('title', 'Staff/Room Status - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Staff/Room'); ?><?php $this->_opening_section('_areaTitle', 'Dashboard'); ?><?php $this->_opening_section('_css'); ?>
+
+<link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+<style>
+    .toolbar {
+        float: left;
+    }
+</style>
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <span class="kt-portlet__head-icon">
+                <i class="kt-font-brand flaticon2-line-chart"></i>
+            </span>
+            <h3 class="kt-portlet__head-title">
+                Dashboard - Staff/Room Status
+            </h3>
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <div class="kt-portlet__head-actions">
+                    &nbsp;
+<?php //                     <a data-toggle="modal" data-target="#addStatus" href="#" class="btn btn-brand btn-elevate btn-icon-sm"> ?><?php //                         <i class="la la-plus"></i> ?><?php //                         Add New Status ?><?php //                     </a> ?>                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+            <div class="kt-portlet kt-portlet--mobile">
+                <div class="kt-portlet__body">
+                    <div id="kt_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="kt_table_1" role="grid" aria-describedby="kt_table_1_info" style="width: 1271px;">
+                                    <thead>
+                                        <tr role="row">
+                                            <th tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 301px;">Staff Name</th>
+                                            <th tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 228px;">Room #</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+									<?php
+									if ($rooms_status){
+									foreach ($rooms_status as $room){ ?>
+									<tr>
+										<td><?php echo $room["full_name"]?></td>
+										<td><?php  echo  $room["id"] ?></td>
+									</tr>
+									<?php }}
+									else{
+										echo "No Record Found";
+									}?>
+
+
+                                        
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------------- Bill Modal --------------------------------- -->
+
+<div class="modal fade" id="addBill" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <form action="" method="POST">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddLabel">Add New Bill</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="kt_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                        <div class="form-group">
+                            <div style="height:200px; overflow:auto;">
+                                <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="kt_table_1" role="grid" aria-describedby="kt_table_1_info" style="width: 430px;">
+                                    <thead>
+                                        <tr role="row">
+                                            <th tabindex="0" aria-controls="kt_table_1" rowspan="1" colspan="1" style="width: 30px;">Students</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--success"><span>E</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Emelita Giraldez</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Rosenbaum-Reichel</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--primary"><span>G</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Gerhard Reinhard</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Gleason, Kub and Marquardt</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--info"><span>E</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Englebert Shelley</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Jenkins Inc</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--brand"><span>E</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Evangeline Cure</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Pfannerstill-Treutel</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--primary"><span>F</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Freida Morby</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Haley, Schamberger and Durgan</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--info"><span>H</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Hazlett Kite</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Streich LLC</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--warning"><span>N</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Nixie Sailor</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Gleichner, Ziemann and Gutkowski</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--info"><span>N</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Norri Foldes</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Strosin, Nitzsche and Wisozk</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--success"><span>O</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Obed Helian</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Labadie, Predovic and Hammes</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--danger"><span>S</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Sibyl Amy</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Treutel-Ratke</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div class="kt-user-card-v2">
+                                                    <div class="kt-user-card-v2__pic">
+                                                        <div class="kt-badge kt-badge--xl kt-badge--danger"><span>S</span></div>
+                                                    </div>
+                                                    <div class="kt-user-card-v2__details">
+                                                        <span class="kt-user-card-v2__name">Sibyl Amy</span>
+                                                        <a href="#" class="kt-user-card-v2__email kt-link">Treutel-Ratke</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="total" value="$" placeholder="Total Amount" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="paid">Paid Amount</label>
+                            <input type="number" name="paid" placeholder="Paid Amount" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pending">Pending Amount</label>
+                            <input type="number" name="pending" placeholder="Pending Amount" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-group" for="status">Choose a Status:</label>
+                            <select class="form-control" name="status" id="status" required>
+                                <option value="Naveen">Paid</option>
+                                <option value="Mam">Pending</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="insert" class="btn btn-info">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#kt_table_1').DataTable({
+            "dom": '<"toolbar">frtip'
+        });
+
+        $("div.toolbar");
+    });
+</script>
+
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('master'); ?>";}

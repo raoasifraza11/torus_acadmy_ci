@@ -1,0 +1,63 @@
+a:3:{s:4:"time";i:1596807605;s:3:"ttl";i:3600;s:4:"data";s:3267:"<?php $this->_opening_section('title', 'Attendance Statistics - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Attendance Mgmt'); ?><?php $this->_opening_section('_areaTitle', 'Attendance Statistics'); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+<!-- row first cards -->
+<div class="kt-portlet kt-portlet--height-fluid">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                Class Attendance Statistics
+            </h3>
+        </div>
+        
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fluid">
+        <div class="kt-widget12">
+            <div class="kt-widget12__content">
+                <div class="kt-widget12__item">
+                    <div class="kt-widget12__info">
+                        <span class="kt-widget12__desc">Students in Safe Zone</span>
+                        <span style="background-color: #84F17B; width: 142px; text-align:center" class="kt-widget12__value">19</span>
+                    </div>
+                    <div class="kt-widget12__info">
+                        <span class="kt-widget12__desc">Students in Warning Zone</span>
+                        <span style="background-color: #E6EE40; width: 170px; text-align:center" class="kt-widget12__value">4</span>
+                    </div>
+                </div>
+                <div class="kt-widget12__item">
+                    <div class="kt-widget12__info">
+                        <span class="kt-widget12__desc">Students in Danger Zone</span>
+                        <span style="background-color: #F57662; width: 160px; text-align:center" class="kt-widget12__value">8</span>
+                    </div>
+                    <div class="kt-widget12__info">
+                        <span class="kt-widget12__desc">Overall Class Attendance</span>
+                        <div class="kt-widget12__progress">
+                            <div class="progress kt-progress--sm">
+                                <div class="progress-bar kt-bg-brand" role="progressbar" style="width: 80%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="kt-widget12__stat">
+                                83%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-widget12__chart" style="height:250px;">
+                <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                        <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                        <div class=""></div>
+                    </div>
+                </div>
+                <canvas id="kt_chart_order_statistics" width="984" height="250" class="chartjs-render-monitor" style="display: block; height: 250px; width: 984px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./row first cards -->
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content --><?php echo $this->_include('school'); ?>";}

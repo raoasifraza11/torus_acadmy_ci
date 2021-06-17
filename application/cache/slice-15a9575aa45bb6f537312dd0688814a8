@@ -1,0 +1,102 @@
+a:3:{s:4:"time";i:1596794190;s:3:"ttl";i:3600;s:4:"data";s:4303:"<?php $this->_opening_section('title', 'Rate Observation - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Rate Observation'); ?><?php $this->_opening_section('_areaTitle', 'Observation Mgmt'); ?><?php $this->_opening_section("_css"); ?>
+<link href="./assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+
+
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+<?php
+
+$month = date('m');
+$day = date('d');
+$year = date('Y');
+
+$today = $year . '-' . $month . '-' . $day;
+?>
+
+
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__head kt-portlet__head--lg">
+        <div class="kt-portlet__head-label">
+            <span class="kt-portlet__head-icon">
+                <i class="kt-font-brand flaticon2-line-chart"></i>
+            </span>
+            <h3 class="kt-portlet__head-title">
+                School Management - Observation Mgmt - Rate Observation
+            </h3>
+        </div>
+        <div class="kt-portlet__head-toolbar">
+            <div class="kt-portlet__head-wrapper">
+                <div class="kt-portlet__head-actions">
+                    &nbsp;
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Communication and Language</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_1" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Listening and attention</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_2" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Understanding</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_3" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Speaking</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_4" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Dual language Acquisition</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_5" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12">Basic Example 2</label>
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="kt-ion-range-slider">
+                    <input type="hidden" id="kt_slider_6" class="irs-hidden-input" tabindex="-1" readonly="" value="10">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+
+
+<script src="./assets/js/demo1/pages/crud/forms/widgets/ion-range-sliderNew.js" type="text/javascript"></script>
+<script src="./assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+<!-- <script src="./assets/js/demo1/scripts.bundle.js" type="text/javascript"></script> -->
+
+		
+
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

@@ -1,0 +1,557 @@
+a:3:{s:4:"time";i:1596794306;s:3:"ttl";i:3600;s:4:"data";s:37842:"<?php $this->_opening_section('title', 'Child Observation - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Child Observation'); ?><?php $this->_opening_section('_areaTitle', 'School Management'); ?><?php $this->_opening_section("_css"); ?>
+
+<style>
+    .material-icons.md-70 {
+        font-size: 40px;
+        color: #000000;
+    }
+</style>
+
+<style>
+    span.select2.select2-container.select2-container--default {
+        width: 50% !important;
+    }
+
+    .toolbar {
+        float: left;
+    }
+
+    .td {
+        color: black;
+        text-align: center
+    }
+</style>
+
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('content'); ?>
+<!-- begin:: Content -->
+
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+    <div class="kt-portlet__body">
+
+        <!--begin: Datatable -->
+        <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+            <!-- begin:: Content Head -->
+
+            <!--Begin:: Portlet-->
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__body">
+                    <div class="tab-content kt-margin-t-20">
+
+                        <!--Begin:: Content | Name-->
+                        <div class="kt-portlet">
+                            <div class="kt-portlet__body">
+                                <div class="kt-widget kt-widget--user-profile-3">
+                                    <div class="kt-widget__top">
+                                        <div class="kt-widget__media">
+                                            <img src="./assets/media/users/download (1).jpg" alt="image">
+                                        </div>
+                                        <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-bolder kt-font-light kt-hidden">
+                                            JM
+                                        </div>
+                                        <div class="kt-widget__content">
+                                            <div class="kt-widget__head">
+                                                <div class="kt-widget__user">
+                                                    <a href="#" class="kt-widget__username">
+                                                        Nixie Sailor
+                                                    </a>
+                                                    <span class="kt-badge kt-badge--bolder kt-badge kt-badge--inline kt-badge--unified-success">Student</span>
+                                                    <div class="dropdown dropdown-inline kt-margin-l-5" data-toggle="kt-tooltip-" title="Change label" data-placement="right">
+                                                        <a href="#" class="btn btn-clean btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-caret-down"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-md dropdown-menu-fit dropdown-menu-right">
+                                                            <ul class="kt-nav">
+                                                                <li class="kt-nav__head">
+                                                                    Choose label:
+                                                                    <i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
+                                                                </li>
+                                                                <li class="kt-nav__separator">
+                                                                </li>
+                                                                <li class="kt-nav__item">
+                                                                    <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="1">
+                                                                        <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-success kt-badge--inline kt-badge--lg kt-badge--bold">Child</span></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="kt-nav__item">
+                                                                    <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="2">
+                                                                        <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-danger kt-badge--inline kt-badge--lg kt-badge--bold">Student</span></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="kt-nav__item">
+                                                                    <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="3">
+                                                                        <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-warning kt-badge--inline kt-badge--lg kt-badge--bold">Junior Student</span></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="kt-nav__item">
+                                                                    <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="4">
+                                                                        <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-info kt-badge--inline kt-badge--lg kt-badge--bold">Senior Student</span></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="kt-nav__item">
+                                                                    <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="4">
+                                                                        <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-brand kt-badge--inline kt-badge--lg kt-badge--bold">Prefect</span></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="kt-nav__separator">
+                                                                </li>
+                                                                <li class="kt-nav__foot">
+                                                                    <a class="btn btn-clean btn-bold btn-sm" href="#"><i class="flaticon2-add-1 kt-icon-sm"></i> Add new</a>
+                                                                    <a class="btn btn-clean btn-bold btn-sm kt-hidden" href="#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="kt-widget__subhead">
+                                                <a href="#"><i class="flaticon2-new-email"></i>@livejournal.com</a>
+                                                <a href="#"><i class="flaticon2-calendar-3"></i>Student </a>
+                                                <a href="#"><i class="flaticon2-placeholder"></i>LinksChild</a>
+                                            </div>
+                                            <div class="kt-widget__info">
+                                                <div class="kt-widget__desc">
+                                                    I distinguish three main text objektive could be merely to inform people.
+                                                    <br> A second could be persuade people.You want people to bay objective
+                                                </div>
+                                                <div class="kt-widget__progress">
+                                                    <div class="kt-widget__text">
+                                                        Overall Progress
+                                                    </div>
+                                                    <div class="progress" style="height: 5px;width: 100%;">
+                                                        <div class="progress-bar kt-bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <div class="kt-widget__stats">
+                                                        65%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kt-widget__bottom kt-hidden">
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-piggy-bank"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <span class="kt-widget__title">Earnings</span>
+                                                <span class="kt-widget__value"><span>$</span>249,500</span>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-confetti"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <span class="kt-widget__title">Expances</span>
+                                                <span class="kt-widget__value"><span>$</span>164,700</span>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-pie-chart"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <span class="kt-widget__title">Net</span>
+                                                <span class="kt-widget__value"><span>$</span>782,300</span>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-file-2"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <span class="kt-widget__title">73 Tasks</span>
+                                                <a href="#" class="kt-widget__value kt-font-brand">View</a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-chat-1"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <span class="kt-widget__title">648 Comments</span>
+                                                <a href="#" class="kt-widget__value kt-font-brand">View</a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget__item">
+                                            <div class="kt-widget__icon">
+                                                <i class="flaticon-network"></i>
+                                            </div>
+                                            <div class="kt-widget__details">
+                                                <div class="kt-section__content kt-section__content--solid">
+                                                    <div class="kt-badge kt-badge__pics">
+                                                        <a href="#" class="kt-badge__pic" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="" data-original-title="John Myer">
+                                                            <img src="./assets/media/users/100_7.jpg" alt="image">
+                                                        </a>
+                                                        <a href="#" class="kt-badge__pic" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="" data-original-title="Alison Brandy">
+                                                            <img src="./assets/media/users/100_3.jpg" alt="image">
+                                                        </a>
+                                                        <a href="#" class="kt-badge__pic" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="" data-original-title="Selina Cranson">
+                                                            <img src="./assets/media/users/100_2.jpg" alt="image">
+                                                        </a>
+                                                        <a href="#" class="kt-badge__pic" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="" data-original-title="Luke Walls">
+                                                            <img src="./assets/media/users/100_13.jpg" alt="image">
+                                                        </a>
+                                                        <a href="#" class="kt-badge__pic" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="" data-original-title="Micheal York">
+                                                            <img src="./assets/media/users/100_4.jpg" alt="image">
+                                                        </a>
+                                                        <a href="#" class="kt-badge__pic kt-badge__pic--last kt-font-brand">
+                                                            +7
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--Begin:: Portlet | Notice-->
+                        <div class="kt-portlet kt-portlet--head-noborder">
+                            <div class="kt-portlet__head">
+                                <div class="kt-portlet__head-label">
+                                    <h3 class="kt-portlet__head-title  kt-font-danger">
+                                        Important Notice
+                                    </h3>
+                                </div>
+
+                            </div>
+                            <div class="kt-portlet__body kt-portlet__body--fit-top">
+                                <div class="kt-section kt-section--space-sm">
+                                    The Overall Progress of this student is increasing gradually and effective.
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--End:: Portlet-->
+
+
+                        <!--Begin:: Content | Observation-->
+                        <div class="kt-portlet">
+                            <div class="kt-portlet__head">
+                                <div class="kt-portlet__head-label">
+                                    <h3 class="kt-portlet__head-title">
+                                        Observations
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="kt-portlet__body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="kt-section kt-section--space-md">
+                                            <div class="kt-widget24 kt-widget24--solid">
+                                                <div class="kt-widget24__details">
+                                                    <div class="kt-widget24__info">
+                                                        <a href="#" class="kt-widget24__title" title="Click to edit">
+                                                            Communication and Language
+                                                        </a>
+                                                        <span class="kt-widget24__desc">
+                                                            Focus on Communication &amp; Language
+                                                        </span>
+                                                    </div>
+                                                    <span class="kt-widget24__stats kt-font-success">
+                                                        85%
+                                                    </span>
+                                                </div>
+                                                <div class="progress progress--sm">
+                                                    <div class="progress-bar kt-bg-success" role="progressbar" style="width: 85%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget24__action">
+                                                    <span class="kt-widget24__change">
+                                                        Last Week Observation
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kt-section kt-section--space-md">
+                                            <div class="kt-widget24 kt-widget24--solid">
+                                                <div class="kt-widget24__details">
+                                                    <div class="kt-widget24__info">
+                                                        <a href="#" class="kt-widget24__title" title="Click to edit">
+                                                            Listening and attention
+                                                        </a>
+                                                        <span class="kt-widget24__desc">
+                                                            Add On Skills in Both
+                                                        </span>
+                                                    </div>
+                                                    <span class="kt-widget24__stats kt-font-brand">
+                                                        65%
+                                                    </span>
+                                                </div>
+                                                <div class="progress progress--sm">
+                                                    <div class="progress-bar kt-bg-brand" role="progressbar" style="width: 65%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget24__action">
+                                                    <span class="kt-widget24__change">
+                                                        Last Week Observation
+                                                    </span>
+
+                                                    <!--End:: Tab Content-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kt-section kt-section--space-md">
+                                            <div class="kt-widget24 kt-widget24--solid">
+                                                <div class="kt-widget24__details">
+                                                    <div class="kt-widget24__info">
+                                                        <a href="#" class="kt-widget24__title" title="Click to edit">
+                                                            Understanding
+                                                        </a>
+                                                        <span class="kt-widget24__desc">
+                                                            Understanding of Objects
+                                                        </span>
+                                                    </div>
+                                                    <span class="kt-widget24__stats kt-font-warning">
+                                                        45%
+                                                    </span>
+                                                </div>
+                                                <div class="progress progress--sm">
+                                                    <div class="progress-bar kt-bg-warning" role="progressbar" style="width: 45%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget24__action">
+                                                    <span class="kt-widget24__change">
+                                                        Last Week Observation
+                                                    </span>
+
+                                                    <!--End:: Tab Content-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="kt-section kt-section--space-md">
+                                            <div class="kt-widget24 kt-widget24--solid">
+                                                <div class="kt-widget24__details">
+                                                    <div class="kt-widget24__info">
+                                                        <a href="#" class="kt-widget24__title" title="Click to edit">
+                                                            Speaking
+                                                        </a>
+                                                        <span class="kt-widget24__desc">
+                                                            Focus on Speaking
+                                                        </span>
+                                                    </div>
+                                                    <span class="kt-widget24__stats kt-font-danger">
+                                                        55%
+                                                    </span>
+                                                </div>
+                                                <div class="progress progress--sm">
+                                                    <div class="progress-bar kt-bg-danger" role="progressbar" style="width: 55%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget24__action">
+                                                    <span class="kt-widget24__change">
+                                                        Last Week Observation
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kt-section kt-section--space-md">
+                                            <div class="kt-widget24 kt-widget24--solid">
+                                                <div class="kt-widget24__details">
+                                                    <div class="kt-widget24__info">
+                                                        <a href="#" class="kt-widget24__title" title="Click to edit">
+                                                            Dual language Acquisition
+                                                        </a>
+                                                        <span class="kt-widget24__desc">
+                                                            Good skills on both Languages
+                                                        </span>
+                                                    </div>
+                                                    <span class="kt-widget24__stats kt-font-success">
+                                                        60%
+                                                    </span>
+                                                </div>
+                                                <div class="progress progress--sm">
+                                                    <div class="progress-bar kt-bg-success" role="progressbar" style="width: 60%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget24__action">
+                                                    <span class="kt-widget24__change">
+                                                        Last Week Observation
+                                                    </span>
+
+                                                    <!--End:: Tab Content-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--End:: Portlet-->
+
+                            </div>
+                        </div>
+
+                        <!-- end:: Content -->
+                    </div>
+                    <!--end: Datatable -->
+                </div>
+
+                <!--Begin:: Content | Statistics-->
+                <div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
+                    <div class="kt-portlet__head kt-portlet__head--noborder">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Observation Statistics
+                            </h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <div class="dropdown dropdown-inline">
+                                <button type="button" class="btn btn-clean btn-sm btn-icon btn-icon-lg" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="flaticon-calendar-with-a-clock-time-tools"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(32px, 33px, 0px);">
+
+                                    <ul class="kt-nav">
+                                        <li class="kt-nav__section kt-nav__section--first">
+                                            <span class="kt-nav__section-text">Time Period</span>
+                                        </li>
+                                        <li class="kt-nav__item">
+                                            <a class="kt-nav__link">
+                                                <i class="kt-nav__link-icon flaticon2-graph-1"></i>
+                                                <span class="kt-nav__link-text">Weekly</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-nav__item">
+                                            <a class="kt-nav__link">
+                                                <i class="kt-nav__link-icon flaticon2-calendar-4"></i>
+                                                <span class="kt-nav__link-text">Monthly</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-nav__item">
+                                            <a class="kt-nav__link">
+                                                <i class="kt-nav__link-icon flaticon2-calendar-3"></i>
+                                                <span class="kt-nav__link-text">Half Quarter</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-nav__item">
+                                            <a class="kt-nav__link">
+                                                <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
+                                                <span class="kt-nav__link-text">Full Quarter</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div id="bars" class="kt-portlet kt-portlet--height-fluid">
+                            <div class="kt-widget14">
+                                <div class="kt-widget14__chart" style="height:120px;">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="bar" style="display: block; width: 984px; height: 120px;" width="984" height="120" class="chartjs-render-monitor"></canvas>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--begin:: Widgets/Order Statistics-->
+                <!-- <div class="kt-portlet kt-portlet--height-fluid">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Order Statistics
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fluid">
+                        <div class="kt-widget12">
+                            <div class="kt-widget12__content">
+                                <div class="kt-widget12__item">
+                                    <div class="kt-widget12__info">
+                                        <span class="kt-widget12__desc">Annual Taxes EMS</span>
+                                        <span class="kt-widget12__value">$400,000</span>
+                                    </div>
+                                    <div class="kt-widget12__info">
+                                        <span class="kt-widget12__desc">Finance Review Date</span>
+                                        <span class="kt-widget12__value">July 24,2019</span>
+                                    </div>
+                                </div>
+                                <div class="kt-widget12__item">
+                                    <div class="kt-widget12__info">
+                                        <span class="kt-widget12__desc">Avarage Revenue</span>
+                                        <span class="kt-widget12__value">$60M</span>
+                                    </div>
+                                    <div class="kt-widget12__info">
+                                        <span class="kt-widget12__desc">Revenue Margin</span>
+                                        <div class="kt-widget12__progress">
+                                            <div class="progress kt-progress--sm">
+                                                <div class="progress-bar kt-bg-brand" role="progressbar" style="width: 40%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="kt-widget12__stat">
+                                                40%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kt-widget12__chart" style="height:250px;">
+                                <canvas id="kt_chart_order_statistics"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!--end:: Widgets/Order Statistics-->
+                <!-- <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <span class="kt-portlet__head-icon kt-hidden">
+                                <i class="la la-gear"></i>
+                            </span>
+                            <h3 class="kt-portlet__head-title">
+                                Pie Chart 4
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <p>Slightly more transparent label backgrounds and adjusted the radius values to place them within the pie.</p>
+                        <div id="kt_flotcharts_11" style="height: 300px;"></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer">
+            <button style="float: right;" type="button" class="btn btn-brand btn-bold" onclick="window.print();">Print</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<?php $this->_closing_section(); ?><?php $this->_opening_section('_js'); ?>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="./assets/js/demo1/pages/dashboardNew.js" type="text/javascript"></script>
+
+
+
+<!-- Datatable JS -->
+
+
+<!--end::Page Scripts -->
+<?php $this->_closing_section(); ?><?php echo $this->_include('school'); ?>";}

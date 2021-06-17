@@ -1,0 +1,408 @@
+a:3:{s:4:"time";i:1596828731;s:3:"ttl";i:3600;s:4:"data";s:27273:"<?php $this->_opening_section('title', 'Profile Setting - LinksChild'); ?><?php $this->_opening_section('_pageTitle', 'Users'); ?><?php $this->_opening_section('_areaTitle', 'Profile Management'); ?><?php $this->_opening_section('_css'); ?>
+    <link href="./assets/css/demo1/pages/wizard/wizard-4.css" rel="stylesheet" type="text/css">
+<?php $this->_closing_section(); ?>
+
+<!-- Content --><?php $this->_opening_section('content'); ?>
+
+    <!-- row first cards -->
+    <div class="kt-wizard-v4" id="kt_wizard_v4" data-ktwizard-state="first">
+
+        <!--begin: Form Wizard Nav -->
+        <div class="kt-wizard-v4__nav">
+            <div class="kt-wizard-v4__nav-items">
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            1
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Account Info
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Account Basic Info
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            2
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Your Address
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Setup Your Address
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            3
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Payment Setting
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Add Payment Options
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="last_step_wizard" class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="pending">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            4
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Completed
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Review and Submit
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--end: Form Wizard Nav -->
+        <div class="kt-portlet">
+            <div class="kt-portlet__body kt-portlet__body--fit">
+                <div class="kt-grid">
+                    <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+
+                        <!--begin: Form Wizard Form-->
+                        <form class="kt-form" id="kt_form" novalidate="novalidate" method="post" action="<?php echo base_url("userprofile")?>">
+
+                            <!--begin: Form Wizard Step 1-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                <div class="kt-heading kt-heading--md">Enter your Account Details</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control" name="first_name" placeholder="First Name" value="<?php echo  $user_details->first_name ; ?>">
+                                            <span class="form-text text-muted">Please enter your first name.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="<?php echo  $user_details->last_name ; ?>">
+                                            <span class="form-text text-muted">Please enter your last name.</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Phone</label>
+                                                    <input type="tel" class="form-control"  name="phone_number" placeholder="phone" value="<?php echo  $user_details->phone_number ; ?>">
+                                                    <span class="form-text text-muted">Please enter your phone number.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Email <span class="text-danger">*</span></label>
+                                                    <input type="email" disabled class="form-control" name="email" placeholder="Email" value="<?php echo  $user->email ; ?>">
+                                                    <span class="form-text text-muted">Please enter your email address.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Institute / School Name</label>
+                                            <input type="text" class="form-control" name="school_name" placeholder="Institute / School Name" value="<?php echo  $user_details->school_name ; ?>">
+                                            <span class="form-text text-muted">Please enter your institute name.</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Certification Name</label>
+                                                    <input type="tel" class="form-control" name="certification_name" placeholder="Certification Name" value="<?php echo  $user_details->certification_name ; ?>">
+                                                    <span class="form-text text-muted">Please enter your certification name.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Verification Number</label>
+                                                    <input type="text" name="verification_number" class="form-control" placeholder="Verification Number" value="<?php echo  $user_details->verification_number ; ?>" >
+                                                    <span class="form-text text-muted">Please enter your verification number.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 1-->
+
+                            <!--begin: Form Wizard Step 2-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Setup Your Address</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form" id="address">
+                                        <div class="form-group">
+                                            <label>Your Address Line 1 <span class="text-danger">*</span></label>
+                                            <!--input type="text" class="form-control" id="sublocality_level_1" name="first_address" placeholder="Address Line 1" value="{ { $user_details->first_address }}"-->
+                                            <input id="sublocality_level_1"
+                                                   class="form-control"
+												   name="first_address"
+                                                   placeholder="Search your address"
+                                                   onFocus="geolocate()"
+                                                   type="text" value="<?php echo  $user_details->first_address ; ?>"/>
+                                            <span class="form-text text-muted">Please edit / complete your address after search.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Your Address Line 2</label>
+                                            <input type="text" class="form-control" id="street_number" name="second_address" placeholder="Address Line 2" value="<?php echo  $user_details->second_address ; ?>" disabled="true">
+                                            <span class="form-text text-muted">Please enter your Address.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Institute Address Line 1 <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" name="school_first_address" placeholder="Institute Address Line 1 " value="<?php echo  $user_details->school_first_address ; ?>">
+                                            <span class="form-text text-muted">Please enter your Institute Address.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Institute Address Line 2</label>
+                                            <input type="text" class="form-control" name="school_second_address" placeholder="Institute Address Line 2" value="<?php echo  $user_details->school_second_address ; ?>">
+                                            <span class="form-text text-muted">Please enter your Institute Address.</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Postcode/Zipcode</label>
+                                                    <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Postcode/Zipcode" value="<?php echo  $user_details->postal_code ; ?>" disabled="true">
+                                                    <span class="form-text text-muted">Please enter your Postcode/Zipcode.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>City <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="locality" name="city" placeholder="City" value="<?php echo  $user_details->city ; ?>" disabled="true">
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>State</label>
+                                                    <input type="text" class="form-control" id="administrative_area_level_1" name="state" placeholder="State" value="<?php echo  $user_details->state ; ?>" disabled="true">
+                                                    <span class="form-text text-muted">Please enter your Postcode.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Country: <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="country" name="country" placeholder="State" value="<?php echo  $user_details->country ; ?>" disabled="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 2-->
+
+                            <!--begin: Form Wizard Step 3-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Enter your Payment Details</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Name on Card <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="ccname" placeholder="Card Name" value="<?php echo  $payment_details->ccname ; ?>">
+                                                    <span class="form-text text-muted">Please enter your Card Name.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Card Number <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="ccnumber" placeholder="Card Number" value="<?php echo  $payment_details->ccnumber ; ?>">
+                                                    <span class="form-text text-muted">Please enter your Address.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label>Card Expiry Month <span class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" name="ccmonth" placeholder="Card Expiry Month" value="<?php echo  $payment_details->ccmonth ; ?>">
+                                                    <span class="form-text text-muted">Please enter your Card Expiry Month.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label>Card Expiry Year <span class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" name="ccyear" placeholder="Card Expire Year" value="<?php echo  $payment_details->ccyear ; ?>">
+                                                    <span class="form-text text-muted">Please enter your Card Expiry Year.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label>Card CVV Number <span class="text-danger">*</span></label>
+                                                    <input type="password" class="form-control" name="cccvv" placeholder="Card CVV Number" value="<?php echo  $payment_details->cccvv ; ?>">
+                                                    <span class="form-text text-muted">Please enter your Card CVV Number.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 3-->
+
+                            <!--begin: Form Wizard Step 4-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Review your Details and Submit</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__review">
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Your Account Details
+                                            </div>
+                                            <div id="account-details" class="kt-wizard-v4__review-content">
+
+                                            </div>
+                                        </div>
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Your Address Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content" id="address_details">
+
+                                            </div>
+                                        </div>
+                                        <!--<div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Your Institute Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content">
+                                                Institute Name<br>
+                                                Address Line 1<br>
+                                                Address Line 2<br>
+                                                Melbourne 3000, VIC, Australia
+                                            </div>
+                                        </div>-->
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Payment Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content">
+                                                Card Number: xxxx xxxx xxxx 1111<br>
+                                                Card Name: John Wick<br>
+                                                Card Expiry: 01/21
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end: Form Wizard Step 4-->
+
+                            <!--begin: Form Actions -->
+                            <div class="kt-form__actions">
+                                <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
+                                    Previous
+                                </div>
+                                <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
+                                    Submit
+                                </div>
+                                <div id="action-next" class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
+                                    Next Step
+                                </div>
+                            </div>
+
+                            <!--end: Form Actions -->
+                        </form>
+
+                        <!--end: Form Wizard Form-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./row first cards -->
+
+<?php $this->_closing_section(); ?>
+<!-- ./ Content --><?php $this->_opening_section('_js'); ?>
+    <script src="./assets/js/demo1/pages/wizard/wizard-4.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCunP78QoJyEZzSFkgPy7Wz8UimF6HIInI&libraries=places&callback=initAutocomplete"
+            async defer></script>
+    <script>
+        /* Map setting */
+        var placeSearch, autocomplete;
+
+        var componentForm = {
+            sublocality_level_1: 'short_name',          // Basti Khudadad
+            street_number: 'short_name',                //
+            //route: 'long_name',                       //
+            locality: 'long_name',                      // City
+            administrative_area_level_1: 'short_name',  // Provience
+            country: 'long_name',                       // Country
+            postal_code: 'short_name'                   // Post Code
+        };
+
+
+        function initAutocomplete() {
+            // Create the autocomplete object, restricting the search predictions to
+            // geographical location types.
+            autocomplete = new google.maps.places.Autocomplete(
+                document.getElementById('sublocality_level_1'), {types: ['geocode']});
+
+            // Avoid paying for data that you don't need by restricting the set of
+            // place fields that are returned to just the address components.
+            autocomplete.setFields(['address_component']);
+
+            // When the user selects an address from the drop-down, populate the
+            // address fields in the form.
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
+
+        function fillInAddress() {
+            // Get the place details from the autocomplete object.
+            var place = autocomplete.getPlace();
+
+            console.log(place);
+
+            for (var component in componentForm) {
+                //console.log(document.getElementById(component))
+                //document.getElementById(component).value = '';
+                document.getElementById(component).disabled = false;
+            }
+
+            // Get each component of the address from the place details,
+            // and then fill-in the corresponding field on the form.
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
+                if (componentForm[addressType]) {
+                    var val = place.address_components[i][componentForm[addressType]];
+                    document.getElementById(addressType).value = val;
+                }
+            }
+        }
+
+        function geolocate() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var circle = new google.maps.Circle(
+                        {center: geolocation, radius: position.coords.accuracy});
+                    autocomplete.setBounds(circle.getBounds());
+                });
+            }
+        }
+
+    </script>
+
+<?php $this->_closing_section(); ?>
+<?php echo $this->_include('school'); ?>";}
