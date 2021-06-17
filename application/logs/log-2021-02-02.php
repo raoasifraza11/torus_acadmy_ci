@@ -450,3 +450,33 @@ INFO - 2021-02-02 07:00:15 --> Slice Template Class Initialized
 INFO - 2021-02-02 07:00:15 --> Helper loaded: file_helper
 INFO - 2021-02-02 07:00:15 --> Final output sent to browser
 DEBUG - 2021-02-02 07:00:15 --> Total execution time: 0.0695
+INFO - 2021-02-02 12:10:57 --> Config Class Initialized
+INFO - 2021-02-02 12:10:57 --> Hooks Class Initialized
+DEBUG - 2021-02-02 12:10:57 --> UTF-8 Support Enabled
+INFO - 2021-02-02 12:10:57 --> Utf8 Class Initialized
+INFO - 2021-02-02 12:10:57 --> URI Class Initialized
+DEBUG - 2021-02-02 12:10:57 --> No URI present. Default controller set.
+INFO - 2021-02-02 12:10:57 --> Router Class Initialized
+INFO - 2021-02-02 12:10:57 --> Output Class Initialized
+INFO - 2021-02-02 12:10:57 --> Security Class Initialized
+DEBUG - 2021-02-02 12:10:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-02-02 12:10:57 --> Input Class Initialized
+INFO - 2021-02-02 12:10:57 --> Language Class Initialized
+INFO - 2021-02-02 12:10:57 --> Loader Class Initialized
+INFO - 2021-02-02 12:10:57 --> Helper loaded: url_helper
+INFO - 2021-02-02 12:10:57 --> Helper loaded: cookie_helper
+INFO - 2021-02-02 12:10:57 --> Helper loaded: form_helper
+INFO - 2021-02-02 12:10:57 --> Helper loaded: utility_helper
+INFO - 2021-02-02 12:10:57 --> Database Driver Class Initialized
+INFO - 2021-02-02 12:10:57 --> Session: Class initialized using 'files' driver.
+INFO - 2021-02-02 12:10:57 --> Form Validation Class Initialized
+DEBUG - 2021-02-02 12:10:57 --> Form_validation class already loaded. Second attempt ignored.
+INFO - 2021-02-02 12:10:57 --> Upload Class Initialized
+INFO - 2021-02-02 12:10:57 --> Model "Crud_model" initialized
+INFO - 2021-02-02 12:10:57 --> Controller Class Initialized
+DEBUG - 2021-02-02 12:10:57 --> Config file loaded: /Users/asifraza/Documents/code.nosync/src/github.com/my-github-raoasifraza11/torus_acadmy_ci/application/config/slice.php
+INFO - 2021-02-02 12:10:57 --> Helper loaded: slice_helper
+INFO - 2021-02-02 12:10:57 --> Slice Template Class Initialized
+INFO - 2021-02-02 12:10:57 --> Helper loaded: file_helper
+INFO - 2021-02-02 12:10:58 --> Final output sent to browser
+DEBUG - 2021-02-02 12:10:58 --> Total execution time: 0.3010

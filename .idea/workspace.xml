@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f8c9ad-a57d-4b12-b41f-71ef7582771f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/UiTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/UiTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2021-02-02.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2021-02-02.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/20200310094100.png" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/20200310094100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/202101180642472.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/202101180642472.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/202101180645392.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/202101180645392.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/202101180646432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/202101180646432.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/public_html/assets/uploads/202101180652162.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/public_html/old_assets/uploads/202101180652162.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/landing_alpha/teacher_register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing_alpha/teacher_register.blade.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,64 +21,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="10" lean-forward="true" selection-end-line="14" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/landing_alpha/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="761" column="32" selection-start-line="761" selection-start-column="32" selection-end-line="761" selection-end-column="32" />
-              <folding>
-                <element signature="e#6261#6284#0#HTML" expanded="true" />
-                <element signature="e#6976#6999#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/public_html/assets_alpha/fe_v1/img/teacher.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/public_html/assets_alpha/fe_v1/img/teacher-reg.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/public_html/assets_alpha/fe_v1/img/teacher_1.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-    </leaf>
+    <execution />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -108,6 +60,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -203,17 +163,17 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="724" />
+    <option name="height" value="727" />
   </component>
+  <component name="ProjectId" id="1pTVnQIX14pdhwAUiPZV2R6pOrr" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,39 +220,35 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/app_alpha/be/students" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/edu_view" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/views/edu_view" />
+      <recent name="$PROJECT_DIR$/application/views" />
+      <recent name="$PROJECT_DIR$/application/public_html/new_assets/css" />
+      <recent name="$PROJECT_DIR$/application/public_html" />
+      <recent name="$PROJECT_DIR$/application/views/app_alpha/be/students" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/views/app_alpha/be/admin" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/application/views/app_alpha/be/students" />
-      <recent name="$PROJECT_DIR$/application/public_html/assets_alpha/be_v1/css" />
-      <recent name="$PROJECT_DIR$/application/public_html/assets_alpha/be_v1/js" />
-      <recent name="$PROJECT_DIR$/application/views/app_alpha/be/admin" />
-      <recent name="$PROJECT_DIR$/application/views/app_alpha/be/admin/courses" />
-    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -314,18 +270,28 @@
       <workItem from="1601694341013" duration="2315000" />
       <workItem from="1601704775106" duration="1066000" />
       <workItem from="1610630387222" duration="1542000" />
-      <workItem from="1612242583769" duration="3062000" />
+      <workItem from="1612242583769" duration="3476000" />
+      <workItem from="1612332141869" duration="711000" />
+      <workItem from="1615207235233" duration="3139000" />
+      <workItem from="1615294415292" duration="1986000" />
+      <workItem from="1615371324978" duration="544000" />
+      <workItem from="1615471242637" duration="24000" />
+      <workItem from="1615787626787" duration="645000" />
+      <workItem from="1622198812176" duration="2898000" />
+      <workItem from="1623777886081" duration="172000" />
+      <workItem from="1623844240664" duration="3489000" />
+      <workItem from="1623851379186" duration="5067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77963000" />
+    <option name="totallyTimeSpent" value="79088000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="726" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24838188" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -338,7 +304,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3227848" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3222749" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -347,7 +313,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,13 +334,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/courses.html" />
     <entry file="file://$PROJECT_DIR$/application/views/landing.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -382,20 +342,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/student_register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/signup.html" />
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/student_register.html" />
     <entry file="file://$PROJECT_DIR$/application/views/landing_alpha/signup.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -403,13 +351,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/course-single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-website/course-single.html" />
     <entry file="file://$PROJECT_DIR$/application/controllers/Landing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -438,26 +380,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/students-dashboard-payment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="260" column="34" selection-start-line="165" selection-start-column="28" selection-end-line="260" selection-end-column="34" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/payments-receipt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="234" column="14" selection-start-line="138" selection-start-column="8" selection-end-line="234" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/students-dashboard-payment.html" />
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/payments-receipt.html" />
     <entry file="file://$PROJECT_DIR$/application/views/landing_alpha/paynow.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1022">
@@ -480,16 +404,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="19" column="38" selection-end-line="65" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/torous/new torus data/torus-admin/university/login.html" />
     <entry file="file://$PROJECT_DIR$/application/views/app_alpha/be/particle/student/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -995,13 +910,7 @@
     <entry file="file://$PROJECT_DIR$/application/config/development/database.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/Rich-Text-Editor-jQuery-RichText/examples/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Rich-Text-Editor-jQuery-RichText/examples/index.html" />
     <entry file="file://$PROJECT_DIR$/application/views/app_alpha/be/students/proof.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1037,6 +946,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/landing_alpha/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11415">
+          <caret line="761" column="32" selection-start-line="761" selection-start-column="32" selection-end-line="761" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/public_html/assets_alpha/fe_v1/img/teacher.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1045,31 +975,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/public_html/assets_alpha/fe_v1/img/teacher_1.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/landing_alpha/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="761" column="32" selection-start-line="761" selection-start-column="32" selection-end-line="761" selection-end-column="32" />
-          <folding>
-            <element signature="e#6261#6284#0#HTML" expanded="true" />
-            <element signature="e#6976#6999#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="true" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-end-line="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />

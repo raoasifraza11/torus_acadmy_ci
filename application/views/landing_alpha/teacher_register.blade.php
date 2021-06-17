@@ -74,10 +74,10 @@
                                         <div >Your country</div>
                                         <i class="zmdi zmdi-caret-down"></i>
 										<select name="country" required class="select-control ">
-											<option value="volvo">Volvo</option>
-											<option value="saab">Saab</option>
-											<option value="mercedes">Mercedes</option>
-											<option value="audi">Audi</option>
+											<option value="pk">Pakistan</option>
+											<option value="uae">United Arab Emirates</option>
+											<option value="uk">United Kingdom</option>
+											<option value="us">United State</option>
 										</select>
                                     </div>
                                 </div>
