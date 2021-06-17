@@ -151,6 +151,12 @@ $route['teacher/bank'] = 'Professor/bank';*/
 
 
 
+//todo : Teacher register area
+$route['teacher/register'] = 'teacher/Signup/index';
+$route['teacher/login'] = 'teacher/Login/index';
+
+
+
 // Default Routes ---------------------------------------------------------
 
 $route['default_controller'] = 'UiTest/index';

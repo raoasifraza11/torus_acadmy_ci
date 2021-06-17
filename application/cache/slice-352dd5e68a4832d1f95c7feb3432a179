@@ -1,4 +1,4 @@
-@extends('edu_master')
+a:3:{s:4:"time";i:1623931284;s:3:"ttl";i:3600;s:4:"data";s:1266:"
 <div class="main-content">
 	<!-- Breadcrumbs Start -->
 	<div class="rs-breadcrumbs breadcrumbs-overlay">
@@ -40,3 +40,4 @@
 	<!-- My Account Section End -->
 
 </div>
+<?php echo $this->_include('edu_master'); ?>";}
