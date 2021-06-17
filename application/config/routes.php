@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *          Website URL's mostly static
  *
  */
-
+/*
 $route['registration_category'] = 'Landing/registration_role';
 $route['courses'] = 'Courses/courses';
 $route['course/single'] = 'Courses/singleCourse';
@@ -74,12 +74,12 @@ $route['course/paynow'] = 'Student/payNow';
  *          Website URL's mostly static
  *
  */
-
+/*
 //$route['registration_category'] = 'Landing/registration_role';
 $route['teacher/register'] = 'Signup/teacher';
 $route['student/register'] = 'Signup/student';
 $route['login'] = 'Login/index';
-$route['logout'] = 'Login/logout';
+$route['logout'] = 'Login/logout';*/
 
 
 
@@ -90,7 +90,7 @@ $route['logout'] = 'Login/logout';
  *
  */
 
-$route['admin'] = 'Login/adminlogin';
+/*$route['admin'] = 'Login/adminlogin';
 $route['admin/dashboard'] = 'Admin/index';
 $route['admin/students'] = 'Admin/students';
 $route['admin/teachers'] = 'Admin/teachers';
@@ -98,15 +98,15 @@ $route['admin/users'] = 'Backend/admin_users';
 $route['admin/courses'] = 'Admin/course';
 $route['admin/courses/add'] = 'Admin/addCourse';
 $route['admin/setting'] = 'Backend/admin_site_setting';
-$route['admin/payments'] = 'Admin/payments';
+$route['admin/payments'] = 'Admin/payments';*/
 
 
 
 
 
-// Site settings
-$route['admin/site-setting'] = 'Backend/site_configuration';
-$route['admin/copyrights'] = 'Backend/copyrights';
+//// Site settings
+//$route['admin/site-setting'] = 'Backend/site_configuration';
+//$route['admin/copyrights'] = 'Backend/copyrights';
 
 
 
@@ -115,7 +115,7 @@ $route['admin/copyrights'] = 'Backend/copyrights';
  * Backend:
  *          Student apart
  *
- */
+ *//*
 $route['student/dashboard'] = 'Student/index';      //working on backend
 //$route['student/profile'] = 'Backend/student_profile_setting';
 $route['student/profile'] = 'Student/profile';
@@ -123,7 +123,7 @@ $route['student/payment/history'] = 'Student/studentPaymentHistory';
 $route['student/course/enrolled'] = 'Student/student_course_enrolled';
 $route['student/course/enrolled/proof/(:any)'] = 'Student/studentCourseEnrolledProof/$1';
 $route['student/course/enrolled/uplaodproof'] = 'Student/uploadProof';
-$route['student/test_reg'] = 'Student/student_reg_data';
+$route['student/test_reg'] = 'Student/student_reg_data';*/
 
 
 /*
@@ -135,11 +135,11 @@ $route['student/test_reg'] = 'Student/student_reg_data';
 //$route['teacher/dashboard'] = 'Backend/dashboard_teacher';
 //$route['teacher/profile'] = 'Backend/profile_setting';
 //$route['teacher/enrolled/students'] = 'Backend/enrolled_student';
-$route['teacher/revenue'] = 'Backend/revenue_teacher';
+//$route['teacher/revenue'] = 'Backend/revenue_teacher';
 //$route['teacher/courses'] = 'Backend/teacher_courses';
 
 //todo:under working on backend
-$route['teacher/dashboard'] = 'Professor/index';
+/*$route['teacher/dashboard'] = 'Professor/index';
 $route['teacher/profile'] = 'Professor/profile'; //at backend
 $route['teacher/academic'] = 'Professor/academic'; //at backend
 $route['teacher/experience'] = 'Professor/experience'; //at backend
@@ -147,16 +147,22 @@ $route['teacher/availability'] = 'Professor/availability'; //at backend
 $route['teacher/courseselection'] = 'Professor/courseSelection'; //at backend
 $route['teacher/account'] = 'Professor/account'; //at backend
 $route['teacher/enrolled/students'] = 'Professor/students';
-$route['teacher/bank'] = 'Professor/bank';
+$route['teacher/bank'] = 'Professor/bank';*/
 
 
 
 // Default Routes ---------------------------------------------------------
 
-$route['default_controller'] = 'Welcome/index';
+$route['default_controller'] = 'UiTest/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['assets/(:any)'] = 'assets/$1';
+
+
+
+// New Routes:
+$route['login'] = 'UiTest/login';
+$route['reg'] = 'UiTest/reg';
 
 
 
